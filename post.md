@@ -8,7 +8,7 @@ tags:
   -Blog
 last_modified_at: 2022-04-28T09:00-19:00 
 ---
-#지금은 markdown 문법 연습 중입니다!
+# 지금은 markdown 문법 연습 중입니다!
 
 **글작성하기 위해 마크다운을 공부해서 좋은 글들을 작성해보자.**
 이글의 제목은 {{page.title}}이고
@@ -17,4 +17,4 @@ last_modified_at: 2022-04-28T09:00-19:00
 카테고리에는 {{page.categories}}가 있다.
 
 
-#{{page.tags}}
+# {{page.tags}}
