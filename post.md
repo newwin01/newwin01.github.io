@@ -19,3 +19,10 @@ last_modified_at: 2022-04-28T09:00-19:00
 {{page.excerpt}}
 카테고리에는 {{page.categories}}가 있다.
 
+1. 순서를 사용해봅니다.
+    1. 1번
+    2. 2번
+    3. 3번
+
+메인 페이지: <https://newwin01.github.io/>
+
