@@ -290,10 +290,10 @@ defaults:
       read_time: true
       show_date: true
       layout: single
-      author_profile: true
+      author_profile: false
       read_time: true
       comments: false ##comment
-      share: true
+      share: false
       related: true
       sidebar: true                 
       nav: "sidebar-category" 

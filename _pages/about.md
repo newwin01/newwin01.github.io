@@ -9,7 +9,7 @@ title: "About"
 ## Hello! My name is Jang Se Chang!
 
 
-Hello! My name is Se Chang Jang! <br><br>
+Hello! <br><br>
 I am a student of Handong Global University.
 
 I am studying at the Department of Computer Science and Electrical Engineering. 
