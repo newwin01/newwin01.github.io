@@ -10,4 +10,10 @@ var store = [{
         "tags": ["Blog","jekyll","Github","Git"],
         "url": "/recent/Test/",
         "teaser": null
+      },{
+        "title": "Window Error",
+        "excerpt":" ","categories": [],
+        "tags": [],
+        "url": "/recent/window-error/",
+        "teaser": null
       }]
