@@ -9,10 +9,13 @@
 <lastmod>2020-05-25T00:00:00+09:00</lastmod>
 </url>
 <url>
+<<<<<<< HEAD
 <loc>http://localhost:4000/recent/sleepovermacro/</loc>
 <lastmod>2022-03-01T00:00:00+09:00</lastmod>
 </url>
 <url>
+=======
+>>>>>>> eb50b9696abbf231214c6bf1030f0f6072c5d597
 <loc>http://localhost:4000/recent/window-error/</loc>
 <lastmod>2023-02-26T00:00:00+09:00</lastmod>
 </url>
