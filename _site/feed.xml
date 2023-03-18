@@ -1,1 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-02-26T16:53:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">[Jekyll] 블로그 포스팅하는 방법</title><link href="http://localhost:4000/recent/Test/" rel="alternate" type="text/html" title="[Jekyll] 블로그 포스팅하는 방법" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/Test</id><content type="html" xml:base="http://localhost:4000/recent/Test/"><![CDATA[<p>테스트를 하고 있고 잘 안되는 것 같아 매우 힘들다.</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html"><![CDATA[테스트 중]]></summary></entry><entry><title type="html">[Jekyll] 블로그 포스팅하는 방법</title><link href="http://localhost:4000/recent/my-first-post/" rel="alternate" type="text/html" title="[Jekyll] 블로그 포스팅하는 방법" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/my-first-post</id><content type="html" xml:base="http://localhost:4000/recent/my-first-post/"><![CDATA[<p>테스트를 하고 있고 잘 안되는 것 같아 매우 힘들다.</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html"><![CDATA[테스트 중]]></summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-18T22:42:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Window Error</title><link href="http://localhost:4000/recent/window-error/" rel="alternate" type="text/html" title="Window Error" /><published>2023-02-26T00:00:00+09:00</published><updated>2023-02-26T00:00:00+09:00</updated><id>http://localhost:4000/recent/window-error</id><content type="html" xml:base="http://localhost:4000/recent/window-error/"><![CDATA[<h1 id="windows-error">Windows Error</h1>
+
+<p>There is an error that dragging the mouse makes a dragged portion of the display black on the window OS.</p>
+
+<p><img src="../../../assets/error.jpg" width="700" height="270" /></p>
+
+<p>If you executes following scripts on the command prompt, you can solve the problem. 
+<br /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo off
+taskkill /f /im explorer.exe
+attrib %userprofile%\appdata\local\iconcache.db -s -r -h
+del /q %userprofile%\appdata\local\iconcache.db
+start explorer.exe
+exit
+</code></pre></div></div>
+
+<h5 id="from--httpsanswersmicrosoftcomko-krwindowsforumwindows_10-filesec9c88eb8f84ec9ab0104a04441e-64c0-4238-af0b-34a45d2737b3auth1">from: <br /> https://answers.microsoft.com/ko-kr/windows/forum/windows_10-files/%EC%9C%88%EB%8F%84%EC%9A%B010/4a04441e-64c0-4238-af0b-34a45d2737b3?auth=1</h5>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[Windows Error]]></summary></entry><entry><title type="html">Sleepovermacro</title><link href="http://localhost:4000/recent/sleepovermacro/" rel="alternate" type="text/html" title="Sleepovermacro" /><published>2022-03-01T00:00:00+09:00</published><updated>2022-03-01T00:00:00+09:00</updated><id>http://localhost:4000/recent/sleepovermacro</id><content type="html" xml:base="http://localhost:4000/recent/sleepovermacro/"><![CDATA[<h1 id="handong-global-university-sleep-over-macro">Handong Global University Sleep Over Macro</h1>
+
+<p>대학교 외박 신청 사이트는 굉장히 번거로운 부분이 많았다. 이를 해소하고자 랩실 친구와 매크로를 만들었다.</p>
+
+<p>https://github.com/newwin01/Sleep-Over-Macro</p>
+
+<h2 id="this-is-hgu-sleep-over-macro-version-100">This is HGU Sleep over macro version 1.0.0</h2>
+
+<h3 id="you-can-sign-up-for-a-sleepover-using-this-program">You can sign up for a sleepover using this program.</h3>
+
+<p>You need to enter the “hisnet” id and password. Then, type the venue and purpose of the sleepover. 
+The format will be:</p>
+<blockquote>
+  <p>“venue”에서 “purpose.”</p>
+</blockquote>
+
+<p>If you edit the source code, you may put the parameter permanently. It is up to you.</p>
+
+<p>I and SB have more ideas about it; please wait for a more updated version.
+Possible updates:</p>
+<ul>
+  <li>Save id &amp; pw/autofill</li>
+  <li>Execute the program in any dir</li>
+  <li>Choose multiple days</li>
+</ul>
+
+<h2 id="requirements">Requirements</h2>
+
+<h4 id="python">Python</h4>
+<h4 id="selenium">Selenium</h4>
+<h4 id="chromedriver-and-appropriate-chrome-version">Chromedriver and appropriate chrome version</h4>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[Handong Global University Sleep Over Macro]]></summary></entry><entry><title type="html">[Jekyll] 블로그 포스팅하는 방법</title><link href="http://localhost:4000/recent/my-first-post/" rel="alternate" type="text/html" title="[Jekyll] 블로그 포스팅하는 방법" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/my-first-post</id><content type="html" xml:base="http://localhost:4000/recent/my-first-post/"><![CDATA[<p>테스트를 하고 있고 잘 안되는 것 같아 매우 힘들다.</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html"><![CDATA[테스트 중]]></summary></entry><entry><title type="html">[Jekyll] 블로그 포스팅하는 방법</title><link href="http://localhost:4000/recent/Test/" rel="alternate" type="text/html" title="[Jekyll] 블로그 포스팅하는 방법" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/Test</id><content type="html" xml:base="http://localhost:4000/recent/Test/"><![CDATA[<p>테스트를 하고 있고 잘 안되는 것 같아 매우 힘들다.</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html"><![CDATA[테스트 중]]></summary></entry></feed>
