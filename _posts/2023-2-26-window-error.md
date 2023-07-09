@@ -1,3 +1,13 @@
+---
+title:  "Window Error"
+excerpt: "1st Posting"
+
+categories:
+  - Blog
+tags:
+  - [Blog]
+---
+
 # Windows Error
 
 There is an error that dragging the mouse makes a dragged portion of the display black on the window OS. 
