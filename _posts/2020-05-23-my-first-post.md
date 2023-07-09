@@ -5,7 +5,7 @@ excerpt: "테스트 중"
 categories:
   - Blog
 tags:
-  - [Blog, jekyll, Github, Git]
+  - [Blog]
 
 toc: true
 toc_sticky: true

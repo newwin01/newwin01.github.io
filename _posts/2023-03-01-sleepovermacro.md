@@ -1,8 +1,18 @@
+---
+title:  "HGU Sleep Over Macro"
+excerpt: "With Acquaintance..."
+
+categories:
+  - Blog
+tags:
+  - [Blog]
+---
+
 # Handong Global University Sleep Over Macro
 
 대학교 외박 신청 사이트는 굉장히 번거로운 부분이 많았다. 이를 해소하고자 랩실 친구와 매크로를 만들었다. 
 
-https://github.com/newwin01/Sleep-Over-Macro
+[https://github.com/newwin01/Sleep-Over-Macro](https://github.com/newwin01/Sleep-Over-Macro)
 
 ## This is HGU Sleep over macro version 1.0.0
 

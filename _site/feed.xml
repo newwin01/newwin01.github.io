@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-09T18:47:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Chapter 16</title><link href="http://localhost:4000/recent/Chapter-16/" rel="alternate" type="text/html" title="Chapter 16" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-16</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-16/"><![CDATA[<p>Segmentation</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-09T19:31:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 16</title><link href="http://localhost:4000/recent/Chapter-16/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 16" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-16</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-16/"><![CDATA[<p>Segmentation</p>
 
 <ul>
   <li>Why not have a base and bounds pair per logical segment</li>
@@ -79,31 +79,7 @@
       </li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Operating System (feat. Three easy pieces)</title><link href="http://localhost:4000/recent/Operating-System/" rel="alternate" type="text/html" title="Operating System (feat. Three easy pieces)" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Operating-System</id><content type="html" xml:base="http://localhost:4000/recent/Operating-System/"><![CDATA[<h2 id="followings-are-notes-of-operating-system">Followings are notes of operating system</h2>
-
-<!-- [Chatper 6](Chatper%206%20eb619004b46f41b18d8f36f7e301dafc.md) -->
-
-<!-- [Chatper 7](Chatper%207%207b10f22065ce41e1aac2ae0c0e510c37.md) -->
-
-<!-- [IPC](IPC%2042a8cefe997a46438d5f70b03a4fae3c.md) -->
-
-<!-- [HW 2](HW%202%20b0bcd96b50be47a39e9e47352cf7e8bd.md) -->
-
-<!-- [Chatper 13](Chatper%2013%20a5554fc1364141c88bd91da31832ff5c.md) -->
-
-<!-- [Chapter 15](../_posts\Chapter_15_7ca961e848194c0db9ad5faff30be7ec.md) -->
-
-<p><a href="../Chapter-16">Chapter 16</a></p>
-
-<p><a href="../Chapter-17">Chapter 17</a></p>
-
-<p><a href="../Chapter-18">Chapter 18</a></p>
-
-<p><a href="../Chapter-19">Chapter 19</a></p>
-
-<!-- [Chapter 20](Chapter%2020%20beec124d35e4434096e789504e018172.md) -->
-
-<!-- [Paging and Segmenation](Paging%20and%20Segmenation%200cdd68112f3e4a40b150bf9298e31d75.md) -->]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[Help me...]]></summary></entry><entry><title type="html">Chapter 19</title><link href="http://localhost:4000/recent/Chapter-19/" rel="alternate" type="text/html" title="Chapter 19" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-19</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-19/"><![CDATA[<p>Paging: Faster Translations</p>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.16]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 19</title><link href="http://localhost:4000/recent/Chapter-19/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 19" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-19</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-19/"><![CDATA[<p>Paging: Faster Translations</p>
 
 <ul>
   <li>TLB: Translation-lookaside buffer
@@ -250,7 +226,7 @@
       <li>The use of TLBs in virtual memory systems can significantly improve address translation performance by caching frequently accessed page table entries on-chip, reducing the need to access main memory. This results in performance similar to that of non-virtualized memory. However, TLBs may be less effective for programs that access a large number of pages in a short time, leading to TLB misses and decreased performance. One solution to this issue is to use larger page sizes to increase TLB coverage, but TLB access can also become a bottleneck in the CPU pipeline, particularly with physically-indexed caches, and virtually-indexed caches introduce new hardware design issues.</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Chapter 18</title><link href="http://localhost:4000/recent/Chapter-18/" rel="alternate" type="text/html" title="Chapter 18" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-18</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-18/"><![CDATA[<p>Paging: Introduction</p>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.19]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 18</title><link href="http://localhost:4000/recent/Chapter-18/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 18" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-18</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-18/"><![CDATA[<p>Paging: Introduction</p>
 
 <ul>
   <li>Page
@@ -337,7 +313,7 @@
       </li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Chapter 17</title><link href="http://localhost:4000/recent/Chapter-17/" rel="alternate" type="text/html" title="Chapter 17" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-17</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-17/"><![CDATA[<p>Free-Space Management</p>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.18]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 17</title><link href="http://localhost:4000/recent/Chapter-17/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 17" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-17</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-17/"><![CDATA[<p>Free-Space Management</p>
 
 <p>When free-space management becomes more difficult is when the free space with user-level memory-allocation memory</p>
 
@@ -419,7 +395,7 @@
     </ul>
   </li>
   <li>One major problem with many of the approaches described above is their lack of scaling.</li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Vs code server error</title><link href="http://localhost:4000/recent/Vs_code_error/" rel="alternate" type="text/html" title="Vs code server error" /><published>2023-03-19T00:00:00+09:00</published><updated>2023-03-19T00:00:00+09:00</updated><id>http://localhost:4000/recent/Vs_code_error</id><content type="html" xml:base="http://localhost:4000/recent/Vs_code_error/"><![CDATA[<h2 id="vs-code로만-서버-접속이-안되는-경우">Vs code로만 서버 접속이 안되는 경우</h2>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.17]]></summary></entry><entry><title type="html">Vs code server error</title><link href="http://localhost:4000/recent/Vs_code_error/" rel="alternate" type="text/html" title="Vs code server error" /><published>2023-03-19T00:00:00+09:00</published><updated>2023-03-19T00:00:00+09:00</updated><id>http://localhost:4000/recent/Vs_code_error</id><content type="html" xml:base="http://localhost:4000/recent/Vs_code_error/"><![CDATA[<h2 id="vs-code로만-서버-접속이-안되는-경우">Vs code로만 서버 접속이 안되는 경우</h2>
 
 <p>VS code 서버 접속이 다른 경로로는 가능하지만 vs code로 안되는 경우가 존재한다. <br />
 서버 내에 vs code server파일의 문제일 가능성이 높다. 해결하는 방법은 어렵지 않다. <br /></p>
@@ -427,7 +403,7 @@
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -rf .vscode-server/
 </code></pre></div></div>
 
-<p>Good!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><summary type="html"><![CDATA[왜 안들어가지지?]]></summary></entry><entry><title type="html">3rd week in handong</title><link href="http://localhost:4000/recent/3rd_week/" rel="alternate" type="text/html" title="3rd week in handong" /><published>2023-03-18T00:00:00+09:00</published><updated>2023-03-18T00:00:00+09:00</updated><id>http://localhost:4000/recent/3rd_week</id><content type="html" xml:base="http://localhost:4000/recent/3rd_week/"><![CDATA[<h2 id="i-am-at-the-end-of-3rd-week-in-handong">I am at the end of 3rd week in Handong.</h2>
+<p>Good!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[왜 안들어가지지?]]></summary></entry><entry><title type="html">3rd week in handong</title><link href="http://localhost:4000/recent/3rd_week/" rel="alternate" type="text/html" title="3rd week in handong" /><published>2023-03-18T00:00:00+09:00</published><updated>2023-03-18T00:00:00+09:00</updated><id>http://localhost:4000/recent/3rd_week</id><content type="html" xml:base="http://localhost:4000/recent/3rd_week/"><![CDATA[<h2 id="i-am-at-the-end-of-3rd-week-in-handong">I am at the end of 3rd week in Handong.</h2>
 <p><br /></p>
 
 <p>The 3rd and 1st semesters at Handong are called “사망년” because it is busy as “hell”. <br />
@@ -437,11 +413,11 @@ I am getting familiar with the Linux system, starting to use notion and slack, a
 
 <p><br /> I am really happy to learn and I hope this happiness last at least until the end of this semester.</p>
 
-<p><img src="../../../assets/sudo_boo.png" width="700" height="270" /></p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><summary type="html"><![CDATA[한동에서의 3주차]]></summary></entry><entry><title type="html">Sleepovermacro</title><link href="http://localhost:4000/recent/sleepovermacro/" rel="alternate" type="text/html" title="Sleepovermacro" /><published>2023-03-01T00:00:00+09:00</published><updated>2023-03-01T00:00:00+09:00</updated><id>http://localhost:4000/recent/sleepovermacro</id><content type="html" xml:base="http://localhost:4000/recent/sleepovermacro/"><![CDATA[<h1 id="handong-global-university-sleep-over-macro">Handong Global University Sleep Over Macro</h1>
+<p><img src="../../../assets/sudo_boo.png" width="700" height="270" /></p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[한동에서의 3주차]]></summary></entry><entry><title type="html">HGU Sleep Over Macro</title><link href="http://localhost:4000/recent/sleepovermacro/" rel="alternate" type="text/html" title="HGU Sleep Over Macro" /><published>2023-03-01T00:00:00+09:00</published><updated>2023-03-01T00:00:00+09:00</updated><id>http://localhost:4000/recent/sleepovermacro</id><content type="html" xml:base="http://localhost:4000/recent/sleepovermacro/"><![CDATA[<h1 id="handong-global-university-sleep-over-macro">Handong Global University Sleep Over Macro</h1>
 
 <p>대학교 외박 신청 사이트는 굉장히 번거로운 부분이 많았다. 이를 해소하고자 랩실 친구와 매크로를 만들었다.</p>
 
-<p>https://github.com/newwin01/Sleep-Over-Macro</p>
+<p><a href="https://github.com/newwin01/Sleep-Over-Macro">https://github.com/newwin01/Sleep-Over-Macro</a></p>
 
 <h2 id="this-is-hgu-sleep-over-macro-version-100">This is HGU Sleep over macro version 1.0.0</h2>
 
@@ -467,7 +443,7 @@ Possible updates:</p>
 
 <h4 id="python">Python</h4>
 <h4 id="selenium">Selenium</h4>
-<h4 id="chromedriver-and-appropriate-chrome-version">Chromedriver and appropriate chrome version</h4>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[Handong Global University Sleep Over Macro]]></summary></entry><entry><title type="html">Window Error</title><link href="http://localhost:4000/recent/window-error/" rel="alternate" type="text/html" title="Window Error" /><published>2023-02-26T00:00:00+09:00</published><updated>2023-02-26T00:00:00+09:00</updated><id>http://localhost:4000/recent/window-error</id><content type="html" xml:base="http://localhost:4000/recent/window-error/"><![CDATA[<h1 id="windows-error">Windows Error</h1>
+<h4 id="chromedriver-and-appropriate-chrome-version">Chromedriver and appropriate chrome version</h4>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[With Acquaintance...]]></summary></entry><entry><title type="html">Window Error</title><link href="http://localhost:4000/recent/window-error/" rel="alternate" type="text/html" title="Window Error" /><published>2023-02-26T00:00:00+09:00</published><updated>2023-02-26T00:00:00+09:00</updated><id>http://localhost:4000/recent/window-error</id><content type="html" xml:base="http://localhost:4000/recent/window-error/"><![CDATA[<h1 id="windows-error">Windows Error</h1>
 
 <p>There is an error that dragging the mouse makes a dragged portion of the display black on the window OS.</p>
 
@@ -483,4 +459,4 @@ start explorer.exe
 exit
 </code></pre></div></div>
 
-<h5 id="from--httpsanswersmicrosoftcomko-krwindowsforumwindows_10-filesec9c88eb8f84ec9ab0104a04441e-64c0-4238-af0b-34a45d2737b3auth1">from: <br /> https://answers.microsoft.com/ko-kr/windows/forum/windows_10-files/%EC%9C%88%EB%8F%84%EC%9A%B010/4a04441e-64c0-4238-af0b-34a45d2737b3?auth=1</h5>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[Windows Error]]></summary></entry><entry><title type="html">[Jekyll] 블로그 포스팅하는 방법</title><link href="http://localhost:4000/recent/my-first-post/" rel="alternate" type="text/html" title="[Jekyll] 블로그 포스팅하는 방법" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/my-first-post</id><content type="html" xml:base="http://localhost:4000/recent/my-first-post/"><![CDATA[<p>테스트를 하고 있고 잘 된다!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html"><![CDATA[테스트 중]]></summary></entry></feed>
+<h5 id="from--httpsanswersmicrosoftcomko-krwindowsforumwindows_10-filesec9c88eb8f84ec9ab0104a04441e-64c0-4238-af0b-34a45d2737b3auth1">from: <br /> https://answers.microsoft.com/ko-kr/windows/forum/windows_10-files/%EC%9C%88%EB%8F%84%EC%9A%B010/4a04441e-64c0-4238-af0b-34a45d2737b3?auth=1</h5>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[1st Posting]]></summary></entry><entry><title type="html">[Jekyll] 블로그 포스팅하는 방법</title><link href="http://localhost:4000/recent/my-first-post/" rel="alternate" type="text/html" title="[Jekyll] 블로그 포스팅하는 방법" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/my-first-post</id><content type="html" xml:base="http://localhost:4000/recent/my-first-post/"><![CDATA[<p>테스트를 하고 있고 잘 된다!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[테스트 중]]></summary></entry></feed>
