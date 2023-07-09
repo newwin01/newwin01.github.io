@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-09T18:46:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Chapter 16</title><link href="http://localhost:4000/recent/Chapter-16/" rel="alternate" type="text/html" title="Chapter 16" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-16</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-16/"><![CDATA[<p>Segmentation</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-09T18:47:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Chapter 16</title><link href="http://localhost:4000/recent/Chapter-16/" rel="alternate" type="text/html" title="Chapter 16" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-16</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-16/"><![CDATA[<p>Segmentation</p>
 
 <ul>
   <li>Why not have a base and bounds pair per logical segment</li>
@@ -431,7 +431,8 @@
 <p><br /></p>
 
 <p>The 3rd and 1st semesters at Handong are called “사망년” because it is busy as “hell”. <br />
-And I am passing the 3rd week. This semester, there were lots of changes. I joined ISEL and met co-workers who share informations and visions. <br />
+And I am passing the 3rd week. This semester, there were lots of changes. <br />
+I joined ISEL and met co-workers who share informations and visions. <br />
 I am getting familiar with the Linux system, starting to use notion and slack, and starting to learn query statements.</p>
 
 <p><br /> I am really happy to learn and I hope this happiness last at least until the end of this semester.</p>
