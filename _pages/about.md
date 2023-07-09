@@ -13,8 +13,8 @@ Hello! <br><br>
 I am a student of Handong Global University.
 
 I am studying at the Department of Computer Science and Electrical Engineering. 
-My main interest is Software Engineering, especailly on Automatic Program Repair and Software Testing!
-Also I am interested to Operating Systems.
+My main interest is Software Engineering, especailly in Automatic Program Repair and Software Testing!
+Also I am interested in Operating Systems and System Programming.
 <br> 
 <br> 
 Joyful coding!
