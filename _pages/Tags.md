@@ -9,3 +9,6 @@ title: "Tags"
 ## Working...
 
 #### 죄인 중의 괴수
+
+### [OS](/categories/os) 
+### [blog](/categories/blog)

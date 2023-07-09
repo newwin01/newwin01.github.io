@@ -1,12 +1,7 @@
 ---
 permalink: /categories/
 title: "Categories"
-
+layout: categories
 # toc: true
 # toc_sticky: true
 ---
-
-## Working...
-
-### [OS](/categories/os) 
-### [blog](/categories/blog)

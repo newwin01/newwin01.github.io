@@ -96,7 +96,7 @@ var store = [{
         "teaser": null
       },{
         "title": "OS-HW2 Summary",
-        "excerpt":"HW 2 First of all, it was the first assignment that I have not completed since I start Computer Science Major… I slept 11 hours for 4 days. Delta debugging: a test input minimization technique that takes a target program together with a crashing test input, and then automatically derives...","categories": ["OS"],
+        "excerpt":"HW 2 First of all, it was the first assignment that I have not completed since I have start Computer Science Major… I slept 11 hours for 4 days. Delta debugging: a test input minimization technique that takes a target program together with a crashing test input, and then automatically...","categories": ["OS"],
         "tags": ["OS"],
         "url": "/recent/OS-HW2/",
         "teaser": null
