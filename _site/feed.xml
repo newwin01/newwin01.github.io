@@ -1,4 +1,198 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-09T19:31:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 16</title><link href="http://localhost:4000/recent/Chapter-16/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 16" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-16</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-16/"><![CDATA[<p>Segmentation</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-09T19:42:36+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 20</title><link href="http://localhost:4000/recent/Chapter-20/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 20" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-20</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-20/"><![CDATA[<p>Paging: Smaller Tables</p>
+
+<p>Page tables are too big and thus consume too much memory.</p>
+
+<ul>
+  <li>32-bit address space (2^32 bytes), with 4KB (2^12 bytes) and 4-byte page-table entry
+    <ul>
+      <li>Simple array-based page tables are too big, taking up far too much memory on typical systems</li>
+      <li>We are in search of some techniques to reduce</li>
+    </ul>
+  </li>
+  <li>Simple solution: Bigger pages
+    <ul>
+      <li>Increasing the page size may decrease the page table size</li>
+      <li>But internal fragmentation will occur</li>
+    </ul>
+  </li>
+  <li>Hybrid approach: Paging and Segments
+    <ul>
+      <li>Instead of having a single-page table for the entire address space of the process, why not have one per logical segment?</li>
+      <li>We still have MMU → hold the physical address of the page table of that segment</li>
+      <li>Three base/bound pairs, one each for code, heap, and tack
+        <ul>
+          <li>When the process is running, the base register for each of these segments contains the physical address of a linear page table for that segment</li>
+          <li>each process in the system now has a three-page table associated with it</li>
+          <li>On a context switch, these registers must be changed to reflect the location of the page tables of the newly-running process</li>
+        </ul>
+      </li>
+      <li>On the TLB miss → hardware uses the segment bits to determine which base and bound pair to use
+        <ul>
+          <li>Hardware takes the physical address and combines it with VPN to form an address of the page table entry</li>
+          <li>The critical difference in our hybrid scheme is the presence of a bounds register per segment</li>
+          <li>But…
+            <ul>
+              <li>if we have a sparsely-used heap, we can still end up with a lot of page table waste</li>
+              <li>since most of the memory is managed in <strong>page-sized units</strong>, page tables can be of arbitrary size, and finding free space is complicated</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Multi-level page tables
+        <ul>
+          <li>chop up the page table into page-sized units, then if an entire page of page-table entries is invalid, don’t allocate that page of the page table at all</li>
+          <li>Page directory</li>
+          <li>The page directory, in a simple two-level table, contains one entry per page of the page table</li>
+          <li>consists of a number of page directory entries (PDE)</li>
+          <li>A PDE (minimally) has a valid bit and a page frame number (PFN), similar to a PTE.
+            <ul>
+              <li>But the meaning of valid bit is different, if it is valid, it means at least one of the pages of the page table that the entry points to is valid</li>
+            </ul>
+          </li>
+          <li>the multi-level table only allocates page-table space in proportion to the amount of address space you are using</li>
+          <li>each portion of the page table fits neatly within a page, making it easier to manage memory</li>
+          <li>level of indirection using the page directory, which points to pieces of the page tables</li>
+          <li>In the case of miss
+            <ul>
+              <li>two loads from memory will be required
+                <ul>
+                  <li>one for the page directory, one for PTE itself</li>
+                </ul>
+              </li>
+              <li>time-space tradeoff</li>
+              <li>complexity</li>
+            </ul>
+          </li>
+          <li>To build a two-level page table for this address space, we start with our full linear page table and break it up into page-sized units.</li>
+          <li>As a result, we need four bits of the VPN to index into the directory; we use the top four bits of the VPN</li>
+          <li>page-directory entry (PDE) with a simple calculation: PDEAddr = PageDirBase + (PDIndex * sizeof(PDE)).</li>
+        </ul>
+      </li>
+      <li>More than two-levels</li>
+      <li>Translation process
+        <ul>
+          <li>the physical address is formed directly without accessing the page table at all, as before. Only upon a TLB miss does the hardware need to perform the full multi-level lookup.</li>
+        </ul>
+      </li>
+      <li>Inverted Page Tables
+        <ul>
+          <li>Even more extreme space saving in the world of page tables is found with inverted page tables</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>some systems place such page tables in kernel virtual memory, allowing the system to swap some page tables to disk when memory pressure gets a little tight.</li>
+</ul>
+
+<p>In summary, it also introduces increased complexity, potential memory overhead, challenges in address translation and memory protection, and fragmentation concerns, which need to be carefully considered and managed in the design and implementation of such a memory management scheme.</p>
+
+<p>PTE → bit의 순서와 optimization</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.20]]></summary></entry><entry><title type="html">OS-HW2 Summary</title><link href="http://localhost:4000/recent/OS-HW2/" rel="alternate" type="text/html" title="OS-HW2 Summary" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/recent/OS-HW2</id><content type="html" xml:base="http://localhost:4000/recent/OS-HW2/"><![CDATA[<h1 id="hw-2">HW 2</h1>
+
+<p>First of all, it was the first assignment that I have not completed since I start Computer Science Major… I slept 11 hours for 4 days.</p>
+
+<ul>
+  <li>Delta debugging:
+    <ul>
+      <li>a test input minimization technique that takes a target program together with a crashing test input, and then automatically derives a part of the test input that still makes the program crash.</li>
+      <li>This algorithm receives three inputs: (1) 𝑝, an executable binary of a target program, (2) 𝑡, a test input that crashes the target program, and (3) 𝑐, a condition to determine the crash.</li>
+    </ul>
+  </li>
+  <li>
+    <p>Overall requirement</p>
+
+    <p>it checks if the regions of size 𝑠 (Line 13) crash 𝑝 while preserving the crash behavior. If found, the algorithm updates 𝑡𝑚 and continues the reduction with it (Lines 14-17). If the algorithm could not find a reduced crashing input with 𝑠, it decrements s by one (Line 19), and repeats the input subsequence exploration until 𝑠 becomes zero (Line 3)</p>
+
+    <ul>
+      <li>User interface:
+        <ul>
+          <li>must return an error message if a given argument is invalid</li>
+          <li>option arguments
+            <ul>
+              <li>I option: receive full path of the crashing input</li>
+              <li>m option: string appeared in the standard error</li>
+              <li>o option: new file to store the reduced crashing input</li>
+            </ul>
+          </li>
+          <li>After the option arguments
+            <ul>
+              <li>executable binary of the target program</li>
+              <li>If the target program needs to receive its own command-line arguments, multiple arguments must be given.</li>
+            </ul>
+          </li>
+          <li>User interrupt
+            <ul>
+              <li>Ctrl+C: for this case, cimin must stop the running test if exists, and prints out the size of the shortest crashing input found so far, produces the output with it, and terminates the execution.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>System Design
+        <ul>
+          <li>Running the target program
+            <ul>
+              <li>To run the target program, cimin must use fork() to create a new process, and exec() (or its variants) to load the target program in the created process.</li>
+              <li>Assumption: receives input via standard input and sends out crash message to standard error</li>
+            </ul>
+          </li>
+          <li>Using Pipe
+            <ul>
+              <li>Target program receives input via standard input and sends out crash message to standard error. To pass input to the target program, cimin must use unnamed pipe (i.e., pipe()) to redirect standard input.</li>
+              <li>Also, it use to redirect the standard error to receive the error message from the target program execution</li>
+              <li>Assumption: We assume that the target program produces crash message to standard error, and we can find a keyword to determine if the same crash happens with reduced inputs.</li>
+            </ul>
+          </li>
+          <li>Using signal
+            <ul>
+              <li>cimin must reject the initial crashing input if its execution takes more than 3 seconds.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Buggy Programs
+        <ul>
+          <li>jsmn
+            <ul>
+              <li>Bug with heap-buffer overflow errors</li>
+              <li>LLVM AddressSanitizer → explicitly detect an occurrence of heap-buffer overflow buffer</li>
+              <li>You can characterize this crashing message by checking if it has “AddressSanitizer: heap-buffer-overflow”.</li>
+            </ul>
+          </li>
+          <li>libxml2
+            <ul>
+              <li>Bugs with null pointer deference errors.</li>
+              <li>You can trigger this bug by executing xmllint with option “–recover –postvalid -” and passing libxml2/testcases/crash.xml to standard input.</li>
+              <li>The crashing symptom can be identified by checking if “SEGV on unknown address” is printed to standard error. This error message is produced by LLVM AddressSanitizer when a crash occurs by null pointer dereference.</li>
+            </ul>
+          </li>
+          <li>balance
+            <ul>
+              <li>balance is a toy example program that checks if the given input has well-balanced parenthesis or not.</li>
+              <li>When this program receives balance/testcases/fail via standard input, it will fall into infinite loop.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Report writing
+        <ul>
+          <li>Must not exceed 3 pages</li>
+          <li>Note that the evaluation is primary based on your report, and your implementation will be tested to check whether it consistently works as described in the report</li>
+        </ul>
+      </li>
+      <li>Submission
+        <ul>
+          <li>Report → PDF</li>
+          <li>Makefile</li>
+          <li><a href="http://README.md">README.md</a></li>
+          <li>Runnable at the peace.handong.edu</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p>Crash_copy.json</p>
+
+    <p>→ Only with the new line character → no output</p>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS HW 2... Prof. Hong...]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 16</title><link href="http://localhost:4000/recent/Chapter-16/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 16" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-16</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-16/"><![CDATA[<p>Segmentation</p>
 
 <ul>
   <li>Why not have a base and bounds pair per logical segment</li>
@@ -395,68 +589,252 @@
     </ul>
   </li>
   <li>One major problem with many of the approaches described above is their lack of scaling.</li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.17]]></summary></entry><entry><title type="html">Vs code server error</title><link href="http://localhost:4000/recent/Vs_code_error/" rel="alternate" type="text/html" title="Vs code server error" /><published>2023-03-19T00:00:00+09:00</published><updated>2023-03-19T00:00:00+09:00</updated><id>http://localhost:4000/recent/Vs_code_error</id><content type="html" xml:base="http://localhost:4000/recent/Vs_code_error/"><![CDATA[<h2 id="vs-code로만-서버-접속이-안되는-경우">Vs code로만 서버 접속이 안되는 경우</h2>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.17]]></summary></entry><entry><title type="html">InterProcess Communication</title><link href="http://localhost:4000/recent/IPC/" rel="alternate" type="text/html" title="InterProcess Communication" /><published>2023-04-15T00:00:00+09:00</published><updated>2023-04-15T00:00:00+09:00</updated><id>http://localhost:4000/recent/IPC</id><content type="html" xml:base="http://localhost:4000/recent/IPC/"><![CDATA[<p>Signal</p>
 
-<p>VS code 서버 접속이 다른 경로로는 가능하지만 vs code로 안되는 경우가 존재한다. <br />
-서버 내에 vs code server파일의 문제일 가능성이 높다. 해결하는 방법은 어렵지 않다. <br /></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -rf .vscode-server/
-</code></pre></div></div>
-
-<p>Good!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[왜 안들어가지지?]]></summary></entry><entry><title type="html">3rd week in handong</title><link href="http://localhost:4000/recent/3rd_week/" rel="alternate" type="text/html" title="3rd week in handong" /><published>2023-03-18T00:00:00+09:00</published><updated>2023-03-18T00:00:00+09:00</updated><id>http://localhost:4000/recent/3rd_week</id><content type="html" xml:base="http://localhost:4000/recent/3rd_week/"><![CDATA[<h2 id="i-am-at-the-end-of-3rd-week-in-handong">I am at the end of 3rd week in Handong.</h2>
-<p><br /></p>
-
-<p>The 3rd and 1st semesters at Handong are called “사망년” because it is busy as “hell”. <br />
-And I am passing the 3rd week. This semester, there were lots of changes. <br />
-I joined ISEL and met co-workers who share informations and visions. <br />
-I am getting familiar with the Linux system, starting to use notion and slack, and starting to learn query statements.</p>
-
-<p><br /> I am really happy to learn and I hope this happiness last at least until the end of this semester.</p>
-
-<p><img src="../../../assets/sudo_boo.png" width="700" height="270" /></p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[한동에서의 3주차]]></summary></entry><entry><title type="html">HGU Sleep Over Macro</title><link href="http://localhost:4000/recent/sleepovermacro/" rel="alternate" type="text/html" title="HGU Sleep Over Macro" /><published>2023-03-01T00:00:00+09:00</published><updated>2023-03-01T00:00:00+09:00</updated><id>http://localhost:4000/recent/sleepovermacro</id><content type="html" xml:base="http://localhost:4000/recent/sleepovermacro/"><![CDATA[<h1 id="handong-global-university-sleep-over-macro">Handong Global University Sleep Over Macro</h1>
-
-<p>대학교 외박 신청 사이트는 굉장히 번거로운 부분이 많았다. 이를 해소하고자 랩실 친구와 매크로를 만들었다.</p>
-
-<p><a href="https://github.com/newwin01/Sleep-Over-Macro">https://github.com/newwin01/Sleep-Over-Macro</a></p>
-
-<h2 id="this-is-hgu-sleep-over-macro-version-100">This is HGU Sleep over macro version 1.0.0</h2>
-
-<h3 id="you-can-sign-up-for-a-sleepover-using-this-program">You can sign up for a sleepover using this program.</h3>
-
-<p>You need to enter the “hisnet” id and password. Then, type the venue and purpose of the sleepover. 
-The format will be:</p>
-<blockquote>
-  <p>“venue”에서 “purpose.”</p>
-</blockquote>
-
-<p>If you edit the source code, you may put the parameter permanently. It is up to you.</p>
-
-<p>I and SB have more ideas about it; please wait for a more updated version.
-Possible updates:</p>
 <ul>
-  <li>Save id &amp; pw/autofill</li>
-  <li>Execute the program in any dir</li>
-  <li>Choose multiple days</li>
-</ul>
+  <li>There can be hardware interrupts, but software interrupts as well</li>
+  <li>GNU signal can be a great reference.
+    <ul>
+      <li>Linux relies on GNU</li>
+    </ul>
+  </li>
+  <li>Signal API → type of interrupt, handler</li>
+  <li>Signal1.c
+    <ul>
+      <li>function pointer → address of the program</li>
+      <li>handler has no return but one input value; signal input is given</li>
+      <li>Check signal is whether Sigint</li>
+      <li>ctrl + c → now task to the program from the outside</li>
+      <li>It changes the control flow of the operation</li>
+    </ul>
+  </li>
+  <li>Signal2.c
+    <ul>
+      <li>Alarm signal</li>
+      <li>need to handle regular alarm</li>
+      <li>Timer interrupt occurs by a sec</li>
+      <li>by signaling, preemption happens and context switch as well</li>
+    </ul>
+  </li>
+  <li>Pipe1.c
+    <ul>
+      <li>Nonzero value → error</li>
+      <li>pipe is a kind of file
+        <ul>
+          <li>File is anything that can have stream of information</li>
+        </ul>
+      </li>
+      <li>Parent and child has same file description information</li>
+      <li>Pipe works for reading and writing</li>
+      <li>If the value is broken, make to write remaining data (buffer)</li>
+      <li>Writing behavior depends on OS/ return sent value, it is because it has limited space of buffer</li>
+      <li>No more data comes to the pipe</li>
+      <li>3 is reading pipe, 4 is writing pipe</li>
+      <li>reading happens up to 31 characters</li>
+      <li>Child and parent process</li>
+      <li>Through using file, parent and child process exchange their data</li>
+      <li>It is something shared exclusively
+        <ul>
+          <li>Doesn’t have global name to be not interrupted by other processes.</li>
+          <li>For one to one communication</li>
+        </ul>
+      </li>
+      <li>Unnamed pipe → use to make communicate</li>
+      <li>multiple process invoked at same time, it is to difficult to clarify sender and messages
+        <ul>
+          <li>Synchronization</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Pipe2.c
+    <ul>
+      <li>duplicate operation</li>
+      <li>hello program is loaded</li>
+      <li>standard ouput goes to the pipe</li>
+      <li>Hello is executed, sent to the pipe and show up at the display</li>
+      <li>invoke the program at the middle of the program</li>
+      <li>Library → popen (read how to utilizte the API)
+        <ul>
+          <li>File is pipe</li>
+          <li>execution results is given to file actually</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[IPC lectures from Prof.Hong]]></summary></entry><entry><title type="html">Paging &amp;amp; Segmentation</title><link href="http://localhost:4000/recent/Paging&Segmentation/" rel="alternate" type="text/html" title="Paging &amp;amp; Segmentation" /><published>2023-04-15T00:00:00+09:00</published><updated>2023-04-15T00:00:00+09:00</updated><id>http://localhost:4000/recent/Paging&amp;Segmentation</id><content type="html" xml:base="http://localhost:4000/recent/Paging&amp;Segmentation/"><![CDATA[<h2 id="created-by-chatgpt">Created by ChatGPT</h2>
 
-<h2 id="requirements">Requirements</h2>
+<p>The main disadvantage of using segmentation in operating systems is the potential for fragmentation, which can occur in two forms: external fragmentation and internal fragmentation.</p>
 
-<h4 id="python">Python</h4>
-<h4 id="selenium">Selenium</h4>
-<h4 id="chromedriver-and-appropriate-chrome-version">Chromedriver and appropriate chrome version</h4>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[With Acquaintance...]]></summary></entry><entry><title type="html">Window Error</title><link href="http://localhost:4000/recent/window-error/" rel="alternate" type="text/html" title="Window Error" /><published>2023-02-26T00:00:00+09:00</published><updated>2023-02-26T00:00:00+09:00</updated><id>http://localhost:4000/recent/window-error</id><content type="html" xml:base="http://localhost:4000/recent/window-error/"><![CDATA[<h1 id="windows-error">Windows Error</h1>
+<ol>
+  <li>External Fragmentation: This occurs when the free memory in the system becomes scattered in small chunks, making it difficult to allocate contiguous blocks of memory to satisfy larger memory requests. As a result, even though the total free memory may be sufficient, it may not be available in a contiguous block, leading to inefficient memory utilization.</li>
+  <li>Internal Fragmentation: This occurs when allocated memory segments are larger than what the process actually needs, resulting in wasted memory space within a segment. This can happen when segments are allocated in fixed sizes, and a process does not fully utilize the entire segment, leaving unused memory within the segment.</li>
+</ol>
 
-<p>There is an error that dragging the mouse makes a dragged portion of the display black on the window OS.</p>
+<p>Both external and internal fragmentation can lead to reduced overall system performance and memory efficiency. Fragmentation can cause increased overhead in memory allocation and deallocation operations, as well as inefficient use of memory resources, which can result in decreased system performance and wasted memory.</p>
 
-<p><img src="../../../assets/error.jpg" width="700" height="270" /></p>
+<p>Additionally, segmentation can also increase the complexity of memory management algorithms and may require additional hardware support, such as hardware-based address translation or segment table management, which can add overhead and increase system complexity.</p>
 
-<p>If you executes following scripts on the command prompt, you can solve the problem. 
-<br /></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo off
-taskkill /f /im explorer.exe
-attrib %userprofile%\appdata\local\iconcache.db -s -r -h
-del /q %userprofile%\appdata\local\iconcache.db
-start explorer.exe
-exit
-</code></pre></div></div>
+<p>In contrast, other memory management techniques, such as paging, which divides the memory into fixed-size blocks called pages, do not suffer from fragmentation issues. Paging allows for more efficient and flexible memory allocation and can provide better memory utilization compared to segmentation, particularly in large and complex systems.</p>
 
-<h5 id="from--httpsanswersmicrosoftcomko-krwindowsforumwindows_10-filesec9c88eb8f84ec9ab0104a04441e-64c0-4238-af0b-34a45d2737b3auth1">from: <br /> https://answers.microsoft.com/ko-kr/windows/forum/windows_10-files/%EC%9C%88%EB%8F%84%EC%9A%B010/4a04441e-64c0-4238-af0b-34a45d2737b3?auth=1</h5>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[1st Posting]]></summary></entry><entry><title type="html">[Jekyll] 블로그 포스팅하는 방법</title><link href="http://localhost:4000/recent/my-first-post/" rel="alternate" type="text/html" title="[Jekyll] 블로그 포스팅하는 방법" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/my-first-post</id><content type="html" xml:base="http://localhost:4000/recent/my-first-post/"><![CDATA[<p>테스트를 하고 있고 잘 된다!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[테스트 중]]></summary></entry></feed>
+<p>Overall, the main disadvantage of using segmentation in operating systems is the potential for fragmentation, which can lead to reduced memory efficiency, increased overhead, and decreased system performance.</p>
+
+<p>While paging as a memory management technique has several advantages, such as efficient memory utilization, simplified address translation, and ease of implementation, it also has some disadvantages. These disadvantages include:</p>
+
+<ol>
+  <li>Fragmentation within Pages: Paging can suffer from internal fragmentation, where the allocated memory within a page may not be fully utilized by a process. This occurs when the size of the page is larger than the actual memory requirements of the process, resulting in wasted memory space within a page. This can reduce overall memory efficiency and lead to increased memory overhead.</li>
+  <li>Increased Page Table Size: Paging requires a page table to map virtual addresses to physical addresses. The size of the page table is directly proportional to the size of the virtual address space, which can be large for processes with a large address space. This can result in increased memory overhead, as the page table needs to be stored in memory and may consume a significant amount of memory space, especially in systems with multiple processes running concurrently.</li>
+  <li>Overhead of Page Table Lookups: Paging introduces an additional step of address translation through the page table, which adds overhead to memory access times. This overhead can impact system performance, especially in systems with high levels of paging activity, where frequent page table lookups may result in increased CPU cycles and memory access times.</li>
+  <li>Increased I/O Overhead: Paging can also result in increased I/O overhead, as pages may need to be loaded from secondary storage (such as disk) into physical memory when they are accessed for the first time, or when the system encounters a page fault. This can result in increased disk I/O operations, which may impact system performance and responsiveness.</li>
+  <li>Limited Flexibility: Paging typically uses fixed-size pages, which may not always align well with the memory requirements of different processes. This can result in memory waste if a process needs a small amount of memory that is less than the page size. Additionally, if a process requires a larger memory allocation that spans multiple pages, it may result in increased overhead due to page table entries and additional address translation.</li>
+</ol>
+
+<p>Despite these disadvantages, paging remains a widely used and effective memory management technique in many operating systems due to its advantages in terms of memory utilization, address translation simplicity, and ease of implementation. However, addressing the limitations of paging, such as internal fragmentation and page table overhead, may require additional techniques such as page coloring, multi-level page tables, or hybrid approaches combining paging with other memory management techniques to optimize system performance and memory efficiency.</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[Paging & Segmentation]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 13</title><link href="http://localhost:4000/recent/Chapter-13/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 13" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-04-10T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-13</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-13/"><![CDATA[<p>The abstraction: Address Space</p>
+
+<ul>
+  <li>Early Systems
+    <ul>
+      <li>OS was a set of routines that sat in memory</li>
+      <li>Use the set of the memory</li>
+      <li>Multiprogramming and Time Sharing
+        <ul>
+          <li>Multiprogramming</li>
+          <li>Utilization</li>
+          <li>Efficiency</li>
+          <li>Time Sharing</li>
+          <li>Interactivity</li>
+          <li>Protection</li>
+        </ul>
+      </li>
+      <li>The address space
+        <ul>
+          <li>easy to use abstract of physical memory</li>
+          <li>code
+            <ul>
+              <li>have to live in memory somewhere</li>
+            </ul>
+          </li>
+          <li>stack
+            <ul>
+              <li>keep track of where it is in the function call chain</li>
+              <li>grow upward</li>
+            </ul>
+          </li>
+          <li>heap
+            <ul>
+              <li>dynamic allocating memory</li>
+              <li>grows downward</li>
+            </ul>
+          </li>
+          <li>The whole thing is just a convention</li>
+          <li>By putting stack and heap opposite, hopefully, grow well</li>
+          <li>What if Multiple threads co-exists → abstraction required</li>
+        </ul>
+      </li>
+      <li>Virtualizing Memory
+        <ul>
+          <li>Transparency
+            <ul>
+              <li>Program should not be aware of the fact that memory is virtualized</li>
+              <li>OS does works to multiplex memory</li>
+            </ul>
+          </li>
+          <li>Efficiency
+            <ul>
+              <li>OS strive to make the virtualization as efficient as possible</li>
+              <li>Both time and space</li>
+              <li>rely on hardware</li>
+            </ul>
+          </li>
+          <li>Protection
+            <ul>
+              <li>make sure to protect processes from one another as well as the OS itself from processes</li>
+              <li>Property of isolation
+  -</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.13]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 15</title><link href="http://localhost:4000/recent/Chapter-15/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 15" /><published>2023-04-01T00:00:00+09:00</published><updated>2023-04-01T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-15</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-15/"><![CDATA[<ul>
+  <li>Limited Direct Execution (LDE)
+    <ul>
+      <li>Make the program run directly on the hardware</li>
+      <li>OS gets involved and makes sure the “right” thing happens</li>
+      <li>Efficient virtualization, interposing at that critical point</li>
+      <li>interposing at those critical point in the time, OS ensure that it maintains the control</li>
+    </ul>
+  </li>
+  <li>Flexibility
+    <ul>
+      <li>we like for program to be able to use their address spaces in whatever way they would like</li>
+    </ul>
+  </li>
+  <li>Address translation
+    <ul>
+      <li>Hardware-based address translation(address translation)
+        <ul>
+          <li>Virtual address provided by the instruction to a physical address where the desired location</li>
+          <li>OS get involved at key points to set up hardware
+            <ul>
+              <li>Manage memory</li>
+            </ul>
+          </li>
+          <li>Illusion of program has own memory, own code and own data</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Assumption
+    <ul>
+      <li>Small space</li>
+      <li>less than size of physical memory, and all are in same size</li>
+    </ul>
+  </li>
+  <li>Address space starts at address 0 and grows to a maximum of 16 KB</li>
+  <li>relocate and transparent?</li>
+  <li>Dynamic relocation
+    <ul>
+      <li>base and bound(limit) register as dynamic relocation</li>
+      <li>Translation (Address translation)
+        <ul>
+          <li>Each memory reference generated by the process is a virtual address</li>
+          <li>Hardware in turn adds the contents of the base register to this address</li>
+          <li>Result is a physical address</li>
+          <li>Due to relocationof the address happens at runtime, we can move address spaces even after the process started running → dynamic relocation</li>
+        </ul>
+      </li>
+      <li>Making sure memory reference is within bounds</li>
+      <li>Memory management unit
+        <ul>
+          <li>size of the address space</li>
+          <li>holds the physical address at the end of the address space</li>
+        </ul>
+      </li>
+      <li>OS Issues
+        <ul>
+          <li>First, the OS must take actions when a process is created, finding space for its address space in memory</li>
+          <li>Os will have to search a data structure(free list) to find room for new address space</li>
+          <li>Taken actions when a process is terminated, reclaiming all of its memory for x</li>
+          <li>Third, the OS must also be taken action when a context switch occurs and needs to save and restore the base-and-bound pairs when it switches between processes
+            <ul>
+              <li>It is privileged operations</li>
+              <li>Required to access base-and-bounds registers; if a process, running in user mode, attempts to do so, the CPU will raise an exception and the OS will likely terminate the process</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Process Structure or Process Control Block</li>
+      <li>Summary
+        <ul>
+          <li>Address translation</li>
+          <li>Key to the efficiency of this technique is hardware support</li>
+          <li>Transparent the process</li>
+          <li>Base and bound register</li>
+          <li>Protection</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.15]]></summary></entry></feed>
