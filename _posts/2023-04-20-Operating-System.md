@@ -21,11 +21,11 @@ excerpt: "Help me..."
 
 [Chapter 16](../Chapter-16)
 
-<!-- [Chapter 17](Chapter%2017%206c551db1f931424ab60e2c2506da36dc.md) -->
+[Chapter 17](../Chapter-17)
 
-<!-- [Chapter 18](Chapter%2018%203bc3758402584e069131661de2081483.md) -->
+[Chapter 18](../Chapter-18)
 
-<!-- [Chapter 19](Chapter%2019%205b51ddf80556404c90620eed1a7cfd67.md) -->
+[Chapter 19](../Chapter-19)
 
 <!-- [Chapter 20](Chapter%2020%20beec124d35e4434096e789504e018172.md) -->
 
