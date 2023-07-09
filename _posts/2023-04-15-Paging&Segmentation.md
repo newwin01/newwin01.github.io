@@ -1,4 +1,14 @@
-# Paging and Segmenation
+---
+title:  "Paging & Segmentation"
+excerpt: "Paging & Segmentation"
+
+categories:
+  - OS
+tags:
+  - [OS]
+---
+
+## Created by ChatGPT
 
 The main disadvantage of using segmentation in operating systems is the potential for fragmentation, which can occur in two forms: external fragmentation and internal fragmentation.
 

@@ -29,6 +29,42 @@ var store = [{
         "url": "/recent/Vs_code_error/",
         "teaser": null
       },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 15",
+        "excerpt":"Limited Direct Execution (LDE) Make the program run directly on the hardware OS gets involved and makes sure the “right” thing happens Efficient virtualization, interposing at that critical point interposing at those critical point in the time, OS ensure that it maintains the control Flexibility we like for program to...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-15/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 6",
+        "excerpt":"Chapter 6: Mechanism Limited Direct Execution Theme: OS sets up the trap handler and starting an interrupt timer, and then by only running processes in a restricted mode. many jobs running seemingly at the same time. Time Sharing Question: Performance Control Concurrency? OS disable interrupt during interrupt processing number of...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-6/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 7",
+        "excerpt":"Low-level mechanisms of running processes Series of scheduling policies (disciplines) Number of simplifying assumptions → workload *The assumption of the chapter Each job runs for the same amount of time All jobs arrive at the same time All jobs only use the CPU (no I/O) The run-time of each job...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-7/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 13",
+        "excerpt":"The abstraction: Address Space Early Systems OS was a set of routines that sat in memory Use the set of the memory Multiprogramming and Time Sharing Multiprogramming Utilization Efficiency Time Sharing Interactivity Protection The address space easy to use abstract of physical memory code have to live in memory somewhere...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-13/",
+        "teaser": null
+      },{
+        "title": "InterProcess Communication",
+        "excerpt":"Signal There can be hardware interrupts, but software interrupts as well GNU signal can be a great reference. Linux relies on GNU Signal API → type of interrupt, handler Signal1.c function pointer → address of the program handler has no return but one input value; signal input is given Check...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/IPC/",
+        "teaser": null
+      },{
+        "title": "Paging & Segmentation",
+        "excerpt":"Created by ChatGPT The main disadvantage of using segmentation in operating systems is the potential for fragmentation, which can occur in two forms: external fragmentation and internal fragmentation. External Fragmentation: This occurs when the free memory in the system becomes scattered in small chunks, making it difficult to allocate contiguous...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Paging&Segmentation/",
+        "teaser": null
+      },{
         "title": "Operating Systems: Three Easy Pieces Ch. 16",
         "excerpt":"Segmentation Why not have a base and bounds pair per logical segment Segment independently in physical memory Sparse address spaces What we need to first do is extract the offset into the heap Illegal address → segmentation fault Which Segment are we referring to? Explicit approach upper two bits heap...","categories": ["OS"],
         "tags": ["OS"],
@@ -51,5 +87,17 @@ var store = [{
         "excerpt":"Paging: Faster Translations TLB: Translation-lookaside buffer Part of MMU: Memory-management unit hardware cache: unlike memory cache, it is visible Hardware-managed TLB extract virtual page number from virtual address and check TLB holds a translation TLB Hit : TLB hold the translation TLB Miss : TLB doesn’t have the translatinon In...","categories": ["OS"],
         "tags": ["OS"],
         "url": "/recent/Chapter-19/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 20",
+        "excerpt":"Paging: Smaller Tables Page tables are too big and thus consume too much memory. 32-bit address space (2^32 bytes), with 4KB (2^12 bytes) and 4-byte page-table entry Simple array-based page tables are too big, taking up far too much memory on typical systems We are in search of some techniques...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-20/",
+        "teaser": null
+      },{
+        "title": "OS-HW2 Summary",
+        "excerpt":"HW 2 First of all, it was the first assignment that I have not completed since I start Computer Science Major… I slept 11 hours for 4 days. Delta debugging: a test input minimization technique that takes a target program together with a crashing test input, and then automatically derives...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/OS-HW2/",
         "teaser": null
       }]
