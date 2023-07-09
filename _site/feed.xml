@@ -1,21 +1,442 @@
-<<<<<<< HEAD
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-18T22:42:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Window Error</title><link href="http://localhost:4000/recent/window-error/" rel="alternate" type="text/html" title="Window Error" /><published>2023-02-26T00:00:00+09:00</published><updated>2023-02-26T00:00:00+09:00</updated><id>http://localhost:4000/recent/window-error</id><content type="html" xml:base="http://localhost:4000/recent/window-error/"><![CDATA[<h1 id="windows-error">Windows Error</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-09T18:46:01+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Chapter 16</title><link href="http://localhost:4000/recent/Chapter-16/" rel="alternate" type="text/html" title="Chapter 16" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-16</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-16/"><![CDATA[<p>Segmentation</p>
 
-<p>There is an error that dragging the mouse makes a dragged portion of the display black on the window OS.</p>
+<ul>
+  <li>Why not have a base and bounds pair per logical segment</li>
+  <li>Segment independently in physical memory</li>
+  <li>Sparse address spaces</li>
+  <li>What we need to first do is extract the offset into the heap</li>
+  <li>Illegal address → segmentation fault</li>
+  <li>Which Segment are we referring to?</li>
+  <li>Explicit approach
+    <ul>
+      <li>upper two bits heap indicates which offset</li>
+      <li>next 12 bits as the offset into the segment</li>
+      <li>By adding the base register to the offset, the hardware arrives at the final physical space</li>
+    </ul>
+  </li>
+  <li>Implicit approach
+    <ul>
+      <li>hardware determines the segment by noticing how the address was formed</li>
+      <li>address is within the code segment</li>
+    </ul>
+  </li>
+  <li>Stack
+    <ul>
+      <li>one critical difference, it grows backward</li>
+      <li>hardware must now translate such virtual addresses slightly differently</li>
+      <li>We simply add the negative offset to the base</li>
+    </ul>
+  </li>
+  <li>Sharing
+    <ul>
+      <li>Code sharing</li>
+      <li>Protection bit → extra support from the hardware</li>
+    </ul>
+  </li>
+  <li>Fine-grained vs Coarse-grained Segmentation
+    <ul>
+      <li>Coarse-grained
+        <ul>
+          <li>chops up the address space into relatively large</li>
+        </ul>
+      </li>
+      <li>Fine-grained
+        <ul>
+          <li>allowed for address space to consist of a large number smaller segment</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Segment table
+    <ul>
+      <li>usually support the creation of a very large number</li>
+    </ul>
+  </li>
+  <li>OS Support
+    <ul>
+      <li>OS must make sure to set up these registers correctly before letting the process run again.</li>
+      <li>The second, and more important, issue is managing free space in physical memory.</li>
+      <li>External fragmentation
+        <ul>
+          <li>The general problem that arises is that physical memory quickly becomes full of little holes of free space, making it difficult to allocate new segments, or to grow existing ones.</li>
+          <li>One solution to this problem would be to compact physical memory by rearranging the existing segments.</li>
+          <li>best fit</li>
+          <li>worst fit</li>
+          <li>first fit</li>
+          <li>buddy algorithm</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Overall
+    <ul>
+      <li>Segmentation solves a number of problems, and helps us build a more effective virtualization of memory. Beyond just dynamic relocation, segmentation can better support sparse address spaces, by avoiding the huge potential waste of memory between logical segments of the address space.</li>
+      <li>Problems
+        <ul>
+          <li>External fragmentation</li>
+          <li>Segmentation is not flexible</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Operating System (feat. Three easy pieces)</title><link href="http://localhost:4000/recent/Operating-System/" rel="alternate" type="text/html" title="Operating System (feat. Three easy pieces)" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Operating-System</id><content type="html" xml:base="http://localhost:4000/recent/Operating-System/"><![CDATA[<h2 id="followings-are-notes-of-operating-system">Followings are notes of operating system</h2>
 
-<p><img src="../../../assets/error.jpg" width="700" height="270" /></p>
+<!-- [Chatper 6](Chatper%206%20eb619004b46f41b18d8f36f7e301dafc.md) -->
 
-<p>If you executes following scripts on the command prompt, you can solve the problem. 
-<br /></p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo off
-taskkill /f /im explorer.exe
-attrib %userprofile%\appdata\local\iconcache.db -s -r -h
-del /q %userprofile%\appdata\local\iconcache.db
-start explorer.exe
-exit
+<!-- [Chatper 7](Chatper%207%207b10f22065ce41e1aac2ae0c0e510c37.md) -->
+
+<!-- [IPC](IPC%2042a8cefe997a46438d5f70b03a4fae3c.md) -->
+
+<!-- [HW 2](HW%202%20b0bcd96b50be47a39e9e47352cf7e8bd.md) -->
+
+<!-- [Chatper 13](Chatper%2013%20a5554fc1364141c88bd91da31832ff5c.md) -->
+
+<!-- [Chapter 15](../_posts\Chapter_15_7ca961e848194c0db9ad5faff30be7ec.md) -->
+
+<p><a href="../Chapter-16">Chapter 16</a></p>
+
+<p><a href="../Chapter-17">Chapter 17</a></p>
+
+<p><a href="../Chapter-18">Chapter 18</a></p>
+
+<p><a href="../Chapter-19">Chapter 19</a></p>
+
+<!-- [Chapter 20](Chapter%2020%20beec124d35e4434096e789504e018172.md) -->
+
+<!-- [Paging and Segmenation](Paging%20and%20Segmenation%200cdd68112f3e4a40b150bf9298e31d75.md) -->]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[Help me...]]></summary></entry><entry><title type="html">Chapter 19</title><link href="http://localhost:4000/recent/Chapter-19/" rel="alternate" type="text/html" title="Chapter 19" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-19</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-19/"><![CDATA[<p>Paging: Faster Translations</p>
+
+<ul>
+  <li>TLB: Translation-lookaside buffer
+    <ul>
+      <li>Part of MMU: Memory-management unit</li>
+      <li>hardware cache: unlike memory cache, it is visible</li>
+    </ul>
+  </li>
+  <li>Hardware-managed TLB
+    <ol>
+      <li>extract virtual page number from virtual address and check TLB holds a translation
+        <ol>
+          <li>TLB Hit : TLB hold the translation</li>
+          <li>TLB Miss : TLB doesn’t have the translatinon
+            <ol>
+              <li>In the case, update the TLB with the translation</li>
+              <li>It is costly since it has more memory access</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>avoid TLB miss is important</li>
+    </ol>
+  </li>
+  <li>Example
+    <ul>
+      <li>In the case of array
+        <ul>
+          <li>Since the array has continous memory, if we load memory unit by memory size, TLB hit occurs often</li>
+        </ul>
+      </li>
+      <li>Spatial locality
+        <ul>
+          <li>The element of the array are packed tightly into pages</li>
+        </ul>
+      </li>
+      <li>Temporal locality
+        <ul>
+          <li>Quick re-referencing of memory items in time</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Handling TLB miss
+    <ul>
+      <li>CISC (complex-instruction set computers), the old day system, engineer doesn’t believe OS
+        <ul>
+          <li>Therefore, hardware know exactly where the page tables located via a page-table base register</li>
+          <li>Hardware-managed TLB, uses fixed multi-level page table</li>
+        </ul>
+      </li>
+      <li>RISC (reduced-instrution set computers)
+        <ul>
+          <li>TLB miss occurs, hardware simply raise the exception</li>
+          <li>Software-managed TLB</li>
+          <li>On the TLB miss → exception → raises privileged level to kernel mode, and jumps to a trap handler</li>
+          <li>Important details
+            <ul>
+              <li>return-from-trap instructions needs to be a little different
+                <ul>
+                  <li>It resume the execution from the instruction “cause” the TLB miss because it now will occur TLB hit</li>
+                </ul>
+              </li>
+              <li>TLB miss-handling, need to extra careful not to cause an infinite chain of TLB miss
+                <ul>
+                  <li>Many solutions → keep TLB miss handler in physical memory</li>
+                  <li>reserve some entries in the TLB for permanenetly-valid translations and use some of those permananent translation slots for the handler code it self → wired translation</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Flexibility → OS can use any data structure it wants to implement page table</li>
+          <li>Simplicity → the hardware doesn’t have to do much on a miss</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>TLB Content
+    <ul>
+      <li>TLB might have 32, 64, 128 entries with fully associative</li>
+      <li>
+        <table>
+          <tbody>
+            <tr>
+              <td>VPN</td>
+              <td>PFN</td>
+              <td>other bits</td>
+            </tr>
+          </tbody>
+        </table>
+      </li>
+      <li>Other bits
+        <ul>
+          <li>valid bit - whether the entry has a valid translation or not</li>
+          <li>protection bit - how can a page can be accessed</li>
+          <li>Address-space identifier</li>
+          <li>dirty bit</li>
+        </ul>
+      </li>
+      <li>Context switches
+        <ul>
+          <li>the TLB contains virtual-to-physical translations that are only valid for the currently running process; these translations are not meaningful for other processes.</li>
+          <li>Need to be careful not to be use other TLB</li>
+          <li>If there is same vpn, the hardware can’t distinguish which entry is meant for which process</li>
+          <li>Solution
+            <ul>
+              <li>TLB flush
+                <ul>
+                  <li>flush the TLB on context switch, emptying TLB before running the new process
+                    <ul>
+                      <li>On a software-based system, this can be accomplished with an explicit (and privileged) hardware instruction; with a hardware-managed TLB, the flush could be enacted when the page-table base register is changed (note the OS must change the PTBR on a context switch anyhow)</li>
+                      <li>There is a cost, it must incur TLB misses at it touches its data and code pages</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>ASID
+                <ul>
+                  <li>address space identifier</li>
+                  <li>TLB can hold same VPN with ASID without confusion</li>
+                  <li>Two processes can share a page with this method</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Replacement policy
+        <ul>
+          <li>main issue: cache replacement; how can we replace?</li>
+          <li>LRU(Least-recently-used)
+            <ul>
+              <li>take advantage of locality in the memory-reference stream</li>
+            </ul>
+          </li>
+          <li>Random policy</li>
+        </ul>
+      </li>
+      <li>The real TLB
+        <ul>
+          <li>Page 193</li>
+        </ul>
+      </li>
+      <li>The use of TLBs in virtual memory systems can significantly improve address translation performance by caching frequently accessed page table entries on-chip, reducing the need to access main memory. This results in performance similar to that of non-virtualized memory. However, TLBs may be less effective for programs that access a large number of pages in a short time, leading to TLB misses and decreased performance. One solution to this issue is to use larger page sizes to increase TLB coverage, but TLB access can also become a bottleneck in the CPU pipeline, particularly with physically-indexed caches, and virtually-indexed caches introduce new hardware design issues.</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Chapter 18</title><link href="http://localhost:4000/recent/Chapter-18/" rel="alternate" type="text/html" title="Chapter 18" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-18</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-18/"><![CDATA[<p>Paging: Introduction</p>
+
+<ul>
+  <li>Page
+    <ul>
+      <li>Split up our address space into fixed-size units</li>
+      <li>With paging, physical memory is also split into some number of pages as well → page frame</li>
+      <li>Advantages
+        <ul>
+          <li>Flexibility → system will be able to support the abstraction of address space</li>
+          <li>simplicity → OS keeps a free list of all pages for this and just grabs the first four free pages off of the list</li>
+        </ul>
+      </li>
+      <li>per-process data structure known as a page table
+        <ul>
+          <li>Main role: address translation</li>
+        </ul>
+      </li>
+      <li>The inverted page table is not a per-process structure</li>
+      <li>To translate the virtual address that the process generated
+        <ul>
+          <li>we have to split into VPN (Virtual page number) and offset</li>
+          <li>movl 21, %eax → convert 21 to 01<strong>0101,</strong> bold → offset</li>
+        </ul>
+      </li>
+      <li>Where are page tables stored?
+        <ul>
+          <li>for 4-KB pages → 12-bit offset required</li>
+          <li>20-bit VPN implies that there are 2^20 translations that OS would have to manage for each process</li>
+          <li>Assume we need 4 bytes per page table entry to hold the physical translation plus other bits
+            <ul>
+              <li>If there is any process, the required bytes will be huge</li>
+              <li>So, we store the page table for each process in memory</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Simple form → Linear page table
+        <ul>
+          <li>for each content of each PTE, we have a number of different bits
+            <ul>
+              <li>valid bit: indicate whether the particular translation is valid
+                <ul>
+                  <li>unused → invalid</li>
+                </ul>
+              </li>
+              <li>protection bit: indicating whether the page could be read from</li>
+              <li>present bit: indicate whether this page is in physical memory or on disk</li>
+              <li>dirty bit: indicating whether the page has been modified since it was brought into memory</li>
+              <li>reference bit: to track whether a page has been accessed
+                <ul>
+                  <li>used in page replacement</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Paging → slow
+            <ul>
+              <li>the system must translate the virtual address</li>
+              <li>Then, the hardware must be where the page table is for the currently running process</li>
+              <li>Assume a single page-table base register contains the physical address of the starting location of the page table</li>
+              <li>Paging requires extra memory access in order to first fetch the translation from the page table</li>
+              <li>page tables will cause the system to run too slowly and take up too much memory.</li>
+            </ul>
+          </li>
+          <li>Memory trace
+            <ul>
+              <li>The first instruction moves the value zero (shown as $0x0) into the virtual memory address of the location of the array;</li>
+              <li>The second instruction increments the array index held in %eax, and the third instruction compares the contents of that register to the hex value 0x03e8, or decimal 1000.</li>
+              <li>where in virtual memory the code snippet and array are found, as well as the contents and location of the page table.</li>
+              <li>Let’s assume we have a linear (array-based) page table and that it is located at a physical address of 1 KB (1024)</li>
+              <li>Worries
+                <ul>
+                  <li>First, there is the virtual page the code lives on. Because the page size is 1 KB, virtual address 1024 resides on the second page of the virtual address space</li>
+                  <li>ts size is 4000 bytes (1000 integers), and it lives at virtual addresses 40000 through 44000 (not including the last byte). The virtual pages for this decimal range are VPN=39 … VPN=42. Thus, we need mappings for these pages.</li>
+                </ul>
+              </li>
+              <li>When it runs, each instruction fetch will generate two memory references: one to the page table to find the physical frame that the instruction resides within, and one to the instruction itself to fetch it to the CPU for processing.</li>
+              <li>one explicit memory reference in the form of the mov instruction; this adds another page table access first (to translate the array virtual address to the correct physical one) and then the array access itself.</li>
+              <li>Need to see the figure carefully
+  -</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Chapter 17</title><link href="http://localhost:4000/recent/Chapter-17/" rel="alternate" type="text/html" title="Chapter 17" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-17</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-17/"><![CDATA[<p>Free-Space Management</p>
+
+<p>When free-space management becomes more difficult is when the free space with user-level memory-allocation memory</p>
+
+<ul>
+  <li>Segmentation</li>
+  <li>External Fragmentation</li>
+  <li>Internal fragmentation
+    <ul>
+      <li>if an allocator hands out chunks of memory bigger than that requested, any unasked for (and thus unused) space in such a chunk</li>
+    </ul>
+  </li>
+  <li>void pointer</li>
+  <li>Low-level Mechanisms
+    <ul>
+      <li>Splitting and Coalescing
+        <ul>
+          <li>requesting more than space that is free will fail → splitting</li>
+          <li>will find a free chunk of memory that can satisfy request</li>
+          <li>What if returned space is in the middle of heap?</li>
+          <li>It may end up with divided arrays with continuous size</li>
+        </ul>
+      </li>
+      <li>Tracking the size of allocated regions
+        <ul>
+          <li>header block</li>
+          <li>Embedding Free list</li>
+          <li>mmap</li>
+          <li>Fragmented free spaces
+            <ul>
+              <li>go through the list and merge neighboring chunks</li>
+            </ul>
+          </li>
+          <li>Heap can grow heap
+            <ul>
+              <li>OS finds free physical pages, maps them into the address space of the requesting process, then returns the value of the end of the new heap</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Strategies
+    <ul>
+      <li>Best fit → search through the free list and find chunks of free memory that bigger than the request size then return one that is the smallest in that group of candidate</li>
+      <li>Worst fit → case find the largest chunk and return the requested amount</li>
+      <li>First fit → finds the first block that is big enough and returns the requested amount to the user
+        <ul>
+          <li>May pollute the beginning of the free list with a small objects</li>
+          <li>address-based ordering → keeping the list ordered by the address of free space</li>
+        </ul>
+      </li>
+      <li>Net fit → keeps an extra pointer to the location within the list where one was looking last
+        <ul>
+          <li>Spread the search for free space throughout the list more uniformly, thus avoiding splintering of the beginning of the list</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Segregated List
+    <ul>
+      <li>Slab allocator
+        <ul>
+          <li>The basic idea is simple: if a particular application has one (or a few) popular-sized requests that it makes, keep a separate list just to manage objects of that size</li>
+        </ul>
+      </li>
+      <li>Slab allocator
+        <ul>
+          <li>Specifically, when the kernel boots up, it allocates a number of object caches for kernel objects that are likely to be requested frequently</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Buddy allocation
+    <ul>
+      <li>big space of size 2^N</li>
+      <li>search for free space recursively divides free space by two until a block that is big enough to accommodate the request is found</li>
+      <li>may suffer internal fragmentation</li>
+      <li>When returning the 8KB block to the free list, the allocator checks whether the “buddy” 8KB is free; if so, it coalesces the two blocks into a 16KB block.</li>
+    </ul>
+  </li>
+  <li>One major problem with many of the approaches described above is their lack of scaling.</li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Vs code server error</title><link href="http://localhost:4000/recent/Vs_code_error/" rel="alternate" type="text/html" title="Vs code server error" /><published>2023-03-19T00:00:00+09:00</published><updated>2023-03-19T00:00:00+09:00</updated><id>http://localhost:4000/recent/Vs_code_error</id><content type="html" xml:base="http://localhost:4000/recent/Vs_code_error/"><![CDATA[<h2 id="vs-code로만-서버-접속이-안되는-경우">Vs code로만 서버 접속이 안되는 경우</h2>
+
+<p>VS code 서버 접속이 다른 경로로는 가능하지만 vs code로 안되는 경우가 존재한다. <br />
+서버 내에 vs code server파일의 문제일 가능성이 높다. 해결하는 방법은 어렵지 않다. <br /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -rf .vscode-server/
 </code></pre></div></div>
 
-<h5 id="from--httpsanswersmicrosoftcomko-krwindowsforumwindows_10-filesec9c88eb8f84ec9ab0104a04441e-64c0-4238-af0b-34a45d2737b3auth1">from: <br /> https://answers.microsoft.com/ko-kr/windows/forum/windows_10-files/%EC%9C%88%EB%8F%84%EC%9A%B010/4a04441e-64c0-4238-af0b-34a45d2737b3?auth=1</h5>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[Windows Error]]></summary></entry><entry><title type="html">Sleepovermacro</title><link href="http://localhost:4000/recent/sleepovermacro/" rel="alternate" type="text/html" title="Sleepovermacro" /><published>2022-03-01T00:00:00+09:00</published><updated>2022-03-01T00:00:00+09:00</updated><id>http://localhost:4000/recent/sleepovermacro</id><content type="html" xml:base="http://localhost:4000/recent/sleepovermacro/"><![CDATA[<h1 id="handong-global-university-sleep-over-macro">Handong Global University Sleep Over Macro</h1>
+<p>Good!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><summary type="html"><![CDATA[왜 안들어가지지?]]></summary></entry><entry><title type="html">3rd week in handong</title><link href="http://localhost:4000/recent/3rd_week/" rel="alternate" type="text/html" title="3rd week in handong" /><published>2023-03-18T00:00:00+09:00</published><updated>2023-03-18T00:00:00+09:00</updated><id>http://localhost:4000/recent/3rd_week</id><content type="html" xml:base="http://localhost:4000/recent/3rd_week/"><![CDATA[<h2 id="i-am-at-the-end-of-3rd-week-in-handong">I am at the end of 3rd week in Handong.</h2>
+<p><br /></p>
+
+<p>The 3rd and 1st semesters at Handong are called “사망년” because it is busy as “hell”. <br />
+And I am passing the 3rd week. This semester, there were lots of changes. I joined ISEL and met co-workers who share informations and visions. <br />
+I am getting familiar with the Linux system, starting to use notion and slack, and starting to learn query statements.</p>
+
+<p><br /> I am really happy to learn and I hope this happiness last at least until the end of this semester.</p>
+
+<p><img src="../../../assets/sudo_boo.png" width="700" height="270" /></p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><summary type="html"><![CDATA[한동에서의 3주차]]></summary></entry><entry><title type="html">Sleepovermacro</title><link href="http://localhost:4000/recent/sleepovermacro/" rel="alternate" type="text/html" title="Sleepovermacro" /><published>2023-03-01T00:00:00+09:00</published><updated>2023-03-01T00:00:00+09:00</updated><id>http://localhost:4000/recent/sleepovermacro</id><content type="html" xml:base="http://localhost:4000/recent/sleepovermacro/"><![CDATA[<h1 id="handong-global-university-sleep-over-macro">Handong Global University Sleep Over Macro</h1>
 
 <p>대학교 외박 신청 사이트는 굉장히 번거로운 부분이 많았다. 이를 해소하고자 랩실 친구와 매크로를 만들었다.</p>
 
@@ -45,7 +466,20 @@ Possible updates:</p>
 
 <h4 id="python">Python</h4>
 <h4 id="selenium">Selenium</h4>
-<h4 id="chromedriver-and-appropriate-chrome-version">Chromedriver and appropriate chrome version</h4>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[Handong Global University Sleep Over Macro]]></summary></entry><entry><title type="html">[Jekyll] 블로그 포스팅하는 방법</title><link href="http://localhost:4000/recent/my-first-post/" rel="alternate" type="text/html" title="[Jekyll] 블로그 포스팅하는 방법" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/my-first-post</id><content type="html" xml:base="http://localhost:4000/recent/my-first-post/"><![CDATA[<p>테스트를 하고 있고 잘 안되는 것 같아 매우 힘들다.</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html"><![CDATA[테스트 중]]></summary></entry><entry><title type="html">[Jekyll] 블로그 포스팅하는 방법</title><link href="http://localhost:4000/recent/Test/" rel="alternate" type="text/html" title="[Jekyll] 블로그 포스팅하는 방법" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/Test</id><content type="html" xml:base="http://localhost:4000/recent/Test/"><![CDATA[<p>테스트를 하고 있고 잘 안되는 것 같아 매우 힘들다.</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html"><![CDATA[테스트 중]]></summary></entry></feed>
-=======
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-02-27T00:08:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Window Error</title><link href="http://localhost:4000/recent/window-error/" rel="alternate" type="text/html" title="Window Error" /><published>2023-02-26T00:00:00+09:00</published><updated>2023-02-26T00:00:00+09:00</updated><id>http://localhost:4000/recent/window-error</id><content type="html" xml:base="http://localhost:4000/recent/window-error/"><![CDATA[]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">[Jekyll] 블로그 포스팅하는 방법</title><link href="http://localhost:4000/recent/my-first-post/" rel="alternate" type="text/html" title="[Jekyll] 블로그 포스팅하는 방법" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/my-first-post</id><content type="html" xml:base="http://localhost:4000/recent/my-first-post/"><![CDATA[<p>테스트를 하고 있고 잘 안되는 것 같아 매우 힘들다.</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html"><![CDATA[테스트 중]]></summary></entry><entry><title type="html">[Jekyll] 블로그 포스팅하는 방법</title><link href="http://localhost:4000/recent/Test/" rel="alternate" type="text/html" title="[Jekyll] 블로그 포스팅하는 방법" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/Test</id><content type="html" xml:base="http://localhost:4000/recent/Test/"><![CDATA[<p>테스트를 하고 있고 잘 안되는 것 같아 매우 힘들다.</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html"><![CDATA[테스트 중]]></summary></entry></feed>
->>>>>>> eb50b9696abbf231214c6bf1030f0f6072c5d597
+<h4 id="chromedriver-and-appropriate-chrome-version">Chromedriver and appropriate chrome version</h4>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[Handong Global University Sleep Over Macro]]></summary></entry><entry><title type="html">Window Error</title><link href="http://localhost:4000/recent/window-error/" rel="alternate" type="text/html" title="Window Error" /><published>2023-02-26T00:00:00+09:00</published><updated>2023-02-26T00:00:00+09:00</updated><id>http://localhost:4000/recent/window-error</id><content type="html" xml:base="http://localhost:4000/recent/window-error/"><![CDATA[<h1 id="windows-error">Windows Error</h1>
+
+<p>There is an error that dragging the mouse makes a dragged portion of the display black on the window OS.</p>
+
+<p><img src="../../../assets/error.jpg" width="700" height="270" /></p>
+
+<p>If you executes following scripts on the command prompt, you can solve the problem. 
+<br /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo off
+taskkill /f /im explorer.exe
+attrib %userprofile%\appdata\local\iconcache.db -s -r -h
+del /q %userprofile%\appdata\local\iconcache.db
+start explorer.exe
+exit
+</code></pre></div></div>
+
+<h5 id="from--httpsanswersmicrosoftcomko-krwindowsforumwindows_10-filesec9c88eb8f84ec9ab0104a04441e-64c0-4238-af0b-34a45d2737b3auth1">from: <br /> https://answers.microsoft.com/ko-kr/windows/forum/windows_10-files/%EC%9C%88%EB%8F%84%EC%9A%B010/4a04441e-64c0-4238-af0b-34a45d2737b3?auth=1</h5>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><summary type="html"><![CDATA[Windows Error]]></summary></entry><entry><title type="html">[Jekyll] 블로그 포스팅하는 방법</title><link href="http://localhost:4000/recent/my-first-post/" rel="alternate" type="text/html" title="[Jekyll] 블로그 포스팅하는 방법" /><published>2020-05-25T00:00:00+09:00</published><updated>2020-05-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/my-first-post</id><content type="html" xml:base="http://localhost:4000/recent/my-first-post/"><![CDATA[<p>테스트를 하고 있고 잘 된다!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><category term="jekyll" /><category term="Github" /><category term="Git" /><summary type="html"><![CDATA[테스트 중]]></summary></entry></feed>
