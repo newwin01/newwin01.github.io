@@ -100,4 +100,22 @@ var store = [{
         "tags": ["OS"],
         "url": "/recent/OS-HW2/",
         "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 21",
+        "excerpt":"Beyound Physical Memory: Mechanisms Memory Hierarchy → additional level, if OS needs to support large address space, it needs to keep every portion of address spaces even if it is not currently using Hard Disk Drive Why do we want to support a single large space? It is convenient to...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-21/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 22",
+        "excerpt":"Beyong Physical Memory: Policies Cache Management cache for virtual memory pages in the system Need to minimize cache misses Maximize the cache hit Average memory access time cost of disk access is so high in modern systems that even a tiny miss rate will quickly dominate the overall AMAT of...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-22/",
+        "teaser": null
+      },{
+        "title": "Automatic Patch Generation with Context-based Change Application",
+        "excerpt":"Automatic Patch Generation with Context-based Change Application Jindae Kim, Sunghun Kim Goal: I am collecting changes from human-written patches for new patch candidate generation. Automatic patch generation technique leveraging human-written patches with our context-based change application technique used by ConFix. Summary: An effective patch generation technique should have a large...","categories": ["APR"],
+        "tags": ["APR"],
+        "url": "/recent/ConFix/",
+        "teaser": null
       }]
