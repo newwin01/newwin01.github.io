@@ -113,9 +113,33 @@ var store = [{
         "url": "/recent/Chapter-22/",
         "teaser": null
       },{
+        "title": "알고리즘 분석과 벚꽃",
+        "excerpt":"거의 처음으로 한글로 블로그 포스팅을 써보는 것 같다! 아무래도 한국어가 제일 편하긴하다 ㅎ 블로그 포스팅을 학기 중에 하고자 헀지만 도저히 안되더라… 그래서 학기 중에 블로그 포스팅 할 것들 메모해놓고 방학 중에 일일히 쓰는 중이다! 날짜도 그 때 썼다고 생각하고 업로드 하는 중이기도 하고… ㅋㅋㅋ 한동에서의 3학년이 사망년이 되지 않기를 바라는...","categories": ["Blog"],
+        "tags": ["Blog"],
+        "url": "/recent/Prof.Yong-Algorithm-Analysis/",
+        "teaser": null
+      },{
         "title": "Automatic Patch Generation with Context-based Change Application",
-        "excerpt":"Automatic Patch Generation with Context-based Change Application Jindae Kim, Sunghun Kim Goal: I am collecting changes from human-written patches for new patch candidate generation. Automatic patch generation technique leveraging human-written patches with our context-based change application technique used by ConFix. Summary: An effective patch generation technique should have a large...","categories": ["APR"],
+        "excerpt":"Automatic Patch Generation with Context-based Change Application Paper Jindae Kim, Sunghun Kim Goal: I am collecting changes from human-written patches for new patch candidate generation. Automatic patch generation technique leveraging human-written patches with our context-based change application technique used by ConFix. Summary: An effective patch generation technique should have a...","categories": ["APR"],
         "tags": ["APR"],
         "url": "/recent/ConFix/",
+        "teaser": null
+      },{
+        "title": "Can We Automatically Fix Bugs by Learning Edit Operations?",
+        "excerpt":"“Can We Automatically Fix Bugs by Learning Edit Operations?” Paper Summary: Implementing Hephaestus, a novel method to improve the accuracy of APR through learning to apply edit operations. Leverages neural machine translation and attempts to produce the edit operations needed. Learning edit operations does not offer an advantage over the...","categories": ["APR"],
+        "tags": ["APR"],
+        "url": "/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/",
+        "teaser": null
+      },{
+        "title": "Clean Code Chapter 1",
+        "excerpt":"What is Clean Code? Bjarne Stroustrup, Inventor of C++ Wasted Cycle are inelegant, not pleasing Error handling should be complete Focused; Each function, class, and module expose a single-minded attitude that remains entirely undistracted, and unpolluted, by the surrounding details Grady Booch, author of Object Oriented Analysis and Design with...","categories": ["Books"],
+        "tags": ["Blog"],
+        "url": "/recent/Clean_Code_Ch1/",
+        "teaser": null
+      },{
+        "title": "Clean Code Chapter 2",
+        "excerpt":"Using the appropriate Name will pay off in the short term and continue to pay in the long run Using Intention-Revealing Names Choosing good names takes time but saves more than it takes Choosing a name that specifies what is being measured and the unit of that measurement Things need...","categories": ["Books"],
+        "tags": ["Blog"],
+        "url": "/recent/Clean_Code_Ch2/",
         "teaser": null
       }]
