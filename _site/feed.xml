@@ -1,4 +1,433 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-10T20:06:59+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Automatic Patch Generation with Context-based Change Application</title><link href="http://localhost:4000/recent/ConFix/" rel="alternate" type="text/html" title="Automatic Patch Generation with Context-based Change Application" /><published>2023-07-10T00:00:00+09:00</published><updated>2023-07-10T00:00:00+09:00</updated><id>http://localhost:4000/recent/ConFix</id><content type="html" xml:base="http://localhost:4000/recent/ConFix/"><![CDATA[<h3 id="automatic-patch-generation-with-context-based-change-application">Automatic Patch Generation with Context-based Change Application</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-13T23:14:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Clean Code Chapter 2</title><link href="http://localhost:4000/recent/Clean_Code_Ch2/" rel="alternate" type="text/html" title="Clean Code Chapter 2" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch2</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch2/"><![CDATA[<p><strong>Using the appropriate Name will pay off in the short term and continue to pay in the long run</strong></p>
+
+<ul>
+  <li>Using Intention-Revealing Names
+    <ul>
+      <li>Choosing good names takes time but saves more than it takes</li>
+      <li>Choosing a name that specifies what is being measured and the unit of that measurement</li>
+      <li>Things need to think
+        <ul>
+          <li>What kind are in</li>
+          <li>What is returned</li>
+          <li>zeroth subscript and value</li>
+        </ul>
+      </li>
+      <li>Do not use <strong>O <em>and l</em></strong></li>
+    </ul>
+  </li>
+  <li>Avoid Disinformation
+    <ul>
+      <li>Avoiding words whose entrenched meanings vary from intention</li>
+      <li>Spelling similar concepts similarly
+        <ul>
+          <li>No inconsistent spelling</li>
+        </ul>
+      </li>
+      <li><del>Using different font??</del></li>
+    </ul>
+  </li>
+  <li>Meaningful Distinction
+    <ul>
+      <li><strong>a</strong> for a local variable, <strong>the</strong> for all function arguments</li>
+      <li>Less redundant words</li>
+      <li>Distinguishing names in a way that readers know what the difference offer</li>
+    </ul>
+  </li>
+  <li>Using Pronounceable Names
+    <ul>
+      <li>Essential for communication</li>
+    </ul>
+  </li>
+  <li>Using Searchable Names
+    <ul>
+      <li>Single-letter names can ONLY be used as local variables inside short methods</li>
+      <li>The length of a name should correspond to the size of its scope</li>
+    </ul>
+  </li>
+  <li>Avoiding Encoding</li>
+  <li>Hungarian Notation
+    <ul>
+      <li>The compiler knows the type nowadays</li>
+    </ul>
+  </li>
+  <li>Member Prefixes
+    <ul>
+      <li>unseen clutter and a marker of older code…</li>
+    </ul>
+  </li>
+  <li>Interface and Implementation
+    <ul>
+      <li>Why would I let user knows I’m handling them with an interface?</li>
+      <li>Marking at the implementation</li>
+    </ul>
+  </li>
+  <li>Avoid Mental Mapping
+    <ul>
+      <li>In most contexts, a single letter for a loop is a poor choice (such as i, j, k)</li>
+      <li><em>Clarity is king</em></li>
+    </ul>
+  </li>
+  <li>Class Names
+    <ul>
+      <li>should have noun or noun phrase names</li>
+    </ul>
+  </li>
+  <li>Method Names
+    <ul>
+      <li>should have verb or verb phase names</li>
+      <li>When constructors are overloaded, use the static method with names that describe the argument
+        <ul>
+          <li>Make corresponding constructors private</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Don’t be cute
+    <ul>
+      <li>No too “user-specific name”</li>
+    </ul>
+  </li>
+  <li>Pick One Word per Concept
+    <ul>
+      <li>Pick one word for one abstract concept</li>
+      <li>The name will express two different types of object</li>
+    </ul>
+  </li>
+  <li>Don’t Pun
+    <ul>
+      <li>Avoiding using the same word for two purposes</li>
+      <li>Even if it has a similar concept, it must have a different name if it is semantically different</li>
+      <li><strong><em>It is the author’s responsibility</em></strong></li>
+    </ul>
+  </li>
+  <li>Use Solution Domain Names
+    <ul>
+      <li>People who read your code will be programmers
+        <ul>
+          <li>CS terms, algorithm names, pattern names, math terms, etc.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Use Problem Domain Names
+    <ul>
+      <li>Separating solution and problem domain concept</li>
+    </ul>
+  </li>
+  <li>Add Meaningful Context
+    <ul>
+      <li>Place the name in context for the reader
+        <ul>
+          <li>enclosing classes, functions, or namespaces</li>
+        </ul>
+      </li>
+      <li>break it into smaller functions if it is necessary</li>
+    </ul>
+  </li>
+  <li>But Don’t Add Gratuitous Context
+    <ul>
+      <li>Shorter names are generally better
+        <ul>
+          <li>As long as they are clear</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[How to name clearly]]></summary></entry><entry><title type="html">Can We Automatically Fix Bugs by Learning Edit Operations?</title><link href="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/" rel="alternate" type="text/html" title="Can We Automatically Fix Bugs by Learning Edit Operations?" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Can%20We%20Automatically%20Fix%20Bugs%20by%20Learning%20Edit%20Operations</id><content type="html" xml:base="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/"><![CDATA[<h2 id="can-we-automatically-fix-bugs-by-learning-edit-operations">“Can We Automatically Fix Bugs by Learning Edit Operations?”</h2>
+
+<h2 id="paper"><a href="https://www.cs.wm.edu/~denys/pubs/SANER-RENE-BugFixing.pdf">Paper</a></h2>
+
+<h3 id="summary">Summary:</h3>
+
+<ul>
+  <li>
+    <p>Implementing Hephaestus, a novel method to improve the accuracy of APR through learning to apply edit operations. Leverages neural machine translation and attempts to produce the edit operations needed.</p>
+
+    <p>Learning edit operations does not offer an advantage over the standard approach of translating directly from buggy code to fixed code. However, interestingly, Hephaestus exhibited lower translation accuracy than the baseline, able to perform successful bug repair.</p>
+  </li>
+</ul>
+
+<h3 id="points">Points:</h3>
+
+<ol>
+  <li>Introduction
+    <ol>
+      <li>The naive approach attempts some sort of comparison algorithm that identifies the type of bug and replaces it with a prescribed bugs
+        <ol>
+          <li>Time Consuming</li>
+        </ol>
+      </li>
+      <li>Learning approach using neural machine translation</li>
+      <li>Directly applying the NMT approach to source code is inefficient
+        <ol>
+          <li>Many bugs fixes involve changes to a few sentences
+            <ol>
+              <li>Results in suboptimal performances</li>
+            </ol>
+          </li>
+          <li>Attempt to mitigate the inefficiency by predicting the specific statement on AST</li>
+          <li>Attempting on individual tokens would be more optimal</li>
+        </ol>
+      </li>
+      <li>Hephaestus leverages NMT to predict edit operation, derived from Levenshtein Distance Algorithm
+        <ol>
+          <li>Working at the token level of source code</li>
+          <li>Work on any language without language-specific parsers</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Related Works
+    <ol>
+      <li>Tufano et al.
+        <ol>
+          <li>Repairing code through identification of bug-fix patterns in large software repositories</li>
+          <li>Usage of Deep Learning Approach regarding “meaningful” change</li>
+        </ol>
+      </li>
+      <li>Chen et al.
+        <ol>
+          <li>Focus on single-line bug</li>
+        </ol>
+      </li>
+      <li>Jiang et al.
+        <ol>
+          <li>The correct fix for a given bug does not exist within the model’s output space and the model’s lack of awareness of syntax</li>
+          <li>Pre-train model on the programming language in question</li>
+        </ol>
+      </li>
+      <li>Yuan and Banzhaf
+        <ol>
+          <li>grouping fine-granularity edits into larger statement-level edits</li>
+        </ol>
+      </li>
+      <li>Mousavi et al.
+        <ol>
+          <li>Overfitting and Disparity between predicted bug and fix operation and would mimic a human software developer</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Background
+    <ol>
+      <li>Fixing buggy code to fixed code using traditional language translation matter of the buggy to fix a variety of language</li>
+      <li>Traditional translation replaces the majority of the input sequence which is natural language.
+        <ol>
+          <li>Fix in code might be minimal</li>
+          <li>repair translation should not have the same meaning as the input</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Approach
+    <ol>
+      <li>Levenshtein Edit Operation
+        <ol>
+          <li>the bug is input sequence, the NMT model attempts to produce edit operations</li>
+          <li>Basic Operations
+            <ol>
+              <li>Insertion</li>
+              <li>Deletion</li>
+              <li>Replacement</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>Compound Edit Operations
+        <ol>
+          <li>Group of one or more edit operations; sequence of operations</li>
+          <li>Condensing: A grouping process to compound operations</li>
+        </ol>
+      </li>
+      <li>Dataset Construction
+        <ol>
+          <li>Control Dataset: baseline, not involved with edit operations</li>
+          <li>Machine String: In order to include edit operations, transforming edit operations
+            <ol>
+              <li>Typed</li>
+              <li>General</li>
+            </ol>
+          </li>
+          <li>We make the distinction between typed and general form to determine if the form of machine string used during training affects the Hephaestus models’ abilities to learn edit operations.</li>
+        </ol>
+      </li>
+      <li>Experimental Dataset
+        <ol>
+          <li>translate the bug into its corresponding fix, showing Levenshetein edit distance between the bug and fix</li>
+          <li>all basic compound operation sequences which transform the bug into the fix, strict is the minimal sequence of the strict compound operation sequences, and loose is the minimal sequence of the loose compound operation sequences</li>
+        </ol>
+      </li>
+      <li>Model Construction
+        <ol>
+          <li>LSTM+General</li>
+          <li>GRU+General</li>
+          <li>LSTM+Typed</li>
+        </ol>
+      </li>
+      <li>The CEC ensures that error signals fed forward into the LSTM layers and backpropagated to the LSTM layers are resistant to the effects of the vanishing gradient problem.</li>
+    </ol>
+  </li>
+  <li>Experimental Design
+    <ol>
+      <li>Perfect Prediction Accuracy</li>
+      <li>Failed Prediction Rate</li>
+      <li>Edit Distance Decrease</li>
+      <li>Training Accuracy</li>
+    </ol>
+  </li>
+  <li>Result
+    <ol>
+      <li>PPA: The control model (baseline model) outperformed the rest, with no much difference</li>
+      <li>FPR: The control model maintained 100% capability, the string can always be interpreted as a sequence of Java method tokens</li>
+      <li>EDD: every model generates “bug fixes” that were further away from the fixed code than the original buggy code</li>
+      <li>Training Accuracy: Every model exceeded 90%</li>
+    </ol>
+  </li>
+  <li>RQ
+    <ol>
+      <li>RQ1: Is learning edit operations an effective approach to automatic bug repair?
+        <ol>
+          <li>learning edit operations does not offer advantages over the baseline approach. The experimental Hephaestus models must determine a sequence of edit operations, decode them, and apply them to the inputted buggy method in order to predict fixed source code</li>
+        </ol>
+      </li>
+      <li>RQ2: What effect does each condensing strategy and machine string form have on the accuracy of bug repair?
+        <ol>
+          <li>The differences in PPA between the basic, strict, and loose models are negligible, but there are differences according to the training accuracy and average EDD values. Despite having significantly lower final training accuracy, the strict and loose models had slightly more positive EDD values than the basic models (a difference of about 0.96). Thus, it is evidenced that condensing edit operations into strict and loose forms are beneficial over not condensing them at all</li>
+        </ol>
+      </li>
+      <li>RQ3: What is the effect of using an LSTM-based architecture versus a GRU-based architecture on the accuracy of bug repair?
+        <ol>
+          <li>the variation is not meaningful enough to consider as a key difference between the models.</li>
+        </ol>
+      </li>
+      <li>Future Work
+        <ol>
+          <li>It was determined that most failed predictions were caused by generated indices outside the valid range for a given string. What changes can be made to this model to restrict the prediction range?</li>
+          <li>does changing the abstraction method of the training dataset affect this metric?</li>
+          <li>Other NLP Tools</li>
+          <li>Extra software layers in addition to the methods presented in our study.</li>
+        </ol>
+      </li>
+      <li>Conclusion
+        <ol>
+          <li>The introduction of these specific methods for training NMTbased systems to learn bug fixes did not provide a benefit to the task</li>
+          <li>Edit operations are capable of performing automated bug repair to some degree</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="knowledge">Knowledge:</h3>
+
+<ul>
+  <li>NMT (Neural Machine Translation): <a href="https://en.wikipedia.org/wiki/Neural_machine_translation">Neural machine translation - Wikipedia</a>uses an artificial neural work to predict the likelihood of a sequence of words</li>
+  <li>Levenshtein Distance Algorithm: A string metric for measuring the difference between two sequences. This is likely due to the experimental models experiencing higher entropy than the control when making predictions.</li>
+</ul>
+
+<h3 id="terminology">Terminology:</h3>
+
+<ul>
+  <li>Condensing Strategies:
+    <ul>
+      <li>Basic Condensing: basic compound operation corresponds with exactly one change</li>
+      <li>Loose Condensing: iff the application of its constituent operation is equivalent to the application of some singular op
+        <ul>
+          <li>Modify a contiguous section of tokens</li>
+        </ul>
+      </li>
+      <li>Strict Condensing: iff it is loosely compatible and every operation is of the same flavor</li>
+    </ul>
+  </li>
+  <li>Machine Strings:
+    <ul>
+      <li>Typed: f is one of ins, del, or rep, depending on if the flavor of the represented edit operation is insertion, deletion, or replacement, respectively</li>
+      <li>General: general form machine strings do not explicitly store the flavor of their represented edit operations</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="tool">Tool:</h3>
+
+<p><a href="https://github.com/WM-SEMERU/hephaestus">GitHub - WM-SEMERU/hephaestus</a></p>
+
+<h3 id="questions">Questions:</h3>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[Generalizing the change is helpful?]]></summary></entry><entry><title type="html">Clean Code Chapter 1</title><link href="http://localhost:4000/recent/Clean_Code_Ch1/" rel="alternate" type="text/html" title="Clean Code Chapter 1" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch1</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch1/"><![CDATA[<ul>
+  <li>What is Clean Code?
+    <ul>
+      <li>Bjarne Stroustrup, Inventor of C++
+        <ul>
+          <li>Wasted Cycle are inelegant, not pleasing</li>
+          <li>Error handling should be complete</li>
+          <li>Focused; Each function, class, and module expose a single-minded attitude that remains entirely undistracted, and unpolluted, by the surrounding details</li>
+        </ul>
+      </li>
+      <li>Grady Booch, author of Object Oriented Analysis and Design with Application
+        <ul>
+          <li>He took a readability perspective</li>
+          <li>Well-written purpose</li>
+          <li>clean code should clearly expose the tensions in the problem to be solved</li>
+          <li>Should be matter-of-fact as opposed to speculative</li>
+        </ul>
+      </li>
+      <li>Dave Thomas, founder of OTI
+        <ul>
+          <li>Make it easy for other people to enhance it</li>
+          <li>Code without test is not clean at all</li>
+          <li>values code that is small, code should be literate</li>
+        </ul>
+      </li>
+      <li>Michael Feathers, author of Working Effectively with Legacy Code
+        <ul>
+          <li>Looks like it was written by someone who cares</li>
+          <li>Someone has taken the time to keep it simple and orderly</li>
+        </ul>
+      </li>
+      <li>Ron Jeffries, author of Extreme Programming Installed and Extreme Programming Adventures in C#
+        <ul>
+          <li>No duplications</li>
+          <li>Express all the design ideas
+            <ul>
+              <li>High expressiveness</li>
+            </ul>
+          </li>
+          <li>Minimize the number of entities
+            <ul>
+              <li>Find things in a collection</li>
+              <li>Wrap particular implementation in a more abstract method</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Ward Cunningham, inventor of Wiki, inventor of Fit …
+        <ul>
+          <li>read turns out what you expected</li>
+          <li>make it look like the language was made for the problem</li>
+          <li>It is the programmer that makes the language appear simple</li>
+        </ul>
+      </li>
+      <li>Author: <a href="https://www.google.com/search?q=Robert+C.+Martin&amp;stick=H4sIAAAAAAAAAONgVuLWz9U3MDSqMspOT3rEaMYt8PLHPWEp3UlrTl5jVOfiCs7IL3fNK8ksqRSS5GKDsvileLmQ9fEsYhUIyk9KLSpRcNZT8E0sKsnMAwD4hk_pWwAAAA&amp;sa=X&amp;ved=2ahUKEwjDuvb5qYSAAxWJAt4KHYeWALQQzIcDKAB6BAgiEAE">Robert Cecil Martin</a>
+        <ul>
+          <li>Discovering new techniques and founding their own schools</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Many Recommendations in this book are controversial.</p>
+
+<p>And we are <strong>AUTHORS</strong>.</p>
+
+<ul>
+  <li>Making it Easy to read makes it easier to write</li>
+  <li>The code has to be kept clean over time</li>
+</ul>
+
+<p>This book cannot promise to make you a good programmer.</p>
+
+<p><strong>“Practice, son. Practice!”</strong></p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[What is Clean Code?]]></summary></entry><entry><title type="html">Automatic Patch Generation with Context-based Change Application</title><link href="http://localhost:4000/recent/ConFix/" rel="alternate" type="text/html" title="Automatic Patch Generation with Context-based Change Application" /><published>2023-07-10T00:00:00+09:00</published><updated>2023-07-10T00:00:00+09:00</updated><id>http://localhost:4000/recent/ConFix</id><content type="html" xml:base="http://localhost:4000/recent/ConFix/"><![CDATA[<h3 id="automatic-patch-generation-with-context-based-change-application">Automatic Patch Generation with Context-based Change Application</h3>
+
+<h2 id="paper"><a href="https://raw.githubusercontent.com/wiki/thwak/ConFix/pre-print.pdf">Paper</a></h2>
 
 <p>Jindae Kim, Sunghun Kim</p>
 
@@ -335,90 +764,24 @@
   <li>Why PLRTH and PLRT: The paper mentioned it is for reducing the search space. Is it the most efficient way to do it?</li>
   <li>I don’t understand the part about fault localization. Is it possible to localize the fault using AST context? Does it just localize fault according to the collected change?</li>
   <li>What if AST differencing tools work maliciously?</li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[ConFix]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 21</title><link href="http://localhost:4000/recent/Chapter-21/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 21" /><published>2023-05-20T00:00:00+09:00</published><updated>2023-05-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-21</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-21/"><![CDATA[<p>Beyound Physical Memory: Mechanisms</p>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[ConFix]]></summary></entry><entry><title type="html">알고리즘 분석과 벚꽃</title><link href="http://localhost:4000/recent/Prof.Yong-Algorithm-Analysis/" rel="alternate" type="text/html" title="알고리즘 분석과 벚꽃" /><published>2023-06-09T00:00:00+09:00</published><updated>2023-06-09T00:00:00+09:00</updated><id>http://localhost:4000/recent/Prof.Yong-Algorithm-Analysis</id><content type="html" xml:base="http://localhost:4000/recent/Prof.Yong-Algorithm-Analysis/"><![CDATA[<p>거의 처음으로 한글로 블로그 포스팅을 써보는 것 같다! 
+아무래도 한국어가 제일 편하긴하다 ㅎ <br /></p>
 
-<ul>
-  <li>Memory Hierarchy → additional level, if OS needs to support large address space, it needs to keep every portion of address spaces even if it is not currently using
-    <ul>
-      <li>Hard Disk Drive</li>
-      <li>Why do we want to support a single large space? It is convenient to use</li>
-    </ul>
-  </li>
-  <li>Memory overlays → programmers to manually move pieces of code or data in and out</li>
-  <li>Swap space → swap the spaces, pages out of memory to it and swap pages into memory from it
-    <ul>
-      <li>Need to remember disk address</li>
-      <li>We should note that swap space is not the only on-disk location for swapping traffic.</li>
-      <li>Safely re-use the memory space for the file that is in the disk storage</li>
-    </ul>
-  </li>
-  <li>Present Bit
-    <ul>
-      <li>Running process generates virtual memory references → the hardware translates them into physical addresses before fetching the desired data from memory
-        <ul>
-          <li>TLB hit, TLB miss</li>
-          <li>PTE</li>
-        </ul>
-      </li>
-      <li>If we need to allow pages to be swapped to disk → need to indicate the page is present in the physical memory or not</li>
-      <li>it is set to zero, the page is not in memory but rather on disk somewhere. The act of accessing a page that is not in physical memory is commonly referred to as a page fault</li>
-    </ul>
-  </li>
-  <li>Page fault
-    <ul>
-      <li>OS is in charge to handle the page fault → page-fault handler
-        <ul>
-          <li>Hardware page-fault handler</li>
-          <li>Software page-fault handler</li>
-        </ul>
-      </li>
-      <li>OS needs to swap the page into memory → how?
-        <ul>
-          <li>the page table is a natural place to store such information. Thus, the OS could use the bits in the PTE normally used for data such as the PFN of the page for a disk address.</li>
-          <li>Disk I/O → update the page table → TLB Miss → Bring up the page to TLB</li>
-          <li>The process will be blocked state so OS will be free to run</li>
-          <li>Overlap of I/O of one process and execution of another way to the effective usage of its hardware</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Page-replacement policy
-    <ul>
-      <li>Page in, Page out</li>
-      <li>Replacing, cost a lot</li>
-    </ul>
-  </li>
-  <li>Three cases
-    <ul>
-      <li>Page was both present and valid → TLB miss handler grap PFN from PTE, retry the instruction</li>
-      <li>Page is valid but not present, Page fault handler → when the page is legitimate</li>
-      <li>Invalid page access → bug, trap the invalid access, terminating</li>
-    </ul>
-  </li>
-  <li>OS to keep a small portion of memory free more proactively
-    <ul>
-      <li>High watermark</li>
-      <li>Low watermark
-        <ul>
-          <li>OS notice fewer than LW page available, the background thread is responsible for freeing memory runs</li>
-          <li>evicts the page until there are HW pages available</li>
-        </ul>
-      </li>
-      <li>Swap daemon
-        <ul>
-          <li>Many systems cluster or group a number of pages and write them out at once to the swap partition</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>these actions all take place transparently to the process</li>
-  <li>Replacement occurs
-    <ul>
-      <li>high watermark (HW ) and low watermark (LW ) to help decide when to start evicting pages from memory</li>
-      <li>systems will cluster or group a number of pages and write them out at once to the swap partition</li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.21]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 22</title><link href="http://localhost:4000/recent/Chapter-22/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 22" /><published>2023-05-20T00:00:00+09:00</published><updated>2023-05-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-22</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-22/"><![CDATA[<p>Beyong Physical Memory: Policies</p>
+<p>블로그 포스팅을 학기 중에 하고자 헀지만 도저히 안되더라… 그래서 학기 중에 블로그 포스팅 할 것들 메모해놓고 방학 중에 일일히 쓰는 중이다! 날짜도 그 때 썼다고 생각하고 업로드 하는 중이기도 하고… ㅋㅋㅋ<br /></p>
+
+<p>한동에서의 3학년이 사망년이 되지 않기를 바라는 포스트 이후 논문 리뷰나 책 리뷰 외의 글을 쓰는 것은 몇달 만인 것 같다. 원래 쓸 생각이 없었는데 포스팅 할 내용이 나에게 큰 위로가 되었기도 하고… <del>랩실에 블로그 괴물이 있다… 진짜 너무 잘씀 꼭 <a href="https://0neand0nly.github.io/">여기</a>가 보세요</del></p>
+
+<p>이번 블로그 글의 제목은 알고리즘 분석과 벚꽃이다! 무슨 관계가 있을까 싶겠지만 꽤나 깊은 관계(?)가 있다.</p>
+
+<p>한동에는 중간고사 기간을 주위로 하여 벚꽃이 핀다! 벚꽃이 정말 아름답게 핀다. 내가 사진을 잘 안찍어서 벚꽃 사진이 없어서 첨부를 못하는게 아쉽다 ㅠㅠ 뭐 찾으면 있겠지만 귀찮기도 하고 사진을 왜 찍지 이해를 못하기도 하고… 뭐 암튼 그렇다. 거두절미하고 이 글은 알고리즘 분석 6월 9일 수업 때 일어난 일의 이야기를 담고 있다. 기억을 더듬어보자면 기말 고사를 앞둔 기간이었고, 과제는 미칠 듯이 쏟아져 나오고 있었다. 다들 너무 지쳐서 수업 분위기는 말이 아니었고 나도 굉장히 지쳐있었다.</p>
+
+<p>수업분위기에 화를 몇 번 내시던 교수님께서 갑자기 벚꽃 이야기를 꺼내셨다. 학교 벚꽃이 이쁘다면서 벚꽃이랑 사진찍는 학생들을 매년 보고 있다는 이야기를 하셨다. 뒤이어 학생들이 벚꽃과 사진을 찍는 것을 이해하지 못한다고 하셨다. 내심 나랑 공감하는 사람이 있다는 생각이 드는 찰나 교수님은 갑자기 닭살돋는 이야기를 하셨다. <em>“이 아이들은 자신이 벚꽃보다 아름답다는 걸 모르나? 왜 사진을 찍지?”</em> 많이 놀랬다. 솔직히 알고리즘 분석 담당 교수님께서 화를 안 내시는 분은 아니라…</p>
+
+<p>그렇게 말씀하시면서 여러 말을 덧붙이셨다. 사람이 가장 아름다운 나이는 20대 초중반라고. 우리가 지금 20대 초중반을 지나고 있기에 우리가 하는 일들은 모두 아름답고 가치 있는 일이라고. 반대로 이렇게 꽃다운 나이기에 치열하게 살아가고, 후회없이 모든 것을 쏟아낼 수 있는 나이라고.</p>
+
+<p>솔직히 많은 위로가 됐다. 내가 글을 쓰는 재주도 없고 한 달 정도가 지난 후에 글을 쓰는 만큼 글에 감동이 하나도 묻어있지 않는게 너무 아쉽다…</p>
+
+<p>이제는 젊다고 할 수 없는 나이에 접어들었지만 치열하게 살아가야 한다는 사실은 오히려 나이가 들수록 깨닫고 있는 것 같다. 나이가 들고 후회하기 보다는 노력해보고 후회하는게 나쁘지 않은 것 같다 ㅎㅎ 교수님 감사합니다!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[젊음!]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 22</title><link href="http://localhost:4000/recent/Chapter-22/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 22" /><published>2023-05-20T00:00:00+09:00</published><updated>2023-05-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-22</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-22/"><![CDATA[<p>Beyong Physical Memory: Policies</p>
 
 <ul>
   <li>Cache Management
@@ -559,7 +922,90 @@
       </li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.22]]></summary></entry><entry><title type="html">OS-HW2 Summary</title><link href="http://localhost:4000/recent/OS-HW2/" rel="alternate" type="text/html" title="OS-HW2 Summary" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/recent/OS-HW2</id><content type="html" xml:base="http://localhost:4000/recent/OS-HW2/"><![CDATA[<h1 id="hw-2">HW 2</h1>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.22]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 21</title><link href="http://localhost:4000/recent/Chapter-21/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 21" /><published>2023-05-20T00:00:00+09:00</published><updated>2023-05-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-21</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-21/"><![CDATA[<p>Beyound Physical Memory: Mechanisms</p>
+
+<ul>
+  <li>Memory Hierarchy → additional level, if OS needs to support large address space, it needs to keep every portion of address spaces even if it is not currently using
+    <ul>
+      <li>Hard Disk Drive</li>
+      <li>Why do we want to support a single large space? It is convenient to use</li>
+    </ul>
+  </li>
+  <li>Memory overlays → programmers to manually move pieces of code or data in and out</li>
+  <li>Swap space → swap the spaces, pages out of memory to it and swap pages into memory from it
+    <ul>
+      <li>Need to remember disk address</li>
+      <li>We should note that swap space is not the only on-disk location for swapping traffic.</li>
+      <li>Safely re-use the memory space for the file that is in the disk storage</li>
+    </ul>
+  </li>
+  <li>Present Bit
+    <ul>
+      <li>Running process generates virtual memory references → the hardware translates them into physical addresses before fetching the desired data from memory
+        <ul>
+          <li>TLB hit, TLB miss</li>
+          <li>PTE</li>
+        </ul>
+      </li>
+      <li>If we need to allow pages to be swapped to disk → need to indicate the page is present in the physical memory or not</li>
+      <li>it is set to zero, the page is not in memory but rather on disk somewhere. The act of accessing a page that is not in physical memory is commonly referred to as a page fault</li>
+    </ul>
+  </li>
+  <li>Page fault
+    <ul>
+      <li>OS is in charge to handle the page fault → page-fault handler
+        <ul>
+          <li>Hardware page-fault handler</li>
+          <li>Software page-fault handler</li>
+        </ul>
+      </li>
+      <li>OS needs to swap the page into memory → how?
+        <ul>
+          <li>the page table is a natural place to store such information. Thus, the OS could use the bits in the PTE normally used for data such as the PFN of the page for a disk address.</li>
+          <li>Disk I/O → update the page table → TLB Miss → Bring up the page to TLB</li>
+          <li>The process will be blocked state so OS will be free to run</li>
+          <li>Overlap of I/O of one process and execution of another way to the effective usage of its hardware</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Page-replacement policy
+    <ul>
+      <li>Page in, Page out</li>
+      <li>Replacing, cost a lot</li>
+    </ul>
+  </li>
+  <li>Three cases
+    <ul>
+      <li>Page was both present and valid → TLB miss handler grap PFN from PTE, retry the instruction</li>
+      <li>Page is valid but not present, Page fault handler → when the page is legitimate</li>
+      <li>Invalid page access → bug, trap the invalid access, terminating</li>
+    </ul>
+  </li>
+  <li>OS to keep a small portion of memory free more proactively
+    <ul>
+      <li>High watermark</li>
+      <li>Low watermark
+        <ul>
+          <li>OS notice fewer than LW page available, the background thread is responsible for freeing memory runs</li>
+          <li>evicts the page until there are HW pages available</li>
+        </ul>
+      </li>
+      <li>Swap daemon
+        <ul>
+          <li>Many systems cluster or group a number of pages and write them out at once to the swap partition</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>these actions all take place transparently to the process</li>
+  <li>Replacement occurs
+    <ul>
+      <li>high watermark (HW ) and low watermark (LW ) to help decide when to start evicting pages from memory</li>
+      <li>systems will cluster or group a number of pages and write them out at once to the swap partition</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.21]]></summary></entry><entry><title type="html">OS-HW2 Summary</title><link href="http://localhost:4000/recent/OS-HW2/" rel="alternate" type="text/html" title="OS-HW2 Summary" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/recent/OS-HW2</id><content type="html" xml:base="http://localhost:4000/recent/OS-HW2/"><![CDATA[<h1 id="hw-2">HW 2</h1>
 
 <p>First of all, it was the first assignment that I have not completed since I have start Computer Science Major… I slept 11 hours for 4 days.</p>
 
@@ -753,322 +1199,7 @@
 
 <p>In summary, it also introduces increased complexity, potential memory overhead, challenges in address translation and memory protection, and fragmentation concerns, which need to be carefully considered and managed in the design and implementation of such a memory management scheme.</p>
 
-<p>PTE → bit의 순서와 optimization</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.20]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 16</title><link href="http://localhost:4000/recent/Chapter-16/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 16" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-16</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-16/"><![CDATA[<p>Segmentation</p>
-
-<ul>
-  <li>Why not have a base and bounds pair per logical segment</li>
-  <li>Segment independently in physical memory</li>
-  <li>Sparse address spaces</li>
-  <li>What we need to first do is extract the offset into the heap</li>
-  <li>Illegal address → segmentation fault</li>
-  <li>Which Segment are we referring to?</li>
-  <li>Explicit approach
-    <ul>
-      <li>upper two bits heap indicates which offset</li>
-      <li>next 12 bits as the offset into the segment</li>
-      <li>By adding the base register to the offset, the hardware arrives at the final physical space</li>
-    </ul>
-  </li>
-  <li>Implicit approach
-    <ul>
-      <li>hardware determines the segment by noticing how the address was formed</li>
-      <li>address is within the code segment</li>
-    </ul>
-  </li>
-  <li>Stack
-    <ul>
-      <li>one critical difference, it grows backward</li>
-      <li>hardware must now translate such virtual addresses slightly differently</li>
-      <li>We simply add the negative offset to the base</li>
-    </ul>
-  </li>
-  <li>Sharing
-    <ul>
-      <li>Code sharing</li>
-      <li>Protection bit → extra support from the hardware</li>
-    </ul>
-  </li>
-  <li>Fine-grained vs Coarse-grained Segmentation
-    <ul>
-      <li>Coarse-grained
-        <ul>
-          <li>chops up the address space into relatively large</li>
-        </ul>
-      </li>
-      <li>Fine-grained
-        <ul>
-          <li>allowed for address space to consist of a large number smaller segment</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Segment table
-    <ul>
-      <li>usually support the creation of a very large number</li>
-    </ul>
-  </li>
-  <li>OS Support
-    <ul>
-      <li>OS must make sure to set up these registers correctly before letting the process run again.</li>
-      <li>The second, and more important, issue is managing free space in physical memory.</li>
-      <li>External fragmentation
-        <ul>
-          <li>The general problem that arises is that physical memory quickly becomes full of little holes of free space, making it difficult to allocate new segments, or to grow existing ones.</li>
-          <li>One solution to this problem would be to compact physical memory by rearranging the existing segments.</li>
-          <li>best fit</li>
-          <li>worst fit</li>
-          <li>first fit</li>
-          <li>buddy algorithm</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Overall
-    <ul>
-      <li>Segmentation solves a number of problems, and helps us build a more effective virtualization of memory. Beyond just dynamic relocation, segmentation can better support sparse address spaces, by avoiding the huge potential waste of memory between logical segments of the address space.</li>
-      <li>Problems
-        <ul>
-          <li>External fragmentation</li>
-          <li>Segmentation is not flexible</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.16]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 19</title><link href="http://localhost:4000/recent/Chapter-19/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 19" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-19</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-19/"><![CDATA[<p>Paging: Faster Translations</p>
-
-<ul>
-  <li>TLB: Translation-lookaside buffer
-    <ul>
-      <li>Part of MMU: Memory-management unit</li>
-      <li>hardware cache: unlike memory cache, it is visible</li>
-    </ul>
-  </li>
-  <li>Hardware-managed TLB
-    <ol>
-      <li>extract virtual page number from virtual address and check TLB holds a translation
-        <ol>
-          <li>TLB Hit : TLB hold the translation</li>
-          <li>TLB Miss : TLB doesn’t have the translatinon
-            <ol>
-              <li>In the case, update the TLB with the translation</li>
-              <li>It is costly since it has more memory access</li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-      <li>avoid TLB miss is important</li>
-    </ol>
-  </li>
-  <li>Example
-    <ul>
-      <li>In the case of array
-        <ul>
-          <li>Since the array has continous memory, if we load memory unit by memory size, TLB hit occurs often</li>
-        </ul>
-      </li>
-      <li>Spatial locality
-        <ul>
-          <li>The element of the array are packed tightly into pages</li>
-        </ul>
-      </li>
-      <li>Temporal locality
-        <ul>
-          <li>Quick re-referencing of memory items in time</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Handling TLB miss
-    <ul>
-      <li>CISC (complex-instruction set computers), the old day system, engineer doesn’t believe OS
-        <ul>
-          <li>Therefore, hardware know exactly where the page tables located via a page-table base register</li>
-          <li>Hardware-managed TLB, uses fixed multi-level page table</li>
-        </ul>
-      </li>
-      <li>RISC (reduced-instrution set computers)
-        <ul>
-          <li>TLB miss occurs, hardware simply raise the exception</li>
-          <li>Software-managed TLB</li>
-          <li>On the TLB miss → exception → raises privileged level to kernel mode, and jumps to a trap handler</li>
-          <li>Important details
-            <ul>
-              <li>return-from-trap instructions needs to be a little different
-                <ul>
-                  <li>It resume the execution from the instruction “cause” the TLB miss because it now will occur TLB hit</li>
-                </ul>
-              </li>
-              <li>TLB miss-handling, need to extra careful not to cause an infinite chain of TLB miss
-                <ul>
-                  <li>Many solutions → keep TLB miss handler in physical memory</li>
-                  <li>reserve some entries in the TLB for permanenetly-valid translations and use some of those permananent translation slots for the handler code it self → wired translation</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Flexibility → OS can use any data structure it wants to implement page table</li>
-          <li>Simplicity → the hardware doesn’t have to do much on a miss</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>TLB Content
-    <ul>
-      <li>TLB might have 32, 64, 128 entries with fully associative</li>
-      <li>
-        <table>
-          <tbody>
-            <tr>
-              <td>VPN</td>
-              <td>PFN</td>
-              <td>other bits</td>
-            </tr>
-          </tbody>
-        </table>
-      </li>
-      <li>Other bits
-        <ul>
-          <li>valid bit - whether the entry has a valid translation or not</li>
-          <li>protection bit - how can a page can be accessed</li>
-          <li>Address-space identifier</li>
-          <li>dirty bit</li>
-        </ul>
-      </li>
-      <li>Context switches
-        <ul>
-          <li>the TLB contains virtual-to-physical translations that are only valid for the currently running process; these translations are not meaningful for other processes.</li>
-          <li>Need to be careful not to be use other TLB</li>
-          <li>If there is same vpn, the hardware can’t distinguish which entry is meant for which process</li>
-          <li>Solution
-            <ul>
-              <li>TLB flush
-                <ul>
-                  <li>flush the TLB on context switch, emptying TLB before running the new process
-                    <ul>
-                      <li>On a software-based system, this can be accomplished with an explicit (and privileged) hardware instruction; with a hardware-managed TLB, the flush could be enacted when the page-table base register is changed (note the OS must change the PTBR on a context switch anyhow)</li>
-                      <li>There is a cost, it must incur TLB misses at it touches its data and code pages</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>ASID
-                <ul>
-                  <li>address space identifier</li>
-                  <li>TLB can hold same VPN with ASID without confusion</li>
-                  <li>Two processes can share a page with this method</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Replacement policy
-        <ul>
-          <li>main issue: cache replacement; how can we replace?</li>
-          <li>LRU(Least-recently-used)
-            <ul>
-              <li>take advantage of locality in the memory-reference stream</li>
-            </ul>
-          </li>
-          <li>Random policy</li>
-        </ul>
-      </li>
-      <li>The real TLB
-        <ul>
-          <li>Page 193</li>
-        </ul>
-      </li>
-      <li>The use of TLBs in virtual memory systems can significantly improve address translation performance by caching frequently accessed page table entries on-chip, reducing the need to access main memory. This results in performance similar to that of non-virtualized memory. However, TLBs may be less effective for programs that access a large number of pages in a short time, leading to TLB misses and decreased performance. One solution to this issue is to use larger page sizes to increase TLB coverage, but TLB access can also become a bottleneck in the CPU pipeline, particularly with physically-indexed caches, and virtually-indexed caches introduce new hardware design issues.</li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.19]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 18</title><link href="http://localhost:4000/recent/Chapter-18/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 18" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-18</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-18/"><![CDATA[<p>Paging: Introduction</p>
-
-<ul>
-  <li>Page
-    <ul>
-      <li>Split up our address space into fixed-size units</li>
-      <li>With paging, physical memory is also split into some number of pages as well → page frame</li>
-      <li>Advantages
-        <ul>
-          <li>Flexibility → system will be able to support the abstraction of address space</li>
-          <li>simplicity → OS keeps a free list of all pages for this and just grabs the first four free pages off of the list</li>
-        </ul>
-      </li>
-      <li>per-process data structure known as a page table
-        <ul>
-          <li>Main role: address translation</li>
-        </ul>
-      </li>
-      <li>The inverted page table is not a per-process structure</li>
-      <li>To translate the virtual address that the process generated
-        <ul>
-          <li>we have to split into VPN (Virtual page number) and offset</li>
-          <li>movl 21, %eax → convert 21 to 01<strong>0101,</strong> bold → offset</li>
-        </ul>
-      </li>
-      <li>Where are page tables stored?
-        <ul>
-          <li>for 4-KB pages → 12-bit offset required</li>
-          <li>20-bit VPN implies that there are 2^20 translations that OS would have to manage for each process</li>
-          <li>Assume we need 4 bytes per page table entry to hold the physical translation plus other bits
-            <ul>
-              <li>If there is any process, the required bytes will be huge</li>
-              <li>So, we store the page table for each process in memory</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Simple form → Linear page table
-        <ul>
-          <li>for each content of each PTE, we have a number of different bits
-            <ul>
-              <li>valid bit: indicate whether the particular translation is valid
-                <ul>
-                  <li>unused → invalid</li>
-                </ul>
-              </li>
-              <li>protection bit: indicating whether the page could be read from</li>
-              <li>present bit: indicate whether this page is in physical memory or on disk</li>
-              <li>dirty bit: indicating whether the page has been modified since it was brought into memory</li>
-              <li>reference bit: to track whether a page has been accessed
-                <ul>
-                  <li>used in page replacement</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Paging → slow
-            <ul>
-              <li>the system must translate the virtual address</li>
-              <li>Then, the hardware must be where the page table is for the currently running process</li>
-              <li>Assume a single page-table base register contains the physical address of the starting location of the page table</li>
-              <li>Paging requires extra memory access in order to first fetch the translation from the page table</li>
-              <li>page tables will cause the system to run too slowly and take up too much memory.</li>
-            </ul>
-          </li>
-          <li>Memory trace
-            <ul>
-              <li>The first instruction moves the value zero (shown as $0x0) into the virtual memory address of the location of the array;</li>
-              <li>The second instruction increments the array index held in %eax, and the third instruction compares the contents of that register to the hex value 0x03e8, or decimal 1000.</li>
-              <li>where in virtual memory the code snippet and array are found, as well as the contents and location of the page table.</li>
-              <li>Let’s assume we have a linear (array-based) page table and that it is located at a physical address of 1 KB (1024)</li>
-              <li>Worries
-                <ul>
-                  <li>First, there is the virtual page the code lives on. Because the page size is 1 KB, virtual address 1024 resides on the second page of the virtual address space</li>
-                  <li>ts size is 4000 bytes (1000 integers), and it lives at virtual addresses 40000 through 44000 (not including the last byte). The virtual pages for this decimal range are VPN=39 … VPN=42. Thus, we need mappings for these pages.</li>
-                </ul>
-              </li>
-              <li>When it runs, each instruction fetch will generate two memory references: one to the page table to find the physical frame that the instruction resides within, and one to the instruction itself to fetch it to the CPU for processing.</li>
-              <li>one explicit memory reference in the form of the mov instruction; this adds another page table access first (to translate the array virtual address to the correct physical one) and then the array access itself.</li>
-              <li>Need to see the figure carefully
-  -</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.18]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 17</title><link href="http://localhost:4000/recent/Chapter-17/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 17" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-17</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-17/"><![CDATA[<p>Free-Space Management</p>
+<p>PTE → bit의 순서와 optimization</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.20]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 17</title><link href="http://localhost:4000/recent/Chapter-17/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 17" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-17</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-17/"><![CDATA[<p>Free-Space Management</p>
 
 <p>When free-space management becomes more difficult is when the free space with user-level memory-allocation memory</p>
 
@@ -1150,77 +1281,4 @@
     </ul>
   </li>
   <li>One major problem with many of the approaches described above is their lack of scaling.</li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.17]]></summary></entry><entry><title type="html">InterProcess Communication</title><link href="http://localhost:4000/recent/IPC/" rel="alternate" type="text/html" title="InterProcess Communication" /><published>2023-04-15T00:00:00+09:00</published><updated>2023-04-15T00:00:00+09:00</updated><id>http://localhost:4000/recent/IPC</id><content type="html" xml:base="http://localhost:4000/recent/IPC/"><![CDATA[<p>Signal</p>
-
-<ul>
-  <li>There can be hardware interrupts, but software interrupts as well</li>
-  <li>GNU signal can be a great reference.
-    <ul>
-      <li>Linux relies on GNU</li>
-    </ul>
-  </li>
-  <li>Signal API → type of interrupt, handler</li>
-  <li>Signal1.c
-    <ul>
-      <li>function pointer → address of the program</li>
-      <li>handler has no return but one input value; signal input is given</li>
-      <li>Check signal is whether Sigint</li>
-      <li>ctrl + c → now task to the program from the outside</li>
-      <li>It changes the control flow of the operation</li>
-    </ul>
-  </li>
-  <li>Signal2.c
-    <ul>
-      <li>Alarm signal</li>
-      <li>need to handle regular alarm</li>
-      <li>Timer interrupt occurs by a sec</li>
-      <li>by signaling, preemption happens and context switch as well</li>
-    </ul>
-  </li>
-  <li>Pipe1.c
-    <ul>
-      <li>Nonzero value → error</li>
-      <li>pipe is a kind of file
-        <ul>
-          <li>File is anything that can have stream of information</li>
-        </ul>
-      </li>
-      <li>Parent and child has same file description information</li>
-      <li>Pipe works for reading and writing</li>
-      <li>If the value is broken, make to write remaining data (buffer)</li>
-      <li>Writing behavior depends on OS/ return sent value, it is because it has limited space of buffer</li>
-      <li>No more data comes to the pipe</li>
-      <li>3 is reading pipe, 4 is writing pipe</li>
-      <li>reading happens up to 31 characters</li>
-      <li>Child and parent process</li>
-      <li>Through using file, parent and child process exchange their data</li>
-      <li>It is something shared exclusively
-        <ul>
-          <li>Doesn’t have global name to be not interrupted by other processes.</li>
-          <li>For one to one communication</li>
-        </ul>
-      </li>
-      <li>Unnamed pipe → use to make communicate</li>
-      <li>multiple process invoked at same time, it is to difficult to clarify sender and messages
-        <ul>
-          <li>Synchronization</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Pipe2.c
-    <ul>
-      <li>duplicate operation</li>
-      <li>hello program is loaded</li>
-      <li>standard ouput goes to the pipe</li>
-      <li>Hello is executed, sent to the pipe and show up at the display</li>
-      <li>invoke the program at the middle of the program</li>
-      <li>Library → popen (read how to utilizte the API)
-        <ul>
-          <li>File is pipe</li>
-          <li>execution results is given to file actually</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[IPC lectures from Prof.Hong]]></summary></entry></feed>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.17]]></summary></entry></feed>
