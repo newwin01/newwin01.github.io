@@ -29,12 +29,6 @@ var store = [{
         "url": "/recent/Vs_code_error/",
         "teaser": null
       },{
-        "title": "Operating Systems: Three Easy Pieces Ch. 15",
-        "excerpt":"Limited Direct Execution (LDE) Make the program run directly on the hardware OS gets involved and makes sure the “right” thing happens Efficient virtualization, interposing at that critical point interposing at those critical point in the time, OS ensure that it maintains the control Flexibility we like for program to...","categories": ["OS"],
-        "tags": ["OS"],
-        "url": "/recent/Chapter-15/",
-        "teaser": null
-      },{
         "title": "Operating Systems: Three Easy Pieces Ch. 6",
         "excerpt":"Chapter 6: Mechanism Limited Direct Execution Theme: OS sets up the trap handler and starting an interrupt timer, and then by only running processes in a restricted mode. many jobs running seemingly at the same time. Time Sharing Question: Performance Control Concurrency? OS disable interrupt during interrupt processing number of...","categories": ["OS"],
         "tags": ["OS"],
@@ -51,6 +45,12 @@ var store = [{
         "excerpt":"The abstraction: Address Space Early Systems OS was a set of routines that sat in memory Use the set of the memory Multiprogramming and Time Sharing Multiprogramming Utilization Efficiency Time Sharing Interactivity Protection The address space easy to use abstract of physical memory code have to live in memory somewhere...","categories": ["OS"],
         "tags": ["OS"],
         "url": "/recent/Chapter-13/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 15",
+        "excerpt":"Limited Direct Execution (LDE) Make the program run directly on the hardware OS gets involved and makes sure the “right” thing happens Efficient virtualization, interposing at that critical point interposing at those critical point in the time, OS ensure that it maintains the control Flexibility we like for program to...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-15/",
         "teaser": null
       },{
         "title": "InterProcess Communication",
@@ -113,10 +113,82 @@ var store = [{
         "url": "/recent/Chapter-22/",
         "teaser": null
       },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 23",
+        "excerpt":"Complete Virtual Memory Systems VAX/VMS operating system 1970’s and early 1980’s Linux Linux is a widely used system runs effectively on systems as small and underpowered as phones VAX/VMS Virtual Memory Digital Equipment Corporation massive player unfortunately, a series of bad decisions and the advent of the PC slowly The...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-23/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 26",
+        "excerpt":"Concurrency: An introduction Virtual CPUs → illusion of large, private virtual memory; abstraction of address space A single running process → thread Multi-threaded State of a single thread Has own PC Context switch Process control block Multi-thread Thread control blocks Major differences between the thread and process Stack Single Thread:...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-26/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 27",
+        "excerpt":"Thread API Thread Creation thread → a pointer to a structure of type pthread_t attribute → to specify any attributes this thread might have function pointer → a function name (start routine), which is passed a single argument of type void * (as indicated in the parentheses after start routine),...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-27/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 28",
+        "excerpt":"Locks Lock variable Calling lock → acquire the lock and enter the ciritical section thre thread acquire the lock called the owner of the lock Unlock → free the lock again Pthread locks Mutex → mutual exclusion between threads one thread is in the critical section, it excludes the others...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-28/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 29",
+        "excerpt":"Lock-based Concurrent Data structures thread safe Adding locks to a data structure to make it usable by threads makes the structure thread-safe Monitors Where locks are acquired and released automatically as you call and return from object methods Approximate counter When a thread running on a given core wishes to...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-29/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 30",
+        "excerpt":"Condition Variables Checking whether a condition is true before continuing its execution If the parent thread might wish to check whether a child thread has been completed before continuing Waiting for a condition to become true → condition variable Explicit queue that threads can put themselves on when some state...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-30/",
+        "teaser": null
+      },{
         "title": "알고리즘 분석과 벚꽃",
         "excerpt":"거의 처음으로 한글로 블로그 포스팅을 써보는 것 같다! 아무래도 한국어가 제일 편하긴하다 ㅎ 블로그 포스팅을 학기 중에 하고자 헀지만 도저히 안되더라… 그래서 학기 중에 블로그 포스팅 할 것들 메모해놓고 방학 중에 일일히 쓰는 중이다! 날짜도 그 때 썼다고 생각하고 업로드 하는 중이기도 하고… ㅋㅋㅋ 한동에서의 3학년이 사망년이 되지 않기를 바라는...","categories": ["Blog"],
         "tags": ["Blog"],
         "url": "/recent/Prof.Yong-Algorithm-Analysis/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 31",
+        "excerpt":"Semaphores both locks and condition variables to solve a broad range of relevant and interesting concurrency problems POSIX standard sem_wait() sem_post() sem_init() Second argument → 0: it will be shared between threads on same process Binary Semaphores it will wait only if the value is not greater than or equal...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-31/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 36",
+        "excerpt":"Input/output device (I/O) System Architecture Hierarchiacal structure CPU, memory, memory BUS I/O bus PCI Peripheral Component Interconnect High-speed I/O devices such as graphics Peripheral bus Lower speed bus SATA, USB connects to disks, mice, keyboards Reasons Physics, cost a high-performance memory bus does not have much room to plug devices...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-36/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 37",
+        "excerpt":"Hard Disk Drives the main form of persistent data storage The interface Consist of a large number of sectors (512 - bytes block) Multi-sector operation Updating the disk is atomic it will either complete in its entirety or it won’t complete at all torn write Basic Geometry Platter Circular hard...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-38/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 39",
+        "excerpt":"File and Directories Persistence Storage HDD SSD Files and Directories inode number directory Directory tree (hierarchy) Root directory Subdirectory Separator Type of the file Creating file open() file descriptor Capability Reading and Writing files Strace trace the system calls made by a program Flags Not sequential reading and writing random...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-39/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 40",
+        "excerpt":"File System Implementation Very Simple File System The file system is pure software we will not be adding hardware features to make some aspect of the file system work better The first is the data structure of the file system data and metadata access method → open(), read(), write() Overall...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-40/",
+        "teaser": null
+      },{
+        "title": "Operating Systems: Three Easy Pieces Ch. 41",
+        "excerpt":"Locality and the fast file system Old file system was simple The problem: Poor Performance UNIX file system treated the disk like it was a random-access memory Data was spread all over the place the data blocks of a file were often very far away from its inode, thus inducing...","categories": ["OS"],
+        "tags": ["OS"],
+        "url": "/recent/Chapter-41/",
         "teaser": null
       },{
         "title": "Automatic Patch Generation with Context-based Change Application",
