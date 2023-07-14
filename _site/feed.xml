@@ -1,139 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-13T23:14:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Clean Code Chapter 2</title><link href="http://localhost:4000/recent/Clean_Code_Ch2/" rel="alternate" type="text/html" title="Clean Code Chapter 2" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch2</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch2/"><![CDATA[<p><strong>Using the appropriate Name will pay off in the short term and continue to pay in the long run</strong></p>
-
-<ul>
-  <li>Using Intention-Revealing Names
-    <ul>
-      <li>Choosing good names takes time but saves more than it takes</li>
-      <li>Choosing a name that specifies what is being measured and the unit of that measurement</li>
-      <li>Things need to think
-        <ul>
-          <li>What kind are in</li>
-          <li>What is returned</li>
-          <li>zeroth subscript and value</li>
-        </ul>
-      </li>
-      <li>Do not use <strong>O <em>and l</em></strong></li>
-    </ul>
-  </li>
-  <li>Avoid Disinformation
-    <ul>
-      <li>Avoiding words whose entrenched meanings vary from intention</li>
-      <li>Spelling similar concepts similarly
-        <ul>
-          <li>No inconsistent spelling</li>
-        </ul>
-      </li>
-      <li><del>Using different font??</del></li>
-    </ul>
-  </li>
-  <li>Meaningful Distinction
-    <ul>
-      <li><strong>a</strong> for a local variable, <strong>the</strong> for all function arguments</li>
-      <li>Less redundant words</li>
-      <li>Distinguishing names in a way that readers know what the difference offer</li>
-    </ul>
-  </li>
-  <li>Using Pronounceable Names
-    <ul>
-      <li>Essential for communication</li>
-    </ul>
-  </li>
-  <li>Using Searchable Names
-    <ul>
-      <li>Single-letter names can ONLY be used as local variables inside short methods</li>
-      <li>The length of a name should correspond to the size of its scope</li>
-    </ul>
-  </li>
-  <li>Avoiding Encoding</li>
-  <li>Hungarian Notation
-    <ul>
-      <li>The compiler knows the type nowadays</li>
-    </ul>
-  </li>
-  <li>Member Prefixes
-    <ul>
-      <li>unseen clutter and a marker of older code…</li>
-    </ul>
-  </li>
-  <li>Interface and Implementation
-    <ul>
-      <li>Why would I let user knows I’m handling them with an interface?</li>
-      <li>Marking at the implementation</li>
-    </ul>
-  </li>
-  <li>Avoid Mental Mapping
-    <ul>
-      <li>In most contexts, a single letter for a loop is a poor choice (such as i, j, k)</li>
-      <li><em>Clarity is king</em></li>
-    </ul>
-  </li>
-  <li>Class Names
-    <ul>
-      <li>should have noun or noun phrase names</li>
-    </ul>
-  </li>
-  <li>Method Names
-    <ul>
-      <li>should have verb or verb phase names</li>
-      <li>When constructors are overloaded, use the static method with names that describe the argument
-        <ul>
-          <li>Make corresponding constructors private</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Don’t be cute
-    <ul>
-      <li>No too “user-specific name”</li>
-    </ul>
-  </li>
-  <li>Pick One Word per Concept
-    <ul>
-      <li>Pick one word for one abstract concept</li>
-      <li>The name will express two different types of object</li>
-    </ul>
-  </li>
-  <li>Don’t Pun
-    <ul>
-      <li>Avoiding using the same word for two purposes</li>
-      <li>Even if it has a similar concept, it must have a different name if it is semantically different</li>
-      <li><strong><em>It is the author’s responsibility</em></strong></li>
-    </ul>
-  </li>
-  <li>Use Solution Domain Names
-    <ul>
-      <li>People who read your code will be programmers
-        <ul>
-          <li>CS terms, algorithm names, pattern names, math terms, etc.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Use Problem Domain Names
-    <ul>
-      <li>Separating solution and problem domain concept</li>
-    </ul>
-  </li>
-  <li>Add Meaningful Context
-    <ul>
-      <li>Place the name in context for the reader
-        <ul>
-          <li>enclosing classes, functions, or namespaces</li>
-        </ul>
-      </li>
-      <li>break it into smaller functions if it is necessary</li>
-    </ul>
-  </li>
-  <li>But Don’t Add Gratuitous Context
-    <ul>
-      <li>Shorter names are generally better
-        <ul>
-          <li>As long as they are clear</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[How to name clearly]]></summary></entry><entry><title type="html">Can We Automatically Fix Bugs by Learning Edit Operations?</title><link href="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/" rel="alternate" type="text/html" title="Can We Automatically Fix Bugs by Learning Edit Operations?" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Can%20We%20Automatically%20Fix%20Bugs%20by%20Learning%20Edit%20Operations</id><content type="html" xml:base="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/"><![CDATA[<h2 id="can-we-automatically-fix-bugs-by-learning-edit-operations">“Can We Automatically Fix Bugs by Learning Edit Operations?”</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-14T18:11:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Can We Automatically Fix Bugs by Learning Edit Operations?</title><link href="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/" rel="alternate" type="text/html" title="Can We Automatically Fix Bugs by Learning Edit Operations?" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Can%20We%20Automatically%20Fix%20Bugs%20by%20Learning%20Edit%20Operations</id><content type="html" xml:base="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/"><![CDATA[<h2 id="can-we-automatically-fix-bugs-by-learning-edit-operations">“Can We Automatically Fix Bugs by Learning Edit Operations?”</h2>
 
 <h2 id="paper"><a href="https://www.cs.wm.edu/~denys/pubs/SANER-RENE-BugFixing.pdf">Paper</a></h2>
 
@@ -351,7 +216,142 @@
 
 <p><a href="https://github.com/WM-SEMERU/hephaestus">GitHub - WM-SEMERU/hephaestus</a></p>
 
-<h3 id="questions">Questions:</h3>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[Generalizing the change is helpful?]]></summary></entry><entry><title type="html">Clean Code Chapter 1</title><link href="http://localhost:4000/recent/Clean_Code_Ch1/" rel="alternate" type="text/html" title="Clean Code Chapter 1" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch1</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch1/"><![CDATA[<ul>
+<h3 id="questions">Questions:</h3>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[Generalizing the change is helpful...?]]></summary></entry><entry><title type="html">Clean Code Chapter 2</title><link href="http://localhost:4000/recent/Clean_Code_Ch2/" rel="alternate" type="text/html" title="Clean Code Chapter 2" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch2</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch2/"><![CDATA[<p><strong>Using the appropriate Name will pay off in the short term and continue to pay in the long run</strong></p>
+
+<ul>
+  <li>Using Intention-Revealing Names
+    <ul>
+      <li>Choosing good names takes time but saves more than it takes</li>
+      <li>Choosing a name that specifies what is being measured and the unit of that measurement</li>
+      <li>Things need to think
+        <ul>
+          <li>What kind are in</li>
+          <li>What is returned</li>
+          <li>zeroth subscript and value</li>
+        </ul>
+      </li>
+      <li>Do not use <strong>O <em>and l</em></strong></li>
+    </ul>
+  </li>
+  <li>Avoid Disinformation
+    <ul>
+      <li>Avoiding words whose entrenched meanings vary from intention</li>
+      <li>Spelling similar concepts similarly
+        <ul>
+          <li>No inconsistent spelling</li>
+        </ul>
+      </li>
+      <li><del>Using different font??</del></li>
+    </ul>
+  </li>
+  <li>Meaningful Distinction
+    <ul>
+      <li><strong>a</strong> for a local variable, <strong>the</strong> for all function arguments</li>
+      <li>Less redundant words</li>
+      <li>Distinguishing names in a way that readers know what the difference offer</li>
+    </ul>
+  </li>
+  <li>Using Pronounceable Names
+    <ul>
+      <li>Essential for communication</li>
+    </ul>
+  </li>
+  <li>Using Searchable Names
+    <ul>
+      <li>Single-letter names can ONLY be used as local variables inside short methods</li>
+      <li>The length of a name should correspond to the size of its scope</li>
+    </ul>
+  </li>
+  <li>Avoiding Encoding</li>
+  <li>Hungarian Notation
+    <ul>
+      <li>The compiler knows the type nowadays</li>
+    </ul>
+  </li>
+  <li>Member Prefixes
+    <ul>
+      <li>unseen clutter and a marker of older code…</li>
+    </ul>
+  </li>
+  <li>Interface and Implementation
+    <ul>
+      <li>Why would I let user knows I’m handling them with an interface?</li>
+      <li>Marking at the implementation</li>
+    </ul>
+  </li>
+  <li>Avoid Mental Mapping
+    <ul>
+      <li>In most contexts, a single letter for a loop is a poor choice (such as i, j, k)</li>
+      <li><em>Clarity is king</em></li>
+    </ul>
+  </li>
+  <li>Class Names
+    <ul>
+      <li>should have noun or noun phrase names</li>
+    </ul>
+  </li>
+  <li>Method Names
+    <ul>
+      <li>should have verb or verb phase names</li>
+      <li>When constructors are overloaded, use the static method with names that describe the argument
+        <ul>
+          <li>Make corresponding constructors private</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Don’t be cute
+    <ul>
+      <li>No too “user-specific name”</li>
+    </ul>
+  </li>
+  <li>Pick One Word per Concept
+    <ul>
+      <li>Pick one word for one abstract concept</li>
+      <li>The name will express two different types of object</li>
+    </ul>
+  </li>
+  <li>Don’t Pun
+    <ul>
+      <li>Avoiding using the same word for two purposes</li>
+      <li>Even if it has a similar concept, it must have a different name if it is semantically different</li>
+      <li><strong><em>It is the author’s responsibility</em></strong></li>
+    </ul>
+  </li>
+  <li>Use Solution Domain Names
+    <ul>
+      <li>People who read your code will be programmers
+        <ul>
+          <li>CS terms, algorithm names, pattern names, math terms, etc.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Use Problem Domain Names
+    <ul>
+      <li>Separating solution and problem domain concept</li>
+    </ul>
+  </li>
+  <li>Add Meaningful Context
+    <ul>
+      <li>Place the name in context for the reader
+        <ul>
+          <li>enclosing classes, functions, or namespaces</li>
+        </ul>
+      </li>
+      <li>break it into smaller functions if it is necessary</li>
+    </ul>
+  </li>
+  <li>But Don’t Add Gratuitous Context
+    <ul>
+      <li>Shorter names are generally better
+        <ul>
+          <li>As long as they are clear</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[How to name clearly]]></summary></entry><entry><title type="html">Clean Code Chapter 1</title><link href="http://localhost:4000/recent/Clean_Code_Ch1/" rel="alternate" type="text/html" title="Clean Code Chapter 1" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch1</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch1/"><![CDATA[<ul>
   <li>What is Clean Code?
     <ul>
       <li>Bjarne Stroustrup, Inventor of C++
@@ -764,521 +764,863 @@
   <li>Why PLRTH and PLRT: The paper mentioned it is for reducing the search space. Is it the most efficient way to do it?</li>
   <li>I don’t understand the part about fault localization. Is it possible to localize the fault using AST context? Does it just localize fault according to the collected change?</li>
   <li>What if AST differencing tools work maliciously?</li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[ConFix]]></summary></entry><entry><title type="html">알고리즘 분석과 벚꽃</title><link href="http://localhost:4000/recent/Prof.Yong-Algorithm-Analysis/" rel="alternate" type="text/html" title="알고리즘 분석과 벚꽃" /><published>2023-06-09T00:00:00+09:00</published><updated>2023-06-09T00:00:00+09:00</updated><id>http://localhost:4000/recent/Prof.Yong-Algorithm-Analysis</id><content type="html" xml:base="http://localhost:4000/recent/Prof.Yong-Algorithm-Analysis/"><![CDATA[<p>거의 처음으로 한글로 블로그 포스팅을 써보는 것 같다! 
-아무래도 한국어가 제일 편하긴하다 ㅎ <br /></p>
-
-<p>블로그 포스팅을 학기 중에 하고자 헀지만 도저히 안되더라… 그래서 학기 중에 블로그 포스팅 할 것들 메모해놓고 방학 중에 일일히 쓰는 중이다! 날짜도 그 때 썼다고 생각하고 업로드 하는 중이기도 하고… ㅋㅋㅋ<br /></p>
-
-<p>한동에서의 3학년이 사망년이 되지 않기를 바라는 포스트 이후 논문 리뷰나 책 리뷰 외의 글을 쓰는 것은 몇달 만인 것 같다. 원래 쓸 생각이 없었는데 포스팅 할 내용이 나에게 큰 위로가 되었기도 하고… <del>랩실에 블로그 괴물이 있다… 진짜 너무 잘씀 꼭 <a href="https://0neand0nly.github.io/">여기</a>가 보세요</del></p>
-
-<p>이번 블로그 글의 제목은 알고리즘 분석과 벚꽃이다! 무슨 관계가 있을까 싶겠지만 꽤나 깊은 관계(?)가 있다.</p>
-
-<p>한동에는 중간고사 기간을 주위로 하여 벚꽃이 핀다! 벚꽃이 정말 아름답게 핀다. 내가 사진을 잘 안찍어서 벚꽃 사진이 없어서 첨부를 못하는게 아쉽다 ㅠㅠ 뭐 찾으면 있겠지만 귀찮기도 하고 사진을 왜 찍지 이해를 못하기도 하고… 뭐 암튼 그렇다. 거두절미하고 이 글은 알고리즘 분석 6월 9일 수업 때 일어난 일의 이야기를 담고 있다. 기억을 더듬어보자면 기말 고사를 앞둔 기간이었고, 과제는 미칠 듯이 쏟아져 나오고 있었다. 다들 너무 지쳐서 수업 분위기는 말이 아니었고 나도 굉장히 지쳐있었다.</p>
-
-<p>수업분위기에 화를 몇 번 내시던 교수님께서 갑자기 벚꽃 이야기를 꺼내셨다. 학교 벚꽃이 이쁘다면서 벚꽃이랑 사진찍는 학생들을 매년 보고 있다는 이야기를 하셨다. 뒤이어 학생들이 벚꽃과 사진을 찍는 것을 이해하지 못한다고 하셨다. 내심 나랑 공감하는 사람이 있다는 생각이 드는 찰나 교수님은 갑자기 닭살돋는 이야기를 하셨다. <em>“이 아이들은 자신이 벚꽃보다 아름답다는 걸 모르나? 왜 사진을 찍지?”</em> 많이 놀랬다. 솔직히 알고리즘 분석 담당 교수님께서 화를 안 내시는 분은 아니라…</p>
-
-<p>그렇게 말씀하시면서 여러 말을 덧붙이셨다. 사람이 가장 아름다운 나이는 20대 초중반라고. 우리가 지금 20대 초중반을 지나고 있기에 우리가 하는 일들은 모두 아름답고 가치 있는 일이라고. 반대로 이렇게 꽃다운 나이기에 치열하게 살아가고, 후회없이 모든 것을 쏟아낼 수 있는 나이라고.</p>
-
-<p>솔직히 많은 위로가 됐다. 내가 글을 쓰는 재주도 없고 한 달 정도가 지난 후에 글을 쓰는 만큼 글에 감동이 하나도 묻어있지 않는게 너무 아쉽다…</p>
-
-<p>이제는 젊다고 할 수 없는 나이에 접어들었지만 치열하게 살아가야 한다는 사실은 오히려 나이가 들수록 깨닫고 있는 것 같다. 나이가 들고 후회하기 보다는 노력해보고 후회하는게 나쁘지 않은 것 같다 ㅎㅎ 교수님 감사합니다!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[젊음!]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 22</title><link href="http://localhost:4000/recent/Chapter-22/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 22" /><published>2023-05-20T00:00:00+09:00</published><updated>2023-05-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-22</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-22/"><![CDATA[<p>Beyong Physical Memory: Policies</p>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[ConFix]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 37</title><link href="http://localhost:4000/recent/Chapter-38/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 37" /><published>2023-06-17T00:00:00+09:00</published><updated>2023-06-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-38</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-38/"><![CDATA[<p>Hard Disk Drives</p>
 
 <ul>
-  <li>Cache Management
+  <li>the main form of persistent data storage</li>
+  <li>The interface
     <ul>
-      <li>cache for virtual memory pages in the system
+      <li>Consist of a large number of sectors (512 - bytes block)</li>
+      <li>Multi-sector operation
         <ul>
-          <li>Need to minimize cache misses</li>
-          <li>Maximize the cache hit</li>
-        </ul>
-      </li>
-      <li>Average memory access time
-        <ul>
-          <li>cost of disk access is so high in modern systems that even a tiny miss rate will quickly dominate the overall AMAT of running programs.</li>
-          <li>AMAT = TM + (PMiss · TD )</li>
+          <li>Updating the disk is atomic</li>
+          <li>it will either complete in its entirety or it won’t complete at all</li>
+          <li>torn write</li>
         </ul>
       </li>
     </ul>
   </li>
-  <li>Optimal Replacement Policy
+  <li>Basic Geometry
     <ul>
-      <li>Optimal policy
+      <li>Platter
         <ul>
-          <li>Cold-start Miss (compulsory miss)</li>
-          <li>Other than that it would be optimal, but it is impossible to build the optimal policy for general-purpose operating system</li>
+          <li>Circular hard surface</li>
+          <li>Each Platter has 2 surfaces</li>
         </ul>
       </li>
-      <li>FIFO
+      <li>Spindle
         <ul>
-          <li>first-in, first-out replacement</li>
-        </ul>
-      </li>
-      <li>Random
-        <ul>
-          <li>Random page to replace under memory pressure</li>
-          <li>depends upon how lucky it is</li>
-          <li>Must be better than random</li>
-        </ul>
-      </li>
-      <li>LRU
-        <ul>
-          <li>Using historical information: recency</li>
-          <li>Using the principle of locality</li>
-          <li>Replace least-recently-used</li>
-        </ul>
-      </li>
-      <li>LFU
-        <ul>
-          <li>using historical information: frequency</li>
-          <li>using the principle of locality</li>
-          <li>Replace least-frequently-used</li>
-        </ul>
-      </li>
-      <li>Other
-        <ul>
-          <li>MFU</li>
-          <li>MRU</li>
-          <li>do not work well, ignore the locality</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Workload
-    <ul>
-      <li>No locality
-        <ul>
-          <li>when there is no locality in the workload, it doesn’t matter much which realistic policy you are using; LRU, FIFO, and Random all perform the same, with the hit rate exactly determined by the size of the cache. Second, when the cache is large enough to fit the entire workload, it also doesn’t matter which policy you use;</li>
-        </ul>
-      </li>
-      <li>With the locality(80-20 locality)
-        <ul>
-          <li>LRU does better, as it is more likely to hold onto the hot pages; as those pages have been referred to frequently in the past, they are likely to be referred to again in the near future</li>
-        </ul>
-      </li>
-      <li>Looping-Sequential Workload
-        <ul>
-          <li>pages have been referred to frequently in the past, they are likely to be referred to again in the near future. Optimal once again does better, showing that LRU’s historical information is not perfect</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Historical algorithm
-    <ul>
-      <li>LRU requires additional things and works</li>
-      <li>One solution → time keeper hardware, but it is not desirable for huge computer system</li>
-      <li>Approximating LRU → currently using
-        <ul>
-          <li>use a bit (reference bit)</li>
-          <li>Clock algorithm (a circular list)
+          <li>Connected to motor</li>
+          <li>RPM (rotations per minute)
             <ul>
-              <li>The clock hand points to some particular page</li>
-              <li>When the replacement must occur, check that currently-pointed to page P has a useful bit of 1 or 0</li>
-              <li>The algorithm continues until it finds a use bit that is set to 0, implying this page has not been recently used</li>
-              <li>nice property of not repeatedly scanning through all of the memory looking for an unused page.</li>
+              <li>7200 ~ 15000 RPM</li>
             </ul>
           </li>
-          <li>scan resistance</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Dirty pages
-    <ul>
-      <li>modified bit or dirty bit
-        <ul>
-          <li>scan for unused and clean pages to evict first; fail to find those, then for unused pages that are dirty, and so forth.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Page selection policy
-    <ul>
-      <li>Demand paging → OS brings the page into memory when it is accessed, “on-demand”</li>
-      <li>OS could guess that a page is about to be used, and thus bring it in ahead of time; this behavior is known as prefetching</li>
-    </ul>
-  </li>
-  <li>Os writes pages out to disk
-    <ul>
-      <li>Collect a number of pending writes and writes at once</li>
-      <li>Clustering or grouping of writes</li>
-    </ul>
-  </li>
-  <li>Trashing
-    <ul>
-      <li>When the demands exceed the available memory space</li>
-      <li>Early system → admission control
-        <ul>
-          <li>could decide not to run the subset, with the hope of reducing set of the process working sets fit in memory and thus can make the process</li>
-        </ul>
-      </li>
-      <li>Current
-        <ul>
-          <li>out-of-memory killer
+          <li>Data is encoded on each surface in <strong>concrete circle</strong>
             <ul>
-              <li>memory is oversubscribed, chooses a memory-intensive process and kills it</li>
+              <li>Track</li>
             </ul>
           </li>
         </ul>
       </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.22]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 21</title><link href="http://localhost:4000/recent/Chapter-21/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 21" /><published>2023-05-20T00:00:00+09:00</published><updated>2023-05-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-21</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-21/"><![CDATA[<p>Beyound Physical Memory: Mechanisms</p>
-
-<ul>
-  <li>Memory Hierarchy → additional level, if OS needs to support large address space, it needs to keep every portion of address spaces even if it is not currently using
-    <ul>
-      <li>Hard Disk Drive</li>
-      <li>Why do we want to support a single large space? It is convenient to use</li>
-    </ul>
-  </li>
-  <li>Memory overlays → programmers to manually move pieces of code or data in and out</li>
-  <li>Swap space → swap the spaces, pages out of memory to it and swap pages into memory from it
-    <ul>
-      <li>Need to remember disk address</li>
-      <li>We should note that swap space is not the only on-disk location for swapping traffic.</li>
-      <li>Safely re-use the memory space for the file that is in the disk storage</li>
-    </ul>
-  </li>
-  <li>Present Bit
-    <ul>
-      <li>Running process generates virtual memory references → the hardware translates them into physical addresses before fetching the desired data from memory
+      <li>Reading and writing is accomplished by the disk head
         <ul>
-          <li>TLB hit, TLB miss</li>
-          <li>PTE</li>
-        </ul>
-      </li>
-      <li>If we need to allow pages to be swapped to disk → need to indicate the page is present in the physical memory or not</li>
-      <li>it is set to zero, the page is not in memory but rather on disk somewhere. The act of accessing a page that is not in physical memory is commonly referred to as a page fault</li>
-    </ul>
-  </li>
-  <li>Page fault
-    <ul>
-      <li>OS is in charge to handle the page fault → page-fault handler
-        <ul>
-          <li>Hardware page-fault handler</li>
-          <li>Software page-fault handler</li>
-        </ul>
-      </li>
-      <li>OS needs to swap the page into memory → how?
-        <ul>
-          <li>the page table is a natural place to store such information. Thus, the OS could use the bits in the PTE normally used for data such as the PFN of the page for a disk address.</li>
-          <li>Disk I/O → update the page table → TLB Miss → Bring up the page to TLB</li>
-          <li>The process will be blocked state so OS will be free to run</li>
-          <li>Overlap of I/O of one process and execution of another way to the effective usage of its hardware</li>
+          <li>Disk head is attached to disk arm</li>
         </ul>
       </li>
     </ul>
   </li>
-  <li>Page-replacement policy
+  <li>Latency
     <ul>
-      <li>Page in, Page out</li>
-      <li>Replacing, cost a lot</li>
-    </ul>
-  </li>
-  <li>Three cases
-    <ul>
-      <li>Page was both present and valid → TLB miss handler grap PFN from PTE, retry the instruction</li>
-      <li>Page is valid but not present, Page fault handler → when the page is legitimate</li>
-      <li>Invalid page access → bug, trap the invalid access, terminating</li>
-    </ul>
-  </li>
-  <li>OS to keep a small portion of memory free more proactively
-    <ul>
-      <li>High watermark</li>
-      <li>Low watermark
+      <li>Single-track Latency
         <ul>
-          <li>OS notice fewer than LW page available, the background thread is responsible for freeing memory runs</li>
-          <li>evicts the page until there are HW pages available</li>
-        </ul>
-      </li>
-      <li>Swap daemon
-        <ul>
-          <li>Many systems cluster or group a number of pages and write them out at once to the swap partition</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>these actions all take place transparently to the process</li>
-  <li>Replacement occurs
-    <ul>
-      <li>high watermark (HW ) and low watermark (LW ) to help decide when to start evicting pages from memory</li>
-      <li>systems will cluster or group a number of pages and write them out at once to the swap partition</li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.21]]></summary></entry><entry><title type="html">OS-HW2 Summary</title><link href="http://localhost:4000/recent/OS-HW2/" rel="alternate" type="text/html" title="OS-HW2 Summary" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/recent/OS-HW2</id><content type="html" xml:base="http://localhost:4000/recent/OS-HW2/"><![CDATA[<h1 id="hw-2">HW 2</h1>
-
-<p>First of all, it was the first assignment that I have not completed since I have start Computer Science Major… I slept 11 hours for 4 days.</p>
-
-<ul>
-  <li>Delta debugging:
-    <ul>
-      <li>a test input minimization technique that takes a target program together with a crashing test input, and then automatically derives a part of the test input that still makes the program crash.</li>
-      <li>This algorithm receives three inputs: (1) 𝑝, an executable binary of a target program, (2) 𝑡, a test input that crashes the target program, and (3) 𝑐, a condition to determine the crash.</li>
-    </ul>
-  </li>
-  <li>
-    <p>Overall requirement</p>
-
-    <p>it checks if the regions of size 𝑠 (Line 13) crash 𝑝 while preserving the crash behavior. If found, the algorithm updates 𝑡𝑚 and continues the reduction with it (Lines 14-17). If the algorithm could not find a reduced crashing input with 𝑠, it decrements s by one (Line 19), and repeats the input subsequence exploration until 𝑠 becomes zero (Line 3)</p>
-
-    <ul>
-      <li>User interface:
-        <ul>
-          <li>must return an error message if a given argument is invalid</li>
-          <li>option arguments
+          <li>Rotational Delay
             <ul>
-              <li>I option: receive full path of the crashing input</li>
-              <li>m option: string appeared in the standard error</li>
-              <li>o option: new file to store the reduced crashing input</li>
-            </ul>
-          </li>
-          <li>After the option arguments
-            <ul>
-              <li>executable binary of the target program</li>
-              <li>If the target program needs to receive its own command-line arguments, multiple arguments must be given.</li>
-            </ul>
-          </li>
-          <li>User interrupt
-            <ul>
-              <li>Ctrl+C: for this case, cimin must stop the running test if exists, and prints out the size of the shortest crashing input found so far, produces the output with it, and terminates the execution.</li>
+              <li>it must just wait for the desired sector to rotate under the disk head</li>
             </ul>
           </li>
         </ul>
       </li>
-      <li>System Design
+      <li>Multiple Tracks
         <ul>
-          <li>Running the target program
+          <li>Seek Time
             <ul>
-              <li>To run the target program, cimin must use fork() to create a new process, and exec() (or its variants) to load the target program in the created process.</li>
-              <li>Assumption: receives input via standard input and sends out crash message to standard error</li>
-            </ul>
-          </li>
-          <li>Using Pipe
-            <ul>
-              <li>Target program receives input via standard input and sends out crash message to standard error. To pass input to the target program, cimin must use unnamed pipe (i.e., pipe()) to redirect standard input.</li>
-              <li>Also, it use to redirect the standard error to receive the error message from the target program execution</li>
-              <li>Assumption: We assume that the target program produces crash message to standard error, and we can find a keyword to determine if the same crash happens with reduced inputs.</li>
-            </ul>
-          </li>
-          <li>Using signal
-            <ul>
-              <li>cimin must reject the initial crashing input if its execution takes more than 3 seconds.</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Buggy Programs
-        <ul>
-          <li>jsmn
-            <ul>
-              <li>Bug with heap-buffer overflow errors</li>
-              <li>LLVM AddressSanitizer → explicitly detect an occurrence of heap-buffer overflow buffer</li>
-              <li>You can characterize this crashing message by checking if it has “AddressSanitizer: heap-buffer-overflow”.</li>
-            </ul>
-          </li>
-          <li>libxml2
-            <ul>
-              <li>Bugs with null pointer deference errors.</li>
-              <li>You can trigger this bug by executing xmllint with option “–recover –postvalid -” and passing libxml2/testcases/crash.xml to standard input.</li>
-              <li>The crashing symptom can be identified by checking if “SEGV on unknown address” is printed to standard error. This error message is produced by LLVM AddressSanitizer when a crash occurs by null pointer dereference.</li>
-            </ul>
-          </li>
-          <li>balance
-            <ul>
-              <li>balance is a toy example program that checks if the given input has well-balanced parenthesis or not.</li>
-              <li>When this program receives balance/testcases/fail via standard input, it will fall into infinite loop.</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Report writing
-        <ul>
-          <li>Must not exceed 3 pages</li>
-          <li>Note that the evaluation is primary based on your report, and your implementation will be tested to check whether it consistently works as described in the report</li>
-        </ul>
-      </li>
-      <li>Submission
-        <ul>
-          <li>Report → PDF</li>
-          <li>Makefile</li>
-          <li><a href="http://README.md">README.md</a></li>
-          <li>Runnable at the peace.handong.edu</li>
-        </ul>
-      </li>
-    </ul>
-
-    <p>Crash_copy.json</p>
-
-    <p>→ Only with the new line character → no output</p>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS HW 2... Prof. Hong...]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 20</title><link href="http://localhost:4000/recent/Chapter-20/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 20" /><published>2023-05-12T00:00:00+09:00</published><updated>2023-05-12T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-20</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-20/"><![CDATA[<p>Paging: Smaller Tables</p>
-
-<p>Page tables are too big and thus consume too much memory.</p>
-
-<ul>
-  <li>32-bit address space (2^32 bytes), with 4KB (2^12 bytes) and 4-byte page-table entry
-    <ul>
-      <li>Simple array-based page tables are too big, taking up far too much memory on typical systems</li>
-      <li>We are in search of some techniques to reduce</li>
-    </ul>
-  </li>
-  <li>Simple solution: Bigger pages
-    <ul>
-      <li>Increasing the page size may decrease the page table size</li>
-      <li>But internal fragmentation will occur</li>
-    </ul>
-  </li>
-  <li>Hybrid approach: Paging and Segments
-    <ul>
-      <li>Instead of having a single-page table for the entire address space of the process, why not have one per logical segment?</li>
-      <li>We still have MMU → hold the physical address of the page table of that segment</li>
-      <li>Three base/bound pairs, one each for code, heap, and tack
-        <ul>
-          <li>When the process is running, the base register for each of these segments contains the physical address of a linear page table for that segment</li>
-          <li>each process in the system now has a three-page table associated with it</li>
-          <li>On a context switch, these registers must be changed to reflect the location of the page tables of the newly-running process</li>
-        </ul>
-      </li>
-      <li>On the TLB miss → hardware uses the segment bits to determine which base and bound pair to use
-        <ul>
-          <li>Hardware takes the physical address and combines it with VPN to form an address of the page table entry</li>
-          <li>The critical difference in our hybrid scheme is the presence of a bounds register per segment</li>
-          <li>But…
-            <ul>
-              <li>if we have a sparsely-used heap, we can still end up with a lot of page table waste</li>
-              <li>since most of the memory is managed in <strong>page-sized units</strong>, page tables can be of arbitrary size, and finding free space is complicated</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Multi-level page tables
-        <ul>
-          <li>chop up the page table into page-sized units, then if an entire page of page-table entries is invalid, don’t allocate that page of the page table at all</li>
-          <li>Page directory</li>
-          <li>The page directory, in a simple two-level table, contains one entry per page of the page table</li>
-          <li>consists of a number of page directory entries (PDE)</li>
-          <li>A PDE (minimally) has a valid bit and a page frame number (PFN), similar to a PTE.
-            <ul>
-              <li>But the meaning of valid bit is different, if it is valid, it means at least one of the pages of the page table that the entry points to is valid</li>
-            </ul>
-          </li>
-          <li>the multi-level table only allocates page-table space in proportion to the amount of address space you are using</li>
-          <li>each portion of the page table fits neatly within a page, making it easier to manage memory</li>
-          <li>level of indirection using the page directory, which points to pieces of the page tables</li>
-          <li>In the case of miss
-            <ul>
-              <li>two loads from memory will be required
+              <li>Seek: Move disk arm to correct track</li>
+              <li>Acceleration → disk arm gets moving</li>
+              <li>Coasting → arm moving as full speed</li>
+              <li>Deceleration → arm moves slow down</li>
+              <li>Settling → head is carefully positioned
                 <ul>
-                  <li>one for the page directory, one for PTE itself</li>
+                  <li>settling time is significant</li>
                 </ul>
               </li>
-              <li>time-space tradeoff</li>
-              <li>complexity</li>
             </ul>
           </li>
-          <li>To build a two-level page table for this address space, we start with our full linear page table and break it up into page-sized units.</li>
-          <li>As a result, we need four bits of the VPN to index into the directory; we use the top four bits of the VPN</li>
-          <li>page-directory entry (PDE) with a simple calculation: PDEAddr = PageDirBase + (PDIndex * sizeof(PDE)).</li>
-        </ul>
-      </li>
-      <li>More than two-levels</li>
-      <li>Translation process
-        <ul>
-          <li>the physical address is formed directly without accessing the page table at all, as before. Only upon a TLB miss does the hardware need to perform the full multi-level lookup.</li>
-        </ul>
-      </li>
-      <li>Inverted Page Tables
-        <ul>
-          <li>Even more extreme space saving in the world of page tables is found with inverted page tables</li>
+          <li>Transfer
+            <ul>
+              <li>where data is either read from or written to the surface</li>
+            </ul>
+          </li>
         </ul>
       </li>
     </ul>
   </li>
-  <li>some systems place such page tables in kernel virtual memory, allowing the system to swap some page tables to disk when memory pressure gets a little tight.</li>
-</ul>
-
-<p>In summary, it also introduces increased complexity, potential memory overhead, challenges in address translation and memory protection, and fragmentation concerns, which need to be carefully considered and managed in the design and implementation of such a memory management scheme.</p>
-
-<p>PTE → bit의 순서와 optimization</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.20]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 17</title><link href="http://localhost:4000/recent/Chapter-17/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 17" /><published>2023-04-20T00:00:00+09:00</published><updated>2023-04-20T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-17</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-17/"><![CDATA[<p>Free-Space Management</p>
-
-<p>When free-space management becomes more difficult is when the free space with user-level memory-allocation memory</p>
+  <li>Track Skew
+    <ul>
+      <li>make sure that sequential reads can be properly serviced even when crossing track boundaries</li>
+      <li>When the disk needs time to reposition head
+        <ul>
+          <li>If there is now skew, the head need to wait for next block which requries whole rotation</li>
+        </ul>
+      </li>
+      <li>Outer track has more sectors than inner tracks
+        <ul>
+          <li>More room geometrically</li>
+          <li>Multi-zoned disk drives</li>
+          <li>Each zone has same number of sectors</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Track buffer
+    <ul>
+      <li>Cache
+        <ul>
+          <li>Just small amount of the memory</li>
+        </ul>
+      </li>
+      <li>Drive has a choice
+        <ul>
+          <li>acknowledge
+            <ul>
+              <li>After put the data in its memory
+                <ul>
+                  <li>Write back caching</li>
+                </ul>
+              </li>
+              <li>write has actually been written to disk
+                <ul>
+                  <li>Write through caching</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Dimensional analysis
+        <ul>
+          <li>RPM</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>I/O time
+    <ul>
+      <li>Workload
+        <ul>
+          <li>Random</li>
+          <li>Sequential</li>
+        </ul>
+      </li>
+      <li>Capcity and performance
+        <ul>
+          <li>High performance for searching</li>
+          <li>Low capacity</li>
+          <li>Low performance on searching</li>
+          <li>High capacity</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Disk Scheduling
+    <ul>
+      <li>Due to the high cost of I/O</li>
+      <li>SSTF: Shortest Seek Time First
+        <ul>
+          <li>order the queue of I/O request by track
+            <ul>
+              <li>drive geometry is not available to the host OS
+                <ul>
+                  <li>Nearest-block-first</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Starvation</li>
+        </ul>
+      </li>
+      <li>SCAN
+        <ul>
+          <li>simply moves back and forth across the disk servicing requests in order across the track
+            <ul>
+              <li>Sweep</li>
+            </ul>
+          </li>
+          <li>F-SCAN
+            <ul>
+              <li>freezes the queue to be serviced when it is doing a sweep</li>
+            </ul>
+          </li>
+          <li>C-SCAN
+            <ul>
+              <li>Circular SCAN</li>
+              <li>sweeps from outer-to-inner, and then resets at the outer track to begin again</li>
+            </ul>
+          </li>
+          <li>Elevator algorithm → going up and down</li>
+        </ul>
+      </li>
+      <li>Rotation Cost</li>
+      <li>shortest positioning time first, SPTF, SATF is the solution</li>
+    </ul>
+  </li>
+  <li>I/O merging
+    <ul>
+      <li>Merge the request, reordering is performed upon the merged request</li>
+    </ul>
+  </li>
+  <li>Work-conversing
+    <ul>
+      <li>How long should the system wait before issuing an I/O to disk?
+        <ul>
+          <li>immediately issue the request to the drive</li>
+        </ul>
+      </li>
+      <li>anticipatory disk scheduling
+        <ul>
+          <li>non-work-conserving</li>
+          <li>waiting for a new and better request results better performance in average</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.37]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 41</title><link href="http://localhost:4000/recent/Chapter-41/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 41" /><published>2023-06-17T00:00:00+09:00</published><updated>2023-06-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-41</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-41/"><![CDATA[<p>Locality and the fast file system</p>
 
 <ul>
-  <li>Segmentation</li>
-  <li>External Fragmentation</li>
+  <li>Old file system was simple
+    <ul>
+      <li>The problem: Poor Performance</li>
+      <li>UNIX file system treated the disk like it was a random-access memory</li>
+      <li>Data was spread all over the place</li>
+      <li>the data blocks of a file were often very far away from its inode, thus inducing an expensive seek</li>
+      <li>Fragmented</li>
+      <li>Degramententation Tool
+        <ul>
+          <li>minimize the internal fragmentation</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>FFS: Disk Awareness
+    <ul>
+      <li>Fast File System</li>
+      <li>interface
+        <ul>
+          <li>open, read, write, and close</li>
+        </ul>
+      </li>
+      <li>Cylinder groups
+        <ul>
+          <li>Single cylinder is a set of tracks on different surfaces of a hard drive</li>
+          <li>Block groups</li>
+          <li>Consecutive portion of the disk’s address space</li>
+          <li>placing two files within the same group</li>
+          <li>Super block, ib, db, inode, data block</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>how to allocate
+    <ul>
+      <li>find the cylinder group with a low number of allocated directories (to balance directories across groups) and a high number of free inodes (to subsequently be able to allocate a bunch of files), and put the directory data and inode in that group</li>
+      <li>to allocate the data blocks of a file in the same group as its inode</li>
+      <li>it places all files that are in the same directory in the cylinder group of the directory they are in</li>
+    </ul>
+  </li>
+  <li>FFS policies
+    <ul>
+      <li>the data blocks of each file are near each file’s inode, and files in the same directory are near one another</li>
+      <li>common sense</li>
+    </ul>
+  </li>
+  <li>Measuring File Locality
+    <ul>
+      <li>The random trace was generated by selecting files from within an existing SEER trace in random order and calculating the distance metric between these randomly-ordered accesses</li>
+      <li>40% of file accesses were to either the same file or to one in the same director</li>
+      <li>a large file would entirely fill the block group it is first placed within</li>
+      <li>FFS instead spreads the file spread across groups</li>
+      <li>amortization</li>
+    </ul>
+  </li>
   <li>Internal fragmentation
     <ul>
-      <li>if an allocator hands out chunks of memory bigger than that requested, any unasked for (and thus unused) space in such a chunk</li>
-    </ul>
-  </li>
-  <li>void pointer</li>
-  <li>Low-level Mechanisms
-    <ul>
-      <li>Splitting and Coalescing
+      <li>internal fragmentation could thus lead to roughly half the disk being wasted for a typical file system</li>
+      <li>sub-blocks
         <ul>
-          <li>requesting more than space that is free will fail → splitting</li>
-          <li>will find a free chunk of memory that can satisfy request</li>
-          <li>What if returned space is in the middle of heap?</li>
-          <li>It may end up with divided arrays with continuous size</li>
+          <li>512-byte little blocks that the file system could allocate to files</li>
+          <li>the file system will continue allocating 512-byte blocks to it until it acquires a full 4KB of data</li>
         </ul>
       </li>
-      <li>Tracking the size of allocated regions
+      <li>A second neat thing that FFS introduced was a disk layout that was optimized for performance</li>
+      <li>Parameterization
         <ul>
-          <li>header block</li>
-          <li>Embedding Free list</li>
-          <li>mmap</li>
-          <li>Fragmented free spaces
+          <li>How many blocks need to skip to avoid extra rotation</li>
+        </ul>
+      </li>
+      <li>FFS was one of the first file systems to allow for long file names</li>
+      <li>symbolic link</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.41]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 40</title><link href="http://localhost:4000/recent/Chapter-40/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 40" /><published>2023-06-17T00:00:00+09:00</published><updated>2023-06-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-40</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-40/"><![CDATA[<p>File System Implementation</p>
+
+<ul>
+  <li>Very Simple File System
+    <ul>
+      <li>The file system is pure software</li>
+      <li>we will not be adding hardware features to make some aspect of the file system work better</li>
+    </ul>
+  </li>
+  <li>The first is the data structure of the file system
+    <ul>
+      <li>data and metadata</li>
+      <li>access method → open(), read(), write()</li>
+    </ul>
+  </li>
+  <li>Overall Organization
+    <ul>
+      <li>Block
+        <ul>
+          <li>one block size, the common size of 4 KB</li>
+          <li>size 4 KB</li>
+        </ul>
+      </li>
+      <li>Data region</li>
+      <li>Metadata
+        <ul>
+          <li>Inode</li>
+          <li>Inode table</li>
+        </ul>
+      </li>
+      <li>Allocation structures
+        <ul>
+          <li>Free list
             <ul>
-              <li>go through the list and merge neighboring chunks</li>
+              <li>points to the next free block</li>
             </ul>
           </li>
-          <li>Heap can grow heap
+          <li>bitmap
             <ul>
-              <li>OS finds free physical pages, maps them into the address space of the requesting process, then returns the value of the end of the new heap</li>
+              <li>Data region</li>
+              <li>Inode</li>
             </ul>
           </li>
         </ul>
       </li>
+      <li>Superblock
+        <ul>
+          <li>Contains information about this particular file system</li>
+          <li>inode bitmap</li>
+          <li>data bitmap</li>
+          <li>Inodes</li>
+        </ul>
+      </li>
     </ul>
   </li>
-  <li>Strategies
+  <li>File Organization: The Inode
     <ul>
-      <li>Best fit → search through the free list and find chunks of free memory that bigger than the request size then return one that is the smallest in that group of candidate</li>
-      <li>Worst fit → case find the largest chunk and return the requested amount</li>
-      <li>First fit → finds the first block that is big enough and returns the requested amount to the user
-        <ul>
-          <li>May pollute the beginning of the free list with a small objects</li>
-          <li>address-based ordering → keeping the list ordered by the address of free space</li>
-        </ul>
-      </li>
-      <li>Net fit → keeps an extra pointer to the location within the list where one was looking last
-        <ul>
-          <li>Spread the search for free space throughout the list more uniformly, thus avoiding splintering of the beginning of the list</li>
-        </ul>
-      </li>
+      <li>inode (short for index node)</li>
+      <li>these nodes were originally arranged in an array, and the array indexed into when accessing a particular inode</li>
+      <li>Each inode is implicitly referred to by a number (called the i-number), which we’ve earlier called the low-level name of the file</li>
+      <li>20KB in size (five 4KB blocks) and thus consisting of 80 inodes (assuming each inode is 256 bytes)</li>
     </ul>
   </li>
-  <li>Segregated List
+  <li>metadata</li>
+  <li>direct pointers</li>
+  <li>The Multi-Level Index
     <ul>
-      <li>Slab allocator
+      <li>Indirect Pointer
         <ul>
-          <li>The basic idea is simple: if a particular application has one (or a few) popular-sized requests that it makes, keep a separate list just to manage objects of that size</li>
+          <li>it points to a block that contains more pointers, each of which point to user data</li>
         </ul>
       </li>
-      <li>Slab allocator
-        <ul>
-          <li>Specifically, when the kernel boots up, it allocates a number of object caches for kernel objects that are likely to be requested frequently</li>
-        </ul>
-      </li>
+      <li>If a file grows large enough, an indirect block is allocated</li>
+      <li>the double indirect pointer</li>
+      <li>triple is possible</li>
+      <li>multi-level index approach to pointing to file blocks. Let’s examine an example with twelve direct pointers and a single and a double indirect block. Assuming a block size of 4 KB, and 4-byte pointers, this structure can accommodate a file of just over 4 GB in size</li>
+      <li>Other file systems, including SGI XFS and Linux ext4, use extents instead of simple pointers</li>
+      <li>Most files are small</li>
     </ul>
   </li>
-  <li>Buddy allocation
+  <li>Directory Organization
     <ul>
-      <li>big space of size 2^N</li>
-      <li>search for free space recursively divides free space by two until a block that is big enough to accommodate the request is found</li>
-      <li>may suffer internal fragmentation</li>
-      <li>When returning the 8KB block to the free list, the allocator checks whether the “buddy” 8KB is free; if so, it coalesces the two blocks into a 16KB block.</li>
+      <li>each entry has an inode number, record length (the total bytes for the name plus any left over space), string length (the actual length of the name), and finally the name of the entry</li>
+      <li>Deleting the file → unlink()</li>
+      <li>directory has an inode, somewhere in the inode table</li>
     </ul>
   </li>
-  <li>One major problem with many of the approaches described above is their lack of scaling.</li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.17]]></summary></entry></feed>
+  <li>free space management
+    <ul>
+      <li>pre-allocation policy</li>
+      <li>the file system guarantees that a portion of the file will be contiguous on the disk</li>
+    </ul>
+  </li>
+  <li>Access Path
+    <ul>
+      <li>The file system must traverse the pathname and thus locate the desired inode</li>
+      <li>root directory</li>
+      <li>i-number of file or directory</li>
+      <li>read and lseek
+        <ul>
+          <li>read in the first block of the file, consulting the inode to find the location of such a block</li>
+        </ul>
+      </li>
+      <li>Close
+        <ul>
+          <li>No disk I/Os take place</li>
+        </ul>
+      </li>
+      <li>Writing to the file may also allocate a block
+        <ul>
+          <li>Overwritten</li>
+        </ul>
+      </li>
+      <li>Traffic of reading and writing
+        <ul>
+          <li>one for inode bitmap, new inode, directory, and directory inode</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Caching and Buffering
+    <ul>
+      <li>fixed-size cache</li>
+      <li>LRU</li>
+      <li>static partioning
+        <ul>
+          <li>10% of the total memory</li>
+        </ul>
+      </li>
+      <li>Dynamic Partioning
+        <ul>
+          <li>unified page cache</li>
+        </ul>
+      </li>
+      <li>Write Buffering</li>
+      <li>Batch</li>
+      <li>Schedule</li>
+      <li>Fsync()
+        <ul>
+          <li>direct I/O interfaces</li>
+          <li>raw disk interface</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.40]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 39</title><link href="http://localhost:4000/recent/Chapter-39/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 39" /><published>2023-06-17T00:00:00+09:00</published><updated>2023-06-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-39</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-39/"><![CDATA[<p>File and Directories</p>
+
+<ul>
+  <li>Persistence Storage
+    <ul>
+      <li>HDD</li>
+      <li>SSD</li>
+    </ul>
+  </li>
+  <li>Files and Directories
+    <ul>
+      <li>inode number</li>
+      <li>directory
+        <ul>
+          <li>Directory tree (hierarchy)</li>
+          <li>Root directory</li>
+          <li>Subdirectory</li>
+          <li>Separator</li>
+        </ul>
+      </li>
+      <li>Type of the file</li>
+    </ul>
+  </li>
+  <li>Creating file
+    <ul>
+      <li>open()</li>
+      <li>file descriptor
+        <ul>
+          <li>Capability</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Reading and Writing files
+    <ul>
+      <li>Strace
+        <ul>
+          <li>trace the system calls made by a program</li>
+          <li>Flags</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Not sequential reading and writing
+    <ul>
+      <li>random offset
+        <ul>
+          <li>searching specific word</li>
+        </ul>
+      </li>
+      <li>File Offset</li>
+      <li>Open file table
+        <ul>
+          <li>OS can use this to determine whether the opened file is readable or writable (or both), which underlying file it refers to (as pointed to by the struct inode pointer ip), and the current offset (off).</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Shared File Table Entities
+    <ul>
+      <li>Fork and dup</li>
+      <li>reference count</li>
+      <li>The dup() call allows a process to create a new file descriptor that refers to the same underlying open file as an existing descriptor</li>
+    </ul>
+  </li>
+  <li>Fsync()
+    <ul>
+      <li>(DBMS), development of a correct recovery protocol requires the ability to force writes to disk from time to time</li>
+    </ul>
+  </li>
+  <li>Renaming files
+    <ul>
+      <li>rename() call is atomic</li>
+    </ul>
+  </li>
+  <li>Information about files
+    <ul>
+      <li>metadata
+        <ul>
+          <li>stat() or fstat() system calls</li>
+        </ul>
+      </li>
+      <li>inode</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="Chapter%2039%206ddb996a8e204d40b66eacace1a2cff9/Untitled.png" alt="Untitled" /></p>
+
+<ul>
+  <li>Removing Files
+    <ul>
+      <li>unlink() ?</li>
+    </ul>
+  </li>
+  <li>Making Directories
+    <ul>
+      <li>To create a directory, a single system call, mkdir(), is available. The eponymous mkdir program can be used to create such a directory.</li>
+    </ul>
+  </li>
+  <li>Reading Directories
+    <ul>
+      <li>the program uses three calls, opendir(), readdir(), and closedir()</li>
+      <li>struct dirent</li>
+    </ul>
+  </li>
+  <li>Deleting Directories
+    <ul>
+      <li>rmdir()</li>
+    </ul>
+  </li>
+  <li>Hard Links
+    <ul>
+      <li>he link() system call takes two arguments, an old pathname and a new one; when you “link” a new file name to an old one, you essentially create another way to refer to the same file</li>
+      <li>The way link() works is that it simply creates another name in the directory you are creating the link to</li>
+      <li>reference count (link count)</li>
+    </ul>
+  </li>
+  <li>Symbolic Links
+    <ul>
+      <li>Soft Link</li>
+      <li>the original file can now be accessed through the file name file as well as the symbolic link name file2.</li>
+      <li>dangling reference possibility</li>
+    </ul>
+  </li>
+  <li>Permission Bits And Access Control Lists
+    <ul>
+      <li>permission bits</li>
+      <li>what the owner of the file can do to it, what someone in a group can do to the file, and finally, what anyone (sometimes referred to as other) can do.</li>
+      <li>chmod command</li>
+      <li>form of an access control list (ACL) per directory</li>
+    </ul>
+  </li>
+  <li>Making And Mounting A File System
+    <ul>
+      <li>What mount does, quite simply is take an existing directory as a target mount point and essentially paste a new file system onto the directory tree at that point</li>
+      <li>mkfs</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.39]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 36</title><link href="http://localhost:4000/recent/Chapter-36/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 36" /><published>2023-06-12T00:00:00+09:00</published><updated>2023-06-12T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-36</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-36/"><![CDATA[<p>Input/output device (I/O)</p>
+
+<ul>
+  <li>System Architecture
+    <ul>
+      <li>Hierarchiacal structure
+        <ul>
+          <li>CPU, memory, memory BUS</li>
+          <li>I/O bus
+            <ul>
+              <li>PCI
+                <ul>
+                  <li>Peripheral Component Interconnect</li>
+                  <li>High-speed I/O devices such as graphics</li>
+                </ul>
+              </li>
+              <li>Peripheral bus
+                <ul>
+                  <li>Lower speed bus</li>
+                  <li>SATA, USB</li>
+                  <li>connects to disks, mice, keyboards</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Reasons
+            <ul>
+              <li>Physics, cost</li>
+              <li>a high-performance memory bus does not have much room to plug devices and such into it</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Modern Computer system
+        <ul>
+          <li>DMI
+            <ul>
+              <li>Direct Media Interface</li>
+              <li>Devices connect to the chip</li>
+            </ul>
+          </li>
+          <li>ATA → The AT Attachment
+            <ul>
+              <li>SATA, eSATA</li>
+            </ul>
+          </li>
+          <li>USB
+            <ul>
+              <li>Universal Serial Bus → Keyborads, Mice</li>
+            </ul>
+          </li>
+          <li>PCIe
+            <ul>
+              <li>Peripheral Component Interconnect Express</li>
+              <li>Higher performance → networ, NVMe(High speed)</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Canonical Device
+        <ul>
+          <li>Hardware interface
+            <ul>
+              <li>present interface that allows the system software to control its operation</li>
+              <li>All device have specified interface and protocol</li>
+            </ul>
+          </li>
+          <li>Internal structure
+            <ul>
+              <li>specific and responsible for implementin the abstraction the devide presents to the system
+                <ul>
+                  <li>Simple device such as CPU, memroy, RAID controller</li>
+                </ul>
+              </li>
+              <li>thousands of line of firmware</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Canonical Protocol
+        <ul>
+          <li>Status register → current status</li>
+          <li>Command register → to perform certain task</li>
+          <li>Data register → pass data to device</li>
+          <li>Four steps
+            <ul>
+              <li>Pooling, waiting for the device is ready to receive a command</li>
+              <li>Sending data
+                <ul>
+                  <li>Programmed I/O</li>
+                </ul>
+              </li>
+              <li>Command using command register</li>
+              <li>OS waits for device poerform the task</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Lowering CPU overhead
+        <ul>
+          <li>interrupt
+            <ul>
+              <li>Instead of pooling</li>
+              <li>Interrupt Service Routine
+                <ul>
+                  <li>Interrupt Handler</li>
+                </ul>
+              </li>
+              <li>Allows overlap of computation and I/O</li>
+            </ul>
+          </li>
+          <li>using interrupts is not always the best solution
+            <ul>
+              <li>Interrupt is expensive, inefficient in the case of simple I/O interrupt
+                <ul>
+                  <li>Hybrid, two-phased approach</li>
+                  <li>First Poll</li>
+                  <li>After certain time, interrupt</li>
+                  <li>if a device is fast, it may be best to poll; if it is slow, interrupt</li>
+                </ul>
+              </li>
+              <li>coalescing
+                <ul>
+                  <li>device need to raise an interrupt first waits for a bit</li>
+                  <li>multiple interrupts can be coalesced into a single interrupt delivery</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>More Efficient Data Movement With DMA
+        <ul>
+          <li>when using programmed I/O (PIO) to transfer a large chunk of data to a device, the CPU is once again over burdened with a rather trivial task
+            <ul>
+              <li>Copying the data using CPU → trivial task</li>
+            </ul>
+          </li>
+          <li>Direct Memory Access (DMA)
+            <ul>
+              <li>OS program DMA engine by telling it where the data lives in memory, how much data to copy, and which device to send it to.</li>
+              <li>DMA is complete → raise the interrupt, and the OS knows the transfer control is completed</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Methods Of Device Interaction
+        <ul>
+          <li>explicit I/O instructions
+            <ul>
+              <li>previleged instructions</li>
+              <li>OS controls device, directly communicate with the device</li>
+            </ul>
+          </li>
+          <li>Memory mapped I/O
+            <ul>
+              <li>the hardware makes device registers available as if they were memory locations</li>
+              <li>OS issues a load (to read) or store (to write) the address</li>
+              <li>The memory-mapped approach is nice in that no new instructions are needed to support it</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Device Driver
+        <ul>
+          <li>how to fit devices, each of which have very specific interfaces</li>
+          <li>OS must know in detail how a device work
+            <ul>
+              <li>Device Driver solve the question</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p><img src="Chapter%2036%2061b718fbd8bf4b238b94fd0431a9941a/Untitled.png" alt="Untitled" /></p>
+
+        <ul>
+          <li>70% of OS code is found in device drivers</li>
+          <li>Window is high as well</li>
+        </ul>
+      </li>
+      <li>An IDE disk presents a simple interface to the system, consisting of four types of register: control, command block, status, and error
+        <ul>
+          <li>Basic Protocol
+            <ul>
+              <li>Wait for ready</li>
+              <li>Write parameter to command register</li>
+              <li>Start I/O</li>
+              <li>Data transfer</li>
+              <li>Handle interrupts</li>
+              <li>Error Handling</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Who started first?
+        <ul>
+          <li>Not clear</li>
+          <li>people built these early machines, it became obvious that I/O support was needed.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.36]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 31</title><link href="http://localhost:4000/recent/Chapter-31/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 31" /><published>2023-06-12T00:00:00+09:00</published><updated>2023-06-12T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-31</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-31/"><![CDATA[<p>Semaphores</p>
+
+<ul>
+  <li>both locks and condition variables to solve a broad range of relevant and interesting concurrency problems</li>
+  <li>POSIX standard
+    <ul>
+      <li>sem_wait()</li>
+      <li>sem_post()</li>
+      <li>sem_init()
+        <ul>
+          <li>Second argument → 0: it will be shared between threads on same process</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Binary Semaphores
+    <ul>
+      <li>it will wait only if the value is not greater than or equal to 0</li>
+      <li>scheduler state
+        <ul>
+          <li>Run</li>
+          <li>Ready</li>
+          <li>Sleep</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Semaphores for ordering
+    <ul>
+      <li>Ordering primitives</li>
+      <li>the parent will call sem wait() before the child has called sem post(); we’d like the parent to wait for the child to run.
+        <ul>
+          <li>Only when the initial value is 0 is possible</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Producer/Consumer Problem
+    <ul>
+      <li>Need to add mutual exclusion
+        <ul>
+          <li>using two locks</li>
+          <li>There is a simple cycle here. The consumer holds the mutex and is waiting for the someone to signal full. The producer could signal full but is waiting for the mutex. Thus, the producer and consumer are each stuck waiting for each other: a classic deadlock.</li>
+        </ul>
+      </li>
+      <li>Avoiding Deadlock
+        <ul>
+          <li>we simply must reduce the scope of the lock</li>
+          <li>using two locks in specific sequences</li>
+        </ul>
+      </li>
+      <li>Sometimes, bound buffer</li>
+    </ul>
+  </li>
+  <li>Reader-Writer Locks
+    <ul>
+      <li>The code is pretty simple. If some thread wants to update the data structure in question, it should call the new pair of synchronization operations</li>
+      <li>when the first reader acquires the lock; in that case, the reader also acquires the write lock</li>
+      <li>once a reader has acquired a read lock, more readers will be allowed to acquire the read lock too</li>
+    </ul>
+
+    <p><a href="https://m.blog.naver.com/hirit808/221786966867">KOCW 운영체제 7: 독자 저자 문제(Readers-Writers Problem)</a></p>
+  </li>
+  <li>dining philosopher’s problem
+    <ul>
+      <li>each has times where they think and don’t need any forks, and times when they eat a philosopher needs two forks, both the one on their left and the one on their right</li>
+      <li>deadlock. If each philosopher happens to grab the fork on their left before any philosopher can grab the fork on their right, each will be stuck holding one fork and waiting for another</li>
+      <li>Breaking The Dependency
+        <ul>
+          <li>gets the forks in a different order than the others; the put forks() code remains the same</li>
+          <li>cigarette smoker’s problem or the sleeping barber problem</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><a href="https://dkswnkk.tistory.com/412">[OS] 식사하는 철학자들 문제(The Dining-Philosophers Problem)</a></p>
+
+<ul>
+  <li>Thread Throttling
+    <ul>
+      <li>A simple semaphore can solve this problem. By initializing the value of the semaphore to the maximum number of threads you wish to enter the memory-intensive region at once, and then putting a sem wait() and sem post() around the region, a semaphore can naturally throttle the number of threads that are ever concurrently in the dangerous region of the code</li>
+    </ul>
+  </li>
+  <li>Zemaphores</li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.31]]></summary></entry></feed>
