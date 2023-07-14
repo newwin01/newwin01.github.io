@@ -1,6 +1,6 @@
 ---
 title:  "Can We Automatically Fix Bugs by Learning Edit Operations?"
-excerpt: "Generalizing the change is helpful?"
+excerpt: "Generalizing the change is helpful...?"
 
 categories:
   - APR
