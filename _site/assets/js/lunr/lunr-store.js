@@ -214,4 +214,16 @@ var store = [{
         "tags": ["Blog"],
         "url": "/recent/Clean_Code_Ch2/",
         "teaser": null
+      },{
+        "title": "And Then There Were None 그리고 아무도 없었다",
+        "excerpt":"추리 소설을 추천받았다. 아가사 크리스티의 그리고 아무도 없었다 였다. 소설을 그렇게 좋아하는 편은 아니라 이름만 들어본 작가였지만 오랜만에 소설을 읽어보자는 마음으로 책을 집어들었다. 와우. 정말 재밌게 읽었다. 그 자리에 앉아서 내리 2시간을 읽었다. 물론 소설이 짧기도 하다 알고 보니 내 주위는 다들 읽었더라… 이 재밌는 걸 자신들만 알고 있었다니… 물론...","categories": ["Books"],
+        "tags": ["Blog"],
+        "url": "/recent/And_Then_There_Were_None/",
+        "teaser": null
+      },{
+        "title": "Clean Code Chapter 3",
+        "excerpt":"How can we make a function communicate its intent? What attributes can we give that will allow a reader to intuit the kind of program they live inside? The function should be very small In 1999, every function was just two, three, or four lines long Each was transparent and...","categories": ["Books"],
+        "tags": ["Blog"],
+        "url": "/recent/Clean_Code_Ch3/",
+        "teaser": null
       }]
