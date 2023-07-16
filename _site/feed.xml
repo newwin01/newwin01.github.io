@@ -1,4 +1,235 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-14T18:13:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">Can We Automatically Fix Bugs by Learning Edit Operations?</title><link href="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/" rel="alternate" type="text/html" title="Can We Automatically Fix Bugs by Learning Edit Operations?" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Can%20We%20Automatically%20Fix%20Bugs%20by%20Learning%20Edit%20Operations</id><content type="html" xml:base="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/"><![CDATA[<h2 id="can-we-automatically-fix-bugs-by-learning-edit-operations">“Can We Automatically Fix Bugs by Learning Edit Operations?”</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-16T23:17:06+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">And Then There Were None 그리고 아무도 없었다</title><link href="http://localhost:4000/recent/And_Then_There_Were_None/" rel="alternate" type="text/html" title="And Then There Were None 그리고 아무도 없었다" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/And_Then_There_Were_None</id><content type="html" xml:base="http://localhost:4000/recent/And_Then_There_Were_None/"><![CDATA[<p>추리 소설을 추천받았다. 아가사 크리스티의 <strong><em>그리고 아무도 없었다</em></strong> 였다. <br /> 
+소설을 그렇게 좋아하는 편은 아니라 이름만 들어본 작가였지만 오랜만에 소설을 읽어보자는 마음으로 책을 집어들었다.</p>
+
+<p>와우. 정말 재밌게 읽었다. 그 자리에 앉아서 내리 2시간을 읽었다. <del>물론 소설이 짧기도 하다</del> <br />
+알고 보니 내 주위는 다들 읽었더라… 이 재밌는 걸 자신들만 알고 있었다니…</p>
+
+<p>물론 선입견빼면 시체인 내가 추리 소설을 추천 받았더라도 내가 내키지 않았으면 안 읽었을 것 같긴 하다.
+뭐든지 한 번 정도 시도해보고 판단하는게 맞는 것 같다는 생각이 근래에 많이 든다.</p>
+
+<p>그 정도로 책이 재밌었다. 다음엔 <strong><em>오리엔탈 특급 살인</em></strong> 읽어볼까 싶다!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[재밌다...]]></summary></entry><entry><title type="html">Clean Code Chapter 3</title><link href="http://localhost:4000/recent/Clean_Code_Ch3/" rel="alternate" type="text/html" title="Clean Code Chapter 3" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch3</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch3/"><![CDATA[<p>How can we make a function communicate its intent?</p>
+
+<p>What attributes can we give that will allow a reader to intuit the kind of program they live inside?</p>
+
+<p><strong><em>The function should be very small</em></strong></p>
+
+<ul>
+  <li>In 1999, every function was just two, three, or four lines long
+    <ul>
+      <li>Each was transparent and led to the next in a compelling order</li>
+    </ul>
+  </li>
+  <li>Block and Indenting
+    <ul>
+      <li>block within if, else, while and so on should be one line long
+        <ul>
+          <li>The line must be a function call</li>
+          <li>The function should not be large enough to hold the nested structure</li>
+          <li>The indent level of a function should not be greater than one or two</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p><strong><em>Function Should Do One Thing</em></strong></p>
+  </li>
+  <li>What is one thing?
+    <ul>
+      <li>If a function does only that is on one level below the stated name of the function, then the function is doing one thing</li>
+      <li>Decomposing a larger concept</li>
+      <li>Simply restates the code without changing the level of abstraction</li>
+      <li>if you can extract another function from it with a name that is not merely a restatement of its implementation</li>
+      <li>A function that does one thing cannot be divided</li>
+    </ul>
+  </li>
+  <li>One level of abstraction per function
+    <ul>
+      <li>Statements within the function are all at the same level of abstraction</li>
+    </ul>
+  </li>
+  <li>Reading code from Top to Bottom: The Stepdown Rule
+    <ul>
+      <li>Top-down Narrative</li>
+      <li>Reading program, descending one level of abstraction at a time as we read down the list of function</li>
+      <li>Each function introduces the nest, and each function remains at a consistent level of abstraction</li>
+    </ul>
+  </li>
+  <li>Avoid using switch statements
+    <ul>
+      <li>Each statement is buried in a low-level class and is never repeated</li>
+      <li>Switch Statements can be tolerated if they appear only once</li>
+      <li>Used to create polymorphic objects; hidden behind an inheritance relationship</li>
+    </ul>
+  </li>
+  <li>Simple Responsibility Principle
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Single-responsibility_principle">https://en.wikipedia.org/wiki/Single-responsibility_principle</a></li>
+    </ul>
+  </li>
+  <li>Open Closed Principle
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle">https://en.wikipedia.org/wiki/Open–closed_principle</a></li>
+    </ul>
+  </li>
+  <li>Use Descriptive Names
+    <ul>
+      <li>Choose descriptive names to clarify the design of the module in mind</li>
+      <li>Don’t be afraid to make a name long</li>
+      <li>Be consistent in names</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong><em>The argument is at a different level of abstraction</em></strong></p>
+
+<ul>
+  <li>Function Arguments
+    <ul>
+      <li>The ideal number argument for a function is zero(niladic)</li>
+      <li>An argument forces the user to know the details</li>
+    </ul>
+  </li>
+  <li>Arguments are hard at the testing point of a view
+    <ul>
+      <li>Need to test all combinations of arguments</li>
+      <li>Output arguments are harder to understand than input arguments</li>
+      <li>Don’t expect information to be going out through arguments</li>
+    </ul>
+  </li>
+  <li>Common Monadic(one argument) function
+    <ul>
+      <li>Usage of arguments
+        <ul>
+          <li>Asking questions about arguments</li>
+          <li>Operating on arguments, transforming the arguments</li>
+        </ul>
+      </li>
+      <li><em>Event: there are input arguments but no output arguments</em>
+        <ul>
+          <li>The intention of calling the event is to use the argument the alter the state of the system</li>
+          <li>Usage should be very clear that reader must notice this function is the event</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Flag Arguments
+    <ul>
+      <li><em>It is Ugly</em></li>
+      <li>Split function instead of flag</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Dyadic Functions</p>
+
+<ul>
+  <li>Should be avoided, but there is a situation in that dyadic function is necessary</li>
+  <li>Take advantage of what mechanisms may be available to convert them into single-argument functions</li>
+</ul>
+
+<p>Triads Functions</p>
+
+<ul>
+  <li>Very careful to use it</li>
+</ul>
+
+<p>Argument Objects</p>
+
+<ul>
+  <li>When a group of variables is passed together, it is likely part of a concept that deserves a name of its own</li>
+  <li>Augment list
+    <ul>
+      <li>Functions that take variable arguments can be monads, dyads, or even triads, but no more than that</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Verb and Keywords</p>
+
+<ul>
+  <li>Monad case
+    <ul>
+      <li>the function and argument should form a very nice verb/noun pair</li>
+    </ul>
+  </li>
+  <li>Using keywords to form a function name</li>
+  <li>Function name and ordering of argument</li>
+  <li>No side Effect
+    <ul>
+      <li>No temporal coupling</li>
+      <li>State exactly what the function does and split the function if it is possible</li>
+    </ul>
+  </li>
+  <li>Output arguments
+    <ul>
+      <li>Anything that forces you to check the function signature is equivalent to a double-take</li>
+      <li><em>this</em> keyword is intended to act as an output argument</li>
+      <li>Output argument should be avoided</li>
+    </ul>
+  </li>
+</ul>
+
+<p><strong><em>Do something or answer something, but not both</em></strong></p>
+
+<p>Command Query Separation</p>
+
+<ul>
+  <li>Separate the command from the query so that ambiguity cannot occur</li>
+</ul>
+
+<p>Prefer Exception to Return Error Codes</p>
+
+<ul>
+  <li>Processing code can be separated from the happy path code and can be simplified</li>
+  <li>Extract Try/Catch Block
+    <ul>
+      <li>Specific function for error handling</li>
+      <li>It makes help to clarify the function
+        <ul>
+          <li>Nice Separation</li>
+        </ul>
+      </li>
+      <li>Error Handling is one thing; function should only be one thing</li>
+    </ul>
+  </li>
+  <li>New exceptions are derivatives of the exception class</li>
+</ul>
+
+<p>Don’t Repeat Yourself</p>
+
+<ul>
+  <li>Duplication may be the root of all evil in software</li>
+  <li>Since the invention of the subroutine, innovations have been an ongoing attempt to eliminate duplication from our source code</li>
+</ul>
+
+<p>Structured Programming</p>
+
+<ul>
+  <li>Only be one <em>return</em> statement</li>
+  <li>No <em>break</em> or <em>continue</em> statement</li>
+  <li>Never <em>goto</em> statement</li>
+  <li>These rules are beneficial for large functions, not small functions</li>
+</ul>
+
+<p>How to write a function with these rules?</p>
+
+<ul>
+  <li>Write code</li>
+  <li>Message and refine the code, shrink and reorder, and keeping the test passing</li>
+</ul>
+
+<p>Conclusion</p>
+
+<ul>
+  <li>Functions are the verb</li>
+  <li>Classes are the nouns</li>
+  <li>The art of programming is the art of language design</li>
+  <li>A function will be short, well-named, nicely organized</li>
+  <li><strong><em>Tell the story of the system</em></strong>
+    <ul>
+      <li>need to fit cleanly together in precise language</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[Using Function Properly]]></summary></entry><entry><title type="html">Can We Automatically Fix Bugs by Learning Edit Operations?</title><link href="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/" rel="alternate" type="text/html" title="Can We Automatically Fix Bugs by Learning Edit Operations?" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Can%20We%20Automatically%20Fix%20Bugs%20by%20Learning%20Edit%20Operations</id><content type="html" xml:base="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/"><![CDATA[<h2 id="can-we-automatically-fix-bugs-by-learning-edit-operations">“Can We Automatically Fix Bugs by Learning Edit Operations?”</h2>
 
 <h2 id="paper"><a href="https://www.cs.wm.edu/~denys/pubs/SANER-RENE-BugFixing.pdf">Paper</a></h2>
 
@@ -764,217 +995,7 @@
   <li>Why PLRTH and PLRT: The paper mentioned it is for reducing the search space. Is it the most efficient way to do it?</li>
   <li>I don’t understand the part about fault localization. Is it possible to localize the fault using AST context? Does it just localize fault according to the collected change?</li>
   <li>What if AST differencing tools work maliciously?</li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[ConFix]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 37</title><link href="http://localhost:4000/recent/Chapter-38/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 37" /><published>2023-06-17T00:00:00+09:00</published><updated>2023-06-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-38</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-38/"><![CDATA[<p>Hard Disk Drives</p>
-
-<ul>
-  <li>the main form of persistent data storage</li>
-  <li>The interface
-    <ul>
-      <li>Consist of a large number of sectors (512 - bytes block)</li>
-      <li>Multi-sector operation
-        <ul>
-          <li>Updating the disk is atomic</li>
-          <li>it will either complete in its entirety or it won’t complete at all</li>
-          <li>torn write</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Basic Geometry
-    <ul>
-      <li>Platter
-        <ul>
-          <li>Circular hard surface</li>
-          <li>Each Platter has 2 surfaces</li>
-        </ul>
-      </li>
-      <li>Spindle
-        <ul>
-          <li>Connected to motor</li>
-          <li>RPM (rotations per minute)
-            <ul>
-              <li>7200 ~ 15000 RPM</li>
-            </ul>
-          </li>
-          <li>Data is encoded on each surface in <strong>concrete circle</strong>
-            <ul>
-              <li>Track</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Reading and writing is accomplished by the disk head
-        <ul>
-          <li>Disk head is attached to disk arm</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Latency
-    <ul>
-      <li>Single-track Latency
-        <ul>
-          <li>Rotational Delay
-            <ul>
-              <li>it must just wait for the desired sector to rotate under the disk head</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Multiple Tracks
-        <ul>
-          <li>Seek Time
-            <ul>
-              <li>Seek: Move disk arm to correct track</li>
-              <li>Acceleration → disk arm gets moving</li>
-              <li>Coasting → arm moving as full speed</li>
-              <li>Deceleration → arm moves slow down</li>
-              <li>Settling → head is carefully positioned
-                <ul>
-                  <li>settling time is significant</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Transfer
-            <ul>
-              <li>where data is either read from or written to the surface</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Track Skew
-    <ul>
-      <li>make sure that sequential reads can be properly serviced even when crossing track boundaries</li>
-      <li>When the disk needs time to reposition head
-        <ul>
-          <li>If there is now skew, the head need to wait for next block which requries whole rotation</li>
-        </ul>
-      </li>
-      <li>Outer track has more sectors than inner tracks
-        <ul>
-          <li>More room geometrically</li>
-          <li>Multi-zoned disk drives</li>
-          <li>Each zone has same number of sectors</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Track buffer
-    <ul>
-      <li>Cache
-        <ul>
-          <li>Just small amount of the memory</li>
-        </ul>
-      </li>
-      <li>Drive has a choice
-        <ul>
-          <li>acknowledge
-            <ul>
-              <li>After put the data in its memory
-                <ul>
-                  <li>Write back caching</li>
-                </ul>
-              </li>
-              <li>write has actually been written to disk
-                <ul>
-                  <li>Write through caching</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Dimensional analysis
-        <ul>
-          <li>RPM</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>I/O time
-    <ul>
-      <li>Workload
-        <ul>
-          <li>Random</li>
-          <li>Sequential</li>
-        </ul>
-      </li>
-      <li>Capcity and performance
-        <ul>
-          <li>High performance for searching</li>
-          <li>Low capacity</li>
-          <li>Low performance on searching</li>
-          <li>High capacity</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Disk Scheduling
-    <ul>
-      <li>Due to the high cost of I/O</li>
-      <li>SSTF: Shortest Seek Time First
-        <ul>
-          <li>order the queue of I/O request by track
-            <ul>
-              <li>drive geometry is not available to the host OS
-                <ul>
-                  <li>Nearest-block-first</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Starvation</li>
-        </ul>
-      </li>
-      <li>SCAN
-        <ul>
-          <li>simply moves back and forth across the disk servicing requests in order across the track
-            <ul>
-              <li>Sweep</li>
-            </ul>
-          </li>
-          <li>F-SCAN
-            <ul>
-              <li>freezes the queue to be serviced when it is doing a sweep</li>
-            </ul>
-          </li>
-          <li>C-SCAN
-            <ul>
-              <li>Circular SCAN</li>
-              <li>sweeps from outer-to-inner, and then resets at the outer track to begin again</li>
-            </ul>
-          </li>
-          <li>Elevator algorithm → going up and down</li>
-        </ul>
-      </li>
-      <li>Rotation Cost</li>
-      <li>shortest positioning time first, SPTF, SATF is the solution</li>
-    </ul>
-  </li>
-  <li>I/O merging
-    <ul>
-      <li>Merge the request, reordering is performed upon the merged request</li>
-    </ul>
-  </li>
-  <li>Work-conversing
-    <ul>
-      <li>How long should the system wait before issuing an I/O to disk?
-        <ul>
-          <li>immediately issue the request to the drive</li>
-        </ul>
-      </li>
-      <li>anticipatory disk scheduling
-        <ul>
-          <li>non-work-conserving</li>
-          <li>waiting for a new and better request results better performance in average</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.37]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 41</title><link href="http://localhost:4000/recent/Chapter-41/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 41" /><published>2023-06-17T00:00:00+09:00</published><updated>2023-06-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-41</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-41/"><![CDATA[<p>Locality and the fast file system</p>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[ConFix]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 41</title><link href="http://localhost:4000/recent/Chapter-41/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 41" /><published>2023-06-17T00:00:00+09:00</published><updated>2023-06-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-41</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-41/"><![CDATA[<p>Locality and the fast file system</p>
 
 <ul>
   <li>Old file system was simple
@@ -1335,292 +1356,214 @@
       <li>mkfs</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.39]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 36</title><link href="http://localhost:4000/recent/Chapter-36/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 36" /><published>2023-06-12T00:00:00+09:00</published><updated>2023-06-12T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-36</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-36/"><![CDATA[<p>Input/output device (I/O)</p>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.39]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 37</title><link href="http://localhost:4000/recent/Chapter-38/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 37" /><published>2023-06-17T00:00:00+09:00</published><updated>2023-06-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-38</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-38/"><![CDATA[<p>Hard Disk Drives</p>
 
 <ul>
-  <li>System Architecture
+  <li>the main form of persistent data storage</li>
+  <li>The interface
     <ul>
-      <li>Hierarchiacal structure
+      <li>Consist of a large number of sectors (512 - bytes block)</li>
+      <li>Multi-sector operation
         <ul>
-          <li>CPU, memory, memory BUS</li>
-          <li>I/O bus
+          <li>Updating the disk is atomic</li>
+          <li>it will either complete in its entirety or it won’t complete at all</li>
+          <li>torn write</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Basic Geometry
+    <ul>
+      <li>Platter
+        <ul>
+          <li>Circular hard surface</li>
+          <li>Each Platter has 2 surfaces</li>
+        </ul>
+      </li>
+      <li>Spindle
+        <ul>
+          <li>Connected to motor</li>
+          <li>RPM (rotations per minute)
             <ul>
-              <li>PCI
-                <ul>
-                  <li>Peripheral Component Interconnect</li>
-                  <li>High-speed I/O devices such as graphics</li>
-                </ul>
-              </li>
-              <li>Peripheral bus
-                <ul>
-                  <li>Lower speed bus</li>
-                  <li>SATA, USB</li>
-                  <li>connects to disks, mice, keyboards</li>
-                </ul>
-              </li>
+              <li>7200 ~ 15000 RPM</li>
             </ul>
           </li>
-          <li>Reasons
+          <li>Data is encoded on each surface in <strong>concrete circle</strong>
             <ul>
-              <li>Physics, cost</li>
-              <li>a high-performance memory bus does not have much room to plug devices and such into it</li>
+              <li>Track</li>
             </ul>
           </li>
         </ul>
       </li>
-      <li>Modern Computer system
+      <li>Reading and writing is accomplished by the disk head
         <ul>
-          <li>DMI
+          <li>Disk head is attached to disk arm</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Latency
+    <ul>
+      <li>Single-track Latency
+        <ul>
+          <li>Rotational Delay
             <ul>
-              <li>Direct Media Interface</li>
-              <li>Devices connect to the chip</li>
-            </ul>
-          </li>
-          <li>ATA → The AT Attachment
-            <ul>
-              <li>SATA, eSATA</li>
-            </ul>
-          </li>
-          <li>USB
-            <ul>
-              <li>Universal Serial Bus → Keyborads, Mice</li>
-            </ul>
-          </li>
-          <li>PCIe
-            <ul>
-              <li>Peripheral Component Interconnect Express</li>
-              <li>Higher performance → networ, NVMe(High speed)</li>
+              <li>it must just wait for the desired sector to rotate under the disk head</li>
             </ul>
           </li>
         </ul>
       </li>
-      <li>Canonical Device
+      <li>Multiple Tracks
         <ul>
-          <li>Hardware interface
+          <li>Seek Time
             <ul>
-              <li>present interface that allows the system software to control its operation</li>
-              <li>All device have specified interface and protocol</li>
-            </ul>
-          </li>
-          <li>Internal structure
-            <ul>
-              <li>specific and responsible for implementin the abstraction the devide presents to the system
+              <li>Seek: Move disk arm to correct track</li>
+              <li>Acceleration → disk arm gets moving</li>
+              <li>Coasting → arm moving as full speed</li>
+              <li>Deceleration → arm moves slow down</li>
+              <li>Settling → head is carefully positioned
                 <ul>
-                  <li>Simple device such as CPU, memroy, RAID controller</li>
+                  <li>settling time is significant</li>
                 </ul>
               </li>
-              <li>thousands of line of firmware</li>
+            </ul>
+          </li>
+          <li>Transfer
+            <ul>
+              <li>where data is either read from or written to the surface</li>
             </ul>
           </li>
         </ul>
       </li>
-      <li>Canonical Protocol
+    </ul>
+  </li>
+  <li>Track Skew
+    <ul>
+      <li>make sure that sequential reads can be properly serviced even when crossing track boundaries</li>
+      <li>When the disk needs time to reposition head
         <ul>
-          <li>Status register → current status</li>
-          <li>Command register → to perform certain task</li>
-          <li>Data register → pass data to device</li>
-          <li>Four steps
-            <ul>
-              <li>Pooling, waiting for the device is ready to receive a command</li>
-              <li>Sending data
-                <ul>
-                  <li>Programmed I/O</li>
-                </ul>
-              </li>
-              <li>Command using command register</li>
-              <li>OS waits for device poerform the task</li>
-            </ul>
-          </li>
+          <li>If there is now skew, the head need to wait for next block which requries whole rotation</li>
         </ul>
       </li>
-      <li>Lowering CPU overhead
+      <li>Outer track has more sectors than inner tracks
         <ul>
-          <li>interrupt
+          <li>More room geometrically</li>
+          <li>Multi-zoned disk drives</li>
+          <li>Each zone has same number of sectors</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Track buffer
+    <ul>
+      <li>Cache
+        <ul>
+          <li>Just small amount of the memory</li>
+        </ul>
+      </li>
+      <li>Drive has a choice
+        <ul>
+          <li>acknowledge
             <ul>
-              <li>Instead of pooling</li>
-              <li>Interrupt Service Routine
+              <li>After put the data in its memory
                 <ul>
-                  <li>Interrupt Handler</li>
+                  <li>Write back caching</li>
                 </ul>
               </li>
-              <li>Allows overlap of computation and I/O</li>
-            </ul>
-          </li>
-          <li>using interrupts is not always the best solution
-            <ul>
-              <li>Interrupt is expensive, inefficient in the case of simple I/O interrupt
+              <li>write has actually been written to disk
                 <ul>
-                  <li>Hybrid, two-phased approach</li>
-                  <li>First Poll</li>
-                  <li>After certain time, interrupt</li>
-                  <li>if a device is fast, it may be best to poll; if it is slow, interrupt</li>
-                </ul>
-              </li>
-              <li>coalescing
-                <ul>
-                  <li>device need to raise an interrupt first waits for a bit</li>
-                  <li>multiple interrupts can be coalesced into a single interrupt delivery</li>
+                  <li>Write through caching</li>
                 </ul>
               </li>
             </ul>
           </li>
         </ul>
       </li>
-      <li>More Efficient Data Movement With DMA
+      <li>Dimensional analysis
         <ul>
-          <li>when using programmed I/O (PIO) to transfer a large chunk of data to a device, the CPU is once again over burdened with a rather trivial task
+          <li>RPM</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>I/O time
+    <ul>
+      <li>Workload
+        <ul>
+          <li>Random</li>
+          <li>Sequential</li>
+        </ul>
+      </li>
+      <li>Capcity and performance
+        <ul>
+          <li>High performance for searching</li>
+          <li>Low capacity</li>
+          <li>Low performance on searching</li>
+          <li>High capacity</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Disk Scheduling
+    <ul>
+      <li>Due to the high cost of I/O</li>
+      <li>SSTF: Shortest Seek Time First
+        <ul>
+          <li>order the queue of I/O request by track
             <ul>
-              <li>Copying the data using CPU → trivial task</li>
+              <li>drive geometry is not available to the host OS
+                <ul>
+                  <li>Nearest-block-first</li>
+                </ul>
+              </li>
             </ul>
           </li>
-          <li>Direct Memory Access (DMA)
+          <li>Starvation</li>
+        </ul>
+      </li>
+      <li>SCAN
+        <ul>
+          <li>simply moves back and forth across the disk servicing requests in order across the track
             <ul>
-              <li>OS program DMA engine by telling it where the data lives in memory, how much data to copy, and which device to send it to.</li>
-              <li>DMA is complete → raise the interrupt, and the OS knows the transfer control is completed</li>
+              <li>Sweep</li>
             </ul>
           </li>
-        </ul>
-      </li>
-      <li>Methods Of Device Interaction
-        <ul>
-          <li>explicit I/O instructions
+          <li>F-SCAN
             <ul>
-              <li>previleged instructions</li>
-              <li>OS controls device, directly communicate with the device</li>
+              <li>freezes the queue to be serviced when it is doing a sweep</li>
             </ul>
           </li>
-          <li>Memory mapped I/O
+          <li>C-SCAN
             <ul>
-              <li>the hardware makes device registers available as if they were memory locations</li>
-              <li>OS issues a load (to read) or store (to write) the address</li>
-              <li>The memory-mapped approach is nice in that no new instructions are needed to support it</li>
+              <li>Circular SCAN</li>
+              <li>sweeps from outer-to-inner, and then resets at the outer track to begin again</li>
             </ul>
           </li>
+          <li>Elevator algorithm → going up and down</li>
         </ul>
       </li>
-      <li>Device Driver
-        <ul>
-          <li>how to fit devices, each of which have very specific interfaces</li>
-          <li>OS must know in detail how a device work
-            <ul>
-              <li>Device Driver solve the question</li>
-            </ul>
-          </li>
-        </ul>
-
-        <p><img src="Chapter%2036%2061b718fbd8bf4b238b94fd0431a9941a/Untitled.png" alt="Untitled" /></p>
-
-        <ul>
-          <li>70% of OS code is found in device drivers</li>
-          <li>Window is high as well</li>
-        </ul>
-      </li>
-      <li>An IDE disk presents a simple interface to the system, consisting of four types of register: control, command block, status, and error
-        <ul>
-          <li>Basic Protocol
-            <ul>
-              <li>Wait for ready</li>
-              <li>Write parameter to command register</li>
-              <li>Start I/O</li>
-              <li>Data transfer</li>
-              <li>Handle interrupts</li>
-              <li>Error Handling</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Who started first?
-        <ul>
-          <li>Not clear</li>
-          <li>people built these early machines, it became obvious that I/O support was needed.</li>
-        </ul>
-      </li>
+      <li>Rotation Cost</li>
+      <li>shortest positioning time first, SPTF, SATF is the solution</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.36]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 31</title><link href="http://localhost:4000/recent/Chapter-31/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 31" /><published>2023-06-12T00:00:00+09:00</published><updated>2023-06-12T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-31</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-31/"><![CDATA[<p>Semaphores</p>
-
-<ul>
-  <li>both locks and condition variables to solve a broad range of relevant and interesting concurrency problems</li>
-  <li>POSIX standard
+  <li>I/O merging
     <ul>
-      <li>sem_wait()</li>
-      <li>sem_post()</li>
-      <li>sem_init()
+      <li>Merge the request, reordering is performed upon the merged request</li>
+    </ul>
+  </li>
+  <li>Work-conversing
+    <ul>
+      <li>How long should the system wait before issuing an I/O to disk?
         <ul>
-          <li>Second argument → 0: it will be shared between threads on same process</li>
+          <li>immediately issue the request to the drive</li>
+        </ul>
+      </li>
+      <li>anticipatory disk scheduling
+        <ul>
+          <li>non-work-conserving</li>
+          <li>waiting for a new and better request results better performance in average</li>
         </ul>
       </li>
     </ul>
   </li>
-  <li>Binary Semaphores
-    <ul>
-      <li>it will wait only if the value is not greater than or equal to 0</li>
-      <li>scheduler state
-        <ul>
-          <li>Run</li>
-          <li>Ready</li>
-          <li>Sleep</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Semaphores for ordering
-    <ul>
-      <li>Ordering primitives</li>
-      <li>the parent will call sem wait() before the child has called sem post(); we’d like the parent to wait for the child to run.
-        <ul>
-          <li>Only when the initial value is 0 is possible</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Producer/Consumer Problem
-    <ul>
-      <li>Need to add mutual exclusion
-        <ul>
-          <li>using two locks</li>
-          <li>There is a simple cycle here. The consumer holds the mutex and is waiting for the someone to signal full. The producer could signal full but is waiting for the mutex. Thus, the producer and consumer are each stuck waiting for each other: a classic deadlock.</li>
-        </ul>
-      </li>
-      <li>Avoiding Deadlock
-        <ul>
-          <li>we simply must reduce the scope of the lock</li>
-          <li>using two locks in specific sequences</li>
-        </ul>
-      </li>
-      <li>Sometimes, bound buffer</li>
-    </ul>
-  </li>
-  <li>Reader-Writer Locks
-    <ul>
-      <li>The code is pretty simple. If some thread wants to update the data structure in question, it should call the new pair of synchronization operations</li>
-      <li>when the first reader acquires the lock; in that case, the reader also acquires the write lock</li>
-      <li>once a reader has acquired a read lock, more readers will be allowed to acquire the read lock too</li>
-    </ul>
-
-    <p><a href="https://m.blog.naver.com/hirit808/221786966867">KOCW 운영체제 7: 독자 저자 문제(Readers-Writers Problem)</a></p>
-  </li>
-  <li>dining philosopher’s problem
-    <ul>
-      <li>each has times where they think and don’t need any forks, and times when they eat a philosopher needs two forks, both the one on their left and the one on their right</li>
-      <li>deadlock. If each philosopher happens to grab the fork on their left before any philosopher can grab the fork on their right, each will be stuck holding one fork and waiting for another</li>
-      <li>Breaking The Dependency
-        <ul>
-          <li>gets the forks in a different order than the others; the put forks() code remains the same</li>
-          <li>cigarette smoker’s problem or the sleeping barber problem</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<p><a href="https://dkswnkk.tistory.com/412">[OS] 식사하는 철학자들 문제(The Dining-Philosophers Problem)</a></p>
-
-<ul>
-  <li>Thread Throttling
-    <ul>
-      <li>A simple semaphore can solve this problem. By initializing the value of the semaphore to the maximum number of threads you wish to enter the memory-intensive region at once, and then putting a sem wait() and sem post() around the region, a semaphore can naturally throttle the number of threads that are ever concurrently in the dangerous region of the code</li>
-    </ul>
-  </li>
-  <li>Zemaphores</li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.31]]></summary></entry></feed>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.37]]></summary></entry></feed>
