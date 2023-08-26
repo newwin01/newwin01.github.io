@@ -226,4 +226,10 @@ var store = [{
         "tags": ["Blog"],
         "url": "/recent/Clean_Code_Ch3/",
         "teaser": null
+      },{
+        "title": "6학기를 앞두고 5학기를 돌아보며!",
+        "excerpt":"정말로 바빴던 방학을 마무리하고 한동에서의 6학기를 앞두고 있다! 저번 학기 Recap을 써야지 써야지 하면서 결국 마무리하지 못했다. 6학기 시작 글과 Recap을 잘 버무려서 써보면 좋겠다는 생각에 글을 쓰고 있다! 5학기는 정말 힘든 학기였다. 내가 한동에 다니면서 이렇게까지 힘들고 지친적이 있었나 라는 질문을 스스로 던졌던 학기였다. 다들 5학기가 힘들다 힘들다 하지만...","categories": ["Blog"],
+        "tags": ["Blog"],
+        "url": "/recent/6th-Semester/",
+        "teaser": null
       }]
