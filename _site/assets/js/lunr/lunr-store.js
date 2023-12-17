@@ -227,9 +227,15 @@ var store = [{
         "url": "/recent/Clean_Code_Ch3/",
         "teaser": null
       },{
-        "title": "6학기를 앞두고 5학기를 돌아보며!",
-        "excerpt":"정말로 바빴던 방학을 마무리하고 한동에서의 6학기를 앞두고 있다! 저번 학기 Recap을 써야지 써야지 하면서 결국 마무리하지 못했다. 6학기 시작 글과 Recap을 잘 버무려서 써보면 좋겠다는 생각에 글을 쓰고 있다! 5학기는 정말 힘든 학기였다. 내가 한동에 다니면서 이렇게까지 힘들고 지친적이 있었나 라는 질문을 스스로 던졌던 학기였다. 다들 5학기가 힘들다 힘들다 하지만...","categories": ["Blog"],
-        "tags": ["Blog"],
-        "url": "/recent/6th-Semester/",
+        "title": "2023-HGU-ML Lecture 1. Introduction to AI and ML",
+        "excerpt":"Introduction to AI &amp; ML Came from Henry Choi’s Lecture and ChatGPT’s explanation Introduction to AI Weak and Strong AI strong AI: understanding Chinese weak AI: simulating the ability to understand Chinese Applied AI and General AI Computationalism and Connectionism Computationalism thoughts are computation on symbols Symbolic, interpretable e.g) Turing...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Introduction_to_AI_ML/",
+        "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 3. Probability and Statistics for ML",
+        "excerpt":"Probability and Statistics for ML Probability IID: independent identically distributed Simpson’s Paradox Probability is a number assigned to an event indicating “how likely” the event will occur when randomly selected uncertainty can make the model simpler. A simple/uncertain model rather than a complex/certain one, even when modeling the true/deterministic rule...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Probability_and_Statistics/",
         "teaser": null
       }]
