@@ -226,4 +226,16 @@ var store = [{
         "tags": ["Blog"],
         "url": "/recent/Clean_Code_Ch3/",
         "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 1. Introduction to AI and ML",
+        "excerpt":"Introduction to AI &amp; ML Came from Henry Choi’s Lecture and ChatGPT’s explanation Introduction to AI Weak and Strong AI strong AI: understanding Chinese weak AI: simulating the ability to understand Chinese Applied AI and General AI Computationalism and Connectionism Computationalism thoughts are computation on symbols Symbolic, interpretable e.g) Turing...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Introduction_to_AI_ML/",
+        "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 3. Probability and Statistics for ML",
+        "excerpt":"Probability and Statistics for ML Probability IID: independent identically distributed Simpson’s Paradox Probability is a number assigned to an event indicating “how likely” the event will occur when randomly selected uncertainty can make the model simpler. A simple/uncertain model rather than a complex/certain one, even when modeling the true/deterministic rule...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Probability_and_Statistics/",
+        "teaser": null
       }]

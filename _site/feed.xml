@@ -1,13 +1,392 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-07-17T08:51:38+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">And Then There Were None 그리고 아무도 없었다</title><link href="http://localhost:4000/recent/And_Then_There_Were_None/" rel="alternate" type="text/html" title="And Then There Were None 그리고 아무도 없었다" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/And_Then_There_Were_None</id><content type="html" xml:base="http://localhost:4000/recent/And_Then_There_Were_None/"><![CDATA[<p>추리 소설을 추천받았다. 아가사 크리스티의 <strong><em>그리고 아무도 없었다</em></strong> 였다. <br /> 
-소설을 그렇게 좋아하는 편은 아니라 이름만 들어본 작가였지만 오랜만에 소설을 읽어보자는 마음으로 책을 집어들었다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-17T22:54:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
 
-<p>와우. 정말 재밌게 읽었다. 그 자리에 앉아서 내리 2시간을 읽었다. <del>물론 소설이 짧기도 하다</del> <br />
-알고 보니 내 주위는 다들 읽었더라… 이 재밌는 걸 자신들만 알고 있었다니…</p>
+<ul>
+  <li>Probability
+    <ul>
+      <li>IID: independent identically distributed</li>
+      <li>Simpson’s Paradox</li>
+      <li>Probability is a number assigned to an event indicating “how likely” the event will occur when randomly selected</li>
+      <li>uncertainty can make the model simpler. A simple/uncertain model rather than a complex/certain one, even when modeling the true/deterministic rule is possible</li>
+      <li>mathematical probability measures the likelihood that events will occur</li>
+      <li>empirical statistics is science of collecting and analyzing numerical data in large quantities</li>
+      <li>Random Variable
+        <ul>
+          <li>a variable whose possible values are numerical outcomes of a random phenomenon</li>
+          <li>is a measurable function from a set of possible outcomes to a measurable space</li>
+        </ul>
+      </li>
+    </ul>
 
-<p>물론 선입견빼면 시체인 내가 추리 소설을 추천 받았더라도 내가 내키지 않았으면 안 읽었을 것 같긴 하다.
-뭐든지 한 번 정도 시도해보고 판단하는게 맞는 것 같다는 생각이 근래에 많이 든다.</p>
+    <p><img src="../../../assets/ML/ProbAndStats/Untitled.png" /></p>
 
-<p>그 정도로 책이 재밌었다. 다음엔 <strong><em>오리엔트 특급 살인</em></strong> 읽어볼까 싶다!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[재밌다...]]></summary></entry><entry><title type="html">Clean Code Chapter 3</title><link href="http://localhost:4000/recent/Clean_Code_Ch3/" rel="alternate" type="text/html" title="Clean Code Chapter 3" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch3</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch3/"><![CDATA[<p>How can we make a function communicate its intent?</p>
+    <p><img src="../../../assets/ML/ProbAndStats/Untitled 1.png" /></p>
+
+    <ul>
+      <li>marginal, joint, and conditional probabilities</li>
+    </ul>
+
+    <p><img src="../../../assets/ML/ProbAndStats/Untitled 2.png" /></p>
+
+    <p><img src="../../../assets/ML/ProbAndStats/Untitled 3.png" /></p>
+
+    <p><img src="../../../assets/ML/ProbAndStats/Untitled 4.png" /></p>
+
+    <ul>
+      <li>Bayes rule presents the transformation process of our beliefs.
+        <ul>
+          <li>subjective belief on Y changes with X</li>
+        </ul>
+      </li>
+      <li>learning is
+        <ul>
+          <li>nothing but to update our confidence from prior to posterior.</li>
+          <li>the key factor is likelihood which is based on data.</li>
+        </ul>
+      </li>
+      <li>
+        <p>Bayesianism (Thomas Bayes) vs. frequentism (Ronald A. Fisher)</p>
+
+        <p>Bayesianism and frequentism are two distinct approaches to statistical inference, and they differ in their fundamental principles and interpretations of probability. Thomas Bayes and Ronald A. Fisher were prominent figures associated with these respective approaches.</p>
+
+        <p>### Bayesianism (Thomas Bayes):</p>
+
+        <ol>
+          <li><strong>Probability as Belief:</strong>
+            <ul>
+              <li>In Bayesian statistics, probability is interpreted as a measure of belief or confidence in a particular hypothesis. It reflects the degree of certainty or uncertainty given available information.</li>
+              <li>Bayesians start with a prior probability distribution, representing initial beliefs about a hypothesis before observing data.</li>
+            </ul>
+          </li>
+          <li><strong>Bayes’ Theorem:</strong>
+            <ul>
+              <li>The cornerstone of Bayesian statistics is Bayes’ theorem, which updates the prior belief based on observed data to obtain a posterior probability distribution.</li>
+              <li>Bayes’ theorem relates the posterior probability (probability of the hypothesis given the data) to the prior probability and the likelihood of the data given the hypothesis.</li>
+            </ul>
+
+\[P(H|D) = \frac{P(D|H) \cdot P(H)}{P(D)}\]
+
+            <ul>
+              <li>\(P(H|D)\) is the posterior probability, 
+ \(( P(D|H) )\) is the likelihood, 
+ \(( P(H) )\) is the prior probability, and 
+ \(( P(D) )\) is the probability of the data.</li>
+            </ul>
+          </li>
+          <li><strong>Incorporation of Prior Knowledge:</strong>
+            <ul>
+              <li>Bayesian analysis allows the incorporation of prior knowledge into the analysis, enabling the adjustment of beliefs based on both prior information and new data.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <p>### Frequentism (Ronald A. Fisher):</p>
+
+        <ol>
+          <li><strong>Probability as Frequency:</strong>
+            <ul>
+              <li>Frequentist statistics, on the other hand, views probability as a long-run frequency or limit of relative frequencies. Probability is associated with the repeated occurrence of events in a hypothetical infinite sequence of trials.</li>
+            </ul>
+          </li>
+          <li><strong>No Prior Probability:</strong>
+            <ul>
+              <li>Unlike Bayesianism, frequentist statistics does not involve prior probabilities. It relies solely on observed data and the likelihood of obtaining that data under different hypotheses.</li>
+            </ul>
+          </li>
+          <li><strong>Hypothesis Testing and Confidence Intervals:</strong>
+            <ul>
+              <li>Frequentist methods often focus on hypothesis testing and confidence intervals. Hypothesis testing involves assessing the evidence against a null hypothesis, and confidence intervals provide a range of plausible values for an unknown parameter.</li>
+            </ul>
+          </li>
+          <li><strong>Objective and Reproducible:</strong>
+            <ul>
+              <li>Frequentist methods are considered more objective and reproducible, as they do not rely on subjective prior beliefs.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <p>### Comparison:</p>
+
+        <ul>
+          <li><strong>Subjectivity:</strong>
+            <ul>
+              <li>Bayesianism is often criticized for being subjective due to the reliance on prior beliefs. Frequentism is considered more objective since it doesn’t involve prior probabilities.</li>
+            </ul>
+          </li>
+          <li><strong>Flexibility vs. Objectivity:</strong>
+            <ul>
+              <li>Bayesian methods provide a flexible framework for incorporating prior information, but this flexibility is seen by some as a weakness. Frequentism, being more rigid, is valued for its objectivity and reproducibility.</li>
+            </ul>
+          </li>
+          <li><strong>Interpretation of Probability:</strong>
+            <ul>
+              <li>Bayesianism interprets probability as a measure of belief, while frequentism interprets it as a long-term frequency.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p>Both Bayesian and frequentist approaches have their strengths and weaknesses, and the choice between them often depends on the nature of the problem, available data, and the philosophical stance of the statistician or researcher. In practice, researchers sometimes use a combination of both approaches, known as Bayesian-frequentist synthesis.</p>
+
+        <ul>
+          <li>parameters
+            <ul>
+              <li>updated (represented probabilistically) vs. fixed</li>
+              <li>with prior vs. no prior</li>
+            </ul>
+          </li>
+          <li>data
+            <ul>
+              <li>fixed vs. random samples</li>
+            </ul>
+          </li>
+          <li>example
+            <ul>
+              <li>diagnosis vs. dice</li>
+            </ul>
+          </li>
+          <li>focused on
+            <ul>
+              <li>posterior vs likelihood</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <p><img src="../../../assets/ML/ProbAndStats/Untitled 5.png" /></p>
+
+    <ul>
+      <li>conjugate distributions
+        <ul>
+          <li><a href="https://en.wikipedia.org/wiki/Conjugate_prior">https://en.wikipedia.org/wiki/Conjugate_prior</a></li>
+          <li>Prior and posterior distribution is in the same family</li>
+        </ul>
+      </li>
+      <li>Central Limit Theorem</li>
+      <li>Cramer’s theorem
+        <ul>
+          <li><a href="https://carstart.tistory.com/160">https://carstart.tistory.com/160</a></li>
+        </ul>
+      </li>
+      <li>multivariate Gaussian
+        <ul>
+          <li><a href="https://dhpark1212.tistory.com/entry/%EB%8B%A4%EB%B3%80%EB%9F%89-%EA%B0%80%EC%9A%B0%EC%8B%9C%EC%95%88-%EB%B6%84%ED%8F%ACMultivariate-Gaussian-Distribution">https://dhpark1212.tistory.com/entry/다변량-가우시안-분포Multivariate-Gaussian-Distribution</a></li>
+        </ul>
+      </li>
+      <li>transformed Gaussian</li>
+      <li>whitening transformation
+        <ul>
+          <li>it transforms a random variable vector with covariance into a new variable vector whose covariance is the identity matrix</li>
+        </ul>
+      </li>
+      <li>transformed densities</li>
+      <li>limitations of Gaussian distribution
+        <ul>
+          <li>there are too many parameters in general</li>
+          <li>it is intrinsically unimodal</li>
+        </ul>
+      </li>
+      <li>stationary process</li>
+      <li>basic distributions: uniform</li>
+      <li>basic distributions: Bernoulli
+        <ul>
+          <li>Discrete probability distribution</li>
+        </ul>
+      </li>
+      <li>basic distributions: binomial
+        <ul>
+          <li>the probability of observing occurrences of in a set of samples from a Bernoulli distribution</li>
+        </ul>
+      </li>
+      <li>basic distributions: categorical and multinomial</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
+
+<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
+
+<ul>
+  <li>Introduction to AI
+    <ul>
+      <li>Weak and Strong AI
+        <ul>
+          <li>strong AI: understanding Chinese</li>
+          <li>weak AI: simulating the ability to understand Chinese</li>
+        </ul>
+      </li>
+      <li>Applied AI and General AI</li>
+      <li>Computationalism and Connectionism
+        <ul>
+          <li>Computationalism
+            <ul>
+              <li>thoughts are computation on symbols
+                <ul>
+                  <li>Symbolic, interpretable</li>
+                  <li>e.g) Turing Machine</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Connectionism
+            <ul>
+              <li>Information is represented in neurons and networks
+                <ul>
+                  <li>Low-level, black-box</li>
+                  <li>Neural Networks</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Turing Test</li>
+      <li>Implementation level and algorithmic level
+        <ul>
+          <li>Implmentation level: how the system is physically realized
+            <ul>
+              <li>AI and Human Intelligence are different</li>
+            </ul>
+          </li>
+          <li>Algorithmic level: how the system does, what representation or process it uses
+            <ul>
+              <li>3 level for intelligent system
+                <ul>
+                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
+                </ul>
+              </li>
+              <li>Can achieve some intelligence on approximation</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Superintelligence
+        <ul>
+          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
+        </ul>
+      </li>
+      <li>Deep Neural Networks
+        <ul>
+          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
+        </ul>
+      </li>
+      <li>Practical AI risks
+        <ul>
+          <li>affected by viruses</li>
+          <li>misused by people with bad intentions</li>
+          <li>biased AI</li>
+          <li>taking over roles</li>
+          <li>unable to reject AI’s decision</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Introduction to ML
+    <ul>
+      <li>What is learning
+        <ul>
+          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
+          <li>simple model (e.g., linear regression)</li>
+          <li>for supervised learning
+            <ul>
+              <li>Learning</li>
+              <li>Recognition</li>
+            </ul>
+          </li>
+          <li>Complex models</li>
+        </ul>
+      </li>
+      <li>Machine learning
+        <ul>
+          <li>Takes data and output  → Makes program</li>
+          <li>source of knowledge is data</li>
+        </ul>
+      </li>
+      <li>Workflow of machine learning
+        <ul>
+          <li>acquisition - data is gathered/collected from various sources</li>
+          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
+          <li>analysis - data is evaluated to run and customize reports</li>
+          <li>modeling - data is patternized and generalized as models</li>
+          <li>visualization</li>
+          <li>deployment and maintenance</li>
+        </ul>
+      </li>
+      <li>Components of ML
+        <ul>
+          <li>data: features, label, format</li>
+          <li>models: SVM, NN, K-means</li>
+          <li>objectives: cross-entropy, RMSE, likelihood</li>
+          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
+        </ul>
+      </li>
+      <li>Data
+        <ul>
+          <li>structured/unstructured</li>
+        </ul>
+      </li>
+      <li>Categories
+        <ul>
+          <li>unsupervised learning
+            <ul>
+              <li>e.g., clustering, dimension reduction</li>
+            </ul>
+          </li>
+          <li>supervised learning
+            <ul>
+              <li>e.g., speech/face recognition</li>
+            </ul>
+          </li>
+          <li>semi-supervised learning
+            <ul>
+              <li>e.g., cancer detection</li>
+            </ul>
+          </li>
+          <li>reinforcement learning
+            <ul>
+              <li>e.g., AlphaGo, self-driving car</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Discriminative model and Generative model
+        <ul>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Discriminative models: p(t</td>
+                  <td>x)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>only for supervising</li>
+            </ul>
+          </li>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Generative model: p(t, x) or p(x</td>
+                  <td>t)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>applicable to unlabeled data</li>
+              <li>focusing on modeling each class’ distribution</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Pattern Recognition
+        <ul>
+          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
+  -</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. Prof. Henry Choi]]></summary></entry><entry><title type="html">Clean Code Chapter 3</title><link href="http://localhost:4000/recent/Clean_Code_Ch3/" rel="alternate" type="text/html" title="Clean Code Chapter 3" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch3</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch3/"><![CDATA[<p>How can we make a function communicate its intent?</p>
 
 <p>What attributes can we give that will allow a reader to intuit the kind of program they live inside?</p>
 
@@ -229,7 +608,151 @@
       <li>need to fit cleanly together in precise language</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[Using Function Properly]]></summary></entry><entry><title type="html">Can We Automatically Fix Bugs by Learning Edit Operations?</title><link href="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/" rel="alternate" type="text/html" title="Can We Automatically Fix Bugs by Learning Edit Operations?" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Can%20We%20Automatically%20Fix%20Bugs%20by%20Learning%20Edit%20Operations</id><content type="html" xml:base="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/"><![CDATA[<h2 id="can-we-automatically-fix-bugs-by-learning-edit-operations">“Can We Automatically Fix Bugs by Learning Edit Operations?”</h2>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[Using Function Properly]]></summary></entry><entry><title type="html">And Then There Were None 그리고 아무도 없었다</title><link href="http://localhost:4000/recent/And_Then_There_Were_None/" rel="alternate" type="text/html" title="And Then There Were None 그리고 아무도 없었다" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/And_Then_There_Were_None</id><content type="html" xml:base="http://localhost:4000/recent/And_Then_There_Were_None/"><![CDATA[<p>추리 소설을 추천받았다. 아가사 크리스티의 <strong><em>그리고 아무도 없었다</em></strong> 였다. <br /> 
+소설을 그렇게 좋아하는 편은 아니라 이름만 들어본 작가였지만 오랜만에 소설을 읽어보자는 마음으로 책을 집어들었다.</p>
+
+<p>와우. 정말 재밌게 읽었다. 그 자리에 앉아서 내리 2시간을 읽었다. <del>물론 소설이 짧기도 하다</del> <br />
+알고 보니 내 주위는 다들 읽었더라… 이 재밌는 걸 자신들만 알고 있었다니…</p>
+
+<p>물론 선입견빼면 시체인 내가 추리 소설을 추천 받았더라도 내가 내키지 않았으면 안 읽었을 것 같긴 하다.
+뭐든지 한 번 정도 시도해보고 판단하는게 맞는 것 같다는 생각이 근래에 많이 든다.</p>
+
+<p>그 정도로 책이 재밌었다. 다음엔 <strong><em>오리엔트 특급 살인</em></strong> 읽어볼까 싶다!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[재밌다...]]></summary></entry><entry><title type="html">Clean Code Chapter 2</title><link href="http://localhost:4000/recent/Clean_Code_Ch2/" rel="alternate" type="text/html" title="Clean Code Chapter 2" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch2</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch2/"><![CDATA[<p><strong>Using the appropriate Name will pay off in the short term and continue to pay in the long run</strong></p>
+
+<ul>
+  <li>Using Intention-Revealing Names
+    <ul>
+      <li>Choosing good names takes time but saves more than it takes</li>
+      <li>Choosing a name that specifies what is being measured and the unit of that measurement</li>
+      <li>Things need to think
+        <ul>
+          <li>What kind are in</li>
+          <li>What is returned</li>
+          <li>zeroth subscript and value</li>
+        </ul>
+      </li>
+      <li>Do not use <strong>O <em>and l</em></strong></li>
+    </ul>
+  </li>
+  <li>Avoid Disinformation
+    <ul>
+      <li>Avoiding words whose entrenched meanings vary from intention</li>
+      <li>Spelling similar concepts similarly
+        <ul>
+          <li>No inconsistent spelling</li>
+        </ul>
+      </li>
+      <li><del>Using different font??</del></li>
+    </ul>
+  </li>
+  <li>Meaningful Distinction
+    <ul>
+      <li><strong>a</strong> for a local variable, <strong>the</strong> for all function arguments</li>
+      <li>Less redundant words</li>
+      <li>Distinguishing names in a way that readers know what the difference offer</li>
+    </ul>
+  </li>
+  <li>Using Pronounceable Names
+    <ul>
+      <li>Essential for communication</li>
+    </ul>
+  </li>
+  <li>Using Searchable Names
+    <ul>
+      <li>Single-letter names can ONLY be used as local variables inside short methods</li>
+      <li>The length of a name should correspond to the size of its scope</li>
+    </ul>
+  </li>
+  <li>Avoiding Encoding</li>
+  <li>Hungarian Notation
+    <ul>
+      <li>The compiler knows the type nowadays</li>
+    </ul>
+  </li>
+  <li>Member Prefixes
+    <ul>
+      <li>unseen clutter and a marker of older code…</li>
+    </ul>
+  </li>
+  <li>Interface and Implementation
+    <ul>
+      <li>Why would I let user knows I’m handling them with an interface?</li>
+      <li>Marking at the implementation</li>
+    </ul>
+  </li>
+  <li>Avoid Mental Mapping
+    <ul>
+      <li>In most contexts, a single letter for a loop is a poor choice (such as i, j, k)</li>
+      <li><em>Clarity is king</em></li>
+    </ul>
+  </li>
+  <li>Class Names
+    <ul>
+      <li>should have noun or noun phrase names</li>
+    </ul>
+  </li>
+  <li>Method Names
+    <ul>
+      <li>should have verb or verb phase names</li>
+      <li>When constructors are overloaded, use the static method with names that describe the argument
+        <ul>
+          <li>Make corresponding constructors private</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Don’t be cute
+    <ul>
+      <li>No too “user-specific name”</li>
+    </ul>
+  </li>
+  <li>Pick One Word per Concept
+    <ul>
+      <li>Pick one word for one abstract concept</li>
+      <li>The name will express two different types of object</li>
+    </ul>
+  </li>
+  <li>Don’t Pun
+    <ul>
+      <li>Avoiding using the same word for two purposes</li>
+      <li>Even if it has a similar concept, it must have a different name if it is semantically different</li>
+      <li><strong><em>It is the author’s responsibility</em></strong></li>
+    </ul>
+  </li>
+  <li>Use Solution Domain Names
+    <ul>
+      <li>People who read your code will be programmers
+        <ul>
+          <li>CS terms, algorithm names, pattern names, math terms, etc.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Use Problem Domain Names
+    <ul>
+      <li>Separating solution and problem domain concept</li>
+    </ul>
+  </li>
+  <li>Add Meaningful Context
+    <ul>
+      <li>Place the name in context for the reader
+        <ul>
+          <li>enclosing classes, functions, or namespaces</li>
+        </ul>
+      </li>
+      <li>break it into smaller functions if it is necessary</li>
+    </ul>
+  </li>
+  <li>But Don’t Add Gratuitous Context
+    <ul>
+      <li>Shorter names are generally better
+        <ul>
+          <li>As long as they are clear</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[How to name clearly]]></summary></entry><entry><title type="html">Can We Automatically Fix Bugs by Learning Edit Operations?</title><link href="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/" rel="alternate" type="text/html" title="Can We Automatically Fix Bugs by Learning Edit Operations?" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Can%20We%20Automatically%20Fix%20Bugs%20by%20Learning%20Edit%20Operations</id><content type="html" xml:base="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/"><![CDATA[<h2 id="can-we-automatically-fix-bugs-by-learning-edit-operations">“Can We Automatically Fix Bugs by Learning Edit Operations?”</h2>
 
 <h2 id="paper"><a href="https://www.cs.wm.edu/~denys/pubs/SANER-RENE-BugFixing.pdf">Paper</a></h2>
 
@@ -447,142 +970,7 @@
 
 <p><a href="https://github.com/WM-SEMERU/hephaestus">GitHub - WM-SEMERU/hephaestus</a></p>
 
-<h3 id="questions">Questions:</h3>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[Generalizing the change is helpful...?]]></summary></entry><entry><title type="html">Clean Code Chapter 2</title><link href="http://localhost:4000/recent/Clean_Code_Ch2/" rel="alternate" type="text/html" title="Clean Code Chapter 2" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch2</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch2/"><![CDATA[<p><strong>Using the appropriate Name will pay off in the short term and continue to pay in the long run</strong></p>
-
-<ul>
-  <li>Using Intention-Revealing Names
-    <ul>
-      <li>Choosing good names takes time but saves more than it takes</li>
-      <li>Choosing a name that specifies what is being measured and the unit of that measurement</li>
-      <li>Things need to think
-        <ul>
-          <li>What kind are in</li>
-          <li>What is returned</li>
-          <li>zeroth subscript and value</li>
-        </ul>
-      </li>
-      <li>Do not use <strong>O <em>and l</em></strong></li>
-    </ul>
-  </li>
-  <li>Avoid Disinformation
-    <ul>
-      <li>Avoiding words whose entrenched meanings vary from intention</li>
-      <li>Spelling similar concepts similarly
-        <ul>
-          <li>No inconsistent spelling</li>
-        </ul>
-      </li>
-      <li><del>Using different font??</del></li>
-    </ul>
-  </li>
-  <li>Meaningful Distinction
-    <ul>
-      <li><strong>a</strong> for a local variable, <strong>the</strong> for all function arguments</li>
-      <li>Less redundant words</li>
-      <li>Distinguishing names in a way that readers know what the difference offer</li>
-    </ul>
-  </li>
-  <li>Using Pronounceable Names
-    <ul>
-      <li>Essential for communication</li>
-    </ul>
-  </li>
-  <li>Using Searchable Names
-    <ul>
-      <li>Single-letter names can ONLY be used as local variables inside short methods</li>
-      <li>The length of a name should correspond to the size of its scope</li>
-    </ul>
-  </li>
-  <li>Avoiding Encoding</li>
-  <li>Hungarian Notation
-    <ul>
-      <li>The compiler knows the type nowadays</li>
-    </ul>
-  </li>
-  <li>Member Prefixes
-    <ul>
-      <li>unseen clutter and a marker of older code…</li>
-    </ul>
-  </li>
-  <li>Interface and Implementation
-    <ul>
-      <li>Why would I let user knows I’m handling them with an interface?</li>
-      <li>Marking at the implementation</li>
-    </ul>
-  </li>
-  <li>Avoid Mental Mapping
-    <ul>
-      <li>In most contexts, a single letter for a loop is a poor choice (such as i, j, k)</li>
-      <li><em>Clarity is king</em></li>
-    </ul>
-  </li>
-  <li>Class Names
-    <ul>
-      <li>should have noun or noun phrase names</li>
-    </ul>
-  </li>
-  <li>Method Names
-    <ul>
-      <li>should have verb or verb phase names</li>
-      <li>When constructors are overloaded, use the static method with names that describe the argument
-        <ul>
-          <li>Make corresponding constructors private</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Don’t be cute
-    <ul>
-      <li>No too “user-specific name”</li>
-    </ul>
-  </li>
-  <li>Pick One Word per Concept
-    <ul>
-      <li>Pick one word for one abstract concept</li>
-      <li>The name will express two different types of object</li>
-    </ul>
-  </li>
-  <li>Don’t Pun
-    <ul>
-      <li>Avoiding using the same word for two purposes</li>
-      <li>Even if it has a similar concept, it must have a different name if it is semantically different</li>
-      <li><strong><em>It is the author’s responsibility</em></strong></li>
-    </ul>
-  </li>
-  <li>Use Solution Domain Names
-    <ul>
-      <li>People who read your code will be programmers
-        <ul>
-          <li>CS terms, algorithm names, pattern names, math terms, etc.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Use Problem Domain Names
-    <ul>
-      <li>Separating solution and problem domain concept</li>
-    </ul>
-  </li>
-  <li>Add Meaningful Context
-    <ul>
-      <li>Place the name in context for the reader
-        <ul>
-          <li>enclosing classes, functions, or namespaces</li>
-        </ul>
-      </li>
-      <li>break it into smaller functions if it is necessary</li>
-    </ul>
-  </li>
-  <li>But Don’t Add Gratuitous Context
-    <ul>
-      <li>Shorter names are generally better
-        <ul>
-          <li>As long as they are clear</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[How to name clearly]]></summary></entry><entry><title type="html">Clean Code Chapter 1</title><link href="http://localhost:4000/recent/Clean_Code_Ch1/" rel="alternate" type="text/html" title="Clean Code Chapter 1" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch1</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch1/"><![CDATA[<ul>
+<h3 id="questions">Questions:</h3>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[Generalizing the change is helpful...?]]></summary></entry><entry><title type="html">Clean Code Chapter 1</title><link href="http://localhost:4000/recent/Clean_Code_Ch1/" rel="alternate" type="text/html" title="Clean Code Chapter 1" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch1</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch1/"><![CDATA[<ul>
   <li>What is Clean Code?
     <ul>
       <li>Bjarne Stroustrup, Inventor of C++
@@ -995,84 +1383,7 @@
   <li>Why PLRTH and PLRT: The paper mentioned it is for reducing the search space. Is it the most efficient way to do it?</li>
   <li>I don’t understand the part about fault localization. Is it possible to localize the fault using AST context? Does it just localize fault according to the collected change?</li>
   <li>What if AST differencing tools work maliciously?</li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[ConFix]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 41</title><link href="http://localhost:4000/recent/Chapter-41/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 41" /><published>2023-06-17T00:00:00+09:00</published><updated>2023-06-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-41</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-41/"><![CDATA[<p>Locality and the fast file system</p>
-
-<ul>
-  <li>Old file system was simple
-    <ul>
-      <li>The problem: Poor Performance</li>
-      <li>UNIX file system treated the disk like it was a random-access memory</li>
-      <li>Data was spread all over the place</li>
-      <li>the data blocks of a file were often very far away from its inode, thus inducing an expensive seek</li>
-      <li>Fragmented</li>
-      <li>Degramententation Tool
-        <ul>
-          <li>minimize the internal fragmentation</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>FFS: Disk Awareness
-    <ul>
-      <li>Fast File System</li>
-      <li>interface
-        <ul>
-          <li>open, read, write, and close</li>
-        </ul>
-      </li>
-      <li>Cylinder groups
-        <ul>
-          <li>Single cylinder is a set of tracks on different surfaces of a hard drive</li>
-          <li>Block groups</li>
-          <li>Consecutive portion of the disk’s address space</li>
-          <li>placing two files within the same group</li>
-          <li>Super block, ib, db, inode, data block</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>how to allocate
-    <ul>
-      <li>find the cylinder group with a low number of allocated directories (to balance directories across groups) and a high number of free inodes (to subsequently be able to allocate a bunch of files), and put the directory data and inode in that group</li>
-      <li>to allocate the data blocks of a file in the same group as its inode</li>
-      <li>it places all files that are in the same directory in the cylinder group of the directory they are in</li>
-    </ul>
-  </li>
-  <li>FFS policies
-    <ul>
-      <li>the data blocks of each file are near each file’s inode, and files in the same directory are near one another</li>
-      <li>common sense</li>
-    </ul>
-  </li>
-  <li>Measuring File Locality
-    <ul>
-      <li>The random trace was generated by selecting files from within an existing SEER trace in random order and calculating the distance metric between these randomly-ordered accesses</li>
-      <li>40% of file accesses were to either the same file or to one in the same director</li>
-      <li>a large file would entirely fill the block group it is first placed within</li>
-      <li>FFS instead spreads the file spread across groups</li>
-      <li>amortization</li>
-    </ul>
-  </li>
-  <li>Internal fragmentation
-    <ul>
-      <li>internal fragmentation could thus lead to roughly half the disk being wasted for a typical file system</li>
-      <li>sub-blocks
-        <ul>
-          <li>512-byte little blocks that the file system could allocate to files</li>
-          <li>the file system will continue allocating 512-byte blocks to it until it acquires a full 4KB of data</li>
-        </ul>
-      </li>
-      <li>A second neat thing that FFS introduced was a disk layout that was optimized for performance</li>
-      <li>Parameterization
-        <ul>
-          <li>How many blocks need to skip to avoid extra rotation</li>
-        </ul>
-      </li>
-      <li>FFS was one of the first file systems to allow for long file names</li>
-      <li>symbolic link</li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.41]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 40</title><link href="http://localhost:4000/recent/Chapter-40/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 40" /><published>2023-06-17T00:00:00+09:00</published><updated>2023-06-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-40</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-40/"><![CDATA[<p>File System Implementation</p>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[ConFix]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 40</title><link href="http://localhost:4000/recent/Chapter-40/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 40" /><published>2023-06-17T00:00:00+09:00</published><updated>2023-06-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-40</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-40/"><![CDATA[<p>File System Implementation</p>
 
 <ul>
   <li>Very Simple File System
@@ -1353,214 +1664,4 @@
       <li>mkfs</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.39]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 37</title><link href="http://localhost:4000/recent/Chapter-38/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 37" /><published>2023-06-17T00:00:00+09:00</published><updated>2023-06-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-38</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-38/"><![CDATA[<p>Hard Disk Drives</p>
-
-<ul>
-  <li>the main form of persistent data storage</li>
-  <li>The interface
-    <ul>
-      <li>Consist of a large number of sectors (512 - bytes block)</li>
-      <li>Multi-sector operation
-        <ul>
-          <li>Updating the disk is atomic</li>
-          <li>it will either complete in its entirety or it won’t complete at all</li>
-          <li>torn write</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Basic Geometry
-    <ul>
-      <li>Platter
-        <ul>
-          <li>Circular hard surface</li>
-          <li>Each Platter has 2 surfaces</li>
-        </ul>
-      </li>
-      <li>Spindle
-        <ul>
-          <li>Connected to motor</li>
-          <li>RPM (rotations per minute)
-            <ul>
-              <li>7200 ~ 15000 RPM</li>
-            </ul>
-          </li>
-          <li>Data is encoded on each surface in <strong>concrete circle</strong>
-            <ul>
-              <li>Track</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Reading and writing is accomplished by the disk head
-        <ul>
-          <li>Disk head is attached to disk arm</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Latency
-    <ul>
-      <li>Single-track Latency
-        <ul>
-          <li>Rotational Delay
-            <ul>
-              <li>it must just wait for the desired sector to rotate under the disk head</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Multiple Tracks
-        <ul>
-          <li>Seek Time
-            <ul>
-              <li>Seek: Move disk arm to correct track</li>
-              <li>Acceleration → disk arm gets moving</li>
-              <li>Coasting → arm moving as full speed</li>
-              <li>Deceleration → arm moves slow down</li>
-              <li>Settling → head is carefully positioned
-                <ul>
-                  <li>settling time is significant</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Transfer
-            <ul>
-              <li>where data is either read from or written to the surface</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Track Skew
-    <ul>
-      <li>make sure that sequential reads can be properly serviced even when crossing track boundaries</li>
-      <li>When the disk needs time to reposition head
-        <ul>
-          <li>If there is now skew, the head need to wait for next block which requries whole rotation</li>
-        </ul>
-      </li>
-      <li>Outer track has more sectors than inner tracks
-        <ul>
-          <li>More room geometrically</li>
-          <li>Multi-zoned disk drives</li>
-          <li>Each zone has same number of sectors</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Track buffer
-    <ul>
-      <li>Cache
-        <ul>
-          <li>Just small amount of the memory</li>
-        </ul>
-      </li>
-      <li>Drive has a choice
-        <ul>
-          <li>acknowledge
-            <ul>
-              <li>After put the data in its memory
-                <ul>
-                  <li>Write back caching</li>
-                </ul>
-              </li>
-              <li>write has actually been written to disk
-                <ul>
-                  <li>Write through caching</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Dimensional analysis
-        <ul>
-          <li>RPM</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>I/O time
-    <ul>
-      <li>Workload
-        <ul>
-          <li>Random</li>
-          <li>Sequential</li>
-        </ul>
-      </li>
-      <li>Capcity and performance
-        <ul>
-          <li>High performance for searching</li>
-          <li>Low capacity</li>
-          <li>Low performance on searching</li>
-          <li>High capacity</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Disk Scheduling
-    <ul>
-      <li>Due to the high cost of I/O</li>
-      <li>SSTF: Shortest Seek Time First
-        <ul>
-          <li>order the queue of I/O request by track
-            <ul>
-              <li>drive geometry is not available to the host OS
-                <ul>
-                  <li>Nearest-block-first</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Starvation</li>
-        </ul>
-      </li>
-      <li>SCAN
-        <ul>
-          <li>simply moves back and forth across the disk servicing requests in order across the track
-            <ul>
-              <li>Sweep</li>
-            </ul>
-          </li>
-          <li>F-SCAN
-            <ul>
-              <li>freezes the queue to be serviced when it is doing a sweep</li>
-            </ul>
-          </li>
-          <li>C-SCAN
-            <ul>
-              <li>Circular SCAN</li>
-              <li>sweeps from outer-to-inner, and then resets at the outer track to begin again</li>
-            </ul>
-          </li>
-          <li>Elevator algorithm → going up and down</li>
-        </ul>
-      </li>
-      <li>Rotation Cost</li>
-      <li>shortest positioning time first, SPTF, SATF is the solution</li>
-    </ul>
-  </li>
-  <li>I/O merging
-    <ul>
-      <li>Merge the request, reordering is performed upon the merged request</li>
-    </ul>
-  </li>
-  <li>Work-conversing
-    <ul>
-      <li>How long should the system wait before issuing an I/O to disk?
-        <ul>
-          <li>immediately issue the request to the drive</li>
-        </ul>
-      </li>
-      <li>anticipatory disk scheduling
-        <ul>
-          <li>non-work-conserving</li>
-          <li>waiting for a new and better request results better performance in average</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.37]]></summary></entry></feed>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.39]]></summary></entry></feed>
