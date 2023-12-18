@@ -238,4 +238,10 @@ var store = [{
         "tags": ["ML"],
         "url": "/recent/Probability_and_Statistics/",
         "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 4. Information Theory",
+        "excerpt":"Information Theory entropy unpredictability of information content it captures the value of surprises information from independent events is “additive” information is non-negative as distributions become more uniform, entropy goes up. Gaussian distribution has the maximum entropy among possible distributions on an infinite range with a finite mean and variance Kullback...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Information_Theory/",
+        "teaser": null
       }]

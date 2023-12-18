@@ -42,7 +42,7 @@ tags:
         
         Bayesianism and frequentism are two distinct approaches to statistical inference, and they differ in their fundamental principles and interpretations of probability. Thomas Bayes and Ronald A. Fisher were prominent figures associated with these respective approaches.
         
-        ### Bayesianism (Thomas Bayes):
+        Bayesianism (Thomas Bayes):
         
         1. **Probability as Belief:**
             - In Bayesian statistics, probability is interpreted as a measure of belief or confidence in a particular hypothesis. It reflects the degree of certainty or uncertainty given available information.
@@ -60,7 +60,7 @@ tags:
         3. **Incorporation of Prior Knowledge:**
             - Bayesian analysis allows the incorporation of prior knowledge into the analysis, enabling the adjustment of beliefs based on both prior information and new data.
         
-        ### Frequentism (Ronald A. Fisher):
+        Frequentism (Ronald A. Fisher):
         
         1. **Probability as Frequency:**
             - Frequentist statistics, on the other hand, views probability as a long-run frequency or limit of relative frequencies. Probability is associated with the repeated occurrence of events in a hypothetical infinite sequence of trials.
@@ -71,7 +71,7 @@ tags:
         4. **Objective and Reproducible:**
             - Frequentist methods are considered more objective and reproducible, as they do not rely on subjective prior beliefs.
         
-        ### Comparison:
+        Comparison:
         
         - **Subjectivity:**
             - Bayesianism is often criticized for being subjective due to the reliance on prior beliefs. Frequentism is considered more objective since it doesn't involve prior probabilities.

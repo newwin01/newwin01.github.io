@@ -1,206 +1,92 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-17T22:54:24+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-18T22:16:46+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 4. Information Theory</title><link href="http://localhost:4000/recent/Information_Theory/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 4. Information Theory" /><published>2023-12-18T00:00:00+09:00</published><updated>2023-12-18T00:00:00+09:00</updated><id>http://localhost:4000/recent/Information_Theory</id><content type="html" xml:base="http://localhost:4000/recent/Information_Theory/"><![CDATA[<h1 id="information-theory">Information Theory</h1>
 
 <ul>
-  <li>Probability
+  <li>entropy
     <ul>
-      <li>IID: independent identically distributed</li>
-      <li>Simpson’s Paradox</li>
-      <li>Probability is a number assigned to an event indicating “how likely” the event will occur when randomly selected</li>
-      <li>uncertainty can make the model simpler. A simple/uncertain model rather than a complex/certain one, even when modeling the true/deterministic rule is possible</li>
-      <li>mathematical probability measures the likelihood that events will occur</li>
-      <li>empirical statistics is science of collecting and analyzing numerical data in large quantities</li>
-      <li>Random Variable
+      <li>unpredictability of information content
         <ul>
-          <li>a variable whose possible values are numerical outcomes of a random phenomenon</li>
-          <li>is a measurable function from a set of possible outcomes to a measurable space</li>
+          <li>it captures the value of surprises</li>
+          <li>information from independent events is “additive”</li>
+          <li>information is non-negative</li>
         </ul>
       </li>
     </ul>
 
-    <p><img src="../../../assets/ML/ProbAndStats/Untitled.png" /></p>
-
-    <p><img src="../../../assets/ML/ProbAndStats/Untitled 1.png" /></p>
+    <p><img src="../../../assets/ML/InfoTheo/Untitled.png" /></p>
 
     <ul>
-      <li>marginal, joint, and conditional probabilities</li>
+      <li>as distributions become more uniform, entropy goes up.</li>
+      <li>Gaussian distribution has the maximum entropy among possible distributions on an infinite range with a finite mean and variance</li>
     </ul>
 
-    <p><img src="../../../assets/ML/ProbAndStats/Untitled 2.png" /></p>
-
-    <p><img src="../../../assets/ML/ProbAndStats/Untitled 3.png" /></p>
-
-    <p><img src="../../../assets/ML/ProbAndStats/Untitled 4.png" /></p>
+    <p><img src="../../../assets/ML/InfoTheo/Untitled 1.png" /></p>
 
     <ul>
-      <li>Bayes rule presents the transformation process of our beliefs.
+      <li>Kullback Leibler (KL) divergence
         <ul>
-          <li>subjective belief on Y changes with X</li>
-        </ul>
-      </li>
-      <li>learning is
-        <ul>
-          <li>nothing but to update our confidence from prior to posterior.</li>
-          <li>the key factor is likelihood which is based on data.</li>
-        </ul>
-      </li>
-      <li>
-        <p>Bayesianism (Thomas Bayes) vs. frequentism (Ronald A. Fisher)</p>
-
-        <p>Bayesianism and frequentism are two distinct approaches to statistical inference, and they differ in their fundamental principles and interpretations of probability. Thomas Bayes and Ronald A. Fisher were prominent figures associated with these respective approaches.</p>
-
-        <p>### Bayesianism (Thomas Bayes):</p>
-
-        <ol>
-          <li><strong>Probability as Belief:</strong>
-            <ul>
-              <li>In Bayesian statistics, probability is interpreted as a measure of belief or confidence in a particular hypothesis. It reflects the degree of certainty or uncertainty given available information.</li>
-              <li>Bayesians start with a prior probability distribution, representing initial beliefs about a hypothesis before observing data.</li>
-            </ul>
-          </li>
-          <li><strong>Bayes’ Theorem:</strong>
-            <ul>
-              <li>The cornerstone of Bayesian statistics is Bayes’ theorem, which updates the prior belief based on observed data to obtain a posterior probability distribution.</li>
-              <li>Bayes’ theorem relates the posterior probability (probability of the hypothesis given the data) to the prior probability and the likelihood of the data given the hypothesis.</li>
-            </ul>
-
-\[P(H|D) = \frac{P(D|H) \cdot P(H)}{P(D)}\]
-
-            <ul>
-              <li>\(P(H|D)\) is the posterior probability, 
- \(( P(D|H) )\) is the likelihood, 
- \(( P(H) )\) is the prior probability, and 
- \(( P(D) )\) is the probability of the data.</li>
-            </ul>
-          </li>
-          <li><strong>Incorporation of Prior Knowledge:</strong>
-            <ul>
-              <li>Bayesian analysis allows the incorporation of prior knowledge into the analysis, enabling the adjustment of beliefs based on both prior information and new data.</li>
-            </ul>
-          </li>
-        </ol>
-
-        <p>### Frequentism (Ronald A. Fisher):</p>
-
-        <ol>
-          <li><strong>Probability as Frequency:</strong>
-            <ul>
-              <li>Frequentist statistics, on the other hand, views probability as a long-run frequency or limit of relative frequencies. Probability is associated with the repeated occurrence of events in a hypothetical infinite sequence of trials.</li>
-            </ul>
-          </li>
-          <li><strong>No Prior Probability:</strong>
-            <ul>
-              <li>Unlike Bayesianism, frequentist statistics does not involve prior probabilities. It relies solely on observed data and the likelihood of obtaining that data under different hypotheses.</li>
-            </ul>
-          </li>
-          <li><strong>Hypothesis Testing and Confidence Intervals:</strong>
-            <ul>
-              <li>Frequentist methods often focus on hypothesis testing and confidence intervals. Hypothesis testing involves assessing the evidence against a null hypothesis, and confidence intervals provide a range of plausible values for an unknown parameter.</li>
-            </ul>
-          </li>
-          <li><strong>Objective and Reproducible:</strong>
-            <ul>
-              <li>Frequentist methods are considered more objective and reproducible, as they do not rely on subjective prior beliefs.</li>
-            </ul>
-          </li>
-        </ol>
-
-        <p>### Comparison:</p>
-
-        <ul>
-          <li><strong>Subjectivity:</strong>
-            <ul>
-              <li>Bayesianism is often criticized for being subjective due to the reliance on prior beliefs. Frequentism is considered more objective since it doesn’t involve prior probabilities.</li>
-            </ul>
-          </li>
-          <li><strong>Flexibility vs. Objectivity:</strong>
-            <ul>
-              <li>Bayesian methods provide a flexible framework for incorporating prior information, but this flexibility is seen by some as a weakness. Frequentism, being more rigid, is valued for its objectivity and reproducibility.</li>
-            </ul>
-          </li>
-          <li><strong>Interpretation of Probability:</strong>
-            <ul>
-              <li>Bayesianism interprets probability as a measure of belief, while frequentism interprets it as a long-term frequency.</li>
-            </ul>
-          </li>
-        </ul>
-
-        <p>Both Bayesian and frequentist approaches have their strengths and weaknesses, and the choice between them often depends on the nature of the problem, available data, and the philosophical stance of the statistician or researcher. In practice, researchers sometimes use a combination of both approaches, known as Bayesian-frequentist synthesis.</p>
-
-        <ul>
-          <li>parameters
-            <ul>
-              <li>updated (represented probabilistically) vs. fixed</li>
-              <li>with prior vs. no prior</li>
-            </ul>
-          </li>
-          <li>data
-            <ul>
-              <li>fixed vs. random samples</li>
-            </ul>
-          </li>
-          <li>example
-            <ul>
-              <li>diagnosis vs. dice</li>
-            </ul>
-          </li>
-          <li>focused on
-            <ul>
-              <li>posterior vs likelihood</li>
-            </ul>
-          </li>
+          <li><a href="https://hyunw.kim/blog/2017/10/27/KL_divergence.html">https://hyunw.kim/blog/2017/10/27/KL_divergence.html</a></li>
+          <li><a href="https://hwiyong.tistory.com/408">https://hwiyong.tistory.com/408</a></li>
+          <li>divergence between two probability distributions</li>
         </ul>
       </li>
     </ul>
 
-    <p><img src="../../../assets/ML/ProbAndStats/Untitled 5.png" /></p>
+    <p><img src="../../../assets/ML/InfoTheo/Untitled 2.png" /></p>
+
+    <p>Entropy is a measure of uncertainty or disorder in a set of outcomes or information. In information theory, three related concepts are often used: marginal entropy, joint entropy, and conditional entropy.</p>
+
+    <ol>
+      <li><strong>Marginal Entropy:</strong>
+        <ul>
+          <li><strong>Definition:</strong> Marginal entropy quantifies the uncertainty associated with a single random variable in isolation, without considering any other variables.</li>
+          <li><strong>Formula:</strong> For a discrete random variable \((X)\), the marginal entropy \((H(X))\) is calculated as \((H(X) = -\sum_{x} P(x) \log_2(P(x)))\), where \((P(x))\) is the probability of each possible outcome of \((X)\).</li>
+          <li><strong>Interpretation:</strong> A higher marginal entropy indicates greater uncertainty or randomness associated with the individual variable.</li>
+        </ul>
+      </li>
+      <li><strong>Joint Entropy:</strong>
+        <ul>
+          <li><strong>Definition:</strong> Joint entropy measures the uncertainty associated with a pair of random variables considered together.</li>
+          <li><strong>Formula:</strong> For two discrete random variables \((X)\) and \((Y)\), the joint entropy \((H(X, Y))\) is calculated as \((H(X, Y) = -\sum_{x, y} P(x, y) \log_2(P(x, y)))\), where \((P(x, y))\) is the joint probability of the outcomes \(((x, y))\).</li>
+          <li><strong>Interpretation:</strong> Joint entropy provides a measure of uncertainty when considering the combined outcomes of two variables.</li>
+        </ul>
+      </li>
+      <li><strong>Conditional Entropy:</strong>
+        <ul>
+          <li><strong>Definition:</strong> Conditional entropy quantifies the remaining uncertainty in one random variable given the knowledge of another.</li>
+          <li><strong>Formula:</strong> For two discrete random variables \((X)\) and \((Y)\), the conditional entropy \((H(X \mid Y))\) is calculated as \((H(X \mid Y) = -\sum_{x, y} P(x, y) \log_2\left(\frac{P(x, y)}{P(y)}\right))\), where \((P(x, y))\) is the joint probability, (P(y)) is the marginal probability of (Y), and the sum is taken over all possible outcomes of \((X)\) and \((Y)\).</li>
+          <li><strong>Interpretation:</strong> Conditional entropy reflects the remaining uncertainty in \((X)\) when \((Y)\) is known. A lower conditional entropy indicates that knowledge of \((Y)\) reduces the uncertainty about \((X)\).</li>
+        </ul>
+      </li>
+    </ol>
+
+    <p>In summary, marginal entropy captures the uncertainty of individual variables, joint entropy quantifies the uncertainty of multiple variables considered together, and conditional entropy measures the remaining uncertainty in one variable given the knowledge of another. These concepts are fundamental in understanding and analyzing the information content and relationships between random variables in various domains, including information theory, statistics, and machine learning.</p>
 
     <ul>
-      <li>conjugate distributions
-        <ul>
-          <li><a href="https://en.wikipedia.org/wiki/Conjugate_prior">https://en.wikipedia.org/wiki/Conjugate_prior</a></li>
-          <li>Prior and posterior distribution is in the same family</li>
-        </ul>
-      </li>
-      <li>Central Limit Theorem</li>
-      <li>Cramer’s theorem
-        <ul>
-          <li><a href="https://carstart.tistory.com/160">https://carstart.tistory.com/160</a></li>
-        </ul>
-      </li>
-      <li>multivariate Gaussian
-        <ul>
-          <li><a href="https://dhpark1212.tistory.com/entry/%EB%8B%A4%EB%B3%80%EB%9F%89-%EA%B0%80%EC%9A%B0%EC%8B%9C%EC%95%88-%EB%B6%84%ED%8F%ACMultivariate-Gaussian-Distribution">https://dhpark1212.tistory.com/entry/다변량-가우시안-분포Multivariate-Gaussian-Distribution</a></li>
-        </ul>
-      </li>
-      <li>transformed Gaussian</li>
-      <li>whitening transformation
-        <ul>
-          <li>it transforms a random variable vector with covariance into a new variable vector whose covariance is the identity matrix</li>
-        </ul>
-      </li>
-      <li>transformed densities</li>
-      <li>limitations of Gaussian distribution
-        <ul>
-          <li>there are too many parameters in general</li>
-          <li>it is intrinsically unimodal</li>
-        </ul>
-      </li>
-      <li>stationary process</li>
-      <li>basic distributions: uniform</li>
-      <li>basic distributions: Bernoulli
-        <ul>
-          <li>Discrete probability distribution</li>
-        </ul>
-      </li>
-      <li>basic distributions: binomial
-        <ul>
-          <li>the probability of observing occurrences of in a set of samples from a Bernoulli distribution</li>
-        </ul>
-      </li>
-      <li>basic distributions: categorical and multinomial</li>
+      <li>KL divergence is not symmetric</li>
+      <li><a href="https://math.stackexchange.com/questions/1972633/what-is-the-difference-between-moment-projection-and-information-projection">https://math.stackexchange.com/questions/1972633/what-is-the-difference-between-moment-projection-and-information-projection</a></li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
+  <li>mutual information
+    <ul>
+      <li>measures how much information is shared</li>
+      <li>the more independent they are, the smaller MI is</li>
+    </ul>
+  </li>
+  <li>Cross Entropy
+    <ul>
+      <li>it measures dissimilarity between and a target</li>
+      <li>identical to KL up to an additive constant</li>
+      <li>popular loss function</li>
+      <li><a href="https://velog.io/@rcchun/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%ED%81%AC%EB%A1%9C%EC%8A%A4-%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BCcross-entropy">https://velog.io/@rcchun/머신러닝-크로스-엔트로피cross-entropy</a></li>
+    </ul>
+  </li>
+  <li>causality - information flow</li>
+  <li>
+    <p>transfer entropy</p>
+
+    <p><img src="../../../assets/ML/InfoTheo/Untitled 3.png" /></p>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
 
 <p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
 
@@ -386,7 +272,209 @@
       </li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. Prof. Henry Choi]]></summary></entry><entry><title type="html">Clean Code Chapter 3</title><link href="http://localhost:4000/recent/Clean_Code_Ch3/" rel="alternate" type="text/html" title="Clean Code Chapter 3" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch3</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch3/"><![CDATA[<p>How can we make a function communicate its intent?</p>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
+
+<ul>
+  <li>Probability
+    <ul>
+      <li>IID: independent identically distributed</li>
+      <li>Simpson’s Paradox</li>
+      <li>Probability is a number assigned to an event indicating “how likely” the event will occur when randomly selected</li>
+      <li>uncertainty can make the model simpler. A simple/uncertain model rather than a complex/certain one, even when modeling the true/deterministic rule is possible</li>
+      <li>mathematical probability measures the likelihood that events will occur</li>
+      <li>empirical statistics is science of collecting and analyzing numerical data in large quantities</li>
+      <li>Random Variable
+        <ul>
+          <li>a variable whose possible values are numerical outcomes of a random phenomenon</li>
+          <li>is a measurable function from a set of possible outcomes to a measurable space</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p><img src="../../../assets/ML/ProbAndStats/Untitled.png" /></p>
+
+    <p><img src="../../../assets/ML/ProbAndStats/Untitled 1.png" /></p>
+
+    <ul>
+      <li>marginal, joint, and conditional probabilities</li>
+    </ul>
+
+    <p><img src="../../../assets/ML/ProbAndStats/Untitled 2.png" /></p>
+
+    <p><img src="../../../assets/ML/ProbAndStats/Untitled 3.png" /></p>
+
+    <p><img src="../../../assets/ML/ProbAndStats/Untitled 4.png" /></p>
+
+    <ul>
+      <li>Bayes rule presents the transformation process of our beliefs.
+        <ul>
+          <li>subjective belief on Y changes with X</li>
+        </ul>
+      </li>
+      <li>learning is
+        <ul>
+          <li>nothing but to update our confidence from prior to posterior.</li>
+          <li>the key factor is likelihood which is based on data.</li>
+        </ul>
+      </li>
+      <li>
+        <p>Bayesianism (Thomas Bayes) vs. frequentism (Ronald A. Fisher)</p>
+
+        <p>Bayesianism and frequentism are two distinct approaches to statistical inference, and they differ in their fundamental principles and interpretations of probability. Thomas Bayes and Ronald A. Fisher were prominent figures associated with these respective approaches.</p>
+
+        <p>Bayesianism (Thomas Bayes):</p>
+
+        <ol>
+          <li><strong>Probability as Belief:</strong>
+            <ul>
+              <li>In Bayesian statistics, probability is interpreted as a measure of belief or confidence in a particular hypothesis. It reflects the degree of certainty or uncertainty given available information.</li>
+              <li>Bayesians start with a prior probability distribution, representing initial beliefs about a hypothesis before observing data.</li>
+            </ul>
+          </li>
+          <li><strong>Bayes’ Theorem:</strong>
+            <ul>
+              <li>The cornerstone of Bayesian statistics is Bayes’ theorem, which updates the prior belief based on observed data to obtain a posterior probability distribution.</li>
+              <li>Bayes’ theorem relates the posterior probability (probability of the hypothesis given the data) to the prior probability and the likelihood of the data given the hypothesis.</li>
+            </ul>
+
+\[P(H|D) = \frac{P(D|H) \cdot P(H)}{P(D)}\]
+
+            <ul>
+              <li>\(P(H|D)\) is the posterior probability, 
+ \(( P(D|H) )\) is the likelihood, 
+ \(( P(H) )\) is the prior probability, and 
+ \(( P(D) )\) is the probability of the data.</li>
+            </ul>
+          </li>
+          <li><strong>Incorporation of Prior Knowledge:</strong>
+            <ul>
+              <li>Bayesian analysis allows the incorporation of prior knowledge into the analysis, enabling the adjustment of beliefs based on both prior information and new data.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <p>Frequentism (Ronald A. Fisher):</p>
+
+        <ol>
+          <li><strong>Probability as Frequency:</strong>
+            <ul>
+              <li>Frequentist statistics, on the other hand, views probability as a long-run frequency or limit of relative frequencies. Probability is associated with the repeated occurrence of events in a hypothetical infinite sequence of trials.</li>
+            </ul>
+          </li>
+          <li><strong>No Prior Probability:</strong>
+            <ul>
+              <li>Unlike Bayesianism, frequentist statistics does not involve prior probabilities. It relies solely on observed data and the likelihood of obtaining that data under different hypotheses.</li>
+            </ul>
+          </li>
+          <li><strong>Hypothesis Testing and Confidence Intervals:</strong>
+            <ul>
+              <li>Frequentist methods often focus on hypothesis testing and confidence intervals. Hypothesis testing involves assessing the evidence against a null hypothesis, and confidence intervals provide a range of plausible values for an unknown parameter.</li>
+            </ul>
+          </li>
+          <li><strong>Objective and Reproducible:</strong>
+            <ul>
+              <li>Frequentist methods are considered more objective and reproducible, as they do not rely on subjective prior beliefs.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <p>Comparison:</p>
+
+        <ul>
+          <li><strong>Subjectivity:</strong>
+            <ul>
+              <li>Bayesianism is often criticized for being subjective due to the reliance on prior beliefs. Frequentism is considered more objective since it doesn’t involve prior probabilities.</li>
+            </ul>
+          </li>
+          <li><strong>Flexibility vs. Objectivity:</strong>
+            <ul>
+              <li>Bayesian methods provide a flexible framework for incorporating prior information, but this flexibility is seen by some as a weakness. Frequentism, being more rigid, is valued for its objectivity and reproducibility.</li>
+            </ul>
+          </li>
+          <li><strong>Interpretation of Probability:</strong>
+            <ul>
+              <li>Bayesianism interprets probability as a measure of belief, while frequentism interprets it as a long-term frequency.</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p>Both Bayesian and frequentist approaches have their strengths and weaknesses, and the choice between them often depends on the nature of the problem, available data, and the philosophical stance of the statistician or researcher. In practice, researchers sometimes use a combination of both approaches, known as Bayesian-frequentist synthesis.</p>
+
+        <ul>
+          <li>parameters
+            <ul>
+              <li>updated (represented probabilistically) vs. fixed</li>
+              <li>with prior vs. no prior</li>
+            </ul>
+          </li>
+          <li>data
+            <ul>
+              <li>fixed vs. random samples</li>
+            </ul>
+          </li>
+          <li>example
+            <ul>
+              <li>diagnosis vs. dice</li>
+            </ul>
+          </li>
+          <li>focused on
+            <ul>
+              <li>posterior vs likelihood</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <p><img src="../../../assets/ML/ProbAndStats/Untitled 5.png" /></p>
+
+    <ul>
+      <li>conjugate distributions
+        <ul>
+          <li><a href="https://en.wikipedia.org/wiki/Conjugate_prior">https://en.wikipedia.org/wiki/Conjugate_prior</a></li>
+          <li>Prior and posterior distribution is in the same family</li>
+        </ul>
+      </li>
+      <li>Central Limit Theorem</li>
+      <li>Cramer’s theorem
+        <ul>
+          <li><a href="https://carstart.tistory.com/160">https://carstart.tistory.com/160</a></li>
+        </ul>
+      </li>
+      <li>multivariate Gaussian
+        <ul>
+          <li><a href="https://dhpark1212.tistory.com/entry/%EB%8B%A4%EB%B3%80%EB%9F%89-%EA%B0%80%EC%9A%B0%EC%8B%9C%EC%95%88-%EB%B6%84%ED%8F%ACMultivariate-Gaussian-Distribution">https://dhpark1212.tistory.com/entry/다변량-가우시안-분포Multivariate-Gaussian-Distribution</a></li>
+        </ul>
+      </li>
+      <li>transformed Gaussian</li>
+      <li>whitening transformation
+        <ul>
+          <li>it transforms a random variable vector with covariance into a new variable vector whose covariance is the identity matrix</li>
+        </ul>
+      </li>
+      <li>transformed densities</li>
+      <li>limitations of Gaussian distribution
+        <ul>
+          <li>there are too many parameters in general</li>
+          <li>it is intrinsically unimodal</li>
+        </ul>
+      </li>
+      <li>stationary process</li>
+      <li>basic distributions: uniform</li>
+      <li>basic distributions: Bernoulli
+        <ul>
+          <li>Discrete probability distribution</li>
+        </ul>
+      </li>
+      <li>basic distributions: binomial
+        <ul>
+          <li>the probability of observing occurrences of in a set of samples from a Bernoulli distribution</li>
+        </ul>
+      </li>
+      <li>basic distributions: categorical and multinomial</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. Prof. Henry Choi]]></summary></entry><entry><title type="html">Clean Code Chapter 3</title><link href="http://localhost:4000/recent/Clean_Code_Ch3/" rel="alternate" type="text/html" title="Clean Code Chapter 3" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch3</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch3/"><![CDATA[<p>How can we make a function communicate its intent?</p>
 
 <p>What attributes can we give that will allow a reader to intuit the kind of program they live inside?</p>
 
@@ -1528,140 +1616,4 @@
       </li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.40]]></summary></entry><entry><title type="html">Operating Systems: Three Easy Pieces Ch. 39</title><link href="http://localhost:4000/recent/Chapter-39/" rel="alternate" type="text/html" title="Operating Systems: Three Easy Pieces Ch. 39" /><published>2023-06-17T00:00:00+09:00</published><updated>2023-06-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Chapter-39</id><content type="html" xml:base="http://localhost:4000/recent/Chapter-39/"><![CDATA[<p>File and Directories</p>
-
-<ul>
-  <li>Persistence Storage
-    <ul>
-      <li>HDD</li>
-      <li>SSD</li>
-    </ul>
-  </li>
-  <li>Files and Directories
-    <ul>
-      <li>inode number</li>
-      <li>directory
-        <ul>
-          <li>Directory tree (hierarchy)</li>
-          <li>Root directory</li>
-          <li>Subdirectory</li>
-          <li>Separator</li>
-        </ul>
-      </li>
-      <li>Type of the file</li>
-    </ul>
-  </li>
-  <li>Creating file
-    <ul>
-      <li>open()</li>
-      <li>file descriptor
-        <ul>
-          <li>Capability</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Reading and Writing files
-    <ul>
-      <li>Strace
-        <ul>
-          <li>trace the system calls made by a program</li>
-          <li>Flags</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Not sequential reading and writing
-    <ul>
-      <li>random offset
-        <ul>
-          <li>searching specific word</li>
-        </ul>
-      </li>
-      <li>File Offset</li>
-      <li>Open file table
-        <ul>
-          <li>OS can use this to determine whether the opened file is readable or writable (or both), which underlying file it refers to (as pointed to by the struct inode pointer ip), and the current offset (off).</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Shared File Table Entities
-    <ul>
-      <li>Fork and dup</li>
-      <li>reference count</li>
-      <li>The dup() call allows a process to create a new file descriptor that refers to the same underlying open file as an existing descriptor</li>
-    </ul>
-  </li>
-  <li>Fsync()
-    <ul>
-      <li>(DBMS), development of a correct recovery protocol requires the ability to force writes to disk from time to time</li>
-    </ul>
-  </li>
-  <li>Renaming files
-    <ul>
-      <li>rename() call is atomic</li>
-    </ul>
-  </li>
-  <li>Information about files
-    <ul>
-      <li>metadata
-        <ul>
-          <li>stat() or fstat() system calls</li>
-        </ul>
-      </li>
-      <li>inode</li>
-    </ul>
-
-    <p><img src="../../../assets/OS_pic/Ch39.png" width="1000" height="270" /></p>
-  </li>
-  <li>Removing Files
-    <ul>
-      <li>unlink() ?</li>
-    </ul>
-  </li>
-  <li>Making Directories
-    <ul>
-      <li>To create a directory, a single system call, mkdir(), is available. The eponymous mkdir program can be used to create such a directory.</li>
-    </ul>
-  </li>
-  <li>Reading Directories
-    <ul>
-      <li>the program uses three calls, opendir(), readdir(), and closedir()</li>
-      <li>struct dirent</li>
-    </ul>
-  </li>
-  <li>Deleting Directories
-    <ul>
-      <li>rmdir()</li>
-    </ul>
-  </li>
-  <li>Hard Links
-    <ul>
-      <li>he link() system call takes two arguments, an old pathname and a new one; when you “link” a new file name to an old one, you essentially create another way to refer to the same file</li>
-      <li>The way link() works is that it simply creates another name in the directory you are creating the link to</li>
-      <li>reference count (link count)</li>
-    </ul>
-  </li>
-  <li>Symbolic Links
-    <ul>
-      <li>Soft Link</li>
-      <li>the original file can now be accessed through the file name file as well as the symbolic link name file2.</li>
-      <li>dangling reference possibility</li>
-    </ul>
-  </li>
-  <li>Permission Bits And Access Control Lists
-    <ul>
-      <li>permission bits</li>
-      <li>what the owner of the file can do to it, what someone in a group can do to the file, and finally, what anyone (sometimes referred to as other) can do.</li>
-      <li>chmod command</li>
-      <li>form of an access control list (ACL) per directory</li>
-    </ul>
-  </li>
-  <li>Making And Mounting A File System
-    <ul>
-      <li>What mount does, quite simply is take an existing directory as a target mount point and essentially paste a new file system onto the directory tree at that point</li>
-      <li>mkfs</li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.39]]></summary></entry></feed>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="OS" /><category term="OS" /><summary type="html"><![CDATA[OS Ch.40]]></summary></entry></feed>
