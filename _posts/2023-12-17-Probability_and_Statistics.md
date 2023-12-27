@@ -1,6 +1,6 @@
 ---
 title:  "2023-HGU-ML Lecture 3. Probability and Statistics for ML"
-excerpt: "Prob and Stats are the fundamentals. Prof. Henry Choi"
+excerpt: "Prob and Stats are the fundamentals. by Prof. Henry Choi"
 
 categories:
   - ML

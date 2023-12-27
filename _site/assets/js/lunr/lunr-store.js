@@ -244,4 +244,10 @@ var store = [{
         "tags": ["ML"],
         "url": "/recent/Information_Theory/",
         "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 5. Density Estimation",
+        "excerpt":"Density Estimation for a data sample, we need a vector to represent for a dataset with many samples, we need the distribution of the samples to understand the dataset Density Estimation estimation of an underlying probability density function p(x) based on observed data we can understand the population (unsupervised) the...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Density_Estimation/",
+        "teaser": null
       }]

@@ -1,6 +1,6 @@
 ---
 title:  "2023-HGU-ML Lecture 1. Introduction to AI and ML"
-excerpt: "AI and ML Intro. Prof. Henry Choi"
+excerpt: "AI and ML Intro. by Prof. Henry Choi"
 
 categories:
   - ML

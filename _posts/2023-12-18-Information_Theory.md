@@ -1,6 +1,6 @@
 ---
 title:  "2023-HGU-ML Lecture 4. Information Theory"
-excerpt: "Information Theory Prof. Henry Choi"
+excerpt: "Information Theory by Prof. Henry Choi"
 
 categories:
   - ML
