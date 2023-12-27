@@ -1,3 +1,13 @@
+---
+title:  "2023-HGU-ML Lecture 5. Density Estimation"
+excerpt: "Density Estimation by Prof. Henry Choi"
+
+categories:
+  - ML
+tags:
+  - [ML]
+---
+
 # Density Estimation
 
 - for a data sample, we need a vector to represent
@@ -37,19 +47,19 @@
     - the log function is monotonic and makes the likelihood equation much simpler
 - MLE for Gaussian
     
-    ![Untitled](Density%20Estimation%20e6be8986d6da4e49bb10ee1a33fc5e8e/Untitled.png)
+    <img src = "../../../assets/ML/DensityEst/Untitled.png">
     
-    ![Untitled](Density%20Estimation%20e6be8986d6da4e49bb10ee1a33fc5e8e/Untitled%201.png)
+    <img src = "../../../assets/ML/DensityEst/Untitled 1.png">
     
 - the mean estimator is unbiased, but the variance estimator is biased
     - maximum likelihood estimator is related to overfitting
     
-    ![Untitled](Density%20Estimation%20e6be8986d6da4e49bb10ee1a33fc5e8e/Untitled%202.png)
+    <img src = "../../../assets/ML/DensityEst/Untitled 2.png">
     
 - histogram as a nonparametric method
     - probability of x in a bin
     
-    ![Untitled](Density%20Estimation%20e6be8986d6da4e49bb10ee1a33fc5e8e/Untitled%203.png)
+    <img src = "../../../assets/ML/DensityEst/Untitled 3.png">
     
 - KDE and kNN
     - kernel density estimation (KDE)
@@ -57,13 +67,13 @@
         - [https://darkpgmr.tistory.com/147](https://darkpgmr.tistory.com/147)
         - Parzen window
         
-        ![Untitled](Density%20Estimation%20e6be8986d6da4e49bb10ee1a33fc5e8e/Untitled%204.png)
+        <img src = "../../../assets/ML/DensityEst/Untitled 4.png">
         
     - k nearest neighbors (kNN)
         - fix k, and increase V to include k samples
 - Semi-parametric method
     - Mixture of Gaussian
     
-    ![Untitled](Density%20Estimation%20e6be8986d6da4e49bb10ee1a33fc5e8e/Untitled%205.png)
+    <img src = "../../../assets/ML/DensityEst/Untitled 5.png">
     
-    ![Untitled](Density%20Estimation%20e6be8986d6da4e49bb10ee1a33fc5e8e/Untitled%206.png)
+    <img src = "../../../assets/ML/DensityEst/Untitled 6.png">
