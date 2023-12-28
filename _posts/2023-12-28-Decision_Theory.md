@@ -1,28 +1,38 @@
+---
+title:  "2023-HGU-ML Lecture 6. Decision Theory"
+excerpt: "Decision... by Prof. Henry Choi"
+
+categories:
+  - ML
+tags:
+  - [ML]
+---
+
 # Decision Theory
 
 - given an input vector, our goal is to predict a corresponding target value
     - The target value is described probabilistically
 - DT provides optimal decisions in situations involving uncertainty, combined with probability theory
 - Three approaches to making a decision
-    - generative model, p(t, x) or p(x|t)
-        - can be used for the classification using p(t|x) =  ( p(x|t)p(t) ) / p(x)
+    - generative model, $$ p(t, x) $$ or $$ p(x \mid t) $$ 
+        - can be used for the classification using $$ p(t \mid x)  $$ =  $$ \frac { p(x \mid t)p(t) }{p(x)} $$ 
         - generate new data or detect outliers
     - Discriminative Model
-        - p(t|x), just classficiation
+        - $$ p(t \mid x) $$, just classficiation
     - Discriminant function
         - f(x), model a map function from input x to a label t
 - probability models for decision
     - misclassification rate vs. loss function
     
-    ![Untitled](Decision%20Theory%20cc149790030948eca8310914de06bc20/Untitled.png)
+    <img src = "../../../assets/ML/DecTheo/Untitled.png">
     
 - Type 1 and 2 error
     
-    ![Untitled](Decision%20Theory%20cc149790030948eca8310914de06bc20/Untitled%201.png)
+    <img src = "../../../assets/ML/DecTheo/Untitled 1.png">
     
 - receiver operating characteristics (ROC)
     
-    ![Untitled](Decision%20Theory%20cc149790030948eca8310914de06bc20/Untitled%202.png)
+    <img src = "../../../assets/ML/DecTheo/Untitled 2.png">
     
 - loss function
     - a function that maps an event onto a “cost” value
@@ -31,7 +41,7 @@
     - classify x into class which minimizes the conditional risk (or expected loss)
 - loss functions in general
     
-    ![Untitled](Decision%20Theory%20cc149790030948eca8310914de06bc20/Untitled%203.png)
+    <img src = "../../../assets/ML/DecTheo/Untitled 3.png">
     
 - The term "probability" refers to the possibility of something happening. The term Likelihood refers to the process of determining the best data distribution given a specific situation in the data. When calculating the probability of a given outcome, you assume the model's parameters are reliable.
 - Three decision rules based on probability
@@ -45,18 +55,18 @@
 
 Bayes Risk is a concept in decision theory that measures the expected loss associated with a decision, taking into account the uncertainty in the underlying parameters or states. It is derived from Bayesian decision theory, which combines prior knowledge with observed data to make optimal decisions.
 
-In the context of decision theory, the Bayes Risk (\(R(\delta)\)) associated with a decision rule (\(\delta\)) is defined as the expected value of the loss function under the posterior distribution of the parameters, given the observed data. Mathematically, it can be expressed as:
+In the context of decision theory, the Bayes Risk $$(R(\delta))$$ associated with a decision rule $$ (\delta) $$ is defined as the expected value of the loss function under the posterior distribution of the parameters, given the observed data. Mathematically, it can be expressed as:
 
-\[ R(\delta) = \int L(\theta, \delta(x)) \cdot f(\theta | x) \, d\theta \]
+$$ R(\delta) = \int L(\theta, \delta(x)) \cdot f(\theta | x) \, d\theta  $$
 
 where:
 
-- \( L(\theta, \delta(x)) \) is the loss function, representing the cost associated with making a decision \(\delta(x)\) when the true state is \(\theta\).
-- \( f(\theta | x) \) is the posterior distribution of the parameters given the observed data \(x\).
+- $$ L(\theta, \delta(x)) $$ is the loss function, representing the cost associated with making a decision $$ \delta(x)$$ when the true state is $$ \theta $$.
+- $$ f(\theta \mid x) $$ is the posterior distribution of the parameters given the observed data $$ (x) $$ .
 
 The Bayes Risk accounts for the uncertainty in parameter estimation by integrating the loss over the entire parameter space, weighted by the posterior distribution. This approach reflects the Bayesian philosophy of updating beliefs based on both prior knowledge and observed evidence.
 
-In practice, the decision rule (\(\delta\)) can be chosen to minimize the Bayes Risk, resulting in a decision that is optimal in terms of expected loss. The Bayes Risk provides a comprehensive measure of the cost associated with decisions, considering the uncertainty inherent in parameter estimation in a Bayesian framework.
+In practice, the decision rule $$ (\delta) $$ can be chosen to minimize the Bayes Risk, resulting in a decision that is optimal in terms of expected loss. The Bayes Risk provides a comprehensive measure of the cost associated with decisions, considering the uncertainty inherent in parameter estimation in a Bayesian framework.
 
 Maximum Likelihood Estimation (MLE) and Maximum A Posteriori (MAP) estimation are both methods used to estimate the parameters of a statistical model, but they differ in their underlying principles and assumptions.
 
@@ -64,14 +74,15 @@ Maximum Likelihood Estimation (MLE) and Maximum A Posteriori (MAP) estimation ar
 
 1. **Objective:** MLE aims to find the values of the model parameters that maximize the likelihood function, which measures how well the observed data is explained by the model.
 2. **Assumption:** MLE assumes a uniform or non-informative prior distribution, meaning that all parameter values are equally likely before observing the data.
-3. **Formula:** \(\hat{\theta}*{\text{MLE}} = \arg\max*{\theta} \mathcal{L}(\theta | \text{data})\), where \(\mathcal{L}(\theta | \text{data})\) is the likelihood function.
+3. **Formula:** $$ \hat{\theta}_{\text{MLE}} = \arg\max_{\theta} \mathcal{L}(\theta \mid \text{data}), $$ where $\mathcal{L}(\theta \mid \text{data})$ is the likelihood function.
+
 4. **Result:** MLE provides a point estimate of the parameters that maximizes the likelihood of the observed data.
 
 **Maximum A Posteriori (MAP) Estimation:**
 
 1. **Objective:** MAP estimation combines the likelihood function with a prior distribution to find the values of the parameters that maximize the posterior distribution.
 2. **Assumption:** MAP incorporates prior knowledge or beliefs about the parameters by introducing a prior distribution. This prior reflects any information available before observing the data.
-3. **Formula:** \(\hat{\theta}*{\text{MAP}} = \arg\max*{\theta} P(\theta | \text{data})\), where \(P(\theta | \text{data})\) is the posterior distribution.
+3. **Formula:** $$ \hat{\theta}_{\text{MAP}} = \arg\max_{\theta} P(\theta \mid \text{data}), $$ where $P(\theta \mid \text{data})$ is the posterior distribution. 
 4. **Result:** MAP provides a point estimate of the parameters that maximizes the posterior distribution, considering both the likelihood and the prior.
 
 **Key Differences:**
@@ -84,11 +95,11 @@ In summary, MLE and MAP are both methods for estimating parameters, with MLE rel
 
 - discriminant function g(x) using gi(x) (e.g., ML, MAP, Bayes risk)
     
-    ![Untitled](Decision%20Theory%20cc149790030948eca8310914de06bc20/Untitled%204.png)
+    <img src = "../../../assets/ML/DecTheo/Untitled 4.png">
     
 - decision boundary
     
-    ![Untitled](Decision%20Theory%20cc149790030948eca8310914de06bc20/Untitled%205.png)
+    <img src = "../../../assets/ML/DecTheo/Untitled 5.png">
     
     - boundaries for Gaussian
         - case1: features are uncorrelated (i.e., independent) with the same variance

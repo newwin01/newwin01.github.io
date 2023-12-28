@@ -1,4 +1,160 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-27T22:17:32+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 5. Density Estimation</title><link href="http://localhost:4000/recent/Density_Estimation/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 5. Density Estimation" /><published>2023-12-27T00:00:00+09:00</published><updated>2023-12-27T00:00:00+09:00</updated><id>http://localhost:4000/recent/Density_Estimation</id><content type="html" xml:base="http://localhost:4000/recent/Density_Estimation/"><![CDATA[<h1 id="density-estimation">Density Estimation</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-28T22:57:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 6. Decision Theory</title><link href="http://localhost:4000/recent/Decision_Theory/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 6. Decision Theory" /><published>2023-12-28T00:00:00+09:00</published><updated>2023-12-28T00:00:00+09:00</updated><id>http://localhost:4000/recent/Decision_Theory</id><content type="html" xml:base="http://localhost:4000/recent/Decision_Theory/"><![CDATA[<h1 id="decision-theory">Decision Theory</h1>
+
+<ul>
+  <li>given an input vector, our goal is to predict a corresponding target value
+    <ul>
+      <li>The target value is described probabilistically</li>
+    </ul>
+  </li>
+  <li>DT provides optimal decisions in situations involving uncertainty, combined with probability theory</li>
+  <li>Three approaches to making a decision
+    <ul>
+      <li>generative model, \(p(t, x)\) or \(p(x \mid t)\)
+        <ul>
+          <li>can be used for the classification using \(p(t \mid x)\) =  \(\frac { p(x \mid t)p(t) }{p(x)}\)</li>
+          <li>generate new data or detect outliers</li>
+        </ul>
+      </li>
+      <li>Discriminative Model
+        <ul>
+          <li>\(p(t \mid x)\), just classficiation</li>
+        </ul>
+      </li>
+      <li>Discriminant function
+        <ul>
+          <li>f(x), model a map function from input x to a label t</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>probability models for decision
+    <ul>
+      <li>misclassification rate vs. loss function</li>
+    </ul>
+
+    <p><img src="../../../assets/ML/DecTheo/Untitled.png" /></p>
+  </li>
+  <li>
+    <p>Type 1 and 2 error</p>
+
+    <p><img src="../../../assets/ML/DecTheo/Untitled 1.png" /></p>
+  </li>
+  <li>
+    <p>receiver operating characteristics (ROC)</p>
+
+    <p><img src="../../../assets/ML/DecTheo/Untitled 2.png" /></p>
+  </li>
+  <li>loss function
+    <ul>
+      <li>a function that maps an event onto a “cost” value</li>
+    </ul>
+  </li>
+  <li>minimum expected loss
+    <ul>
+      <li>our goal is to minimize an expected loss (or risk)</li>
+      <li>classify x into class which minimizes the conditional risk (or expected loss)</li>
+    </ul>
+  </li>
+  <li>
+    <p>loss functions in general</p>
+
+    <p><img src="../../../assets/ML/DecTheo/Untitled 3.png" /></p>
+  </li>
+  <li>The term “probability” refers to the possibility of something happening. The term Likelihood refers to the process of determining the best data distribution given a specific situation in the data. When calculating the probability of a given outcome, you assume the model’s parameters are reliable.</li>
+  <li>Three decision rules based on probability
+    <ul>
+      <li>Maximum Likelihood
+        <ul>
+          <li><a href="https://angeloyeo.github.io/2020/07/17/MLE.html">https://angeloyeo.github.io/2020/07/17/MLE.html</a></li>
+        </ul>
+      </li>
+      <li>Maximum a posterior
+        <ul>
+          <li><a href="https://process-mining.tistory.com/126">https://process-mining.tistory.com/126</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation">https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation</a></li>
+        </ul>
+      </li>
+      <li>Bayes Risk
+        <ul>
+          <li><a href="http://www.stat.yale.edu/~yw562/teaching/598/lec02.pdf">http://www.stat.yale.edu/~yw562/teaching/598/lec02.pdf</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Bayes Risk is a concept in decision theory that measures the expected loss associated with a decision, taking into account the uncertainty in the underlying parameters or states. It is derived from Bayesian decision theory, which combines prior knowledge with observed data to make optimal decisions.</p>
+
+<p>In the context of decision theory, the Bayes Risk \((R(\delta))\) associated with a decision rule \((\delta)\) is defined as the expected value of the loss function under the posterior distribution of the parameters, given the observed data. Mathematically, it can be expressed as:</p>
+
+\[R(\delta) = \int L(\theta, \delta(x)) \cdot f(\theta | x) \, d\theta\]
+
+<p>where:</p>
+
+<ul>
+  <li>\(L(\theta, \delta(x))\) is the loss function, representing the cost associated with making a decision \(\delta(x)\) when the true state is \(\theta\).</li>
+  <li>\(f(\theta \mid x)\) is the posterior distribution of the parameters given the observed data \((x)\) .</li>
+</ul>
+
+<p>The Bayes Risk accounts for the uncertainty in parameter estimation by integrating the loss over the entire parameter space, weighted by the posterior distribution. This approach reflects the Bayesian philosophy of updating beliefs based on both prior knowledge and observed evidence.</p>
+
+<p>In practice, the decision rule \((\delta)\) can be chosen to minimize the Bayes Risk, resulting in a decision that is optimal in terms of expected loss. The Bayes Risk provides a comprehensive measure of the cost associated with decisions, considering the uncertainty inherent in parameter estimation in a Bayesian framework.</p>
+
+<p>Maximum Likelihood Estimation (MLE) and Maximum A Posteriori (MAP) estimation are both methods used to estimate the parameters of a statistical model, but they differ in their underlying principles and assumptions.</p>
+
+<p><strong>Maximum Likelihood Estimation (MLE):</strong></p>
+
+<ol>
+  <li><strong>Objective:</strong> MLE aims to find the values of the model parameters that maximize the likelihood function, which measures how well the observed data is explained by the model.</li>
+  <li><strong>Assumption:</strong> MLE assumes a uniform or non-informative prior distribution, meaning that all parameter values are equally likely before observing the data.</li>
+  <li>
+    <p><strong>Formula:</strong> \(\hat{\theta}_{\text{MLE}} = \arg\max_{\theta} \mathcal{L}(\theta \mid \text{data}),\) where $\mathcal{L}(\theta \mid \text{data})$ is the likelihood function.</p>
+  </li>
+  <li><strong>Result:</strong> MLE provides a point estimate of the parameters that maximizes the likelihood of the observed data.</li>
+</ol>
+
+<p><strong>Maximum A Posteriori (MAP) Estimation:</strong></p>
+
+<ol>
+  <li><strong>Objective:</strong> MAP estimation combines the likelihood function with a prior distribution to find the values of the parameters that maximize the posterior distribution.</li>
+  <li><strong>Assumption:</strong> MAP incorporates prior knowledge or beliefs about the parameters by introducing a prior distribution. This prior reflects any information available before observing the data.</li>
+  <li><strong>Formula:</strong> \(\hat{\theta}_{\text{MAP}} = \arg\max_{\theta} P(\theta \mid \text{data}),\) where $P(\theta \mid \text{data})$ is the posterior distribution.</li>
+  <li><strong>Result:</strong> MAP provides a point estimate of the parameters that maximizes the posterior distribution, considering both the likelihood and the prior.</li>
+</ol>
+
+<p><strong>Key Differences:</strong></p>
+
+<ul>
+  <li><strong>Incorporating Prior Information:</strong> The major distinction lies in the incorporation of prior information. MLE assumes a non-informative prior (flat prior), while MAP explicitly considers a prior distribution that may encode prior beliefs or knowledge about the parameters.</li>
+  <li><strong>Formula:</strong> The formulas for MLE and MAP are similar, but MAP includes the prior term in the optimization process, affecting the final estimate.</li>
+  <li><strong>Robustness:</strong> MAP estimates may be more robust when dealing with limited data because the prior helps regularize the estimation. MLE can be sensitive to sparse or noisy data.</li>
+</ul>
+
+<p>In summary, MLE and MAP are both methods for estimating parameters, with MLE relying solely on the likelihood function and MAP incorporating prior information through a prior distribution. The choice between them depends on the available information and the desired balance between data-driven estimates and prior beliefs.</p>
+
+<ul>
+  <li>
+    <p>discriminant function g(x) using gi(x) (e.g., ML, MAP, Bayes risk)</p>
+
+    <p><img src="../../../assets/ML/DecTheo/Untitled 4.png" /></p>
+  </li>
+  <li>
+    <p>decision boundary</p>
+
+    <p><img src="../../../assets/ML/DecTheo/Untitled 5.png" /></p>
+
+    <ul>
+      <li>boundaries for Gaussian
+        <ul>
+          <li>case1: features are uncorrelated (i.e., independent) with the same variance</li>
+          <li>case2: the classes have identical covariance matrices</li>
+          <li>case3: each class has a different covariance matrix</li>
+        </ul>
+      </li>
+      <li><a href="https://www.cs.cmu.edu/~aarti/Class/10315_Fall19/lecs/Lecture3.pdf">https://www.cs.cmu.edu/~aarti/Class/10315_Fall19/lecs/Lecture3.pdf</a></li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Decision... by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 5. Density Estimation</title><link href="http://localhost:4000/recent/Density_Estimation/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 5. Density Estimation" /><published>2023-12-27T00:00:00+09:00</published><updated>2023-12-27T00:00:00+09:00</updated><id>http://localhost:4000/recent/Density_Estimation</id><content type="html" xml:base="http://localhost:4000/recent/Density_Estimation/"><![CDATA[<h1 id="density-estimation">Density Estimation</h1>
 
 <ul>
   <li>for a data sample, we need a vector to represent</li>
@@ -208,7 +364,193 @@
 
     <p><img src="../../../assets/ML/InfoTheo/Untitled 3.png" /></p>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
+
+<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
+
+<ul>
+  <li>Introduction to AI
+    <ul>
+      <li>Weak and Strong AI
+        <ul>
+          <li>strong AI: understanding Chinese</li>
+          <li>weak AI: simulating the ability to understand Chinese</li>
+        </ul>
+      </li>
+      <li>Applied AI and General AI</li>
+      <li>Computationalism and Connectionism
+        <ul>
+          <li>Computationalism
+            <ul>
+              <li>thoughts are computation on symbols
+                <ul>
+                  <li>Symbolic, interpretable</li>
+                  <li>e.g) Turing Machine</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Connectionism
+            <ul>
+              <li>Information is represented in neurons and networks
+                <ul>
+                  <li>Low-level, black-box</li>
+                  <li>Neural Networks</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Turing Test</li>
+      <li>Implementation level and algorithmic level
+        <ul>
+          <li>Implmentation level: how the system is physically realized
+            <ul>
+              <li>AI and Human Intelligence are different</li>
+            </ul>
+          </li>
+          <li>Algorithmic level: how the system does, what representation or process it uses
+            <ul>
+              <li>3 level for intelligent system
+                <ul>
+                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
+                </ul>
+              </li>
+              <li>Can achieve some intelligence on approximation</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Superintelligence
+        <ul>
+          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
+        </ul>
+      </li>
+      <li>Deep Neural Networks
+        <ul>
+          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
+        </ul>
+      </li>
+      <li>Practical AI risks
+        <ul>
+          <li>affected by viruses</li>
+          <li>misused by people with bad intentions</li>
+          <li>biased AI</li>
+          <li>taking over roles</li>
+          <li>unable to reject AI’s decision</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Introduction to ML
+    <ul>
+      <li>What is learning
+        <ul>
+          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
+          <li>simple model (e.g., linear regression)</li>
+          <li>for supervised learning
+            <ul>
+              <li>Learning</li>
+              <li>Recognition</li>
+            </ul>
+          </li>
+          <li>Complex models</li>
+        </ul>
+      </li>
+      <li>Machine learning
+        <ul>
+          <li>Takes data and output  → Makes program</li>
+          <li>source of knowledge is data</li>
+        </ul>
+      </li>
+      <li>Workflow of machine learning
+        <ul>
+          <li>acquisition - data is gathered/collected from various sources</li>
+          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
+          <li>analysis - data is evaluated to run and customize reports</li>
+          <li>modeling - data is patternized and generalized as models</li>
+          <li>visualization</li>
+          <li>deployment and maintenance</li>
+        </ul>
+      </li>
+      <li>Components of ML
+        <ul>
+          <li>data: features, label, format</li>
+          <li>models: SVM, NN, K-means</li>
+          <li>objectives: cross-entropy, RMSE, likelihood</li>
+          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
+        </ul>
+      </li>
+      <li>Data
+        <ul>
+          <li>structured/unstructured</li>
+        </ul>
+      </li>
+      <li>Categories
+        <ul>
+          <li>unsupervised learning
+            <ul>
+              <li>e.g., clustering, dimension reduction</li>
+            </ul>
+          </li>
+          <li>supervised learning
+            <ul>
+              <li>e.g., speech/face recognition</li>
+            </ul>
+          </li>
+          <li>semi-supervised learning
+            <ul>
+              <li>e.g., cancer detection</li>
+            </ul>
+          </li>
+          <li>reinforcement learning
+            <ul>
+              <li>e.g., AlphaGo, self-driving car</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Discriminative model and Generative model
+        <ul>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Discriminative models: p(t</td>
+                  <td>x)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>only for supervising</li>
+            </ul>
+          </li>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Generative model: p(t, x) or p(x</td>
+                  <td>t)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>applicable to unlabeled data</li>
+              <li>focusing on modeling each class’ distribution</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Pattern Recognition
+        <ul>
+          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
+  -</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
 
 <ul>
   <li>Probability
@@ -410,193 +752,7 @@
       <li>basic distributions: categorical and multinomial</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
-
-<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
-
-<ul>
-  <li>Introduction to AI
-    <ul>
-      <li>Weak and Strong AI
-        <ul>
-          <li>strong AI: understanding Chinese</li>
-          <li>weak AI: simulating the ability to understand Chinese</li>
-        </ul>
-      </li>
-      <li>Applied AI and General AI</li>
-      <li>Computationalism and Connectionism
-        <ul>
-          <li>Computationalism
-            <ul>
-              <li>thoughts are computation on symbols
-                <ul>
-                  <li>Symbolic, interpretable</li>
-                  <li>e.g) Turing Machine</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Connectionism
-            <ul>
-              <li>Information is represented in neurons and networks
-                <ul>
-                  <li>Low-level, black-box</li>
-                  <li>Neural Networks</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Turing Test</li>
-      <li>Implementation level and algorithmic level
-        <ul>
-          <li>Implmentation level: how the system is physically realized
-            <ul>
-              <li>AI and Human Intelligence are different</li>
-            </ul>
-          </li>
-          <li>Algorithmic level: how the system does, what representation or process it uses
-            <ul>
-              <li>3 level for intelligent system
-                <ul>
-                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
-                </ul>
-              </li>
-              <li>Can achieve some intelligence on approximation</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Superintelligence
-        <ul>
-          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
-        </ul>
-      </li>
-      <li>Deep Neural Networks
-        <ul>
-          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
-        </ul>
-      </li>
-      <li>Practical AI risks
-        <ul>
-          <li>affected by viruses</li>
-          <li>misused by people with bad intentions</li>
-          <li>biased AI</li>
-          <li>taking over roles</li>
-          <li>unable to reject AI’s decision</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Introduction to ML
-    <ul>
-      <li>What is learning
-        <ul>
-          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
-          <li>simple model (e.g., linear regression)</li>
-          <li>for supervised learning
-            <ul>
-              <li>Learning</li>
-              <li>Recognition</li>
-            </ul>
-          </li>
-          <li>Complex models</li>
-        </ul>
-      </li>
-      <li>Machine learning
-        <ul>
-          <li>Takes data and output  → Makes program</li>
-          <li>source of knowledge is data</li>
-        </ul>
-      </li>
-      <li>Workflow of machine learning
-        <ul>
-          <li>acquisition - data is gathered/collected from various sources</li>
-          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
-          <li>analysis - data is evaluated to run and customize reports</li>
-          <li>modeling - data is patternized and generalized as models</li>
-          <li>visualization</li>
-          <li>deployment and maintenance</li>
-        </ul>
-      </li>
-      <li>Components of ML
-        <ul>
-          <li>data: features, label, format</li>
-          <li>models: SVM, NN, K-means</li>
-          <li>objectives: cross-entropy, RMSE, likelihood</li>
-          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
-        </ul>
-      </li>
-      <li>Data
-        <ul>
-          <li>structured/unstructured</li>
-        </ul>
-      </li>
-      <li>Categories
-        <ul>
-          <li>unsupervised learning
-            <ul>
-              <li>e.g., clustering, dimension reduction</li>
-            </ul>
-          </li>
-          <li>supervised learning
-            <ul>
-              <li>e.g., speech/face recognition</li>
-            </ul>
-          </li>
-          <li>semi-supervised learning
-            <ul>
-              <li>e.g., cancer detection</li>
-            </ul>
-          </li>
-          <li>reinforcement learning
-            <ul>
-              <li>e.g., AlphaGo, self-driving car</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Discriminative model and Generative model
-        <ul>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Discriminative models: p(t</td>
-                  <td>x)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>only for supervising</li>
-            </ul>
-          </li>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Generative model: p(t, x) or p(x</td>
-                  <td>t)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>applicable to unlabeled data</li>
-              <li>focusing on modeling each class’ distribution</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Pattern Recognition
-        <ul>
-          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
-  -</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. by Prof. Henry Choi]]></summary></entry><entry><title type="html">And Then There Were None 그리고 아무도 없었다</title><link href="http://localhost:4000/recent/And_Then_There_Were_None/" rel="alternate" type="text/html" title="And Then There Were None 그리고 아무도 없었다" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/And_Then_There_Were_None</id><content type="html" xml:base="http://localhost:4000/recent/And_Then_There_Were_None/"><![CDATA[<p>추리 소설을 추천받았다. 아가사 크리스티의 <strong><em>그리고 아무도 없었다</em></strong> 였다. <br /> 
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. by Prof. Henry Choi]]></summary></entry><entry><title type="html">And Then There Were None 그리고 아무도 없었다</title><link href="http://localhost:4000/recent/And_Then_There_Were_None/" rel="alternate" type="text/html" title="And Then There Were None 그리고 아무도 없었다" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/And_Then_There_Were_None</id><content type="html" xml:base="http://localhost:4000/recent/And_Then_There_Were_None/"><![CDATA[<p>추리 소설을 추천받았다. 아가사 크리스티의 <strong><em>그리고 아무도 없었다</em></strong> 였다. <br /> 
 소설을 그렇게 좋아하는 편은 아니라 이름만 들어본 작가였지만 오랜만에 소설을 읽어보자는 마음으로 책을 집어들었다.</p>
 
 <p>와우. 정말 재밌게 읽었다. 그 자리에 앉아서 내리 2시간을 읽었다. <del>물론 소설이 짧기도 하다</del> <br />
@@ -827,7 +983,216 @@
       <li>need to fit cleanly together in precise language</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[Using Function Properly]]></summary></entry><entry><title type="html">Can We Automatically Fix Bugs by Learning Edit Operations?</title><link href="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/" rel="alternate" type="text/html" title="Can We Automatically Fix Bugs by Learning Edit Operations?" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Can%20We%20Automatically%20Fix%20Bugs%20by%20Learning%20Edit%20Operations</id><content type="html" xml:base="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/"><![CDATA[<h2 id="can-we-automatically-fix-bugs-by-learning-edit-operations">“Can We Automatically Fix Bugs by Learning Edit Operations?”</h2>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[Using Function Properly]]></summary></entry><entry><title type="html">Clean Code Chapter 2</title><link href="http://localhost:4000/recent/Clean_Code_Ch2/" rel="alternate" type="text/html" title="Clean Code Chapter 2" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch2</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch2/"><![CDATA[<p><strong>Using the appropriate Name will pay off in the short term and continue to pay in the long run</strong></p>
+
+<ul>
+  <li>Using Intention-Revealing Names
+    <ul>
+      <li>Choosing good names takes time but saves more than it takes</li>
+      <li>Choosing a name that specifies what is being measured and the unit of that measurement</li>
+      <li>Things need to think
+        <ul>
+          <li>What kind are in</li>
+          <li>What is returned</li>
+          <li>zeroth subscript and value</li>
+        </ul>
+      </li>
+      <li>Do not use <strong>O <em>and l</em></strong></li>
+    </ul>
+  </li>
+  <li>Avoid Disinformation
+    <ul>
+      <li>Avoiding words whose entrenched meanings vary from intention</li>
+      <li>Spelling similar concepts similarly
+        <ul>
+          <li>No inconsistent spelling</li>
+        </ul>
+      </li>
+      <li><del>Using different font??</del></li>
+    </ul>
+  </li>
+  <li>Meaningful Distinction
+    <ul>
+      <li><strong>a</strong> for a local variable, <strong>the</strong> for all function arguments</li>
+      <li>Less redundant words</li>
+      <li>Distinguishing names in a way that readers know what the difference offer</li>
+    </ul>
+  </li>
+  <li>Using Pronounceable Names
+    <ul>
+      <li>Essential for communication</li>
+    </ul>
+  </li>
+  <li>Using Searchable Names
+    <ul>
+      <li>Single-letter names can ONLY be used as local variables inside short methods</li>
+      <li>The length of a name should correspond to the size of its scope</li>
+    </ul>
+  </li>
+  <li>Avoiding Encoding</li>
+  <li>Hungarian Notation
+    <ul>
+      <li>The compiler knows the type nowadays</li>
+    </ul>
+  </li>
+  <li>Member Prefixes
+    <ul>
+      <li>unseen clutter and a marker of older code…</li>
+    </ul>
+  </li>
+  <li>Interface and Implementation
+    <ul>
+      <li>Why would I let user knows I’m handling them with an interface?</li>
+      <li>Marking at the implementation</li>
+    </ul>
+  </li>
+  <li>Avoid Mental Mapping
+    <ul>
+      <li>In most contexts, a single letter for a loop is a poor choice (such as i, j, k)</li>
+      <li><em>Clarity is king</em></li>
+    </ul>
+  </li>
+  <li>Class Names
+    <ul>
+      <li>should have noun or noun phrase names</li>
+    </ul>
+  </li>
+  <li>Method Names
+    <ul>
+      <li>should have verb or verb phase names</li>
+      <li>When constructors are overloaded, use the static method with names that describe the argument
+        <ul>
+          <li>Make corresponding constructors private</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Don’t be cute
+    <ul>
+      <li>No too “user-specific name”</li>
+    </ul>
+  </li>
+  <li>Pick One Word per Concept
+    <ul>
+      <li>Pick one word for one abstract concept</li>
+      <li>The name will express two different types of object</li>
+    </ul>
+  </li>
+  <li>Don’t Pun
+    <ul>
+      <li>Avoiding using the same word for two purposes</li>
+      <li>Even if it has a similar concept, it must have a different name if it is semantically different</li>
+      <li><strong><em>It is the author’s responsibility</em></strong></li>
+    </ul>
+  </li>
+  <li>Use Solution Domain Names
+    <ul>
+      <li>People who read your code will be programmers
+        <ul>
+          <li>CS terms, algorithm names, pattern names, math terms, etc.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Use Problem Domain Names
+    <ul>
+      <li>Separating solution and problem domain concept</li>
+    </ul>
+  </li>
+  <li>Add Meaningful Context
+    <ul>
+      <li>Place the name in context for the reader
+        <ul>
+          <li>enclosing classes, functions, or namespaces</li>
+        </ul>
+      </li>
+      <li>break it into smaller functions if it is necessary</li>
+    </ul>
+  </li>
+  <li>But Don’t Add Gratuitous Context
+    <ul>
+      <li>Shorter names are generally better
+        <ul>
+          <li>As long as they are clear</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[How to name clearly]]></summary></entry><entry><title type="html">Clean Code Chapter 1</title><link href="http://localhost:4000/recent/Clean_Code_Ch1/" rel="alternate" type="text/html" title="Clean Code Chapter 1" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch1</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch1/"><![CDATA[<ul>
+  <li>What is Clean Code?
+    <ul>
+      <li>Bjarne Stroustrup, Inventor of C++
+        <ul>
+          <li>Wasted Cycle are inelegant, not pleasing</li>
+          <li>Error handling should be complete</li>
+          <li>Focused; Each function, class, and module expose a single-minded attitude that remains entirely undistracted, and unpolluted, by the surrounding details</li>
+        </ul>
+      </li>
+      <li>Grady Booch, author of Object Oriented Analysis and Design with Application
+        <ul>
+          <li>He took a readability perspective</li>
+          <li>Well-written purpose</li>
+          <li>clean code should clearly expose the tensions in the problem to be solved</li>
+          <li>Should be matter-of-fact as opposed to speculative</li>
+        </ul>
+      </li>
+      <li>Dave Thomas, founder of OTI
+        <ul>
+          <li>Make it easy for other people to enhance it</li>
+          <li>Code without test is not clean at all</li>
+          <li>values code that is small, code should be literate</li>
+        </ul>
+      </li>
+      <li>Michael Feathers, author of Working Effectively with Legacy Code
+        <ul>
+          <li>Looks like it was written by someone who cares</li>
+          <li>Someone has taken the time to keep it simple and orderly</li>
+        </ul>
+      </li>
+      <li>Ron Jeffries, author of Extreme Programming Installed and Extreme Programming Adventures in C#
+        <ul>
+          <li>No duplications</li>
+          <li>Express all the design ideas
+            <ul>
+              <li>High expressiveness</li>
+            </ul>
+          </li>
+          <li>Minimize the number of entities
+            <ul>
+              <li>Find things in a collection</li>
+              <li>Wrap particular implementation in a more abstract method</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Ward Cunningham, inventor of Wiki, inventor of Fit …
+        <ul>
+          <li>read turns out what you expected</li>
+          <li>make it look like the language was made for the problem</li>
+          <li>It is the programmer that makes the language appear simple</li>
+        </ul>
+      </li>
+      <li>Author: <a href="https://www.google.com/search?q=Robert+C.+Martin&amp;stick=H4sIAAAAAAAAAONgVuLWz9U3MDSqMspOT3rEaMYt8PLHPWEp3UlrTl5jVOfiCs7IL3fNK8ksqRSS5GKDsvileLmQ9fEsYhUIyk9KLSpRcNZT8E0sKsnMAwD4hk_pWwAAAA&amp;sa=X&amp;ved=2ahUKEwjDuvb5qYSAAxWJAt4KHYeWALQQzIcDKAB6BAgiEAE">Robert Cecil Martin</a>
+        <ul>
+          <li>Discovering new techniques and founding their own schools</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Many Recommendations in this book are controversial.</p>
+
+<p>And we are <strong>AUTHORS</strong>.</p>
+
+<ul>
+  <li>Making it Easy to read makes it easier to write</li>
+  <li>The code has to be kept clean over time</li>
+</ul>
+
+<p>This book cannot promise to make you a good programmer.</p>
+
+<p><strong>“Practice, son. Practice!”</strong></p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[What is Clean Code?]]></summary></entry><entry><title type="html">Can We Automatically Fix Bugs by Learning Edit Operations?</title><link href="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/" rel="alternate" type="text/html" title="Can We Automatically Fix Bugs by Learning Edit Operations?" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Can%20We%20Automatically%20Fix%20Bugs%20by%20Learning%20Edit%20Operations</id><content type="html" xml:base="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/"><![CDATA[<h2 id="can-we-automatically-fix-bugs-by-learning-edit-operations">“Can We Automatically Fix Bugs by Learning Edit Operations?”</h2>
 
 <h2 id="paper"><a href="https://www.cs.wm.edu/~denys/pubs/SANER-RENE-BugFixing.pdf">Paper</a></h2>
 
@@ -1045,552 +1410,4 @@
 
 <p><a href="https://github.com/WM-SEMERU/hephaestus">GitHub - WM-SEMERU/hephaestus</a></p>
 
-<h3 id="questions">Questions:</h3>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[Generalizing the change is helpful...?]]></summary></entry><entry><title type="html">Clean Code Chapter 2</title><link href="http://localhost:4000/recent/Clean_Code_Ch2/" rel="alternate" type="text/html" title="Clean Code Chapter 2" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch2</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch2/"><![CDATA[<p><strong>Using the appropriate Name will pay off in the short term and continue to pay in the long run</strong></p>
-
-<ul>
-  <li>Using Intention-Revealing Names
-    <ul>
-      <li>Choosing good names takes time but saves more than it takes</li>
-      <li>Choosing a name that specifies what is being measured and the unit of that measurement</li>
-      <li>Things need to think
-        <ul>
-          <li>What kind are in</li>
-          <li>What is returned</li>
-          <li>zeroth subscript and value</li>
-        </ul>
-      </li>
-      <li>Do not use <strong>O <em>and l</em></strong></li>
-    </ul>
-  </li>
-  <li>Avoid Disinformation
-    <ul>
-      <li>Avoiding words whose entrenched meanings vary from intention</li>
-      <li>Spelling similar concepts similarly
-        <ul>
-          <li>No inconsistent spelling</li>
-        </ul>
-      </li>
-      <li><del>Using different font??</del></li>
-    </ul>
-  </li>
-  <li>Meaningful Distinction
-    <ul>
-      <li><strong>a</strong> for a local variable, <strong>the</strong> for all function arguments</li>
-      <li>Less redundant words</li>
-      <li>Distinguishing names in a way that readers know what the difference offer</li>
-    </ul>
-  </li>
-  <li>Using Pronounceable Names
-    <ul>
-      <li>Essential for communication</li>
-    </ul>
-  </li>
-  <li>Using Searchable Names
-    <ul>
-      <li>Single-letter names can ONLY be used as local variables inside short methods</li>
-      <li>The length of a name should correspond to the size of its scope</li>
-    </ul>
-  </li>
-  <li>Avoiding Encoding</li>
-  <li>Hungarian Notation
-    <ul>
-      <li>The compiler knows the type nowadays</li>
-    </ul>
-  </li>
-  <li>Member Prefixes
-    <ul>
-      <li>unseen clutter and a marker of older code…</li>
-    </ul>
-  </li>
-  <li>Interface and Implementation
-    <ul>
-      <li>Why would I let user knows I’m handling them with an interface?</li>
-      <li>Marking at the implementation</li>
-    </ul>
-  </li>
-  <li>Avoid Mental Mapping
-    <ul>
-      <li>In most contexts, a single letter for a loop is a poor choice (such as i, j, k)</li>
-      <li><em>Clarity is king</em></li>
-    </ul>
-  </li>
-  <li>Class Names
-    <ul>
-      <li>should have noun or noun phrase names</li>
-    </ul>
-  </li>
-  <li>Method Names
-    <ul>
-      <li>should have verb or verb phase names</li>
-      <li>When constructors are overloaded, use the static method with names that describe the argument
-        <ul>
-          <li>Make corresponding constructors private</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Don’t be cute
-    <ul>
-      <li>No too “user-specific name”</li>
-    </ul>
-  </li>
-  <li>Pick One Word per Concept
-    <ul>
-      <li>Pick one word for one abstract concept</li>
-      <li>The name will express two different types of object</li>
-    </ul>
-  </li>
-  <li>Don’t Pun
-    <ul>
-      <li>Avoiding using the same word for two purposes</li>
-      <li>Even if it has a similar concept, it must have a different name if it is semantically different</li>
-      <li><strong><em>It is the author’s responsibility</em></strong></li>
-    </ul>
-  </li>
-  <li>Use Solution Domain Names
-    <ul>
-      <li>People who read your code will be programmers
-        <ul>
-          <li>CS terms, algorithm names, pattern names, math terms, etc.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Use Problem Domain Names
-    <ul>
-      <li>Separating solution and problem domain concept</li>
-    </ul>
-  </li>
-  <li>Add Meaningful Context
-    <ul>
-      <li>Place the name in context for the reader
-        <ul>
-          <li>enclosing classes, functions, or namespaces</li>
-        </ul>
-      </li>
-      <li>break it into smaller functions if it is necessary</li>
-    </ul>
-  </li>
-  <li>But Don’t Add Gratuitous Context
-    <ul>
-      <li>Shorter names are generally better
-        <ul>
-          <li>As long as they are clear</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[How to name clearly]]></summary></entry><entry><title type="html">Clean Code Chapter 1</title><link href="http://localhost:4000/recent/Clean_Code_Ch1/" rel="alternate" type="text/html" title="Clean Code Chapter 1" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch1</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch1/"><![CDATA[<ul>
-  <li>What is Clean Code?
-    <ul>
-      <li>Bjarne Stroustrup, Inventor of C++
-        <ul>
-          <li>Wasted Cycle are inelegant, not pleasing</li>
-          <li>Error handling should be complete</li>
-          <li>Focused; Each function, class, and module expose a single-minded attitude that remains entirely undistracted, and unpolluted, by the surrounding details</li>
-        </ul>
-      </li>
-      <li>Grady Booch, author of Object Oriented Analysis and Design with Application
-        <ul>
-          <li>He took a readability perspective</li>
-          <li>Well-written purpose</li>
-          <li>clean code should clearly expose the tensions in the problem to be solved</li>
-          <li>Should be matter-of-fact as opposed to speculative</li>
-        </ul>
-      </li>
-      <li>Dave Thomas, founder of OTI
-        <ul>
-          <li>Make it easy for other people to enhance it</li>
-          <li>Code without test is not clean at all</li>
-          <li>values code that is small, code should be literate</li>
-        </ul>
-      </li>
-      <li>Michael Feathers, author of Working Effectively with Legacy Code
-        <ul>
-          <li>Looks like it was written by someone who cares</li>
-          <li>Someone has taken the time to keep it simple and orderly</li>
-        </ul>
-      </li>
-      <li>Ron Jeffries, author of Extreme Programming Installed and Extreme Programming Adventures in C#
-        <ul>
-          <li>No duplications</li>
-          <li>Express all the design ideas
-            <ul>
-              <li>High expressiveness</li>
-            </ul>
-          </li>
-          <li>Minimize the number of entities
-            <ul>
-              <li>Find things in a collection</li>
-              <li>Wrap particular implementation in a more abstract method</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Ward Cunningham, inventor of Wiki, inventor of Fit …
-        <ul>
-          <li>read turns out what you expected</li>
-          <li>make it look like the language was made for the problem</li>
-          <li>It is the programmer that makes the language appear simple</li>
-        </ul>
-      </li>
-      <li>Author: <a href="https://www.google.com/search?q=Robert+C.+Martin&amp;stick=H4sIAAAAAAAAAONgVuLWz9U3MDSqMspOT3rEaMYt8PLHPWEp3UlrTl5jVOfiCs7IL3fNK8ksqRSS5GKDsvileLmQ9fEsYhUIyk9KLSpRcNZT8E0sKsnMAwD4hk_pWwAAAA&amp;sa=X&amp;ved=2ahUKEwjDuvb5qYSAAxWJAt4KHYeWALQQzIcDKAB6BAgiEAE">Robert Cecil Martin</a>
-        <ul>
-          <li>Discovering new techniques and founding their own schools</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<p>Many Recommendations in this book are controversial.</p>
-
-<p>And we are <strong>AUTHORS</strong>.</p>
-
-<ul>
-  <li>Making it Easy to read makes it easier to write</li>
-  <li>The code has to be kept clean over time</li>
-</ul>
-
-<p>This book cannot promise to make you a good programmer.</p>
-
-<p><strong>“Practice, son. Practice!”</strong></p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[What is Clean Code?]]></summary></entry><entry><title type="html">Automatic Patch Generation with Context-based Change Application</title><link href="http://localhost:4000/recent/ConFix/" rel="alternate" type="text/html" title="Automatic Patch Generation with Context-based Change Application" /><published>2023-07-10T00:00:00+09:00</published><updated>2023-07-10T00:00:00+09:00</updated><id>http://localhost:4000/recent/ConFix</id><content type="html" xml:base="http://localhost:4000/recent/ConFix/"><![CDATA[<h3 id="automatic-patch-generation-with-context-based-change-application">Automatic Patch Generation with Context-based Change Application</h3>
-
-<h2 id="paper"><a href="https://raw.githubusercontent.com/wiki/thwak/ConFix/pre-print.pdf">Paper</a></h2>
-
-<p>Jindae Kim, Sunghun Kim</p>
-
-<h3 id="goal">Goal:</h3>
-
-<ol>
-  <li>I am collecting changes from human-written patches for new patch candidate generation.</li>
-  <li>Automatic patch generation technique leveraging human-written patches with our context-based change application technique used by ConFix.</li>
-</ol>
-
-<h3 id="summary">Summary:</h3>
-
-<ul>
-  <li>An effective patch generation technique should have a large search space with a high probability that patches for bugs are included, and it also needs to locate such patches effectively. Confix collects abstract AST changes from human-written patches, providing resources for patch generation. Then, using only matching context only, Confix selects a necessary change for a possible fixed location. Also, Confix filters out undesirable locations to fix using the info that the location has not been changed in human-written patches.</li>
-</ul>
-
-<h3 id="points">Points:</h3>
-
-<ol>
-  <li>The problem with APR is search space size and navigation.
-    <ol>
-      <li>To solve the problem, mining changes from human-written patches has been trying, but it makes navigation for the patch more difficult since the changes are very sparse.</li>
-      <li>Confix, use context-based change application technique to generate patch candidates.
-        <ol>
-          <li>AST context applies collected change to a possible fixed location only if their AST contents are matched</li>
-          <li>ConFix compares AST contexts defined by parent, left, and right nodes of a change and a location and applies the change to a target location only if their contexts are matched.</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Change Collection
-    <ol>
-      <li>Collecting changes generally applicable to other location</li>
-      <li>We extract AST form since source code can be easily affected by specific user styles.</li>
-      <li>Following some steps, dependent on how changes are collected</li>
-    </ol>
-  </li>
-  <li>Change Extraction
-    <ol>
-      <li>Each hunk is extracted and converted to an individual AST subtree change.</li>
-      <li>Collect separate individual changes rather than the whole patch to use repetitiveness of changes.</li>
-      <li>To extract changes, use the differencing tool, generates AST subtree edit operation, combine node edit operation into trees
-        <ol>
-          <li>AST node type and node value indicate a specific identifier, literals, or operators; the edit operation preserves the AST structure of the inserted code fragment</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Change conversion
-    <ol>
-      <li>Extracted edit operations need to be independent and applicable form.
-        <ol>
-          <li>The type needs to be changed as a single change
-            <ol>
-              <li>divide operation more</li>
-              <li>extends operation</li>
-              <li>remove any operation if a changed AST is a subtree of another operation’s changed AST</li>
-              <li>Find all inserted-delete pairs applied to the same location and combine them.</li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-      <li>Need to normalize the user-defined identifiers.
-        <ol>
-          <li>By normalizing user-defined names, we can increase the reusability of collected changes since we can apply a change regardless of the availability of user-defined names.</li>
-          <li>The technique normalizes user-defined names with two principles: consistency and order-preserving</li>
-          <li>By normalizing user-defined names, we can increase the reusability of collected changes since we can apply a change regardless of the availability of user-defined names.</li>
-          <li>At the time of change concretization, the collected information works as requirements for each abstract name which ConFix should consider when it assigns a concrete name for the abstract name.</li>
-        </ol>
-      </li>
-      <li>Change Context Identification
-        <ol>
-          <li>After individual changes are obtained from source code patches, the next step is identifying the AST contexts of the changes.</li>
-          <li>By identifying the context of the target location, we can avoid meaningless modifications and more frequent changes.</li>
-          <li>To define AST context, use nearby nodes of a changed AST subtree
-            <ol>
-              <li>The parent node represents the location where a changed code fragment belongs.</li>
-              <li>The left and Right nodes indicate code fragments before and after the changed code fragment.</li>
-              <li>Using fingerprinting technique</li>
-              <li>Dyck Word Hash
-                <ol>
-                  <li>represents the parent-child relationship of nodes</li>
-                  <li>Compare two nodes’ hash values to check whether they are the roots of two type-isomorphic AST subtrees.</li>
-                  <li>For fast comparison</li>
-                </ol>
-              </li>
-            </ol>
-          </li>
-          <li>PLRTH and PLRT
-            <ol>
-              <li>left node indicates code before the changed code frame; the right node indicates code after the changed code fragment</li>
-              <li>PTLRH context, we also examine whether the change and the location have the same code fragment before and after them, while PLRT context only checks which kind of code fragments exist before and after the change and the location.</li>
-              <li>PTLRH context constrains the search area too much; we can expand the search area with PLRT context.</li>
-              <li>Exception</li>
-              <li>Block node does not mean too much; use its parent node as a type.</li>
-              <li>Move operations primarily consider the old location’s context, but store the new location’s context to use it as an additional constraint of move changes.</li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Change Application
-    <ol>
-      <li>Target Location Context Identification
-        <ol>
-          <li>The target location is also an AST node to which a change will be applied</li>
-          <li>To identify the location context is compatible with change contexts, using PLR nodes we can identify location contexts for changes
-            <ol>
-              <li>Except for insert, another operation has an old AST subtree so it is applicable</li>
-              <li>The inserted context is identified from New AST which is inserted. We need a different type, based on the assumption that a subtree is inserted near a location. Insert Before and Insert After contexts are the contexts for cases in which a new AST subtree is inserted before and after node N. Node C indicates the actual location where a subtree will be inserted</li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Change Selection
-    <ol>
-      <li>retrieve changes with the same context from a changing pool</li>
-      <li>Categorized by their context, only store unique changes with their frequency</li>
-      <li>choose one of the selections and mimic human-written changes by selecting any of the changes on the list
-        <ol>
-          <li>The random selection, strategy is not decided specifically</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Change Concretiziation
-    <ol>
-      <li>Replacing all normalized identifiers with concrete name
-        <ol>
-          <li>Do not fully specify the strategy yet how ConFix concretizes a change since various strategies can be used</li>
-          <li>Since the type of normalized variables and signature of normalized methods are also stored during change collection, we can consider a strategy that assigns an existing variable name to a normalized variable (if the type is compatible)</li>
-          <li>Since change is concretized, apply it to the target location</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Patch generation
-    <ol>
-      <li>Generate-and-validate process</li>
-      <li>Starts with the PTLRH pool to narrow down the search area for patch generation, switch to PLRT if the patch generation failed at the above level</li>
-      <li>Identify target location, retrieves changes having the same context as the selected location, apply it to the target location</li>
-      <li>Lastly, tries different name assignments by predefined max trials
-        <ol>
-          <li>To prevent spoiled validation due to wrong name assignment</li>
-        </ol>
-      </li>
-      <li>Pass -&gt; termination; Fail -&gt; continues with another change</li>
-      <li>When it reaches the max candidate, moves to the next change pool</li>
-    </ol>
-  </li>
-  <li>Target Location Identification
-    <ol>
-      <li>Confix leverages both fault localization and change context to identify target locations from given buggy code
-        <ol>
-          <li>Identifies all AST nodes which belong to the statement as potential target locations</li>
-          <li>filters out all target locations having context not included in the current change pool</li>
-          <li>Identify fail and pass a group
-            <ol>
-              <li>The first pick from the fail-only group, if there is no location, starts from the pass-fail group</li>
-              <li>Failing test cases have a much higher priority</li>
-            </ol>
-          </li>
-          <li>Prior target location has if, method invocation, infix expression, or return statement since it influences the whole execution</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Change Selection
-    <ol>
-      <li>ConFix selects one of the retrieved changes for the current target location and chooses the most frequent change</li>
-      <li>Even if it is in the same context, change might not be applicable
-        <ol>
-          <li>In case of replacement operation, one more location should be selected</li>
-          <li>Therefore, ConFix randomly selects one of the target locations with a matching context
-            <ol>
-              <li>If there is not, discard the change</li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-      <li>Code might not be compilable, so ConFix goes through the verification steps
-        <ol>
-          <li>Examine all change-location pairs since a change that was applicable in another location might not be applicable in other locations</li>
-          <li>Considering all pairs and compiling is beneficial rather than since it is not expensive to recompile source code with a small modification</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Change Concretization
-    <ol>
-      <li>Concretizing selected change for the target location</li>
-      <li>ConFix collects concrete names of variables, types, and methods from the given buggy code and decides which names are within the scope</li>
-      <li>To find a concrete method for a normalized method, ConFix identifies compatible methods from collected methods available at a target location</li>
-      <li>Abstract signature
-        <ol>
-          <li>method signature with normalized types</li>
-          <li>The purpose of this is to find a concrete method with the same abstract signature, then it will not cause a compile error</li>
-        </ol>
-      </li>
-      <li>Assignable type
-        <ol>
-          <li>Consider both type compatibility and the number of variables of the types
-            <ol>
-              <li>Normalized types are considered wildcard characters, which means that they can be assignable to either normalized types or JSL types.</li>
-              <li>ConFix only considers a type as assignable to another type if there exist enough variables for assignment.</li>
-            </ol>
-          </li>
-          <li>the compatibility of a normalized and a concrete method is defined by their abstract signatures and assignable types
-            <ol>
-              <li>The concrete method first considers local methods, then global methods with the assumption that local methods are more closely related to buggy code</li>
-              <li>Once a concrete method for a normalized method is selected and assigned, ConFix update types are matched due to method assignment</li>
-              <li>Randomly assigns one of the assignable concrete types for each normalized type</li>
-              <li>Assigns concrete variables to normalized variables</li>
-            </ol>
-          </li>
-          <li>There is one additional treatment for update type changes which updates an identifier with another identifier
-            <ol>
-              <li>Assume the update change is meaningful when the new name is similar to the old one, so calculate the Levenshtein distance between the identifier and concrete name</li>
-            </ol>
-          </li>
-          <li>In case of no type-compatible assignment
-            <ol>
-              <li>Change concretization is considered failed and no patch candidate is generated</li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Evaluation
-    <ol>
-      <li>Collected changes with PTLRH and PTLR contexts from Apache Commons Collections (collections), Derby (derby), Hadoop (hadoop), Ivy (ivy) and Lucene (lucene) projects.
-        <ol>
-          <li>we selected a completely different set of projects for change resources from the projects in Defects4j dataset.</li>
-          <li>For each context, there are averages 1.91 and 16.25 changes in PTLRH and PLRT change pools respectively</li>
-        </ol>
-      </li>
-      <li>We built change pools and obtained coverage information of all buggy codes before we applied ConFix to each bug.
-        <ol>
-          <li>Change pool and coverage information is given to ConFix</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Results
-    <ol>
-      <li>Compilation of one Java file is much cheaper than test execution even if only a few failing test is executed. Therefore ConFix can find a patch within a reasonable time.</li>
-      <li>Acceptable and Plausible</li>
-      <li>We did not set a time budget, however, ConFix generated all the patches within two hours</li>
-      <li>ConFix generated 71 patches
-        <ol>
-          <li>which are greater than other techniques - ssFix(60), Nopol(33), jGenProg(19), jKali(18), HDRepair(16) and ACS(7)</li>
-          <li>generated 13 acceptable patches, which is significantly higher than valid patches generated by HDRepair(5), ACS(3), jGenProg(3), jKali(1), and Nopol(0). One exception is ssFix, which generated 20 valid patches, higher than ConFix.</li>
-        </ol>
-      </li>
-      <li>ssFix
-        <ol>
-          <li>We verified ssFix-generated patches again and found that two valid patches (C1, M79) are not acceptable patches.</li>
-        </ol>
-      </li>
-      <li>ConFix was able to find necessary changes and the right fix locations with its patch generation strategy</li>
-      <li>Informative Patches
-        <ol>
-          <li>Although plausible patches are not acceptable when it is compared to human-written patches, they might be given as debugging hints for developers.</li>
-          <li>we manually analyzed 58 plausible patches and checked whether these patches are informative.</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Are PLRTH and PLRT really helpful?
-    <ol>
-      <li>With PTLRH contexts, ConFix explores a much narrower area in its candidate space
-        <ol>
-          <li>Consequently, it might also lose the chance that actual patches are included in the area</li>
-        </ol>
-      </li>
-      <li>Among 71 generated patches, 81% of the patches (58/71) are generated by changes from PTLRH change pools. In terms of acceptable patches, using PLRT context only gives two more acceptable patches, and PTLRH change pool still works for 85% of the acceptable patches (11/13).</li>
-      <li>ConFix generated two acceptable patches which take 15% of all acceptable patches under both types of context. These PLRT acceptable patches are all semantically equivalent to human-written patches, which means that they addressed issues in the same way as humans did. Therefore PLRT context can also provide practical constraints to mimic the developer’s changes and produce acceptable patches.</li>
-    </ol>
-  </li>
-  <li>Threats to validity
-    <ol>
-      <li>Our evaluation results might be different if we used other collected changes from different human-written patches.</li>
-      <li>There exists another issue that bugs from five projects might not be representative</li>
-      <li>Manual assessment of patches could be another issue, since we do not have domain knowledge and the judgment about patches might be subjective and biased.</li>
-    </ol>
-  </li>
-  <li>Related Works
-    <ol>
-      <li>The difference is that ConFix uses AST contexts to select one of the changes, while ssFix considers the syntactic relation of code fragments to given buggy code.</li>
-      <li>Identifying AST contexts is less costly than deriving SMT constraints, but these contexts still provide syntactic information which also implies some of the program semantics, although it does not fully represent the program’s semantics like SMT constraints.</li>
-      <li>ConFix differs from these previous techniques due to the point that it can automatically collect abstract individual changes on a large scale and it uses them to generate patch candidates, instead of generating patch candidates with several pre-defined modifications or mutation operations with limited resources of code fragments</li>
-    </ol>
-  </li>
-  <li>Studies on Human-written patches
-    <ol>
-      <li>changes in bug fixes are repetitive, and smaller changes are even more repetitive</li>
-      <li>There exist other studies on changes and source code’s uniqueness which imply the potential of techniques leveraging 17 existing code fragments or changes</li>
-      <li>Empirical evaluation of ConFix and fixability analysis results imply that we can obtain necessary changes for new bug fixes from existing patches.</li>
-    </ol>
-  </li>
-  <li>Change Collection and Application
-    <ol>
-      <li>we may consider using these code transfer techniques to develop new methods for patch candidate generation in ConFix</li>
-      <li>it is possible to apply high-level ideas such as collecting abstract changes with their AST contexts regardless of adjustment</li>
-    </ol>
-  </li>
-  <li>Conclusion
-    <ol>
-      <li>We may try to generate patches with multiple changes to improve partial patches up to acceptable patches or use more sophisticated concretization methods to effectively generate high-quality patches.</li>
-    </ol>
-  </li>
-</ol>
-
-<h3 id="knowledge">Knowledge:</h3>
-
-<ul>
-  <li>Context-based Change Application Technique: a technique to generate candidate patches</li>
-  <li>ConFix can expand its search space by collecting more changes, while it can navigate through them effectively with the guidance of context</li>
-</ul>
-
-<h3 id="terminology">Terminology:</h3>
-
-<ul>
-  <li>Hunk: Single changes including deletion and addition, may have multiple in a single commit</li>
-</ul>
-
-<h3 id="questions">Questions:</h3>
-
-<ul>
-  <li>Why PLRTH and PLRT: The paper mentioned it is for reducing the search space. Is it the most efficient way to do it?</li>
-  <li>I don’t understand the part about fault localization. Is it possible to localize the fault using AST context? Does it just localize fault according to the collected change?</li>
-  <li>What if AST differencing tools work maliciously?</li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[ConFix]]></summary></entry></feed>
+<h3 id="questions">Questions:</h3>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[Generalizing the change is helpful...?]]></summary></entry></feed>
