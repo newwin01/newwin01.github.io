@@ -250,4 +250,10 @@ var store = [{
         "tags": ["ML"],
         "url": "/recent/Density_Estimation/",
         "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 6. Decision Theory",
+        "excerpt":"Decision Theory given an input vector, our goal is to predict a corresponding target value The target value is described probabilistically DT provides optimal decisions in situations involving uncertainty, combined with probability theory Three approaches to making a decision generative model, \\(p(t, x)\\) or \\(p(x \\mid t)\\) can be used...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Decision_Theory/",
+        "teaser": null
       }]
