@@ -1,3 +1,13 @@
+---
+title:  "2023-HGU-ML Lecture 7. Clustering"
+excerpt: "Clustering by Prof. Henry Choi"
+
+categories:
+  - ML
+tags:
+  - [ML]
+---
+
 # Clustering
 
 - unsupervised learning
@@ -36,7 +46,7 @@
         - K-means minimizes within cluster point scatter
         - It is an optimization problem
         
-        ![Untitled](Clustering%20aee15be50c8f4f47b0e229a62f6e8d02/Untitled.png)
+        <img src = "../../../assets/ML/Clus/Untitled.png">
         
     - Issues
         - initialization is important
@@ -46,11 +56,11 @@
 - mixture of Gaussian
     - a distribution can be approximated by a weighted sum of component Gaussian densities with parameters
     
-    ![Untitled](Clustering%20aee15be50c8f4f47b0e229a62f6e8d02/Untitled%201.png)
+     <img src = "../../../assets/ML/Clus/Untitled 1.png">
     
     - latent variables
     
-    ![Untitled](Clustering%20aee15be50c8f4f47b0e229a62f6e8d02/Untitled%202.png)
+     <img src = "../../../assets/ML/Clus/Untitled 2.png">
     
     - Gaussian densities with MLE
 - expectation maximization (EM)
@@ -69,14 +79,14 @@
             - should tight log P(X, theta) → B should be maximized with respect to ft(Z)
         - M steps
             
-            ![Untitled](Clustering%20aee15be50c8f4f47b0e229a62f6e8d02/Untitled%203.png)
+             <img src = "../../../assets/ML/Clus/Untitled 3.png">
             
     
-    ![Untitled](Clustering%20aee15be50c8f4f47b0e229a62f6e8d02/Untitled%204.png)
+    <img src = "../../../assets/ML/Clus/Untitled 4.png">
     
 - MoG training with EM
     
-    ![Untitled](Clustering%20aee15be50c8f4f47b0e229a62f6e8d02/Untitled%205.png)
+    <img src = "../../../assets/ML/Clus/Untitled 5.png">
     
 - Difference between MoG and K-means
     - EM for mixtures of Gaussians is just like a soft version of K-means, with
@@ -99,11 +109,11 @@
             - considers the connectivity with the volume of each group
         - normalized cut derivation
         
-        ![Untitled](Clustering%20aee15be50c8f4f47b0e229a62f6e8d02/Untitled%206.png)
+        <img src = "../../../assets/ML/Clus/Untitled 6.png">
         
     - competitive learning
         - a clustering algorithm related to humans based on neural network
     - when the number of clusters is unknown
         - DBSCAN (Density-based spatial clustering of applications with noise)
         
-        ![Untitled](Clustering%20aee15be50c8f4f47b0e229a62f6e8d02/Untitled%207.png)
+        <img src = "../../../assets/ML/Clus/Untitled 7.png">
