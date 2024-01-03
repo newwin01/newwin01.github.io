@@ -1,4 +1,185 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-12-28T22:57:47+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 6. Decision Theory</title><link href="http://localhost:4000/recent/Decision_Theory/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 6. Decision Theory" /><published>2023-12-28T00:00:00+09:00</published><updated>2023-12-28T00:00:00+09:00</updated><id>http://localhost:4000/recent/Decision_Theory</id><content type="html" xml:base="http://localhost:4000/recent/Decision_Theory/"><![CDATA[<h1 id="decision-theory">Decision Theory</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-03T23:14:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 7. Clustering</title><link href="http://localhost:4000/recent/Clustering/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 7. Clustering" /><published>2024-01-03T00:00:00+09:00</published><updated>2024-01-03T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clustering</id><content type="html" xml:base="http://localhost:4000/recent/Clustering/"><![CDATA[<h1 id="clustering">Clustering</h1>
+
+<ul>
+  <li>unsupervised learning
+    <ul>
+      <li>density estimation</li>
+      <li>clustering</li>
+      <li>dimension reduction</li>
+      <li>factor analysis</li>
+      <li>representation learning</li>
+    </ul>
+  </li>
+  <li>Clustering helps us understand the data samples
+    <ul>
+      <li>clustering → grouping samples in a way that samples in the same group are more similar to each other than to those in another group</li>
+    </ul>
+  </li>
+  <li>Approaches for clustering
+    <ul>
+      <li>Connectivity based</li>
+      <li>Centroids based</li>
+      <li>distribution based</li>
+      <li>graph theoretic</li>
+    </ul>
+  </li>
+  <li>hierarchical clustering
+    <ul>
+      <li>dendrogram in hierarchical clustering</li>
+      <li>bottom-up/top-down manner
+        <ul>
+          <li>agglomerative (bottom-up)
+            <ul>
+              <li>at each step, compute distances between all pairs of clusters, then merge the ones with the smallest distance.
+                <ul>
+                  <li>distance between centroids</li>
+                  <li>distance between the two closest or furthest points</li>
+                  <li>define the number of clusters</li>
+                  <li>use cohesion</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>divisive (top-down)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>K-means
+    <ul>
+      <li>an unsupervised clustering algorithm</li>
+      <li>K → number of clusters</li>
+      <li>global convergence</li>
+      <li>only a local minimum is obtained</li>
+      <li>sensitive to initialization</li>
+      <li>sensitive to outliers</li>
+      <li>Algorithm
+        <ul>
+          <li>each vector will be assigned to one cluster exclusively</li>
+          <li>define dissimilarity measures such as Euclidean distance</li>
+          <li>K-means minimizes within cluster point scatter</li>
+          <li>It is an optimization problem</li>
+        </ul>
+
+        <p><img src="../../../assets/ML/Clus/Untitled.png" /></p>
+      </li>
+      <li>Issues
+        <ul>
+          <li>initialization is important</li>
+          <li>distance function (or metric) should be carefully chosen</li>
+          <li>K-means is sensitive to outliers</li>
+          <li>kMedoids → using medoids (one of the actual points)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>mixture of Gaussian
+    <ul>
+      <li>a distribution can be approximated by a weighted sum of component Gaussian densities with parameters</li>
+    </ul>
+
+    <p><img src="../../../assets/ML/Clus/Untitled 1.png" /></p>
+
+    <ul>
+      <li>latent variables</li>
+    </ul>
+
+    <p><img src="../../../assets/ML/Clus/Untitled 2.png" /></p>
+
+    <ul>
+      <li>Gaussian densities with MLE</li>
+    </ul>
+  </li>
+  <li>expectation maximization (EM)
+    <ol>
+      <li>The Expectation-Maximization algorithm is the algorithm to find the maximum likelihood or maximum a posteriori estimates of parameters in probabilistic models. It repeatedly applies the expectation step and the maximization steps.</li>
+      <li>In the expectation step, calculate the expected value of log-likelihood using the estimated value of a parameter. Particularly when dealing with incomplete or missing data, the expectation step involves calculating the posterior probability distribution of the missing data given the observed data and the current parameter estimates.</li>
+      <li>The maximization step is finding a variable value that maximizes this expected value. The variable value calculated in the maximization step is used as the estimated value of the next expectation step.</li>
+      <li>The process iterates between the E and M steps until convergence, where the parameter estimates stabilize. Using this algorithm, you can easily know one of the parameters or latent variables, when you know the other values.
+        <ul>
+          <li>an iterative optimization method to estimate parameters, given measurements X when there are hidden (nuisance) variables Z</li>
+          <li>it can maximize the posterior probability (or likelihood or joint probability)</li>
+          <li>a naive approach would be an alternate optimization between Z and estimate parameters</li>
+          <li>EM: lower bound</li>
+        </ul>
+        <ul>
+          <li><a href="http://norman3.github.io/prml/docs/chapter09/4.html">http://norman3.github.io/prml/docs/chapter09/4.html</a></li>
+          <li><a href="https://zzaebok.github.io/machine_learning/EM_algorithm/">https://zzaebok.github.io/machine_learning/EM_algorithm/</a></li>
+          <li>E steps
+            <ul>
+              <li>suppose that we try to maximize joint probability, lower bound B</li>
+              <li>should tight log P(X, theta) → B should be maximized with respect to ft(Z)</li>
+            </ul>
+          </li>
+          <li>
+            <p>M steps</p>
+
+            <p><img src="../../../assets/ML/Clus/Untitled 3.png" /></p>
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <p><img src="../../../assets/ML/Clus/Untitled 4.png" /></p>
+  </li>
+  <li>
+    <p>MoG training with EM</p>
+
+    <p><img src="../../../assets/ML/Clus/Untitled 5.png" /></p>
+  </li>
+  <li>Difference between MoG and K-means
+    <ul>
+      <li>EM for mixtures of Gaussians is just like a soft version of K-means, with
+  fixed priors and covariance</li>
+      <li>Instead of hard assignments in the E-step, we do soft assignments based on
+  the softmax of the squared Mahalanobis distance from each point to each
+  cluster.</li>
+      <li>Each center is moved by weighted means of the data, with weights given by
+  soft assignments</li>
+      <li>In K-means, weights are 0 or 1</li>
+    </ul>
+  </li>
+  <li>Spectral clustering
+    <ul>
+      <li>graphs:
+        <ul>
+          <li>natural way to represent many types of data</li>
+          <li>nodes corresponding to data samples</li>
+          <li>edges connecting the nodes</li>
+        </ul>
+      </li>
+      <li>graph partitioning
+        <ul>
+          <li>graph cut
+            <ul>
+              <li>consider a partition of the graph into two parts A and B</li>
+            </ul>
+          </li>
+          <li>normalized cut
+            <ul>
+              <li>considers the connectivity with the volume of each group</li>
+            </ul>
+          </li>
+          <li>normalized cut derivation</li>
+        </ul>
+
+        <p><img src="../../../assets/ML/Clus/Untitled 6.png" /></p>
+      </li>
+      <li>competitive learning
+        <ul>
+          <li>a clustering algorithm related to humans based on neural network</li>
+        </ul>
+      </li>
+      <li>when the number of clusters is unknown
+        <ul>
+          <li>DBSCAN (Density-based spatial clustering of applications with noise)</li>
+        </ul>
+
+        <p><img src="../../../assets/ML/Clus/Untitled 7.png" /></p>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Clustering by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 6. Decision Theory</title><link href="http://localhost:4000/recent/Decision_Theory/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 6. Decision Theory" /><published>2023-12-28T00:00:00+09:00</published><updated>2023-12-28T00:00:00+09:00</updated><id>http://localhost:4000/recent/Decision_Theory</id><content type="html" xml:base="http://localhost:4000/recent/Decision_Theory/"><![CDATA[<h1 id="decision-theory">Decision Theory</h1>
 
 <ul>
   <li>given an input vector, our goal is to predict a corresponding target value
@@ -364,193 +545,7 @@
 
     <p><img src="../../../assets/ML/InfoTheo/Untitled 3.png" /></p>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
-
-<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
-
-<ul>
-  <li>Introduction to AI
-    <ul>
-      <li>Weak and Strong AI
-        <ul>
-          <li>strong AI: understanding Chinese</li>
-          <li>weak AI: simulating the ability to understand Chinese</li>
-        </ul>
-      </li>
-      <li>Applied AI and General AI</li>
-      <li>Computationalism and Connectionism
-        <ul>
-          <li>Computationalism
-            <ul>
-              <li>thoughts are computation on symbols
-                <ul>
-                  <li>Symbolic, interpretable</li>
-                  <li>e.g) Turing Machine</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Connectionism
-            <ul>
-              <li>Information is represented in neurons and networks
-                <ul>
-                  <li>Low-level, black-box</li>
-                  <li>Neural Networks</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Turing Test</li>
-      <li>Implementation level and algorithmic level
-        <ul>
-          <li>Implmentation level: how the system is physically realized
-            <ul>
-              <li>AI and Human Intelligence are different</li>
-            </ul>
-          </li>
-          <li>Algorithmic level: how the system does, what representation or process it uses
-            <ul>
-              <li>3 level for intelligent system
-                <ul>
-                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
-                </ul>
-              </li>
-              <li>Can achieve some intelligence on approximation</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Superintelligence
-        <ul>
-          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
-        </ul>
-      </li>
-      <li>Deep Neural Networks
-        <ul>
-          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
-        </ul>
-      </li>
-      <li>Practical AI risks
-        <ul>
-          <li>affected by viruses</li>
-          <li>misused by people with bad intentions</li>
-          <li>biased AI</li>
-          <li>taking over roles</li>
-          <li>unable to reject AI’s decision</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Introduction to ML
-    <ul>
-      <li>What is learning
-        <ul>
-          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
-          <li>simple model (e.g., linear regression)</li>
-          <li>for supervised learning
-            <ul>
-              <li>Learning</li>
-              <li>Recognition</li>
-            </ul>
-          </li>
-          <li>Complex models</li>
-        </ul>
-      </li>
-      <li>Machine learning
-        <ul>
-          <li>Takes data and output  → Makes program</li>
-          <li>source of knowledge is data</li>
-        </ul>
-      </li>
-      <li>Workflow of machine learning
-        <ul>
-          <li>acquisition - data is gathered/collected from various sources</li>
-          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
-          <li>analysis - data is evaluated to run and customize reports</li>
-          <li>modeling - data is patternized and generalized as models</li>
-          <li>visualization</li>
-          <li>deployment and maintenance</li>
-        </ul>
-      </li>
-      <li>Components of ML
-        <ul>
-          <li>data: features, label, format</li>
-          <li>models: SVM, NN, K-means</li>
-          <li>objectives: cross-entropy, RMSE, likelihood</li>
-          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
-        </ul>
-      </li>
-      <li>Data
-        <ul>
-          <li>structured/unstructured</li>
-        </ul>
-      </li>
-      <li>Categories
-        <ul>
-          <li>unsupervised learning
-            <ul>
-              <li>e.g., clustering, dimension reduction</li>
-            </ul>
-          </li>
-          <li>supervised learning
-            <ul>
-              <li>e.g., speech/face recognition</li>
-            </ul>
-          </li>
-          <li>semi-supervised learning
-            <ul>
-              <li>e.g., cancer detection</li>
-            </ul>
-          </li>
-          <li>reinforcement learning
-            <ul>
-              <li>e.g., AlphaGo, self-driving car</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Discriminative model and Generative model
-        <ul>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Discriminative models: p(t</td>
-                  <td>x)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>only for supervising</li>
-            </ul>
-          </li>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Generative model: p(t, x) or p(x</td>
-                  <td>t)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>applicable to unlabeled data</li>
-              <li>focusing on modeling each class’ distribution</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Pattern Recognition
-        <ul>
-          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
-  -</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
 
 <ul>
   <li>Probability
@@ -752,7 +747,193 @@
       <li>basic distributions: categorical and multinomial</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. by Prof. Henry Choi]]></summary></entry><entry><title type="html">And Then There Were None 그리고 아무도 없었다</title><link href="http://localhost:4000/recent/And_Then_There_Were_None/" rel="alternate" type="text/html" title="And Then There Were None 그리고 아무도 없었다" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/And_Then_There_Were_None</id><content type="html" xml:base="http://localhost:4000/recent/And_Then_There_Were_None/"><![CDATA[<p>추리 소설을 추천받았다. 아가사 크리스티의 <strong><em>그리고 아무도 없었다</em></strong> 였다. <br /> 
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
+
+<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
+
+<ul>
+  <li>Introduction to AI
+    <ul>
+      <li>Weak and Strong AI
+        <ul>
+          <li>strong AI: understanding Chinese</li>
+          <li>weak AI: simulating the ability to understand Chinese</li>
+        </ul>
+      </li>
+      <li>Applied AI and General AI</li>
+      <li>Computationalism and Connectionism
+        <ul>
+          <li>Computationalism
+            <ul>
+              <li>thoughts are computation on symbols
+                <ul>
+                  <li>Symbolic, interpretable</li>
+                  <li>e.g) Turing Machine</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Connectionism
+            <ul>
+              <li>Information is represented in neurons and networks
+                <ul>
+                  <li>Low-level, black-box</li>
+                  <li>Neural Networks</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Turing Test</li>
+      <li>Implementation level and algorithmic level
+        <ul>
+          <li>Implmentation level: how the system is physically realized
+            <ul>
+              <li>AI and Human Intelligence are different</li>
+            </ul>
+          </li>
+          <li>Algorithmic level: how the system does, what representation or process it uses
+            <ul>
+              <li>3 level for intelligent system
+                <ul>
+                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
+                </ul>
+              </li>
+              <li>Can achieve some intelligence on approximation</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Superintelligence
+        <ul>
+          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
+        </ul>
+      </li>
+      <li>Deep Neural Networks
+        <ul>
+          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
+        </ul>
+      </li>
+      <li>Practical AI risks
+        <ul>
+          <li>affected by viruses</li>
+          <li>misused by people with bad intentions</li>
+          <li>biased AI</li>
+          <li>taking over roles</li>
+          <li>unable to reject AI’s decision</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Introduction to ML
+    <ul>
+      <li>What is learning
+        <ul>
+          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
+          <li>simple model (e.g., linear regression)</li>
+          <li>for supervised learning
+            <ul>
+              <li>Learning</li>
+              <li>Recognition</li>
+            </ul>
+          </li>
+          <li>Complex models</li>
+        </ul>
+      </li>
+      <li>Machine learning
+        <ul>
+          <li>Takes data and output  → Makes program</li>
+          <li>source of knowledge is data</li>
+        </ul>
+      </li>
+      <li>Workflow of machine learning
+        <ul>
+          <li>acquisition - data is gathered/collected from various sources</li>
+          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
+          <li>analysis - data is evaluated to run and customize reports</li>
+          <li>modeling - data is patternized and generalized as models</li>
+          <li>visualization</li>
+          <li>deployment and maintenance</li>
+        </ul>
+      </li>
+      <li>Components of ML
+        <ul>
+          <li>data: features, label, format</li>
+          <li>models: SVM, NN, K-means</li>
+          <li>objectives: cross-entropy, RMSE, likelihood</li>
+          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
+        </ul>
+      </li>
+      <li>Data
+        <ul>
+          <li>structured/unstructured</li>
+        </ul>
+      </li>
+      <li>Categories
+        <ul>
+          <li>unsupervised learning
+            <ul>
+              <li>e.g., clustering, dimension reduction</li>
+            </ul>
+          </li>
+          <li>supervised learning
+            <ul>
+              <li>e.g., speech/face recognition</li>
+            </ul>
+          </li>
+          <li>semi-supervised learning
+            <ul>
+              <li>e.g., cancer detection</li>
+            </ul>
+          </li>
+          <li>reinforcement learning
+            <ul>
+              <li>e.g., AlphaGo, self-driving car</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Discriminative model and Generative model
+        <ul>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Discriminative models: p(t</td>
+                  <td>x)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>only for supervising</li>
+            </ul>
+          </li>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Generative model: p(t, x) or p(x</td>
+                  <td>t)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>applicable to unlabeled data</li>
+              <li>focusing on modeling each class’ distribution</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Pattern Recognition
+        <ul>
+          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
+  -</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. by Prof. Henry Choi]]></summary></entry><entry><title type="html">And Then There Were None 그리고 아무도 없었다</title><link href="http://localhost:4000/recent/And_Then_There_Were_None/" rel="alternate" type="text/html" title="And Then There Were None 그리고 아무도 없었다" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/And_Then_There_Were_None</id><content type="html" xml:base="http://localhost:4000/recent/And_Then_There_Were_None/"><![CDATA[<p>추리 소설을 추천받았다. 아가사 크리스티의 <strong><em>그리고 아무도 없었다</em></strong> 였다. <br /> 
 소설을 그렇게 좋아하는 편은 아니라 이름만 들어본 작가였지만 오랜만에 소설을 읽어보자는 마음으로 책을 집어들었다.</p>
 
 <p>와우. 정말 재밌게 읽었다. 그 자리에 앉아서 내리 2시간을 읽었다. <del>물론 소설이 짧기도 하다</del> <br />
@@ -983,216 +1164,7 @@
       <li>need to fit cleanly together in precise language</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[Using Function Properly]]></summary></entry><entry><title type="html">Clean Code Chapter 2</title><link href="http://localhost:4000/recent/Clean_Code_Ch2/" rel="alternate" type="text/html" title="Clean Code Chapter 2" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch2</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch2/"><![CDATA[<p><strong>Using the appropriate Name will pay off in the short term and continue to pay in the long run</strong></p>
-
-<ul>
-  <li>Using Intention-Revealing Names
-    <ul>
-      <li>Choosing good names takes time but saves more than it takes</li>
-      <li>Choosing a name that specifies what is being measured and the unit of that measurement</li>
-      <li>Things need to think
-        <ul>
-          <li>What kind are in</li>
-          <li>What is returned</li>
-          <li>zeroth subscript and value</li>
-        </ul>
-      </li>
-      <li>Do not use <strong>O <em>and l</em></strong></li>
-    </ul>
-  </li>
-  <li>Avoid Disinformation
-    <ul>
-      <li>Avoiding words whose entrenched meanings vary from intention</li>
-      <li>Spelling similar concepts similarly
-        <ul>
-          <li>No inconsistent spelling</li>
-        </ul>
-      </li>
-      <li><del>Using different font??</del></li>
-    </ul>
-  </li>
-  <li>Meaningful Distinction
-    <ul>
-      <li><strong>a</strong> for a local variable, <strong>the</strong> for all function arguments</li>
-      <li>Less redundant words</li>
-      <li>Distinguishing names in a way that readers know what the difference offer</li>
-    </ul>
-  </li>
-  <li>Using Pronounceable Names
-    <ul>
-      <li>Essential for communication</li>
-    </ul>
-  </li>
-  <li>Using Searchable Names
-    <ul>
-      <li>Single-letter names can ONLY be used as local variables inside short methods</li>
-      <li>The length of a name should correspond to the size of its scope</li>
-    </ul>
-  </li>
-  <li>Avoiding Encoding</li>
-  <li>Hungarian Notation
-    <ul>
-      <li>The compiler knows the type nowadays</li>
-    </ul>
-  </li>
-  <li>Member Prefixes
-    <ul>
-      <li>unseen clutter and a marker of older code…</li>
-    </ul>
-  </li>
-  <li>Interface and Implementation
-    <ul>
-      <li>Why would I let user knows I’m handling them with an interface?</li>
-      <li>Marking at the implementation</li>
-    </ul>
-  </li>
-  <li>Avoid Mental Mapping
-    <ul>
-      <li>In most contexts, a single letter for a loop is a poor choice (such as i, j, k)</li>
-      <li><em>Clarity is king</em></li>
-    </ul>
-  </li>
-  <li>Class Names
-    <ul>
-      <li>should have noun or noun phrase names</li>
-    </ul>
-  </li>
-  <li>Method Names
-    <ul>
-      <li>should have verb or verb phase names</li>
-      <li>When constructors are overloaded, use the static method with names that describe the argument
-        <ul>
-          <li>Make corresponding constructors private</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Don’t be cute
-    <ul>
-      <li>No too “user-specific name”</li>
-    </ul>
-  </li>
-  <li>Pick One Word per Concept
-    <ul>
-      <li>Pick one word for one abstract concept</li>
-      <li>The name will express two different types of object</li>
-    </ul>
-  </li>
-  <li>Don’t Pun
-    <ul>
-      <li>Avoiding using the same word for two purposes</li>
-      <li>Even if it has a similar concept, it must have a different name if it is semantically different</li>
-      <li><strong><em>It is the author’s responsibility</em></strong></li>
-    </ul>
-  </li>
-  <li>Use Solution Domain Names
-    <ul>
-      <li>People who read your code will be programmers
-        <ul>
-          <li>CS terms, algorithm names, pattern names, math terms, etc.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Use Problem Domain Names
-    <ul>
-      <li>Separating solution and problem domain concept</li>
-    </ul>
-  </li>
-  <li>Add Meaningful Context
-    <ul>
-      <li>Place the name in context for the reader
-        <ul>
-          <li>enclosing classes, functions, or namespaces</li>
-        </ul>
-      </li>
-      <li>break it into smaller functions if it is necessary</li>
-    </ul>
-  </li>
-  <li>But Don’t Add Gratuitous Context
-    <ul>
-      <li>Shorter names are generally better
-        <ul>
-          <li>As long as they are clear</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[How to name clearly]]></summary></entry><entry><title type="html">Clean Code Chapter 1</title><link href="http://localhost:4000/recent/Clean_Code_Ch1/" rel="alternate" type="text/html" title="Clean Code Chapter 1" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch1</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch1/"><![CDATA[<ul>
-  <li>What is Clean Code?
-    <ul>
-      <li>Bjarne Stroustrup, Inventor of C++
-        <ul>
-          <li>Wasted Cycle are inelegant, not pleasing</li>
-          <li>Error handling should be complete</li>
-          <li>Focused; Each function, class, and module expose a single-minded attitude that remains entirely undistracted, and unpolluted, by the surrounding details</li>
-        </ul>
-      </li>
-      <li>Grady Booch, author of Object Oriented Analysis and Design with Application
-        <ul>
-          <li>He took a readability perspective</li>
-          <li>Well-written purpose</li>
-          <li>clean code should clearly expose the tensions in the problem to be solved</li>
-          <li>Should be matter-of-fact as opposed to speculative</li>
-        </ul>
-      </li>
-      <li>Dave Thomas, founder of OTI
-        <ul>
-          <li>Make it easy for other people to enhance it</li>
-          <li>Code without test is not clean at all</li>
-          <li>values code that is small, code should be literate</li>
-        </ul>
-      </li>
-      <li>Michael Feathers, author of Working Effectively with Legacy Code
-        <ul>
-          <li>Looks like it was written by someone who cares</li>
-          <li>Someone has taken the time to keep it simple and orderly</li>
-        </ul>
-      </li>
-      <li>Ron Jeffries, author of Extreme Programming Installed and Extreme Programming Adventures in C#
-        <ul>
-          <li>No duplications</li>
-          <li>Express all the design ideas
-            <ul>
-              <li>High expressiveness</li>
-            </ul>
-          </li>
-          <li>Minimize the number of entities
-            <ul>
-              <li>Find things in a collection</li>
-              <li>Wrap particular implementation in a more abstract method</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Ward Cunningham, inventor of Wiki, inventor of Fit …
-        <ul>
-          <li>read turns out what you expected</li>
-          <li>make it look like the language was made for the problem</li>
-          <li>It is the programmer that makes the language appear simple</li>
-        </ul>
-      </li>
-      <li>Author: <a href="https://www.google.com/search?q=Robert+C.+Martin&amp;stick=H4sIAAAAAAAAAONgVuLWz9U3MDSqMspOT3rEaMYt8PLHPWEp3UlrTl5jVOfiCs7IL3fNK8ksqRSS5GKDsvileLmQ9fEsYhUIyk9KLSpRcNZT8E0sKsnMAwD4hk_pWwAAAA&amp;sa=X&amp;ved=2ahUKEwjDuvb5qYSAAxWJAt4KHYeWALQQzIcDKAB6BAgiEAE">Robert Cecil Martin</a>
-        <ul>
-          <li>Discovering new techniques and founding their own schools</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>
-
-<p>Many Recommendations in this book are controversial.</p>
-
-<p>And we are <strong>AUTHORS</strong>.</p>
-
-<ul>
-  <li>Making it Easy to read makes it easier to write</li>
-  <li>The code has to be kept clean over time</li>
-</ul>
-
-<p>This book cannot promise to make you a good programmer.</p>
-
-<p><strong>“Practice, son. Practice!”</strong></p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[What is Clean Code?]]></summary></entry><entry><title type="html">Can We Automatically Fix Bugs by Learning Edit Operations?</title><link href="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/" rel="alternate" type="text/html" title="Can We Automatically Fix Bugs by Learning Edit Operations?" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Can%20We%20Automatically%20Fix%20Bugs%20by%20Learning%20Edit%20Operations</id><content type="html" xml:base="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/"><![CDATA[<h2 id="can-we-automatically-fix-bugs-by-learning-edit-operations">“Can We Automatically Fix Bugs by Learning Edit Operations?”</h2>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[Using Function Properly]]></summary></entry><entry><title type="html">Can We Automatically Fix Bugs by Learning Edit Operations?</title><link href="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/" rel="alternate" type="text/html" title="Can We Automatically Fix Bugs by Learning Edit Operations?" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Can%20We%20Automatically%20Fix%20Bugs%20by%20Learning%20Edit%20Operations</id><content type="html" xml:base="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/"><![CDATA[<h2 id="can-we-automatically-fix-bugs-by-learning-edit-operations">“Can We Automatically Fix Bugs by Learning Edit Operations?”</h2>
 
 <h2 id="paper"><a href="https://www.cs.wm.edu/~denys/pubs/SANER-RENE-BugFixing.pdf">Paper</a></h2>
 
@@ -1410,4 +1382,139 @@
 
 <p><a href="https://github.com/WM-SEMERU/hephaestus">GitHub - WM-SEMERU/hephaestus</a></p>
 
-<h3 id="questions">Questions:</h3>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[Generalizing the change is helpful...?]]></summary></entry></feed>
+<h3 id="questions">Questions:</h3>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[Generalizing the change is helpful...?]]></summary></entry><entry><title type="html">Clean Code Chapter 2</title><link href="http://localhost:4000/recent/Clean_Code_Ch2/" rel="alternate" type="text/html" title="Clean Code Chapter 2" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch2</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch2/"><![CDATA[<p><strong>Using the appropriate Name will pay off in the short term and continue to pay in the long run</strong></p>
+
+<ul>
+  <li>Using Intention-Revealing Names
+    <ul>
+      <li>Choosing good names takes time but saves more than it takes</li>
+      <li>Choosing a name that specifies what is being measured and the unit of that measurement</li>
+      <li>Things need to think
+        <ul>
+          <li>What kind are in</li>
+          <li>What is returned</li>
+          <li>zeroth subscript and value</li>
+        </ul>
+      </li>
+      <li>Do not use <strong>O <em>and l</em></strong></li>
+    </ul>
+  </li>
+  <li>Avoid Disinformation
+    <ul>
+      <li>Avoiding words whose entrenched meanings vary from intention</li>
+      <li>Spelling similar concepts similarly
+        <ul>
+          <li>No inconsistent spelling</li>
+        </ul>
+      </li>
+      <li><del>Using different font??</del></li>
+    </ul>
+  </li>
+  <li>Meaningful Distinction
+    <ul>
+      <li><strong>a</strong> for a local variable, <strong>the</strong> for all function arguments</li>
+      <li>Less redundant words</li>
+      <li>Distinguishing names in a way that readers know what the difference offer</li>
+    </ul>
+  </li>
+  <li>Using Pronounceable Names
+    <ul>
+      <li>Essential for communication</li>
+    </ul>
+  </li>
+  <li>Using Searchable Names
+    <ul>
+      <li>Single-letter names can ONLY be used as local variables inside short methods</li>
+      <li>The length of a name should correspond to the size of its scope</li>
+    </ul>
+  </li>
+  <li>Avoiding Encoding</li>
+  <li>Hungarian Notation
+    <ul>
+      <li>The compiler knows the type nowadays</li>
+    </ul>
+  </li>
+  <li>Member Prefixes
+    <ul>
+      <li>unseen clutter and a marker of older code…</li>
+    </ul>
+  </li>
+  <li>Interface and Implementation
+    <ul>
+      <li>Why would I let user knows I’m handling them with an interface?</li>
+      <li>Marking at the implementation</li>
+    </ul>
+  </li>
+  <li>Avoid Mental Mapping
+    <ul>
+      <li>In most contexts, a single letter for a loop is a poor choice (such as i, j, k)</li>
+      <li><em>Clarity is king</em></li>
+    </ul>
+  </li>
+  <li>Class Names
+    <ul>
+      <li>should have noun or noun phrase names</li>
+    </ul>
+  </li>
+  <li>Method Names
+    <ul>
+      <li>should have verb or verb phase names</li>
+      <li>When constructors are overloaded, use the static method with names that describe the argument
+        <ul>
+          <li>Make corresponding constructors private</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Don’t be cute
+    <ul>
+      <li>No too “user-specific name”</li>
+    </ul>
+  </li>
+  <li>Pick One Word per Concept
+    <ul>
+      <li>Pick one word for one abstract concept</li>
+      <li>The name will express two different types of object</li>
+    </ul>
+  </li>
+  <li>Don’t Pun
+    <ul>
+      <li>Avoiding using the same word for two purposes</li>
+      <li>Even if it has a similar concept, it must have a different name if it is semantically different</li>
+      <li><strong><em>It is the author’s responsibility</em></strong></li>
+    </ul>
+  </li>
+  <li>Use Solution Domain Names
+    <ul>
+      <li>People who read your code will be programmers
+        <ul>
+          <li>CS terms, algorithm names, pattern names, math terms, etc.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Use Problem Domain Names
+    <ul>
+      <li>Separating solution and problem domain concept</li>
+    </ul>
+  </li>
+  <li>Add Meaningful Context
+    <ul>
+      <li>Place the name in context for the reader
+        <ul>
+          <li>enclosing classes, functions, or namespaces</li>
+        </ul>
+      </li>
+      <li>break it into smaller functions if it is necessary</li>
+    </ul>
+  </li>
+  <li>But Don’t Add Gratuitous Context
+    <ul>
+      <li>Shorter names are generally better
+        <ul>
+          <li>As long as they are clear</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[How to name clearly]]></summary></entry></feed>
