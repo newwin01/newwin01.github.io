@@ -1,3 +1,13 @@
+---
+title:  "2023-HGU-ML Lecture 8. Dimension Reduction"
+excerpt: "Dimension Reduction by Prof. Henry Choi"
+
+categories:
+  - ML
+tags:
+  - [ML]
+---
+
 # Dimension Reduction
 
 - Many features
@@ -8,14 +18,14 @@
     - is one of the most popular and simple DR methods.
     - is a linear projection
     - finds an orthogonal basis set that makes the largest possible variance on the linearly projected space
-    - minimal reconstruction error
+    - minimal reconstruction error``
         - maximizing preserved variance after projection
     - eigendecomposition of covariance matrix
 - Rayleigh Quotient
     - [https://en.wikipedia.org/wiki/Rayleigh_quotient](https://en.wikipedia.org/wiki/Rayleigh_quotient)
     - [https://blog.naver.com/kj0602j/221622542090](https://blog.naver.com/kj0602j/221622542090)
         
-        ![Untitled](Dimension%20Reduction%20034c01f924d34215b7a34e43aa562a39/Untitled.png)
+        <img src = "../../../assets/ML/DimRed/Untitled.png">
         
 - eigenfaces
 - multidimensional scaling (MDS)
@@ -39,9 +49,9 @@
     
     In summary, multidimensional scaling is a valuable technique for visualizing and interpreting the relationships between data points based on their dissimilarities. It is particularly useful when dealing with high-dimensional data, as it provides a lower-dimensional representation that retains important structural information about the original data.
     
-    ![Untitled](Dimension%20Reduction%20034c01f924d34215b7a34e43aa562a39/Untitled%201.png)
+    <img src = "../../../assets/ML/DimRed/Untitled 1.png">
     
-    ![Untitled](Dimension%20Reduction%20034c01f924d34215b7a34e43aa562a39/Untitled%202.png)
+    <img src = "../../../assets/ML/DimRed/Untitled 2.png">
     
 - non-metric pairwise data
     - in the real world, many relations are asymmetric
@@ -97,11 +107,11 @@
     - it is a generalized eigenvalue problem (Rayleigh quotient)
         - for 2 class cases, no need even to solve eigendecomposition
     
-    ![Untitled](Dimension%20Reduction%20034c01f924d34215b7a34e43aa562a39/Untitled%203.png)
+    <img src = "../../../assets/ML/DimRed/Untitled 3.png">
     
     - Multi-class case
         
-        ![Untitled](Dimension%20Reduction%20034c01f924d34215b7a34e43aa562a39/Untitled%204.png)
+        <img src = "../../../assets/ML/DimRed/Untitled 4.png">
         
 - PCA and LDA
 - Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) are both dimensionality reduction techniques, but they have different objectives and are used in different contexts. Here are the key differences between PCA and LDA:
@@ -132,7 +142,7 @@
     - a statistical problem
     - to decompose given multivariate data into a linear sum of statistically independent components
     
-    ![Untitled](Dimension%20Reduction%20034c01f924d34215b7a34e43aa562a39/Untitled%205.png)
+    <img src = "../../../assets/ML/DimRed/Untitle 5.png">
     
     1. **Maximum Likelihood Estimation (MLE):**
         - In the context of ICA, the observed data is assumed to be a linear combination of independent sources corrupted by noise. The demixing matrix is then estimated by maximizing the likelihood of the observed data given the model assumptions.
@@ -153,11 +163,11 @@
 - representation: local vs. distributed
     - support vector machines (SVMs) vs. artificial neural networks (ANNs)
     
-    ![Untitled](Dimension%20Reduction%20034c01f924d34215b7a34e43aa562a39/Untitled%206.png)
+   <img src = "../../../assets/ML/DimRed/Untitled 6.png">
     
 - representation: compact vs. sparse
     - coding strategy
     - sparseness
         - equal response probability over the cells, low response probability for input
 
-![Untitled](Dimension%20Reduction%20034c01f924d34215b7a34e43aa562a39/Untitled%207.png)
+<img src = "../../../assets/ML/DimRed/Untitled 7.png">

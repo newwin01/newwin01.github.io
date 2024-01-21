@@ -262,4 +262,10 @@ var store = [{
         "tags": ["ML"],
         "url": "/recent/Clustering/",
         "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 8. Dimension Reduction",
+        "excerpt":"Dimension Reduction Many features provide more information and potentially high accuracy make it harder to train a classifier (the curse of dimensionality) increase the possibility of overfitting principal component analysis (PCA) is one of the most popular and simple DR methods. is a linear projection finds an orthogonal basis set...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Dimension_Reduction/",
+        "teaser": null
       }]
