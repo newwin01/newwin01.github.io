@@ -1,4 +1,306 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-03T23:14:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 7. Clustering</title><link href="http://localhost:4000/recent/Clustering/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 7. Clustering" /><published>2024-01-03T00:00:00+09:00</published><updated>2024-01-03T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clustering</id><content type="html" xml:base="http://localhost:4000/recent/Clustering/"><![CDATA[<h1 id="clustering">Clustering</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-21T15:32:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 8. Dimension Reduction</title><link href="http://localhost:4000/recent/Dimension_Reduction/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 8. Dimension Reduction" /><published>2024-01-21T00:00:00+09:00</published><updated>2024-01-21T00:00:00+09:00</updated><id>http://localhost:4000/recent/Dimension_Reduction</id><content type="html" xml:base="http://localhost:4000/recent/Dimension_Reduction/"><![CDATA[<h1 id="dimension-reduction">Dimension Reduction</h1>
+
+<ul>
+  <li>Many features
+    <ul>
+      <li>provide more information and potentially high accuracy</li>
+      <li>make it harder to train a classifier (the curse of dimensionality)</li>
+      <li>increase the possibility of overfitting</li>
+    </ul>
+  </li>
+  <li>principal component analysis (PCA)
+    <ul>
+      <li>is one of the most popular and simple DR methods.</li>
+      <li>is a linear projection</li>
+      <li>finds an orthogonal basis set that makes the largest possible variance on the linearly projected space</li>
+      <li>minimal reconstruction error``
+        <ul>
+          <li>maximizing preserved variance after projection</li>
+        </ul>
+      </li>
+      <li>eigendecomposition of covariance matrix</li>
+    </ul>
+  </li>
+  <li>Rayleigh Quotient
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Rayleigh_quotient">https://en.wikipedia.org/wiki/Rayleigh_quotient</a></li>
+      <li>
+        <p><a href="https://blog.naver.com/kj0602j/221622542090">https://blog.naver.com/kj0602j/221622542090</a></p>
+
+        <p><img src="../../../assets/ML/DimRed/Untitled.png" /></p>
+      </li>
+    </ul>
+  </li>
+  <li>eigenfaces</li>
+  <li>
+    <p>multidimensional scaling (MDS)</p>
+
+    <p>Multidimensional Scaling (MDS) is a technique used in statistics and data analysis to visualize the similarity or dissimilarity of data points in a high-dimensional space by projecting them into a lower-dimensional space. The goal of MDS is to represent the pairwise dissimilarities or distances between data points in a way that preserves the original relationships as much as possible.</p>
+
+    <p>Here are the key concepts and steps involved in multidimensional scaling:</p>
+
+    <ol>
+      <li><strong>Dissimilarity (or Distance) Matrix:</strong>
+        <ul>
+          <li>MDS begins with a dissimilarity matrix, which contains the pairwise distances or dissimilarities between each pair of data points. These dissimilarities could represent any measure of dissimilarity, such as Euclidean distance, correlation, or other distance metrics depending on the nature of the data.</li>
+        </ul>
+      </li>
+      <li><strong>Projection into Lower-Dimensional Space:</strong>
+        <ul>
+          <li>MDS aims to find a configuration of points in a lower-dimensional space (typically 2D or 3D) such that the pairwise distances in the lower-dimensional space approximate the original dissimilarity matrix as closely as possible.</li>
+        </ul>
+      </li>
+      <li><strong>Stress Optimization:</strong>
+        <ul>
+          <li>The quality of the representation is often assessed using a stress criterion, which measures how well the lower-dimensional distances approximate the original dissimilarities. The goal is to minimize stress, indicating a good fit between the original and the lower-dimensional representation.</li>
+        </ul>
+      </li>
+      <li><strong>Metric vs. Non-metric MDS:</strong>
+        <ul>
+          <li>MDS can be classified into metric and non-metric MDS. Metric MDS preserves the actual distances between points, while non-metric MDS only preserves the order of distances (i.e., the ranking of dissimilarities).</li>
+        </ul>
+      </li>
+      <li><strong>Applications:</strong>
+        <ul>
+          <li>MDS is widely used in various fields, including psychology, marketing, geography, and bioinformatics. It is often applied to explore and visualize relationships between objects, such as similarity between products based on consumer preferences, geographic relationships between cities, or genetic similarities between species.</li>
+        </ul>
+      </li>
+      <li><strong>Classical vs. Non-classical MDS:</strong>
+        <ul>
+          <li>Classical MDS is based on eigenvalue decomposition and is suitable for metric MDS. Non-classical MDS, including methods like Sammon mapping, is used for non-metric MDS and often employs optimization algorithms to find the lower-dimensional representation.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <p>In summary, multidimensional scaling is a valuable technique for visualizing and interpreting the relationships between data points based on their dissimilarities. It is particularly useful when dealing with high-dimensional data, as it provides a lower-dimensional representation that retains important structural information about the original data.</p>
+
+    <p><img src="../../../assets/ML/DimRed/Untitled 1.png" /></p>
+
+    <p><img src="../../../assets/ML/DimRed/Untitled 2.png" /></p>
+  </li>
+  <li>non-metric pairwise data
+    <ul>
+      <li>in the real world, many relations are asymmetric</li>
+      <li>kernel matrix from asymmetric relations is not PSD</li>
+    </ul>
+  </li>
+  <li>PCA with inner products</li>
+  <li>principle components regression (PCR)
+    <ul>
+      <li>instead of regressing y (the dependent variable) on x directly, the principal components (PCs) of x are used as regressors.</li>
+      <li>PCR regularizes the model (by using a subset of components)</li>
+      <li>In <a href="https://en.wikipedia.org/wiki/Statistics">statistics</a>, <strong>principal component regression</strong> (<strong>PCR</strong>) is a <a href="https://en.wikipedia.org/wiki/Regression_analysis">regression analysis</a> technique that is based on <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">principal component analysis</a> (PCA). More specifically, PCR is used for <a href="https://en.wikipedia.org/wiki/Estimation">estimating</a> the unknown <a href="https://en.wikipedia.org/wiki/Linear_regression">regression coefficients</a> in a <a href="https://en.wikipedia.org/wiki/Linear_regression">standard linear regression model</a>.</li>
+      <li>In PCR, instead of regressing the dependent variable on the explanatory variables directly, the <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">principal components</a> of the explanatory variables are used as <a href="https://en.wikipedia.org/wiki/Dependent_and_independent_variables">regressors</a>. One typically uses only a subset of all the principal components for regression, making PCR a kind of <a href="https://en.wikipedia.org/wiki/Regularization_(mathematics)">regularized</a> procedure and also a type of <a href="https://en.wikipedia.org/wiki/Shrinkage_estimator">shrinkage estimator</a>.</li>
+      <li><a href="https://deep-learning-study.tistory.com/668">https://deep-learning-study.tistory.com/668</a></li>
+      <li>통계에서 주성분 회귀(Principal Component Regression, PCR)는 주성분 분석(Principal Component Analysis, PCA)을 기반으로 한 회귀 분석 기법입니다. 보다 구체적으로, PCR은 표준 선형 회귀 모델에서 알려지지 않은 회귀 계수를 추정하는 데 사용됩니다. PCR은 설명 변수의 종속 변수를 직접 회귀하는 대신 회귀 변수로 설명 변수의 주성분을 사용합니다. PCR은 일종의 정규화 절차이자 일종의 수축 추정기이기도 합니다. 일반적으로 모든 주성분의 하위 집합만 회귀에 사용되기 때문입니다. 종종 분산이 더 높은 주성분(설명 변수의 샘플 분산-공분산 행렬의 더 높은 고유값에 해당하는 고유 벡터를 기반으로 함)이 회귀 변수로 선택됩니다. 그러나 분산이 낮은 주성분도 결과를 예측하는 데 중요할 수 있으며 때로는 훨씬 더 중요할 수도 있습니다. PCR의 주요 용도 중 하나는 하나 이상의 설명 변수가 있을 때 발생하는 다중 공선성 문제를 극복하는 것입니다. 거의 동일선상에 있습니다. PCR은 회귀 단계에서 분산이 적은 일부 주요 구성 요소를 제외하여 이러한 상황을 잘 처리할 수 있습니다. 또한 PCR은 일반적으로 모든 주성분의 하위 집합만 회귀하여 기본 모델을 특성화하는 매개 변수의 유효 수를 크게 줄임으로써 차원을 줄일 수 있습니다. 이는 고차원 공변량이 있는 설정에서 특히 유용합니다. 또한 회귀에 사용할 주성분을 적절하게 선택하면 PCR은 가정된 모델을 기반으로 결과를 효율적으로 예측할 수 있습니다.</li>
+    </ul>
+  </li>
+  <li>probabilistic PCA (PPCA)
+    <ul>
+      <li>PPCA: probabilistic model of PCA for the observed data
+        <ul>
+          <li>the principal axes: maximum likelihood parameter estimates</li>
+          <li>generative view: sampling x conditioned on the latent value z</li>
+        </ul>
+      </li>
+      <li>Advantages
+        <ul>
+          <li>EM is available</li>
+          <li>can deal with missing value</li>
+          <li>can be used in other probabilistic models</li>
+        </ul>
+      </li>
+      <li><a href="https://eehoeskrap.tistory.com/231">https://eehoeskrap.tistory.com/231</a></li>
+    </ul>
+  </li>
+  <li>Difference between PCA and PPCA
+    <ul>
+      <li>PCA (Principal Component Analysis) and PPCA (Probabilistic Principal Component Analysis) are both techniques used for dimensionality reduction, but they have some differences in their underlying assumptions and methodologies.
+        <ol>
+          <li><strong>Nature:</strong>
+            <ul>
+              <li><strong>PCA:</strong> PCA is a deterministic method that aims to find orthogonal linear transformations of the data such that the variance of the data is maximized along the transformed axes.</li>
+              <li><strong>PPCA:</strong> PPCA, on the other hand, is a probabilistic method that assumes a probabilistic generative model for the data. It introduces a probabilistic noise model and estimates the parameters of this model.</li>
+            </ul>
+          </li>
+          <li><strong>Probabilistic Model:</strong>
+            <ul>
+              <li><strong>PCA:</strong> PCA does not explicitly model the probability distribution of the data. It focuses on finding the principal components that capture the maximum variance in the data.</li>
+              <li><strong>PPCA:</strong> PPCA explicitly models the probability distribution of the data. It assumes that the observed data is generated from a lower-dimensional subspace with Gaussian noise.</li>
+            </ul>
+          </li>
+          <li><strong>Handling Missing Data:</strong>
+            <ul>
+              <li><strong>PCA:</strong> PCA does not handle missing data well. If data is missing for some observations, PCA might not provide accurate results.</li>
+              <li><strong>PPCA:</strong> PPCA is designed to handle missing data more gracefully. It can incorporate a probabilistic treatment of missing data, making it more robust in scenarios where not all data is available.</li>
+            </ul>
+          </li>
+          <li><strong>Optimization:</strong>
+            <ul>
+              <li><strong>PCA:</strong> PCA is typically solved through the eigenvalue decomposition of the covariance matrix or by using singular value decomposition (SVD).</li>
+              <li><strong>PPCA:</strong> PPCA is often solved using the expectation-maximization (EM) algorithm, which is an iterative optimization algorithm for finding maximum likelihood estimates of parameters in probabilistic models.</li>
+            </ul>
+          </li>
+          <li><strong>Noise Model:</strong>
+            <ul>
+              <li><strong>PCA:</strong> PCA assumes that the variability in the data is entirely due to the principal components, and any residual variability is treated as noise without a specific probabilistic model.</li>
+              <li><strong>PPCA:</strong> PPCA explicitly models the noise in the data as Gaussian, which allows for a probabilistic treatment of uncertainty in the estimated lower-dimensional representation.</li>
+            </ul>
+          </li>
+        </ol>
+
+        <p>In summary, while both PCA and PPCA are techniques for dimensionality reduction, PPCA extends PCA by introducing a probabilistic model and is more suitable for scenarios where a probabilistic treatment of the data and handling missing values are important considerations.</p>
+      </li>
+    </ul>
+  </li>
+  <li>FA (Factor Analysis)
+    <ul>
+      <li>FA describes observations in terms of latent variable, factors</li>
+    </ul>
+  </li>
+  <li>PCA extension
+    <ul>
+      <li>LDA: Linear discriminant analysis
+        <ul>
+          <li>to supervised learning</li>
+        </ul>
+      </li>
+      <li>ICA: Independent component analysis
+        <ul>
+          <li>to independent factors</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>LDA
+    <ul>
+      <li>the dimensions of largest variance are good, but not always the best</li>
+      <li>known Fisher discriminant analysis</li>
+      <li>maximize the ratio of the variance between classes to the one within the classes on the projected space</li>
+      <li>it is a generalized eigenvalue problem (Rayleigh quotient)
+        <ul>
+          <li>for 2 class cases, no need even to solve eigendecomposition</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p><img src="../../../assets/ML/DimRed/Untitled 3.png" /></p>
+
+    <ul>
+      <li>
+        <p>Multi-class case</p>
+
+        <p><img src="../../../assets/ML/DimRed/Untitled 4.png" /></p>
+      </li>
+    </ul>
+  </li>
+  <li>PCA and LDA</li>
+  <li>Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) are both dimensionality reduction techniques, but they have different objectives and are used in different contexts. Here are the key differences between PCA and LDA:
+    <ol>
+      <li><strong>Supervision:</strong>
+        <ol>
+          <li><strong>Objective:</strong>
+            <ul>
+              <li><strong>PCA:</strong> PCA aims to maximize the variance in the data. It identifies the directions (principal components) along which the data varies the most.</li>
+              <li><strong>LDA:</strong> LDA, on the other hand, aims to maximize the separation between classes. It identifies the directions that maximize the distance between the means of different classes while minimizing the spread (variance) within each class.
+      - <strong>PCA:</strong> PCA is an unsupervised technique, meaning it does not take into account any class labels or information about the classes.
+      - <strong>LDA:</strong> LDA is a supervised technique. It requires class labels for each data point to learn the linear combinations of features that best separate the classes.</li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+      <li><strong>Application:</strong>
+        <ul>
+          <li><strong>PCA:</strong> PCA is often used for reducing the dimensionality of data when the goal is to capture the most important patterns or variability in the entire dataset, without specific regard to class labels.</li>
+          <li><strong>LDA:</strong> LDA is commonly employed in classification problems where the goal is to distinguish between different classes. It is used to find the linear combinations of features that are most informative for classification.</li>
+        </ul>
+      </li>
+      <li><strong>Number of Components:</strong>
+        <ul>
+          <li><strong>PCA:</strong> In PCA, the number of principal components is determined by the number of features in the original data. It doesn’t consider class information.</li>
+          <li><strong>LDA:</strong> In LDA, the number of discriminant components is at most (c-1), where (c) is the number of classes. The maximum number of discriminant components is limited by the number of classes.</li>
+        </ul>
+      </li>
+      <li><strong>Variance vs. Discrimination:</strong>
+        <ul>
+          <li><strong>PCA:</strong> PCA focuses on maximizing the total variance in the dataset. It is not concerned with class discrimination.</li>
+          <li><strong>LDA:</strong> LDA focuses on maximizing the ratio of between-class variance to within-class variance. It explicitly considers class information to find directions that maximize class separability.</li>
+        </ul>
+      </li>
+      <li><strong>Assumptions:</strong>
+        <ul>
+          <li><strong>PCA:</strong> PCA assumes that the directions of maximum variance are the most important and informative directions in the data.</li>
+          <li><strong>LDA:</strong> LDA assumes that the data can be well-separated into classes, and it seeks the linear combinations of features that best discriminate between these classes.</li>
+        </ul>
+      </li>
+    </ol>
+
+    <p>In summary, PCA is primarily a dimensionality reduction technique that captures overall variance, while LDA is a supervised dimensionality reduction technique specifically designed for improving class separability in classification problems. The choice between PCA and LDA depends on the specific goals and nature of the data at hand.</p>
+  </li>
+  <li>cocktail party problem</li>
+  <li>independent component analysis
+    <ul>
+      <li>Independent Component Analysis (ICA) is a computational technique used for separating a multivariate signal into additive, independent components. The goal of ICA is to find a linear transformation of the data such that the resulting components are statistically as independent as possible. It is commonly applied in signal processing, neuroscience, and image analysis to identify and extract hidden factors contributing to observed data.</li>
+      <li>a statistical problem</li>
+      <li>to decompose given multivariate data into a linear sum of statistically independent components</li>
+    </ul>
+
+    <p><img src="../../../assets/ML/DimRed/Untitle 5.png" /></p>
+
+    <ol>
+      <li><strong>Maximum Likelihood Estimation (MLE):</strong>
+        <ul>
+          <li>In the context of ICA, the observed data is assumed to be a linear combination of independent sources corrupted by noise. The demixing matrix is then estimated by maximizing the likelihood of the observed data given the model assumptions.</li>
+          <li>The likelihood function involves the joint probability density function of the independent components. The demixing matrix that maximizes this likelihood is the one that effectively separates the sources.</li>
+          <li>The optimization problem is often solved using algorithms like the FastICA algorithm, which seeks to find the demixing matrix that maximizes non-Gaussianity of the estimated sources.</li>
+        </ul>
+      </li>
+      <li><strong>Super/Sub-Gaussianity:</strong>
+        <ul>
+          <li>ICA relies on the assumption that the sources are statistically independent and have non-Gaussian distributions. Super-Gaussian sources have heavier tails than a Gaussian distribution, while sub-Gaussian sources have lighter tails.</li>
+          <li>The non-Gaussianity assumption is crucial because Gaussian sources are not unique in ICA; any rotation or scaling of Gaussian sources can be considered a solution. Non-Gaussianity provides a measure of the independence of the estimated sources.</li>
+          <li>The algorithms used in ICA often exploit measures of non-Gaussianity, such as kurtosis, to guide the separation process. Sources that are more non-Gaussian are considered more likely to be independent.</li>
+        </ul>
+      </li>
+    </ol>
+  </li>
+  <li>nonnegative matrix factorization (NMF)
+    <ul>
+      <li>constraint: W and H can not have negative value</li>
+      <li>all basis vectors in NMF have localized features
+        <ul>
+          <li>so both the basis and encodings are sparse</li>
+          <li>the variability of X is generated by combining these different parts
+            <ul>
+              <li>the basis vectors are like Lego blocks without subtraction</li>
+              <li>and define a convex cone</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Non-negative Matrix Factorization (NMF) is a linear algebraic technique used for decomposing a non-negative matrix into two lower-rank non-negative matrices. It is particularly useful for analyzing non-negative data, such as images, documents, or audio signals. NMF has applications in diverse fields, including image processing, topic modeling, and source separation, where it helps extract meaningful and interpretable patterns from the data.</li>
+    </ul>
+  </li>
+  <li>representation: local vs. distributed
+    <ul>
+      <li>support vector machines (SVMs) vs. artificial neural networks (ANNs)</li>
+    </ul>
+
+    <p><img src="../../../assets/ML/DimRed/Untitled 6.png" /></p>
+  </li>
+  <li>representation: compact vs. sparse
+    <ul>
+      <li>coding strategy</li>
+      <li>sparseness
+        <ul>
+          <li>equal response probability over the cells, low response probability for input</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="../../../assets/ML/DimRed/Untitled 7.png" /></p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Dimension Reduction by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 7. Clustering</title><link href="http://localhost:4000/recent/Clustering/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 7. Clustering" /><published>2024-01-03T00:00:00+09:00</published><updated>2024-01-03T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clustering</id><content type="html" xml:base="http://localhost:4000/recent/Clustering/"><![CDATA[<h1 id="clustering">Clustering</h1>
 
 <ul>
   <li>unsupervised learning
@@ -545,7 +847,193 @@
 
     <p><img src="../../../assets/ML/InfoTheo/Untitled 3.png" /></p>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
+
+<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
+
+<ul>
+  <li>Introduction to AI
+    <ul>
+      <li>Weak and Strong AI
+        <ul>
+          <li>strong AI: understanding Chinese</li>
+          <li>weak AI: simulating the ability to understand Chinese</li>
+        </ul>
+      </li>
+      <li>Applied AI and General AI</li>
+      <li>Computationalism and Connectionism
+        <ul>
+          <li>Computationalism
+            <ul>
+              <li>thoughts are computation on symbols
+                <ul>
+                  <li>Symbolic, interpretable</li>
+                  <li>e.g) Turing Machine</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Connectionism
+            <ul>
+              <li>Information is represented in neurons and networks
+                <ul>
+                  <li>Low-level, black-box</li>
+                  <li>Neural Networks</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Turing Test</li>
+      <li>Implementation level and algorithmic level
+        <ul>
+          <li>Implmentation level: how the system is physically realized
+            <ul>
+              <li>AI and Human Intelligence are different</li>
+            </ul>
+          </li>
+          <li>Algorithmic level: how the system does, what representation or process it uses
+            <ul>
+              <li>3 level for intelligent system
+                <ul>
+                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
+                </ul>
+              </li>
+              <li>Can achieve some intelligence on approximation</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Superintelligence
+        <ul>
+          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
+        </ul>
+      </li>
+      <li>Deep Neural Networks
+        <ul>
+          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
+        </ul>
+      </li>
+      <li>Practical AI risks
+        <ul>
+          <li>affected by viruses</li>
+          <li>misused by people with bad intentions</li>
+          <li>biased AI</li>
+          <li>taking over roles</li>
+          <li>unable to reject AI’s decision</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Introduction to ML
+    <ul>
+      <li>What is learning
+        <ul>
+          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
+          <li>simple model (e.g., linear regression)</li>
+          <li>for supervised learning
+            <ul>
+              <li>Learning</li>
+              <li>Recognition</li>
+            </ul>
+          </li>
+          <li>Complex models</li>
+        </ul>
+      </li>
+      <li>Machine learning
+        <ul>
+          <li>Takes data and output  → Makes program</li>
+          <li>source of knowledge is data</li>
+        </ul>
+      </li>
+      <li>Workflow of machine learning
+        <ul>
+          <li>acquisition - data is gathered/collected from various sources</li>
+          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
+          <li>analysis - data is evaluated to run and customize reports</li>
+          <li>modeling - data is patternized and generalized as models</li>
+          <li>visualization</li>
+          <li>deployment and maintenance</li>
+        </ul>
+      </li>
+      <li>Components of ML
+        <ul>
+          <li>data: features, label, format</li>
+          <li>models: SVM, NN, K-means</li>
+          <li>objectives: cross-entropy, RMSE, likelihood</li>
+          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
+        </ul>
+      </li>
+      <li>Data
+        <ul>
+          <li>structured/unstructured</li>
+        </ul>
+      </li>
+      <li>Categories
+        <ul>
+          <li>unsupervised learning
+            <ul>
+              <li>e.g., clustering, dimension reduction</li>
+            </ul>
+          </li>
+          <li>supervised learning
+            <ul>
+              <li>e.g., speech/face recognition</li>
+            </ul>
+          </li>
+          <li>semi-supervised learning
+            <ul>
+              <li>e.g., cancer detection</li>
+            </ul>
+          </li>
+          <li>reinforcement learning
+            <ul>
+              <li>e.g., AlphaGo, self-driving car</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Discriminative model and Generative model
+        <ul>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Discriminative models: p(t</td>
+                  <td>x)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>only for supervising</li>
+            </ul>
+          </li>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Generative model: p(t, x) or p(x</td>
+                  <td>t)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>applicable to unlabeled data</li>
+              <li>focusing on modeling each class’ distribution</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Pattern Recognition
+        <ul>
+          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
+  -</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
 
 <ul>
   <li>Probability
@@ -747,193 +1235,7 @@
       <li>basic distributions: categorical and multinomial</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
-
-<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
-
-<ul>
-  <li>Introduction to AI
-    <ul>
-      <li>Weak and Strong AI
-        <ul>
-          <li>strong AI: understanding Chinese</li>
-          <li>weak AI: simulating the ability to understand Chinese</li>
-        </ul>
-      </li>
-      <li>Applied AI and General AI</li>
-      <li>Computationalism and Connectionism
-        <ul>
-          <li>Computationalism
-            <ul>
-              <li>thoughts are computation on symbols
-                <ul>
-                  <li>Symbolic, interpretable</li>
-                  <li>e.g) Turing Machine</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Connectionism
-            <ul>
-              <li>Information is represented in neurons and networks
-                <ul>
-                  <li>Low-level, black-box</li>
-                  <li>Neural Networks</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Turing Test</li>
-      <li>Implementation level and algorithmic level
-        <ul>
-          <li>Implmentation level: how the system is physically realized
-            <ul>
-              <li>AI and Human Intelligence are different</li>
-            </ul>
-          </li>
-          <li>Algorithmic level: how the system does, what representation or process it uses
-            <ul>
-              <li>3 level for intelligent system
-                <ul>
-                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
-                </ul>
-              </li>
-              <li>Can achieve some intelligence on approximation</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Superintelligence
-        <ul>
-          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
-        </ul>
-      </li>
-      <li>Deep Neural Networks
-        <ul>
-          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
-        </ul>
-      </li>
-      <li>Practical AI risks
-        <ul>
-          <li>affected by viruses</li>
-          <li>misused by people with bad intentions</li>
-          <li>biased AI</li>
-          <li>taking over roles</li>
-          <li>unable to reject AI’s decision</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Introduction to ML
-    <ul>
-      <li>What is learning
-        <ul>
-          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
-          <li>simple model (e.g., linear regression)</li>
-          <li>for supervised learning
-            <ul>
-              <li>Learning</li>
-              <li>Recognition</li>
-            </ul>
-          </li>
-          <li>Complex models</li>
-        </ul>
-      </li>
-      <li>Machine learning
-        <ul>
-          <li>Takes data and output  → Makes program</li>
-          <li>source of knowledge is data</li>
-        </ul>
-      </li>
-      <li>Workflow of machine learning
-        <ul>
-          <li>acquisition - data is gathered/collected from various sources</li>
-          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
-          <li>analysis - data is evaluated to run and customize reports</li>
-          <li>modeling - data is patternized and generalized as models</li>
-          <li>visualization</li>
-          <li>deployment and maintenance</li>
-        </ul>
-      </li>
-      <li>Components of ML
-        <ul>
-          <li>data: features, label, format</li>
-          <li>models: SVM, NN, K-means</li>
-          <li>objectives: cross-entropy, RMSE, likelihood</li>
-          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
-        </ul>
-      </li>
-      <li>Data
-        <ul>
-          <li>structured/unstructured</li>
-        </ul>
-      </li>
-      <li>Categories
-        <ul>
-          <li>unsupervised learning
-            <ul>
-              <li>e.g., clustering, dimension reduction</li>
-            </ul>
-          </li>
-          <li>supervised learning
-            <ul>
-              <li>e.g., speech/face recognition</li>
-            </ul>
-          </li>
-          <li>semi-supervised learning
-            <ul>
-              <li>e.g., cancer detection</li>
-            </ul>
-          </li>
-          <li>reinforcement learning
-            <ul>
-              <li>e.g., AlphaGo, self-driving car</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Discriminative model and Generative model
-        <ul>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Discriminative models: p(t</td>
-                  <td>x)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>only for supervising</li>
-            </ul>
-          </li>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Generative model: p(t, x) or p(x</td>
-                  <td>t)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>applicable to unlabeled data</li>
-              <li>focusing on modeling each class’ distribution</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Pattern Recognition
-        <ul>
-          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
-  -</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. by Prof. Henry Choi]]></summary></entry><entry><title type="html">And Then There Were None 그리고 아무도 없었다</title><link href="http://localhost:4000/recent/And_Then_There_Were_None/" rel="alternate" type="text/html" title="And Then There Were None 그리고 아무도 없었다" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/And_Then_There_Were_None</id><content type="html" xml:base="http://localhost:4000/recent/And_Then_There_Were_None/"><![CDATA[<p>추리 소설을 추천받았다. 아가사 크리스티의 <strong><em>그리고 아무도 없었다</em></strong> 였다. <br /> 
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. by Prof. Henry Choi]]></summary></entry><entry><title type="html">And Then There Were None 그리고 아무도 없었다</title><link href="http://localhost:4000/recent/And_Then_There_Were_None/" rel="alternate" type="text/html" title="And Then There Were None 그리고 아무도 없었다" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/And_Then_There_Were_None</id><content type="html" xml:base="http://localhost:4000/recent/And_Then_There_Were_None/"><![CDATA[<p>추리 소설을 추천받았다. 아가사 크리스티의 <strong><em>그리고 아무도 없었다</em></strong> 였다. <br /> 
 소설을 그렇게 좋아하는 편은 아니라 이름만 들어본 작가였지만 오랜만에 소설을 읽어보자는 마음으로 책을 집어들었다.</p>
 
 <p>와우. 정말 재밌게 읽었다. 그 자리에 앉아서 내리 2시간을 읽었다. <del>물론 소설이 짧기도 하다</del> <br />
@@ -1382,139 +1684,4 @@
 
 <p><a href="https://github.com/WM-SEMERU/hephaestus">GitHub - WM-SEMERU/hephaestus</a></p>
 
-<h3 id="questions">Questions:</h3>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[Generalizing the change is helpful...?]]></summary></entry><entry><title type="html">Clean Code Chapter 2</title><link href="http://localhost:4000/recent/Clean_Code_Ch2/" rel="alternate" type="text/html" title="Clean Code Chapter 2" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch2</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch2/"><![CDATA[<p><strong>Using the appropriate Name will pay off in the short term and continue to pay in the long run</strong></p>
-
-<ul>
-  <li>Using Intention-Revealing Names
-    <ul>
-      <li>Choosing good names takes time but saves more than it takes</li>
-      <li>Choosing a name that specifies what is being measured and the unit of that measurement</li>
-      <li>Things need to think
-        <ul>
-          <li>What kind are in</li>
-          <li>What is returned</li>
-          <li>zeroth subscript and value</li>
-        </ul>
-      </li>
-      <li>Do not use <strong>O <em>and l</em></strong></li>
-    </ul>
-  </li>
-  <li>Avoid Disinformation
-    <ul>
-      <li>Avoiding words whose entrenched meanings vary from intention</li>
-      <li>Spelling similar concepts similarly
-        <ul>
-          <li>No inconsistent spelling</li>
-        </ul>
-      </li>
-      <li><del>Using different font??</del></li>
-    </ul>
-  </li>
-  <li>Meaningful Distinction
-    <ul>
-      <li><strong>a</strong> for a local variable, <strong>the</strong> for all function arguments</li>
-      <li>Less redundant words</li>
-      <li>Distinguishing names in a way that readers know what the difference offer</li>
-    </ul>
-  </li>
-  <li>Using Pronounceable Names
-    <ul>
-      <li>Essential for communication</li>
-    </ul>
-  </li>
-  <li>Using Searchable Names
-    <ul>
-      <li>Single-letter names can ONLY be used as local variables inside short methods</li>
-      <li>The length of a name should correspond to the size of its scope</li>
-    </ul>
-  </li>
-  <li>Avoiding Encoding</li>
-  <li>Hungarian Notation
-    <ul>
-      <li>The compiler knows the type nowadays</li>
-    </ul>
-  </li>
-  <li>Member Prefixes
-    <ul>
-      <li>unseen clutter and a marker of older code…</li>
-    </ul>
-  </li>
-  <li>Interface and Implementation
-    <ul>
-      <li>Why would I let user knows I’m handling them with an interface?</li>
-      <li>Marking at the implementation</li>
-    </ul>
-  </li>
-  <li>Avoid Mental Mapping
-    <ul>
-      <li>In most contexts, a single letter for a loop is a poor choice (such as i, j, k)</li>
-      <li><em>Clarity is king</em></li>
-    </ul>
-  </li>
-  <li>Class Names
-    <ul>
-      <li>should have noun or noun phrase names</li>
-    </ul>
-  </li>
-  <li>Method Names
-    <ul>
-      <li>should have verb or verb phase names</li>
-      <li>When constructors are overloaded, use the static method with names that describe the argument
-        <ul>
-          <li>Make corresponding constructors private</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Don’t be cute
-    <ul>
-      <li>No too “user-specific name”</li>
-    </ul>
-  </li>
-  <li>Pick One Word per Concept
-    <ul>
-      <li>Pick one word for one abstract concept</li>
-      <li>The name will express two different types of object</li>
-    </ul>
-  </li>
-  <li>Don’t Pun
-    <ul>
-      <li>Avoiding using the same word for two purposes</li>
-      <li>Even if it has a similar concept, it must have a different name if it is semantically different</li>
-      <li><strong><em>It is the author’s responsibility</em></strong></li>
-    </ul>
-  </li>
-  <li>Use Solution Domain Names
-    <ul>
-      <li>People who read your code will be programmers
-        <ul>
-          <li>CS terms, algorithm names, pattern names, math terms, etc.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Use Problem Domain Names
-    <ul>
-      <li>Separating solution and problem domain concept</li>
-    </ul>
-  </li>
-  <li>Add Meaningful Context
-    <ul>
-      <li>Place the name in context for the reader
-        <ul>
-          <li>enclosing classes, functions, or namespaces</li>
-        </ul>
-      </li>
-      <li>break it into smaller functions if it is necessary</li>
-    </ul>
-  </li>
-  <li>But Don’t Add Gratuitous Context
-    <ul>
-      <li>Shorter names are generally better
-        <ul>
-          <li>As long as they are clear</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[How to name clearly]]></summary></entry></feed>
+<h3 id="questions">Questions:</h3>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[Generalizing the change is helpful...?]]></summary></entry></feed>
