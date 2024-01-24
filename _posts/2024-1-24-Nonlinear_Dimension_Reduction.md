@@ -1,3 +1,13 @@
+---
+title:  "2023-HGU-ML Lecture 9. Nonlinear Dimension Reduction"
+excerpt: "Nonlinear Dimension Reduction by Prof. Henry Choi"
+
+categories:
+  - ML
+tags:
+  - [ML]
+---
+
 # Nonlinear Dimension Reduction
 
 - Kernel machine and manifold learning
@@ -5,30 +15,30 @@
     - kernel PCA
     - kernel Fisher discriminant (kernel FD)
     
-    ![Untitled](Nonlinear%20Dimension%20Reduction%20fb021271c6994407a0e19a3f2d704658/Untitled.png)
+    <img src = "../../../assets/ML/NonLinDimRed/Untitled.png">
     
 - Kernel trick
     - many ML algorithms are based on relations between samples’ inner product
     - The kernel trick is a method in machine learning and support vector machines (SVMs) that allows the application of a linear algorithm in a high-dimensional feature space without explicitly calculating the transformed feature vectors. It is achieved by using a kernel function to compute the dot product between the transformed data points, which implicitly represents the higher-dimensional space. This technique is especially powerful when dealing with non-linearly separable data, enabling linear algorithms to effectively capture complex relationships by operating in a higher-dimensional space.
 
-![Untitled](Nonlinear%20Dimension%20Reduction%20fb021271c6994407a0e19a3f2d704658/Untitled%201.png)
+<img src = "../../../assets/ML/NonLinDimRed/Untitled 1.png">
 
 - Mercer’s theorem
     - any PSD kernel can be expressed as an inner product in some space
     - if a kernel function k(x, y) is positive semi definite(PSD), a PSD matrix can be eigen-decomposed
     
-    ![Untitled](Nonlinear%20Dimension%20Reduction%20fb021271c6994407a0e19a3f2d704658/Untitled%202.png)
+    <img src = "../../../assets/ML/NonLinDimRed/Untitled 2.png">
     
 - kernel functions
     
-    ![Untitled](Nonlinear%20Dimension%20Reduction%20fb021271c6994407a0e19a3f2d704658/Untitled%203.png)
+    <img src = "../../../assets/ML/NonLinDimRed/Untitled 3.png">
     
 - kernel PCA
     - Kernel Principal Component Analysis (Kernel PCA) is an extension of Principal Component Analysis (PCA) that utilizes the kernel trick to implicitly map input data into a higher-dimensional feature space. In traditional PCA, linear transformations are applied to find the principal components, but in Kernel PCA, a kernel function is used to capture non-linear relationships in the data. This allows Kernel PCA to uncover complex patterns and structures in high-dimensional spaces, making it particularly useful for tasks such as dimensionality reduction and non-linear feature extraction in machine learning.
 - kernel FD
     - Kernel Fisher Discriminant (KFD) is an extension of Fisher's Linear Discriminant Analysis (LDA) that incorporates the kernel trick to handle non-linearly separable data. Fisher's LDA is a method used for finding linear combinations of features that best separate different classes in a dataset. KFD, through the use of a kernel function, allows this linear separation to be performed in a higher-dimensional space, enabling the discrimination of classes in a non-linear manner. Similar to Kernel PCA, Kernel Fisher Discriminant is particularly useful when dealing with complex, non-linear relationships in the data.
     
-    ![Untitled](Nonlinear%20Dimension%20Reduction%20fb021271c6994407a0e19a3f2d704658/Untitled%204.png)
+    <img src = "../../../assets/ML/NonLinDimRed/Untitled 4.png">
     
 - manifold learning
     - usually, nonlinear dimension reduction
@@ -36,7 +46,7 @@
     - linear methods (PCA, LDA, ICA, NMF, etc)
     - nonlinear methods (kernel PCA, kernel FD, Isomap, LLE, etc)
     
-    ![Untitled](Nonlinear%20Dimension%20Reduction%20fb021271c6994407a0e19a3f2d704658/Untitled%205.png)
+    <img src = "../../../assets/ML/NonLinDimRed/Untitled 5.png">
     
 - Isomap
     - manifold learning algorithms are to find the embedded manifold from data samples in a high dimensional space
@@ -44,14 +54,14 @@
         - uses geodesic distances on a neighborhood graph in the framework of MDS
         - [https://en.wikipedia.org/wiki/Multidimensional_scaling](https://en.wikipedia.org/wiki/Multidimensional_scaling)
         
-        ![Untitled](Nonlinear%20Dimension%20Reduction%20fb021271c6994407a0e19a3f2d704658/Untitled%206.png)
+        <img src = "../../../assets/ML/NonLinDimRed/Untitled 6.png">
         
         - Deciding neighbors
             - KNN
             - epsilon neighborhood
 - kernel Isomap
     
-    ![Untitled](Nonlinear%20Dimension%20Reduction%20fb021271c6994407a0e19a3f2d704658/Untitled%207.png)
+    <img src = "../../../assets/ML/NonLinDimRed/Untitled 7.png">
     
     - positive semi-definiteness
 - locally linear embedding
@@ -83,7 +93,7 @@
     - t-SNE (t-Distributed Stochastic Neighbor Embedding) is an extension of the original SNE (Stochastic Neighbor Embedding) algorithm designed to address some of its limitations. Both SNE and t-SNE are nonlinear dimensionality reduction techniques that focus on preserving pairwise similarities between data points.
 - t-SNE and SNE
     
-    ### Comparison:
+    Comparison:
     
     - **Crowding Problem:**
         - One of the main challenges with SNE is the crowding problem, where points in high-dimensional space are too close together and end up being crowded in the lower-dimensional space. t-SNE addresses this issue by using a heavy-tailed distribution, leading to better separation of clusters.

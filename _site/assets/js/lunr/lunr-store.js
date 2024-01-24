@@ -268,4 +268,10 @@ var store = [{
         "tags": ["ML"],
         "url": "/recent/Dimension_Reduction/",
         "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 9. Nonlinear Dimension Reduction",
+        "excerpt":"Nonlinear Dimension Reduction Kernel machine and manifold learning extension of linear models with the kernel trick kernel PCA kernel Fisher discriminant (kernel FD) Kernel trick many ML algorithms are based on relations between samples’ inner product The kernel trick is a method in machine learning and support vector machines (SVMs)...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Nonlinear_Dimension_Reduction/",
+        "teaser": null
       }]
