@@ -1,4 +1,183 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-21T15:32:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 8. Dimension Reduction</title><link href="http://localhost:4000/recent/Dimension_Reduction/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 8. Dimension Reduction" /><published>2024-01-21T00:00:00+09:00</published><updated>2024-01-21T00:00:00+09:00</updated><id>http://localhost:4000/recent/Dimension_Reduction</id><content type="html" xml:base="http://localhost:4000/recent/Dimension_Reduction/"><![CDATA[<h1 id="dimension-reduction">Dimension Reduction</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-24T22:52:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 9. Nonlinear Dimension Reduction</title><link href="http://localhost:4000/recent/Nonlinear_Dimension_Reduction/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 9. Nonlinear Dimension Reduction" /><published>2024-01-24T00:00:00+09:00</published><updated>2024-01-24T00:00:00+09:00</updated><id>http://localhost:4000/recent/Nonlinear_Dimension_Reduction</id><content type="html" xml:base="http://localhost:4000/recent/Nonlinear_Dimension_Reduction/"><![CDATA[<h1 id="nonlinear-dimension-reduction">Nonlinear Dimension Reduction</h1>
+
+<ul>
+  <li>Kernel machine and manifold learning</li>
+  <li>extension of linear models with the kernel trick
+    <ul>
+      <li>kernel PCA</li>
+      <li>kernel Fisher discriminant (kernel FD)</li>
+    </ul>
+
+    <p><img src="../../../assets/ML/NonLinDimRed/Untitled.png" /></p>
+  </li>
+  <li>Kernel trick
+    <ul>
+      <li>many ML algorithms are based on relations between samples’ inner product</li>
+      <li>The kernel trick is a method in machine learning and support vector machines (SVMs) that allows the application of a linear algorithm in a high-dimensional feature space without explicitly calculating the transformed feature vectors. It is achieved by using a kernel function to compute the dot product between the transformed data points, which implicitly represents the higher-dimensional space. This technique is especially powerful when dealing with non-linearly separable data, enabling linear algorithms to effectively capture complex relationships by operating in a higher-dimensional space.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="../../../assets/ML/NonLinDimRed/Untitled 1.png" /></p>
+
+<ul>
+  <li>Mercer’s theorem
+    <ul>
+      <li>any PSD kernel can be expressed as an inner product in some space</li>
+      <li>if a kernel function k(x, y) is positive semi definite(PSD), a PSD matrix can be eigen-decomposed</li>
+    </ul>
+
+    <p><img src="../../../assets/ML/NonLinDimRed/Untitled 2.png" /></p>
+  </li>
+  <li>
+    <p>kernel functions</p>
+
+    <p><img src="../../../assets/ML/NonLinDimRed/Untitled 3.png" /></p>
+  </li>
+  <li>kernel PCA
+    <ul>
+      <li>Kernel Principal Component Analysis (Kernel PCA) is an extension of Principal Component Analysis (PCA) that utilizes the kernel trick to implicitly map input data into a higher-dimensional feature space. In traditional PCA, linear transformations are applied to find the principal components, but in Kernel PCA, a kernel function is used to capture non-linear relationships in the data. This allows Kernel PCA to uncover complex patterns and structures in high-dimensional spaces, making it particularly useful for tasks such as dimensionality reduction and non-linear feature extraction in machine learning.</li>
+    </ul>
+  </li>
+  <li>kernel FD
+    <ul>
+      <li>Kernel Fisher Discriminant (KFD) is an extension of Fisher’s Linear Discriminant Analysis (LDA) that incorporates the kernel trick to handle non-linearly separable data. Fisher’s LDA is a method used for finding linear combinations of features that best separate different classes in a dataset. KFD, through the use of a kernel function, allows this linear separation to be performed in a higher-dimensional space, enabling the discrimination of classes in a non-linear manner. Similar to Kernel PCA, Kernel Fisher Discriminant is particularly useful when dealing with complex, non-linear relationships in the data.</li>
+    </ul>
+
+    <p><img src="../../../assets/ML/NonLinDimRed/Untitled 4.png" /></p>
+  </li>
+  <li>manifold learning
+    <ul>
+      <li>usually, nonlinear dimension reduction</li>
+      <li>find the invariant property of a data set</li>
+      <li>linear methods (PCA, LDA, ICA, NMF, etc)</li>
+      <li>nonlinear methods (kernel PCA, kernel FD, Isomap, LLE, etc)</li>
+    </ul>
+
+    <p><img src="../../../assets/ML/NonLinDimRed/Untitled 5.png" /></p>
+  </li>
+  <li>Isomap
+    <ul>
+      <li>manifold learning algorithms are to find the embedded manifold from data samples in a high dimensional space</li>
+      <li>Isomap algorithm
+        <ul>
+          <li>uses geodesic distances on a neighborhood graph in the framework of MDS</li>
+          <li><a href="https://en.wikipedia.org/wiki/Multidimensional_scaling">https://en.wikipedia.org/wiki/Multidimensional_scaling</a></li>
+        </ul>
+
+        <p><img src="../../../assets/ML/NonLinDimRed/Untitled 6.png" /></p>
+
+        <ul>
+          <li>Deciding neighbors
+            <ul>
+              <li>KNN</li>
+              <li>epsilon neighborhood</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>kernel Isomap</p>
+
+    <p><img src="../../../assets/ML/NonLinDimRed/Untitled 7.png" /></p>
+
+    <ul>
+      <li>positive semi-definiteness</li>
+    </ul>
+  </li>
+  <li>locally linear embedding
+    <ul>
+      <li>keep the neighbors</li>
+      <li>Locally Linear Embedding (LLE) is a nonlinear dimensionality reduction algorithm that seeks to preserve the local linear relationships within a dataset. The key idea behind LLE is to represent each data point as a weighted linear combination of its neighbors, thereby capturing the local geometry of the data. Here’s a brief explanation of the LLE algorithm:
+        <ol>
+          <li><strong>Local Reconstruction:</strong>
+            <ul>
+              <li>For each data point in the high-dimensional space, LLE identifies its k nearest neighbors. These neighbors are the points that are most similar to the given point based on pairwise distances.</li>
+            </ul>
+          </li>
+          <li><strong>Local Weight Optimization:</strong>
+            <ul>
+              <li>LLE then seeks to reconstruct the data point by finding the weights (coefficients) that best represent it as a linear combination of its neighbors. The reconstruction is performed in a way that minimizes the difference between the original point and its reconstruction.</li>
+            </ul>
+          </li>
+          <li><strong>Global Embedding:</strong>
+            <ul>
+              <li>After obtaining the local linear representations for all data points, LLE seeks a lower-dimensional representation (embedding) for the entire dataset while preserving these local relationships. This is achieved by minimizing a cost function that enforces consistency in the local linear relationships across the entire dataset.</li>
+            </ul>
+          </li>
+          <li><strong>Final Embedding:</strong>
+            <ul>
+              <li>The resulting lower-dimensional representation is obtained by stacking the embeddings of all data points. This representation captures the intrinsic geometry of the data, emphasizing the local linear relationships.</li>
+            </ul>
+          </li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Isomap and LLE
+    <ul>
+      <li>Isomap takes a global strategy, while LLE local</li>
+      <li>LLE analyzes local linear coefficients and reconstruction error
+        <ul>
+          <li>no need to solve large dynamic programming problems</li>
+          <li>related to spectral clustering</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>stochastic neighbor embedding
+    <ul>
+      <li>probabilistically decides if points are neighbors to a given point</li>
+      <li>convert similarity into the probability</li>
+      <li>neighbors are selected probabilistically</li>
+      <li>use distances in a low dimensional space which define probabilities</li>
+      <li>compute KL divergence between the two probabilities</li>
+      <li>minimize KL with respect to yi</li>
+      <li>Stochastic Neighbor Embedding (SNE) is a dimensionality reduction technique that aims to capture the local and global structures of high-dimensional data in a lower-dimensional space. SNE is particularly effective at preserving pairwise similarities between data points, making it well-suited for visualization and exploration of complex datasets.</li>
+    </ul>
+  </li>
+  <li>t-SNE
+    <ul>
+      <li>a symmetrized version of SNE with t-Student instead of Gaussian</li>
+      <li>t-SNE (t-Distributed Stochastic Neighbor Embedding) is an extension of the original SNE (Stochastic Neighbor Embedding) algorithm designed to address some of its limitations. Both SNE and t-SNE are nonlinear dimensionality reduction techniques that focus on preserving pairwise similarities between data points.</li>
+    </ul>
+  </li>
+  <li>
+    <p>t-SNE and SNE</p>
+
+    <p>Comparison:</p>
+
+    <ul>
+      <li><strong>Crowding Problem:</strong>
+        <ul>
+          <li>One of the main challenges with SNE is the crowding problem, where points in high-dimensional space are too close together and end up being crowded in the lower-dimensional space. t-SNE addresses this issue by using a heavy-tailed distribution, leading to better separation of clusters.</li>
+        </ul>
+      </li>
+      <li><strong>Preservation of Global Structure:</strong>
+        <ul>
+          <li>While SNE can struggle with preserving global structures, t-SNE is designed to perform better in this aspect. It is often more effective in revealing the overall structure of the data.</li>
+        </ul>
+      </li>
+      <li><strong>Computational Complexity:</strong>
+        <ul>
+          <li>t-SNE can be computationally more expensive than SNE, especially for large datasets, due to the need to compute and optimize the heavy-tailed distribution</li>
+        </ul>
+      </li>
+      <li><a href="https://woosikyang.github.io/first-post.html">https://woosikyang.github.io/first-post.html</a></li>
+    </ul>
+  </li>
+  <li>neural network approaches
+    <ul>
+      <li>weakness in manifold learning (kernel machine): it does not scale well with sample size. (scales quadratically with the size) the training data is referenced for test data</li>
+      <li>let’s get back to parametric models, especially neural networks</li>
+      <li>self organizing map</li>
+      <li>restricted Boltzmann machine</li>
+      <li>autoencoder (trained with backprop)</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Nonlinear Dimension Reduction by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 8. Dimension Reduction</title><link href="http://localhost:4000/recent/Dimension_Reduction/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 8. Dimension Reduction" /><published>2024-01-21T00:00:00+09:00</published><updated>2024-01-21T00:00:00+09:00</updated><id>http://localhost:4000/recent/Dimension_Reduction</id><content type="html" xml:base="http://localhost:4000/recent/Dimension_Reduction/"><![CDATA[<h1 id="dimension-reduction">Dimension Reduction</h1>
 
 <ul>
   <li>Many features
@@ -847,193 +1026,7 @@
 
     <p><img src="../../../assets/ML/InfoTheo/Untitled 3.png" /></p>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
-
-<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
-
-<ul>
-  <li>Introduction to AI
-    <ul>
-      <li>Weak and Strong AI
-        <ul>
-          <li>strong AI: understanding Chinese</li>
-          <li>weak AI: simulating the ability to understand Chinese</li>
-        </ul>
-      </li>
-      <li>Applied AI and General AI</li>
-      <li>Computationalism and Connectionism
-        <ul>
-          <li>Computationalism
-            <ul>
-              <li>thoughts are computation on symbols
-                <ul>
-                  <li>Symbolic, interpretable</li>
-                  <li>e.g) Turing Machine</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Connectionism
-            <ul>
-              <li>Information is represented in neurons and networks
-                <ul>
-                  <li>Low-level, black-box</li>
-                  <li>Neural Networks</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Turing Test</li>
-      <li>Implementation level and algorithmic level
-        <ul>
-          <li>Implmentation level: how the system is physically realized
-            <ul>
-              <li>AI and Human Intelligence are different</li>
-            </ul>
-          </li>
-          <li>Algorithmic level: how the system does, what representation or process it uses
-            <ul>
-              <li>3 level for intelligent system
-                <ul>
-                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
-                </ul>
-              </li>
-              <li>Can achieve some intelligence on approximation</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Superintelligence
-        <ul>
-          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
-        </ul>
-      </li>
-      <li>Deep Neural Networks
-        <ul>
-          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
-        </ul>
-      </li>
-      <li>Practical AI risks
-        <ul>
-          <li>affected by viruses</li>
-          <li>misused by people with bad intentions</li>
-          <li>biased AI</li>
-          <li>taking over roles</li>
-          <li>unable to reject AI’s decision</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Introduction to ML
-    <ul>
-      <li>What is learning
-        <ul>
-          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
-          <li>simple model (e.g., linear regression)</li>
-          <li>for supervised learning
-            <ul>
-              <li>Learning</li>
-              <li>Recognition</li>
-            </ul>
-          </li>
-          <li>Complex models</li>
-        </ul>
-      </li>
-      <li>Machine learning
-        <ul>
-          <li>Takes data and output  → Makes program</li>
-          <li>source of knowledge is data</li>
-        </ul>
-      </li>
-      <li>Workflow of machine learning
-        <ul>
-          <li>acquisition - data is gathered/collected from various sources</li>
-          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
-          <li>analysis - data is evaluated to run and customize reports</li>
-          <li>modeling - data is patternized and generalized as models</li>
-          <li>visualization</li>
-          <li>deployment and maintenance</li>
-        </ul>
-      </li>
-      <li>Components of ML
-        <ul>
-          <li>data: features, label, format</li>
-          <li>models: SVM, NN, K-means</li>
-          <li>objectives: cross-entropy, RMSE, likelihood</li>
-          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
-        </ul>
-      </li>
-      <li>Data
-        <ul>
-          <li>structured/unstructured</li>
-        </ul>
-      </li>
-      <li>Categories
-        <ul>
-          <li>unsupervised learning
-            <ul>
-              <li>e.g., clustering, dimension reduction</li>
-            </ul>
-          </li>
-          <li>supervised learning
-            <ul>
-              <li>e.g., speech/face recognition</li>
-            </ul>
-          </li>
-          <li>semi-supervised learning
-            <ul>
-              <li>e.g., cancer detection</li>
-            </ul>
-          </li>
-          <li>reinforcement learning
-            <ul>
-              <li>e.g., AlphaGo, self-driving car</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Discriminative model and Generative model
-        <ul>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Discriminative models: p(t</td>
-                  <td>x)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>only for supervising</li>
-            </ul>
-          </li>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Generative model: p(t, x) or p(x</td>
-                  <td>t)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>applicable to unlabeled data</li>
-              <li>focusing on modeling each class’ distribution</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Pattern Recognition
-        <ul>
-          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
-  -</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
 
 <ul>
   <li>Probability
@@ -1235,16 +1228,193 @@
       <li>basic distributions: categorical and multinomial</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. by Prof. Henry Choi]]></summary></entry><entry><title type="html">And Then There Were None 그리고 아무도 없었다</title><link href="http://localhost:4000/recent/And_Then_There_Were_None/" rel="alternate" type="text/html" title="And Then There Were None 그리고 아무도 없었다" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/And_Then_There_Were_None</id><content type="html" xml:base="http://localhost:4000/recent/And_Then_There_Were_None/"><![CDATA[<p>추리 소설을 추천받았다. 아가사 크리스티의 <strong><em>그리고 아무도 없었다</em></strong> 였다. <br /> 
-소설을 그렇게 좋아하는 편은 아니라 이름만 들어본 작가였지만 오랜만에 소설을 읽어보자는 마음으로 책을 집어들었다.</p>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
 
-<p>와우. 정말 재밌게 읽었다. 그 자리에 앉아서 내리 2시간을 읽었다. <del>물론 소설이 짧기도 하다</del> <br />
-알고 보니 내 주위는 다들 읽었더라… 이 재밌는 걸 자신들만 알고 있었다니…</p>
+<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
 
-<p>물론 선입견빼면 시체인 내가 추리 소설을 추천 받았더라도 내가 내키지 않았으면 안 읽었을 것 같긴 하다.
-뭐든지 한 번 정도 시도해보고 판단하는게 맞는 것 같다는 생각이 근래에 많이 든다.</p>
-
-<p>그 정도로 책이 재밌었다. 다음엔 <strong><em>오리엔트 특급 살인</em></strong> 읽어볼까 싶다!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[재밌다...]]></summary></entry><entry><title type="html">Clean Code Chapter 3</title><link href="http://localhost:4000/recent/Clean_Code_Ch3/" rel="alternate" type="text/html" title="Clean Code Chapter 3" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch3</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch3/"><![CDATA[<p>How can we make a function communicate its intent?</p>
+<ul>
+  <li>Introduction to AI
+    <ul>
+      <li>Weak and Strong AI
+        <ul>
+          <li>strong AI: understanding Chinese</li>
+          <li>weak AI: simulating the ability to understand Chinese</li>
+        </ul>
+      </li>
+      <li>Applied AI and General AI</li>
+      <li>Computationalism and Connectionism
+        <ul>
+          <li>Computationalism
+            <ul>
+              <li>thoughts are computation on symbols
+                <ul>
+                  <li>Symbolic, interpretable</li>
+                  <li>e.g) Turing Machine</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Connectionism
+            <ul>
+              <li>Information is represented in neurons and networks
+                <ul>
+                  <li>Low-level, black-box</li>
+                  <li>Neural Networks</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Turing Test</li>
+      <li>Implementation level and algorithmic level
+        <ul>
+          <li>Implmentation level: how the system is physically realized
+            <ul>
+              <li>AI and Human Intelligence are different</li>
+            </ul>
+          </li>
+          <li>Algorithmic level: how the system does, what representation or process it uses
+            <ul>
+              <li>3 level for intelligent system
+                <ul>
+                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
+                </ul>
+              </li>
+              <li>Can achieve some intelligence on approximation</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Superintelligence
+        <ul>
+          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
+        </ul>
+      </li>
+      <li>Deep Neural Networks
+        <ul>
+          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
+        </ul>
+      </li>
+      <li>Practical AI risks
+        <ul>
+          <li>affected by viruses</li>
+          <li>misused by people with bad intentions</li>
+          <li>biased AI</li>
+          <li>taking over roles</li>
+          <li>unable to reject AI’s decision</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Introduction to ML
+    <ul>
+      <li>What is learning
+        <ul>
+          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
+          <li>simple model (e.g., linear regression)</li>
+          <li>for supervised learning
+            <ul>
+              <li>Learning</li>
+              <li>Recognition</li>
+            </ul>
+          </li>
+          <li>Complex models</li>
+        </ul>
+      </li>
+      <li>Machine learning
+        <ul>
+          <li>Takes data and output  → Makes program</li>
+          <li>source of knowledge is data</li>
+        </ul>
+      </li>
+      <li>Workflow of machine learning
+        <ul>
+          <li>acquisition - data is gathered/collected from various sources</li>
+          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
+          <li>analysis - data is evaluated to run and customize reports</li>
+          <li>modeling - data is patternized and generalized as models</li>
+          <li>visualization</li>
+          <li>deployment and maintenance</li>
+        </ul>
+      </li>
+      <li>Components of ML
+        <ul>
+          <li>data: features, label, format</li>
+          <li>models: SVM, NN, K-means</li>
+          <li>objectives: cross-entropy, RMSE, likelihood</li>
+          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
+        </ul>
+      </li>
+      <li>Data
+        <ul>
+          <li>structured/unstructured</li>
+        </ul>
+      </li>
+      <li>Categories
+        <ul>
+          <li>unsupervised learning
+            <ul>
+              <li>e.g., clustering, dimension reduction</li>
+            </ul>
+          </li>
+          <li>supervised learning
+            <ul>
+              <li>e.g., speech/face recognition</li>
+            </ul>
+          </li>
+          <li>semi-supervised learning
+            <ul>
+              <li>e.g., cancer detection</li>
+            </ul>
+          </li>
+          <li>reinforcement learning
+            <ul>
+              <li>e.g., AlphaGo, self-driving car</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Discriminative model and Generative model
+        <ul>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Discriminative models: p(t</td>
+                  <td>x)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>only for supervising</li>
+            </ul>
+          </li>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Generative model: p(t, x) or p(x</td>
+                  <td>t)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>applicable to unlabeled data</li>
+              <li>focusing on modeling each class’ distribution</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Pattern Recognition
+        <ul>
+          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
+  -</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. by Prof. Henry Choi]]></summary></entry><entry><title type="html">Clean Code Chapter 3</title><link href="http://localhost:4000/recent/Clean_Code_Ch3/" rel="alternate" type="text/html" title="Clean Code Chapter 3" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch3</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch3/"><![CDATA[<p>How can we make a function communicate its intent?</p>
 
 <p>What attributes can we give that will allow a reader to intuit the kind of program they live inside?</p>
 
@@ -1466,222 +1636,13 @@
       <li>need to fit cleanly together in precise language</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[Using Function Properly]]></summary></entry><entry><title type="html">Can We Automatically Fix Bugs by Learning Edit Operations?</title><link href="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/" rel="alternate" type="text/html" title="Can We Automatically Fix Bugs by Learning Edit Operations?" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Can%20We%20Automatically%20Fix%20Bugs%20by%20Learning%20Edit%20Operations</id><content type="html" xml:base="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/"><![CDATA[<h2 id="can-we-automatically-fix-bugs-by-learning-edit-operations">“Can We Automatically Fix Bugs by Learning Edit Operations?”</h2>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[Using Function Properly]]></summary></entry><entry><title type="html">And Then There Were None 그리고 아무도 없었다</title><link href="http://localhost:4000/recent/And_Then_There_Were_None/" rel="alternate" type="text/html" title="And Then There Were None 그리고 아무도 없었다" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/And_Then_There_Were_None</id><content type="html" xml:base="http://localhost:4000/recent/And_Then_There_Were_None/"><![CDATA[<p>추리 소설을 추천받았다. 아가사 크리스티의 <strong><em>그리고 아무도 없었다</em></strong> 였다. <br /> 
+소설을 그렇게 좋아하는 편은 아니라 이름만 들어본 작가였지만 오랜만에 소설을 읽어보자는 마음으로 책을 집어들었다.</p>
 
-<h2 id="paper"><a href="https://www.cs.wm.edu/~denys/pubs/SANER-RENE-BugFixing.pdf">Paper</a></h2>
+<p>와우. 정말 재밌게 읽었다. 그 자리에 앉아서 내리 2시간을 읽었다. <del>물론 소설이 짧기도 하다</del> <br />
+알고 보니 내 주위는 다들 읽었더라… 이 재밌는 걸 자신들만 알고 있었다니…</p>
 
-<h3 id="summary">Summary:</h3>
+<p>물론 선입견빼면 시체인 내가 추리 소설을 추천 받았더라도 내가 내키지 않았으면 안 읽었을 것 같긴 하다.
+뭐든지 한 번 정도 시도해보고 판단하는게 맞는 것 같다는 생각이 근래에 많이 든다.</p>
 
-<ul>
-  <li>
-    <p>Implementing Hephaestus, a novel method to improve the accuracy of APR through learning to apply edit operations. Leverages neural machine translation and attempts to produce the edit operations needed.</p>
-
-    <p>Learning edit operations does not offer an advantage over the standard approach of translating directly from buggy code to fixed code. However, interestingly, Hephaestus exhibited lower translation accuracy than the baseline, able to perform successful bug repair.</p>
-  </li>
-</ul>
-
-<h3 id="points">Points:</h3>
-
-<ol>
-  <li>Introduction
-    <ol>
-      <li>The naive approach attempts some sort of comparison algorithm that identifies the type of bug and replaces it with a prescribed bugs
-        <ol>
-          <li>Time Consuming</li>
-        </ol>
-      </li>
-      <li>Learning approach using neural machine translation</li>
-      <li>Directly applying the NMT approach to source code is inefficient
-        <ol>
-          <li>Many bugs fixes involve changes to a few sentences
-            <ol>
-              <li>Results in suboptimal performances</li>
-            </ol>
-          </li>
-          <li>Attempt to mitigate the inefficiency by predicting the specific statement on AST</li>
-          <li>Attempting on individual tokens would be more optimal</li>
-        </ol>
-      </li>
-      <li>Hephaestus leverages NMT to predict edit operation, derived from Levenshtein Distance Algorithm
-        <ol>
-          <li>Working at the token level of source code</li>
-          <li>Work on any language without language-specific parsers</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Related Works
-    <ol>
-      <li>Tufano et al.
-        <ol>
-          <li>Repairing code through identification of bug-fix patterns in large software repositories</li>
-          <li>Usage of Deep Learning Approach regarding “meaningful” change</li>
-        </ol>
-      </li>
-      <li>Chen et al.
-        <ol>
-          <li>Focus on single-line bug</li>
-        </ol>
-      </li>
-      <li>Jiang et al.
-        <ol>
-          <li>The correct fix for a given bug does not exist within the model’s output space and the model’s lack of awareness of syntax</li>
-          <li>Pre-train model on the programming language in question</li>
-        </ol>
-      </li>
-      <li>Yuan and Banzhaf
-        <ol>
-          <li>grouping fine-granularity edits into larger statement-level edits</li>
-        </ol>
-      </li>
-      <li>Mousavi et al.
-        <ol>
-          <li>Overfitting and Disparity between predicted bug and fix operation and would mimic a human software developer</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Background
-    <ol>
-      <li>Fixing buggy code to fixed code using traditional language translation matter of the buggy to fix a variety of language</li>
-      <li>Traditional translation replaces the majority of the input sequence which is natural language.
-        <ol>
-          <li>Fix in code might be minimal</li>
-          <li>repair translation should not have the same meaning as the input</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-  <li>Approach
-    <ol>
-      <li>Levenshtein Edit Operation
-        <ol>
-          <li>the bug is input sequence, the NMT model attempts to produce edit operations</li>
-          <li>Basic Operations
-            <ol>
-              <li>Insertion</li>
-              <li>Deletion</li>
-              <li>Replacement</li>
-            </ol>
-          </li>
-        </ol>
-      </li>
-      <li>Compound Edit Operations
-        <ol>
-          <li>Group of one or more edit operations; sequence of operations</li>
-          <li>Condensing: A grouping process to compound operations</li>
-        </ol>
-      </li>
-      <li>Dataset Construction
-        <ol>
-          <li>Control Dataset: baseline, not involved with edit operations</li>
-          <li>Machine String: In order to include edit operations, transforming edit operations
-            <ol>
-              <li>Typed</li>
-              <li>General</li>
-            </ol>
-          </li>
-          <li>We make the distinction between typed and general form to determine if the form of machine string used during training affects the Hephaestus models’ abilities to learn edit operations.</li>
-        </ol>
-      </li>
-      <li>Experimental Dataset
-        <ol>
-          <li>translate the bug into its corresponding fix, showing Levenshetein edit distance between the bug and fix</li>
-          <li>all basic compound operation sequences which transform the bug into the fix, strict is the minimal sequence of the strict compound operation sequences, and loose is the minimal sequence of the loose compound operation sequences</li>
-        </ol>
-      </li>
-      <li>Model Construction
-        <ol>
-          <li>LSTM+General</li>
-          <li>GRU+General</li>
-          <li>LSTM+Typed</li>
-        </ol>
-      </li>
-      <li>The CEC ensures that error signals fed forward into the LSTM layers and backpropagated to the LSTM layers are resistant to the effects of the vanishing gradient problem.</li>
-    </ol>
-  </li>
-  <li>Experimental Design
-    <ol>
-      <li>Perfect Prediction Accuracy</li>
-      <li>Failed Prediction Rate</li>
-      <li>Edit Distance Decrease</li>
-      <li>Training Accuracy</li>
-    </ol>
-  </li>
-  <li>Result
-    <ol>
-      <li>PPA: The control model (baseline model) outperformed the rest, with no much difference</li>
-      <li>FPR: The control model maintained 100% capability, the string can always be interpreted as a sequence of Java method tokens</li>
-      <li>EDD: every model generates “bug fixes” that were further away from the fixed code than the original buggy code</li>
-      <li>Training Accuracy: Every model exceeded 90%</li>
-    </ol>
-  </li>
-  <li>RQ
-    <ol>
-      <li>RQ1: Is learning edit operations an effective approach to automatic bug repair?
-        <ol>
-          <li>learning edit operations does not offer advantages over the baseline approach. The experimental Hephaestus models must determine a sequence of edit operations, decode them, and apply them to the inputted buggy method in order to predict fixed source code</li>
-        </ol>
-      </li>
-      <li>RQ2: What effect does each condensing strategy and machine string form have on the accuracy of bug repair?
-        <ol>
-          <li>The differences in PPA between the basic, strict, and loose models are negligible, but there are differences according to the training accuracy and average EDD values. Despite having significantly lower final training accuracy, the strict and loose models had slightly more positive EDD values than the basic models (a difference of about 0.96). Thus, it is evidenced that condensing edit operations into strict and loose forms are beneficial over not condensing them at all</li>
-        </ol>
-      </li>
-      <li>RQ3: What is the effect of using an LSTM-based architecture versus a GRU-based architecture on the accuracy of bug repair?
-        <ol>
-          <li>the variation is not meaningful enough to consider as a key difference between the models.</li>
-        </ol>
-      </li>
-      <li>Future Work
-        <ol>
-          <li>It was determined that most failed predictions were caused by generated indices outside the valid range for a given string. What changes can be made to this model to restrict the prediction range?</li>
-          <li>does changing the abstraction method of the training dataset affect this metric?</li>
-          <li>Other NLP Tools</li>
-          <li>Extra software layers in addition to the methods presented in our study.</li>
-        </ol>
-      </li>
-      <li>Conclusion
-        <ol>
-          <li>The introduction of these specific methods for training NMTbased systems to learn bug fixes did not provide a benefit to the task</li>
-          <li>Edit operations are capable of performing automated bug repair to some degree</li>
-        </ol>
-      </li>
-    </ol>
-  </li>
-</ol>
-
-<h3 id="knowledge">Knowledge:</h3>
-
-<ul>
-  <li>NMT (Neural Machine Translation): <a href="https://en.wikipedia.org/wiki/Neural_machine_translation">Neural machine translation - Wikipedia</a>uses an artificial neural work to predict the likelihood of a sequence of words</li>
-  <li>Levenshtein Distance Algorithm: A string metric for measuring the difference between two sequences. This is likely due to the experimental models experiencing higher entropy than the control when making predictions.</li>
-</ul>
-
-<h3 id="terminology">Terminology:</h3>
-
-<ul>
-  <li>Condensing Strategies:
-    <ul>
-      <li>Basic Condensing: basic compound operation corresponds with exactly one change</li>
-      <li>Loose Condensing: iff the application of its constituent operation is equivalent to the application of some singular op
-        <ul>
-          <li>Modify a contiguous section of tokens</li>
-        </ul>
-      </li>
-      <li>Strict Condensing: iff it is loosely compatible and every operation is of the same flavor</li>
-    </ul>
-  </li>
-  <li>Machine Strings:
-    <ul>
-      <li>Typed: f is one of ins, del, or rep, depending on if the flavor of the represented edit operation is insertion, deletion, or replacement, respectively</li>
-      <li>General: general form machine strings do not explicitly store the flavor of their represented edit operations</li>
-    </ul>
-  </li>
-</ul>
-
-<h3 id="tool">Tool:</h3>
-
-<p><a href="https://github.com/WM-SEMERU/hephaestus">GitHub - WM-SEMERU/hephaestus</a></p>
-
-<h3 id="questions">Questions:</h3>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[Generalizing the change is helpful...?]]></summary></entry></feed>
+<p>그 정도로 책이 재밌었다. 다음엔 <strong><em>오리엔트 특급 살인</em></strong> 읽어볼까 싶다!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[재밌다...]]></summary></entry></feed>
