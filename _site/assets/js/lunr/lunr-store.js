@@ -227,6 +227,12 @@ var store = [{
         "url": "/recent/Clean_Code_Ch3/",
         "teaser": null
       },{
+        "title": "6학기를 앞두고 5학기를 돌아보며!",
+        "excerpt":"정말로 바빴던 방학을 마무리하고 한동에서의 6학기를 앞두고 있다! 저번 학기 Recap을 써야지 써야지 하면서 결국 마무리하지 못했다. 6학기 시작 글과 Recap을 잘 버무려서 써보면 좋겠다는 생각에 글을 쓰고 있다! 5학기는 정말 힘든 학기였다. 내가 한동에 다니면서 이렇게까지 힘들고 지친적이 있었나 라는 질문을 스스로 던졌던 학기였다. 다들 5학기가 힘들다 힘들다 하지만...","categories": ["Blog"],
+        "tags": ["Blog"],
+        "url": "/recent/6th-Semester/",
+        "teaser": null
+      },{
         "title": "2023-HGU-ML Lecture 1. Introduction to AI and ML",
         "excerpt":"Introduction to AI &amp; ML Came from Henry Choi’s Lecture and ChatGPT’s explanation Introduction to AI Weak and Strong AI strong AI: understanding Chinese weak AI: simulating the ability to understand Chinese Applied AI and General AI Computationalism and Connectionism Computationalism thoughts are computation on symbols Symbolic, interpretable e.g) Turing...","categories": ["ML"],
         "tags": ["ML"],
@@ -273,5 +279,11 @@ var store = [{
         "excerpt":"Nonlinear Dimension Reduction Kernel machine and manifold learning extension of linear models with the kernel trick kernel PCA kernel Fisher discriminant (kernel FD) Kernel trick many ML algorithms are based on relations between samples’ inner product The kernel trick is a method in machine learning and support vector machines (SVMs)...","categories": ["ML"],
         "tags": ["ML"],
         "url": "/recent/Nonlinear_Dimension_Reduction/",
+        "teaser": null
+      },{
+        "title": "6학기를 돌아보며",
+        "excerpt":"6학기가 마친지 벌써 4주 정도가 지났다. 시간이 참 빠르다… 6학기를 앞두고 5학기를 돌아보며!라는 글을 쓴지 얼마 되지 않은 것 같은데, 6학기가 벌써 끝나다니… 6학기는 저번 학기에 비해 수월했다. TA 업무는 적응이 되어 속도가 붙었고, 수강생들을 대하는 것도 편해졌다. 저번 학기에 OS, DB, 알고 3과목이 있었다면 이번학기는 ML, PLT, 컴퓨터 네트워크...","categories": ["Blog"],
+        "tags": ["Blog"],
+        "url": "/recent/6th_Semester_Recap/",
         "teaser": null
       }]
