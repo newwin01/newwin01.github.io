@@ -13,7 +13,7 @@ Hello! <br><br>
 I am a student of Handong Global University.
 
 I am studying at the Department of Computer Science and Electrical Engineering. 
-My main interest is Software Engineering, especailly in Automatic Program Repair and Software Testing!
+My main interest is Software Engineering, especailly in Automatic Program Repair.
 Also I am interested in Operating Systems and System Programming.
 <br> 
 <br> 
@@ -32,6 +32,8 @@ Joyful coding!
 <h3 id="timeline">Timeline</h3>
 Korean Version:
 <ul>
+  <li>2024.01           - <a href="http://sigsoft.or.kr/kcse2024/">KCSE 2024</a> 참가</li>
+  <li>2023.09 - 2023.12 - 자바 프로그래밍 언어(English Section) TA</li>
   <li>2023.03 - 2023.06 - 자바 프로그래밍 언어(English Section) TA</li>
   <li>2023.02           - <a href="http://sigsoft.or.kr/kcse2023/">KCSE 2023</a> 참가</li>
   <li>2022.12           - <a href="https://isel.handong.edu/">ISEL</a> incubating member</li>
@@ -39,6 +41,9 @@ Korean Version:
 </ul>
 English Version:
 <ul>
+
+  <li>2023.02           - Attended <a href="http://sigsoft.or.kr/kcse2024/">KCSE 2024</a> </li>
+  <li>2023.09 - 2023.12 - Java Programming Teaching Assistants</li>
   <li>2023.03 - 2023.06 - Java Programming Teaching Assistants</li>
   <li>2023.02           - Attended <a href="http://sigsoft.or.kr/kcse2023/">KCSE 2023</a> </li>
   <li>2022.12           - <a href="https://isel.handong.edu/">ISEL</a> incubating member</li>
@@ -48,6 +53,9 @@ English Version:
 <h3 id="timeline">Awards</h3>
 
 <ul>
+
+  <li> 2023.09 - 2023.12 - Academic Excellence Scholarship </li>
+  <li> 2023.09 - 2023.12 - Excellent TA Award </li>
   <li> 2023.03 - 2024.12 - National Science & Technology Scholarship </li>
   <li> 2023.03 - 2023.06 - Excellent TA Award </li>
   <li> 2022.09 - 2022.12 - Academic Excellence Scholarship </li>
