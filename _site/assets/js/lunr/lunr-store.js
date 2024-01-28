@@ -227,9 +227,51 @@ var store = [{
         "url": "/recent/Clean_Code_Ch3/",
         "teaser": null
       },{
-        "title": "6학기를 앞두고 5학기를 돌아보며!",
-        "excerpt":"정말로 바빴던 방학을 마무리하고 한동에서의 6학기를 앞두고 있다! 저번 학기 Recap을 써야지 써야지 하면서 결국 마무리하지 못했다. 6학기 시작 글과 Recap을 잘 버무려서 써보면 좋겠다는 생각에 글을 쓰고 있다! 5학기는 정말 힘든 학기였다. 내가 한동에 다니면서 이렇게까지 힘들고 지친적이 있었나 라는 질문을 스스로 던졌던 학기였다. 다들 5학기가 힘들다 힘들다 하지만...","categories": ["Blog"],
-        "tags": ["Blog"],
-        "url": "/recent/6th-Semester/",
+        "title": "2023-HGU-ML Lecture 1. Introduction to AI and ML",
+        "excerpt":"Introduction to AI &amp; ML Came from Henry Choi’s Lecture and ChatGPT’s explanation Introduction to AI Weak and Strong AI strong AI: understanding Chinese weak AI: simulating the ability to understand Chinese Applied AI and General AI Computationalism and Connectionism Computationalism thoughts are computation on symbols Symbolic, interpretable e.g) Turing...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Introduction_to_AI_ML/",
+        "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 3. Probability and Statistics for ML",
+        "excerpt":"Probability and Statistics for ML Probability IID: independent identically distributed Simpson’s Paradox Probability is a number assigned to an event indicating “how likely” the event will occur when randomly selected uncertainty can make the model simpler. A simple/uncertain model rather than a complex/certain one, even when modeling the true/deterministic rule...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Probability_and_Statistics/",
+        "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 4. Information Theory",
+        "excerpt":"Information Theory entropy unpredictability of information content it captures the value of surprises information from independent events is “additive” information is non-negative as distributions become more uniform, entropy goes up. Gaussian distribution has the maximum entropy among possible distributions on an infinite range with a finite mean and variance Kullback...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Information_Theory/",
+        "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 5. Density Estimation",
+        "excerpt":"Density Estimation for a data sample, we need a vector to represent for a dataset with many samples, we need the distribution of the samples to understand the dataset Density Estimation estimation of an underlying probability density function p(x) based on observed data we can understand the population (unsupervised) the...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Density_Estimation/",
+        "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 6. Decision Theory",
+        "excerpt":"Decision Theory given an input vector, our goal is to predict a corresponding target value The target value is described probabilistically DT provides optimal decisions in situations involving uncertainty, combined with probability theory Three approaches to making a decision generative model, \\(p(t, x)\\) or \\(p(x \\mid t)\\) can be used...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Decision_Theory/",
+        "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 7. Clustering",
+        "excerpt":"Clustering unsupervised learning density estimation clustering dimension reduction factor analysis representation learning Clustering helps us understand the data samples clustering → grouping samples in a way that samples in the same group are more similar to each other than to those in another group Approaches for clustering Connectivity based Centroids...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Clustering/",
+        "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 8. Dimension Reduction",
+        "excerpt":"Dimension Reduction Many features provide more information and potentially high accuracy make it harder to train a classifier (the curse of dimensionality) increase the possibility of overfitting principal component analysis (PCA) is one of the most popular and simple DR methods. is a linear projection finds an orthogonal basis set...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Dimension_Reduction/",
+        "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 9. Nonlinear Dimension Reduction",
+        "excerpt":"Nonlinear Dimension Reduction Kernel machine and manifold learning extension of linear models with the kernel trick kernel PCA kernel Fisher discriminant (kernel FD) Kernel trick many ML algorithms are based on relations between samples’ inner product The kernel trick is a method in machine learning and support vector machines (SVMs)...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Nonlinear_Dimension_Reduction/",
         "teaser": null
       }]
