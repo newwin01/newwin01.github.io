@@ -14,7 +14,7 @@ I am a student of Handong Global University.
 
 I am studying at the Department of Computer Science and Electrical Engineering. 
 My main interest is Software Engineering, especailly in Automatic Program Repair.
-Also I am interested in Operating Systems and System Programming.
+Also I am interested in Operating Systems and System Programming. ~~Programming Language Maybe(?)~~
 <br> 
 <br> 
 Joyful coding!
@@ -33,7 +33,7 @@ Joyful coding!
 Korean Version:
 <ul>
   <li>2024.01           - <a href="http://sigsoft.or.kr/kcse2024/">KCSE 2024</a> 참가</li>
-  <li>2023.09 - 2023.12 - 자바 프로그래밍 언어(English Section) TA</li>
+  <li>2023.09 - 2023.12 - 자바 프로그래밍 언어(Korean Section) TA</li>
   <li>2023.03 - 2023.06 - 자바 프로그래밍 언어(English Section) TA</li>
   <li>2023.02           - <a href="http://sigsoft.or.kr/kcse2023/">KCSE 2023</a> 참가</li>
   <li>2022.12           - <a href="https://isel.handong.edu/">ISEL</a> incubating member</li>
