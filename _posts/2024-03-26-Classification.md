@@ -1,4 +1,12 @@
-# Classification
+---
+title:  "2023-HGU-ML Lecture 9. Classification"
+excerpt: "Classification by Prof. Henry Choi"
+
+categories:
+  - ML
+tags:
+  - [ML]
+---
 
 - classification and regression
     - both supervised learning
@@ -10,7 +18,7 @@
         - usually evaluated by root mean square error
         - interested in the relationship between input and output
     
-    ![Untitled](Classification%204f9a82a53dbe4d18860c622f86268820/Untitled.png)
+     <img src = "../../../assets/ML/Classification/Untitled.png">
     
 - data for supervised learning
     - a row: instance
@@ -48,7 +56,7 @@
     - lazy learning
         - all deferred until the prediction time
     
-    ![Untitled](Classification%204f9a82a53dbe4d18860c622f86268820/Untitled%201.png)
+    <img src = "../../../assets/ML/Classification/Untitled 2.png">
     
     - Algorithm
         - need to decide
@@ -84,7 +92,7 @@
 - naïve Bayes classifier
     - for classification, what we want is posterior
     
-    ![Untitled](Classification%204f9a82a53dbe4d18860c622f86268820/Untitled%203.png)
+    <img src = "../../../assets/ML/Classification/Untitled 3.png">
     
     - assuming that the features are class conditionally independent
     - The Naïve Bayes classifier is a probabilistic machine learning algorithm based on Bayes' theorem.
@@ -106,7 +114,7 @@
                     - until the subset at a node has all the same value
                 - top-down induction of decision trees (greedy algorithm)
             
-            ![Untitled](Classification%204f9a82a53dbe4d18860c622f86268820/Untitled%204.png)
+            <img src = "../../../assets/ML/Classification/Untitled 4.png">
             
             - Metrics
                 - classification
@@ -125,7 +133,7 @@
                     - measures decrease in node impurity weighted by the probability of the node
                     - or measures decrease in MSE for regression
                     
-                    ![Untitled](Classification%204f9a82a53dbe4d18860c622f86268820/Untitled%205.png)
+                    <img src = "../../../assets/ML/Classification/Untitled 5.png">
                     
                 - to overcome overfitting
                     - early stopping
@@ -136,9 +144,9 @@
     - algorithm
         - applies the committee method to the decision tree
         
-        ![Untitled](Classification%204f9a82a53dbe4d18860c622f86268820/Untitled%206.png)
+        <img src = "../../../assets/ML/Classification/Untitled 6.png">
         
-        ![Untitled](Classification%204f9a82a53dbe4d18860c622f86268820/Untitled%207.png)
+        <img src = "../../../assets/ML/Classification/Untitled 7.png">
         
 - For feature importance
     - permutation
@@ -149,4 +157,4 @@
     - dropping a column
         - compare a score with all features and a score with one feature dropped
             - accurate, but expensive
--
+
