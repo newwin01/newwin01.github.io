@@ -56,7 +56,7 @@ tags:
     - lazy learning
         - all deferred until the prediction time
     
-    <img src = "../../../assets/ML/Classification/Untitled 2.png">
+    <img src = "../../../assets/ML/Classification/Untitled 1.png">
     
     - Algorithm
         - need to decide
@@ -71,7 +71,7 @@ tags:
         - leads to a very simple approximation of the optimal Bayes classifier
         - lazy
         
-        ![Untitled](Classification%204f9a82a53dbe4d18860c622f86268820/Untitled%202.png)
+        <img src = "../../../assets/ML/Classification/Untitled 2.png">
         
         - The "curse of dimensionality" refers to various challenges and phenomena that arise when working with high-dimensional data. As the number of features or dimensions in a dataset increases, certain issues and complexities emerge that can affect the performance of algorithms and the interpretation of results
     - To solve the issue
@@ -92,7 +92,7 @@ tags:
 - naïve Bayes classifier
     - for classification, what we want is posterior
     
-    <img src = "../../../assets/ML/Classification/Untitled 3.png">
+    <img src = "../../../assets/ML/Classification/Untitled 2.png">
     
     - assuming that the features are class conditionally independent
     - The Naïve Bayes classifier is a probabilistic machine learning algorithm based on Bayes' theorem.
@@ -114,7 +114,7 @@ tags:
                     - until the subset at a node has all the same value
                 - top-down induction of decision trees (greedy algorithm)
             
-            <img src = "../../../assets/ML/Classification/Untitled 4.png">
+            <img src = "../../../assets/ML/Classification/Untitled 3.png">
             
             - Metrics
                 - classification
@@ -133,7 +133,7 @@ tags:
                     - measures decrease in node impurity weighted by the probability of the node
                     - or measures decrease in MSE for regression
                     
-                    <img src = "../../../assets/ML/Classification/Untitled 5.png">
+                    <img src = "../../../assets/ML/Classification/Untitled 4.png">
                     
                 - to overcome overfitting
                     - early stopping
@@ -144,9 +144,9 @@ tags:
     - algorithm
         - applies the committee method to the decision tree
         
-        <img src = "../../../assets/ML/Classification/Untitled 6.png">
+        <img src = "../../../assets/ML/Classification/Untitled 5.png">
         
-        <img src = "../../../assets/ML/Classification/Untitled 7.png">
+        <img src = "../../../assets/ML/Classification/Untitled 6.png">
         
 - For feature importance
     - permutation
