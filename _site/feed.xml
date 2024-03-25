@@ -1,4 +1,297 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-01-28T22:11:12+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">6학기를 돌아보며</title><link href="http://localhost:4000/recent/6th_Semester_Recap/" rel="alternate" type="text/html" title="6학기를 돌아보며" /><published>2024-01-28T00:00:00+09:00</published><updated>2024-01-28T00:00:00+09:00</updated><id>http://localhost:4000/recent/6th_Semester_Recap</id><content type="html" xml:base="http://localhost:4000/recent/6th_Semester_Recap/"><![CDATA[<p>6학기가 마친지 벌써 4주 정도가 지났다. 시간이 참 빠르다…</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-26T00:45:55+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 9. Classification</title><link href="http://localhost:4000/recent/Classification/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 9. Classification" /><published>2024-03-26T00:00:00+09:00</published><updated>2024-03-26T00:00:00+09:00</updated><id>http://localhost:4000/recent/Classification</id><content type="html" xml:base="http://localhost:4000/recent/Classification/"><![CDATA[<ul>
+  <li>classification and regression
+    <ul>
+      <li>both supervised learning</li>
+      <li>classification
+        <ul>
+          <li>predicting a discrete label of the input</li>
+          <li>interested in the boundary</li>
+        </ul>
+      </li>
+      <li>regression
+        <ul>
+          <li>predicting the quantity of output</li>
+          <li>usually evaluated by root mean square error</li>
+          <li>interested in the relationship between input and output</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p><img src="../../../assets/ML/Classification/Untitled.png" /></p>
+  </li>
+  <li>data for supervised learning
+    <ul>
+      <li>a row: instance</li>
+      <li>a column: one feature or attribute</li>
+      <li>Xn → n samples</li>
+      <li>Y: N outputs</li>
+    </ul>
+  </li>
+  <li>training, validation, and testing
+    <ul>
+      <li>training the model with training data (Xtr, Ytr)
+        <ul>
+          <li>learning the parameters by optimizing an objective function</li>
+        </ul>
+      </li>
+      <li>validation with validation data (X val, Y val)
+        <ul>
+          <li>to evaluate the model or to avoid overfitting</li>
+          <li>if no validation data is available, split the data into training and validation</li>
+        </ul>
+      </li>
+      <li>test
+        <ul>
+          <li>predicting the output of new data</li>
+          <li>test data and training data should be separated at all.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>cross-validation
+    <ul>
+      <li>a resampling procedure to evaluate ML models on limited data</li>
+      <li>split the data into training (including validation) and testing</li>
+      <li>evaluate the model</li>
+      <li>repeat the above steps</li>
+    </ul>
+  </li>
+  <li>model complexity and overfitting
+    <ul>
+      <li>overfitting: a model is too closely fit to a limited set of training data</li>
+      <li>to avoid
+        <ul>
+          <li>spreading out the probability mass from the training samples</li>
+          <li>discovering underlying abstractions/explanatory factors</li>
+        </ul>
+      </li>
+      <li>approaches
+        <ul>
+          <li>more data</li>
+          <li>simpler model</li>
+          <li>regularization</li>
+          <li>early stopping</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>k nearest neighbors
+    <ul>
+      <li>a simple form of making predictions</li>
+      <li>instance-based approach
+        <ul>
+          <li>to make a decision, retrieve k closest training examples in the feature space</li>
+        </ul>
+      </li>
+      <li>lazy learning
+        <ul>
+          <li>all deferred until the prediction time</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p><img src="../../../assets/ML/Classification/Untitled 1.png" /></p>
+
+    <ul>
+      <li>Algorithm
+        <ul>
+          <li>need to decide
+            <ul>
+              <li>distance metric</li>
+              <li>k</li>
+              <li>how to make a prediction</li>
+            </ul>
+          </li>
+          <li>compute the distances to the training data instances</li>
+          <li>identify k neighbors</li>
+          <li>determine the class label of the testing instance</li>
+        </ul>
+      </li>
+      <li>characteristics
+        <ul>
+          <li>simple to implement</li>
+          <li>leads to a very simple approximation of the optimal Bayes classifier</li>
+          <li>lazy</li>
+        </ul>
+
+        <p><img src="../../../assets/ML/Classification/Untitled 2.png" /></p>
+
+        <ul>
+          <li>The “curse of dimensionality” refers to various challenges and phenomena that arise when working with high-dimensional data. As the number of features or dimensions in a dataset increases, certain issues and complexities emerge that can affect the performance of algorithms and the interpretation of results</li>
+        </ul>
+      </li>
+      <li>To solve the issue
+        <ul>
+          <li>bucketing</li>
+          <li>k-d tree</li>
+          <li>metric learning</li>
+          <li>feature-weighting</li>
+          <li>distance-weighting</li>
+        </ul>
+      </li>
+      <li>Under or overfitting
+        <ul>
+          <li>K is too small
+            <ul>
+              <li>sensitive to noisy data</li>
+              <li>overfitting to training data</li>
+            </ul>
+          </li>
+          <li>K is too large
+            <ul>
+              <li>no-sensitive to data</li>
+              <li>underfitting</li>
+              <li>smoother decision regions, destroying the locality of the estimation</li>
+              <li>burden</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>naïve Bayes classifier
+    <ul>
+      <li>for classification, what we want is posterior</li>
+    </ul>
+
+    <p><img src="../../../assets/ML/Classification/Untitled 2.png" /></p>
+
+    <ul>
+      <li>assuming that the features are class conditionally independent</li>
+      <li>The Naïve Bayes classifier is a probabilistic machine learning algorithm based on Bayes’ theorem.
+        <ul>
+          <li>It assumes that features are conditionally independent given the class label, simplifying the computation of the posterior probability. Despite its simplistic assumption, Naïve Bayes is widely used for classification tasks and is particularly effective in text categorization, spam filtering, and other applications where independence assumptions hold reasonably well.</li>
+          <li><a href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier">https://en.wikipedia.org/wiki/Naive_Bayes_classifier</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>decision tree (DT)
+    <ul>
+      <li>a tree-shaped prediction mode</li>
+      <li>decision-based on a tree</li>
+      <li>a non-metric method
+        <ul>
+          <li>without a measure of distance between features</li>
+          <li>can work with nominal data</li>
+        </ul>
+      </li>
+      <li>Prediction and Training
+        <ul>
+          <li>prediction: given a decision tree, how can we make predictions for new data?
+            <ul>
+              <li>when the instance arrives at a leaf node, take the node’s decision</li>
+            </ul>
+          </li>
+          <li>training: given a dataset, how can we select a feature and make a branch?
+            <ul>
+              <li>the most common training strategy for a given dataset
+                <ul>
+                  <li>start from an empty decision tree</li>
+                  <li>on each node, split the set in the node into subsets based on a metric
+                    <ul>
+                      <li>until the subset at a node has all the same value</li>
+                    </ul>
+                  </li>
+                  <li>top-down induction of decision trees (greedy algorithm)</li>
+                </ul>
+              </li>
+            </ul>
+
+            <p><img src="../../../assets/ML/Classification/Untitled 3.png" /></p>
+
+            <ul>
+              <li>Metrics
+                <ul>
+                  <li>classification
+                    <ul>
+                      <li>Minimize Gini Impurity
+                        <ul>
+                          <li>Gini impurity: measures how often a decision would be incorrect
+  if it was randomly labeled according to the distribution of labels
+  in the subset</li>
+                        </ul>
+                      </li>
+                      <li>maximize information gain
+                        <ul>
+                          <li>Information Gain: calculates the decrease in entropy after the dataset is split on a feature</li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>regression
+                    <ul>
+                      <li>minimize variance and std</li>
+                      <li>a weighted average of MSE from two nodes</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>interpretability of decision tree
+                <ul>
+                  <li>in business, interpretability is also important as well as accuracy</li>
+                  <li>importance value in the decision tree
+                    <ul>
+                      <li>measures decrease in node impurity weighted by the probability of the node</li>
+                      <li>or measures decrease in MSE for regression</li>
+                    </ul>
+
+                    <p><img src="../../../assets/ML/Classification/Untitled 4.png" /></p>
+                  </li>
+                  <li>to overcome overfitting
+                    <ul>
+                      <li>early stopping</li>
+                      <li>readjusting</li>
+                      <li>random forest</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Random Forest
+    <ul>
+      <li>ensemble learning method by constructing a set of decision trees</li>
+      <li>algorithm
+        <ul>
+          <li>applies the committee method to the decision tree</li>
+        </ul>
+
+        <p><img src="../../../assets/ML/Classification/Untitled 5.png" /></p>
+
+        <p><img src="../../../assets/ML/Classification/Untitled 6.png" /></p>
+      </li>
+    </ul>
+  </li>
+  <li>For feature importance
+    <ul>
+      <li>permutation
+        <ul>
+          <li>train the baseline model and record the score</li>
+          <li>for all, randomize the values
+            <ul>
+              <li>calculate new scores</li>
+              <li>difference of the score → feature importance</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>dropping a column
+        <ul>
+          <li>compare a score with all features and a score with one feature dropped
+            <ul>
+              <li>accurate, but expensive</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Classification by Prof. Henry Choi]]></summary></entry><entry><title type="html">6학기를 돌아보며</title><link href="http://localhost:4000/recent/6th_Semester_Recap/" rel="alternate" type="text/html" title="6학기를 돌아보며" /><published>2024-01-28T00:00:00+09:00</published><updated>2024-01-28T00:00:00+09:00</updated><id>http://localhost:4000/recent/6th_Semester_Recap</id><content type="html" xml:base="http://localhost:4000/recent/6th_Semester_Recap/"><![CDATA[<p>6학기가 마친지 벌써 4주 정도가 지났다. 시간이 참 빠르다…</p>
 
 <p><a href="../../../recent/6th-Semester">6학기를 앞두고 5학기를 돌아보며!</a>라는 글을 쓴지 얼마 되지 않은 것 같은데, 6학기가 벌써 끝나다니…</p>
 
@@ -1074,193 +1367,7 @@
 
     <p><img src="../../../assets/ML/InfoTheo/Untitled 3.png" /></p>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
-
-<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
-
-<ul>
-  <li>Introduction to AI
-    <ul>
-      <li>Weak and Strong AI
-        <ul>
-          <li>strong AI: understanding Chinese</li>
-          <li>weak AI: simulating the ability to understand Chinese</li>
-        </ul>
-      </li>
-      <li>Applied AI and General AI</li>
-      <li>Computationalism and Connectionism
-        <ul>
-          <li>Computationalism
-            <ul>
-              <li>thoughts are computation on symbols
-                <ul>
-                  <li>Symbolic, interpretable</li>
-                  <li>e.g) Turing Machine</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Connectionism
-            <ul>
-              <li>Information is represented in neurons and networks
-                <ul>
-                  <li>Low-level, black-box</li>
-                  <li>Neural Networks</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Turing Test</li>
-      <li>Implementation level and algorithmic level
-        <ul>
-          <li>Implmentation level: how the system is physically realized
-            <ul>
-              <li>AI and Human Intelligence are different</li>
-            </ul>
-          </li>
-          <li>Algorithmic level: how the system does, what representation or process it uses
-            <ul>
-              <li>3 level for intelligent system
-                <ul>
-                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
-                </ul>
-              </li>
-              <li>Can achieve some intelligence on approximation</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Superintelligence
-        <ul>
-          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
-        </ul>
-      </li>
-      <li>Deep Neural Networks
-        <ul>
-          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
-        </ul>
-      </li>
-      <li>Practical AI risks
-        <ul>
-          <li>affected by viruses</li>
-          <li>misused by people with bad intentions</li>
-          <li>biased AI</li>
-          <li>taking over roles</li>
-          <li>unable to reject AI’s decision</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Introduction to ML
-    <ul>
-      <li>What is learning
-        <ul>
-          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
-          <li>simple model (e.g., linear regression)</li>
-          <li>for supervised learning
-            <ul>
-              <li>Learning</li>
-              <li>Recognition</li>
-            </ul>
-          </li>
-          <li>Complex models</li>
-        </ul>
-      </li>
-      <li>Machine learning
-        <ul>
-          <li>Takes data and output  → Makes program</li>
-          <li>source of knowledge is data</li>
-        </ul>
-      </li>
-      <li>Workflow of machine learning
-        <ul>
-          <li>acquisition - data is gathered/collected from various sources</li>
-          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
-          <li>analysis - data is evaluated to run and customize reports</li>
-          <li>modeling - data is patternized and generalized as models</li>
-          <li>visualization</li>
-          <li>deployment and maintenance</li>
-        </ul>
-      </li>
-      <li>Components of ML
-        <ul>
-          <li>data: features, label, format</li>
-          <li>models: SVM, NN, K-means</li>
-          <li>objectives: cross-entropy, RMSE, likelihood</li>
-          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
-        </ul>
-      </li>
-      <li>Data
-        <ul>
-          <li>structured/unstructured</li>
-        </ul>
-      </li>
-      <li>Categories
-        <ul>
-          <li>unsupervised learning
-            <ul>
-              <li>e.g., clustering, dimension reduction</li>
-            </ul>
-          </li>
-          <li>supervised learning
-            <ul>
-              <li>e.g., speech/face recognition</li>
-            </ul>
-          </li>
-          <li>semi-supervised learning
-            <ul>
-              <li>e.g., cancer detection</li>
-            </ul>
-          </li>
-          <li>reinforcement learning
-            <ul>
-              <li>e.g., AlphaGo, self-driving car</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Discriminative model and Generative model
-        <ul>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Discriminative models: p(t</td>
-                  <td>x)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>only for supervising</li>
-            </ul>
-          </li>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Generative model: p(t, x) or p(x</td>
-                  <td>t)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>applicable to unlabeled data</li>
-              <li>focusing on modeling each class’ distribution</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Pattern Recognition
-        <ul>
-          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
-  -</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
 
 <ul>
   <li>Probability
@@ -1462,27 +1569,190 @@
       <li>basic distributions: categorical and multinomial</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. by Prof. Henry Choi]]></summary></entry><entry><title type="html">6학기를 앞두고 5학기를 돌아보며!</title><link href="http://localhost:4000/recent/6th-Semester/" rel="alternate" type="text/html" title="6학기를 앞두고 5학기를 돌아보며!" /><published>2023-08-26T00:00:00+09:00</published><updated>2023-08-26T00:00:00+09:00</updated><id>http://localhost:4000/recent/6th-Semester</id><content type="html" xml:base="http://localhost:4000/recent/6th-Semester/"><![CDATA[<p>정말로 바빴던 방학을 마무리하고 한동에서의 6학기를 앞두고 있다!<br /></p>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
 
-<p>저번 학기 Recap을 써야지 써야지 하면서 결국 마무리하지 못했다. 6학기 시작 글과 Recap을 잘 버무려서 써보면 좋겠다는 생각에 글을 쓰고 있다!<br />5학기는 정말 힘든 학기였다. 내가 한동에 다니면서 이렇게까지 힘들고 지친적이 있었나 라는 질문을 스스로 던졌던 학기였다. 다들 5학기가 힘들다 힘들다 하지만 이 정도로 힘들 줄은 ㅠㅠ… <br /></p>
-
-<p>그래도 많이 배운 학기였다. 저번 학기에 이룬 점이라고 한다면…</p>
+<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
 
 <ul>
-  <li>학기 중에 토익을 봤고 나쁘지 않은 성적을 받았다! (공부 한 번도 안하고 900 넘겼으니 잘한 거 아닐까…? <del>우리학교 사람들 너무 영어 잘해 ㅠㅠ</del>)</li>
-  <li>국가이공계우수장학생에 선정되어서 남은 2년 동안 전액 장학금을 받는다!</li>
-  <li>TA로 섬기게 되었고 우수 TA 상도 받았다!</li>
-  <li>그 어렵다는 홍신 교수님 OS 좋은 성적 받았다! <del>(솔직히 말이 안되는 성적을 받았다)</del></li>
-</ul>
-
-<p>물론 가장 아쉬운 학기였다는 건 부정할 수 없을 것 같다. 학부에 들어온 후 가장 낮은 성적을 받았고 가장 멘탈적으로 힘든 학기였다. 처음으로 지친다는 것을 경험해보기도 했고, 무엇보다 팀플이 가장 힘들었다… 학부 내에서 좋은 인맥을 쌓기도 했지만 정말 힘든 사람도 만나기도 했고… <br /></p>
-
-<p><img src="../../../assets/mudo_desperation.jpg" width="700" height="170" /></p>
-
-<p>그래도 감사한 건 5학기, 정말 좋은 타이밍에 너무 귀중한 것들을 깨달았다는 것이다. 공부는 체력 싸움이라는 말을 처음으로 이해했고 방학 때 운동도 꾸준히 했다. 크고 어려운 과제를 어떻게 풀어가야 하는가에 대한 방법론을 고민해보게 되었다. 방학 때는 정말 많은 논문을 읽으면서 연구 주제에 대한 식견을 넓혔다. 쉼의 중요성도 느끼면서 중간 중간 쉬는 방법도 깨달았고 2년 만에 못 봤던 친구들도 많이 만났다. <br /></p>
-
-<p>무엇보다 멘탈의 중요성을 느낀 학기였다. 솔직히 그렇게 크게 무너진 것도 아니였고 갑자기 모든 걸 놓아버리는 일이 있었던 것도 아니었다. 그러나 내 자신이 너무 지쳤던 학기였다. 충분히 만족할 만한 퍼포먼스를 보였고 걱정한 것보다도 훨씬 잘했지만 멘탈을 조금만 챙겼더라면 더 잘할 수 있지 않았을까 라는 아쉬움이 너무나도 크게 다가왔다. 그렇기에 6학기가 너무 기대된다. 이러한 위기 아닌 위기를 겪으면서 멘탈이 강화된 것 같다는 가설(?)을 증명하고 싶다. 뿐만 아니라 새로운 과목들을 (특히 내가 너무 기대하고 있는 Programming Language Theory) 듣는다. 이제는 공식적으로 연구자로서의 미미한 발걸음을 내딛는다. 랩실 생활에 적응했고 수민이가 없는 학교에 적응했다. TA로서도 학생들을 더 잘 도와줄 수 있지 않을까 라는 생각이 든다. <br /></p>
-
-<p>6학기를 앞두며 이제는 내가 목표한 바를 이루기 위해서 최선을 다 할 일밖에 남지 않았다고 생각한다. 지금까지 잘 해왔고 계속해온 것처럼 노력한다면 목표한 바를 충분히 이룰 수 있다고 생각한다. 지금까지 잘해왔고 잘하고 있다! <br /></p>
-
-<p>무엇보다 바쁜 학기 가운데 신앙을 잃지 않았으면 한다.</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[6th Semster]]></summary></entry></feed>
+  <li>Introduction to AI
+    <ul>
+      <li>Weak and Strong AI
+        <ul>
+          <li>strong AI: understanding Chinese</li>
+          <li>weak AI: simulating the ability to understand Chinese</li>
+        </ul>
+      </li>
+      <li>Applied AI and General AI</li>
+      <li>Computationalism and Connectionism
+        <ul>
+          <li>Computationalism
+            <ul>
+              <li>thoughts are computation on symbols
+                <ul>
+                  <li>Symbolic, interpretable</li>
+                  <li>e.g) Turing Machine</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Connectionism
+            <ul>
+              <li>Information is represented in neurons and networks
+                <ul>
+                  <li>Low-level, black-box</li>
+                  <li>Neural Networks</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Turing Test</li>
+      <li>Implementation level and algorithmic level
+        <ul>
+          <li>Implmentation level: how the system is physically realized
+            <ul>
+              <li>AI and Human Intelligence are different</li>
+            </ul>
+          </li>
+          <li>Algorithmic level: how the system does, what representation or process it uses
+            <ul>
+              <li>3 level for intelligent system
+                <ul>
+                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
+                </ul>
+              </li>
+              <li>Can achieve some intelligence on approximation</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Superintelligence
+        <ul>
+          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
+        </ul>
+      </li>
+      <li>Deep Neural Networks
+        <ul>
+          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
+        </ul>
+      </li>
+      <li>Practical AI risks
+        <ul>
+          <li>affected by viruses</li>
+          <li>misused by people with bad intentions</li>
+          <li>biased AI</li>
+          <li>taking over roles</li>
+          <li>unable to reject AI’s decision</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Introduction to ML
+    <ul>
+      <li>What is learning
+        <ul>
+          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
+          <li>simple model (e.g., linear regression)</li>
+          <li>for supervised learning
+            <ul>
+              <li>Learning</li>
+              <li>Recognition</li>
+            </ul>
+          </li>
+          <li>Complex models</li>
+        </ul>
+      </li>
+      <li>Machine learning
+        <ul>
+          <li>Takes data and output  → Makes program</li>
+          <li>source of knowledge is data</li>
+        </ul>
+      </li>
+      <li>Workflow of machine learning
+        <ul>
+          <li>acquisition - data is gathered/collected from various sources</li>
+          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
+          <li>analysis - data is evaluated to run and customize reports</li>
+          <li>modeling - data is patternized and generalized as models</li>
+          <li>visualization</li>
+          <li>deployment and maintenance</li>
+        </ul>
+      </li>
+      <li>Components of ML
+        <ul>
+          <li>data: features, label, format</li>
+          <li>models: SVM, NN, K-means</li>
+          <li>objectives: cross-entropy, RMSE, likelihood</li>
+          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
+        </ul>
+      </li>
+      <li>Data
+        <ul>
+          <li>structured/unstructured</li>
+        </ul>
+      </li>
+      <li>Categories
+        <ul>
+          <li>unsupervised learning
+            <ul>
+              <li>e.g., clustering, dimension reduction</li>
+            </ul>
+          </li>
+          <li>supervised learning
+            <ul>
+              <li>e.g., speech/face recognition</li>
+            </ul>
+          </li>
+          <li>semi-supervised learning
+            <ul>
+              <li>e.g., cancer detection</li>
+            </ul>
+          </li>
+          <li>reinforcement learning
+            <ul>
+              <li>e.g., AlphaGo, self-driving car</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Discriminative model and Generative model
+        <ul>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Discriminative models: p(t</td>
+                  <td>x)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>only for supervising</li>
+            </ul>
+          </li>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Generative model: p(t, x) or p(x</td>
+                  <td>t)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>applicable to unlabeled data</li>
+              <li>focusing on modeling each class’ distribution</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Pattern Recognition
+        <ul>
+          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
+  -</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. by Prof. Henry Choi]]></summary></entry></feed>
