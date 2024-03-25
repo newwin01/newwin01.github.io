@@ -1,6 +1,7 @@
 ---
 title:  "2023-HGU-ML Lecture 10. Classification"
 excerpt: "Classification by Prof. Henry Choi"
+published: true
 
 categories:
   - ML
