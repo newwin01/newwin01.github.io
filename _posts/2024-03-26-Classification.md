@@ -1,5 +1,5 @@
 ---
-title:  "2023-HGU-ML Lecture 9. Classification"
+title:  "2023-HGU-ML Lecture 10. Classification"
 excerpt: "Classification by Prof. Henry Choi"
 
 categories:
