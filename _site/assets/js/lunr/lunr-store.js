@@ -286,4 +286,10 @@ var store = [{
         "tags": ["Blog"],
         "url": "/recent/6th_Semester_Recap/",
         "teaser": null
+      },{
+        "title": "2023-HGU-ML Lecture 10. Classification",
+        "excerpt":"classification and regression both supervised learning classification predicting a discrete label of the input interested in the boundary regression predicting the quantity of output usually evaluated by root mean square error interested in the relationship between input and output data for supervised learning a row: instance a column: one feature...","categories": ["ML"],
+        "tags": ["ML"],
+        "url": "/recent/Classification/",
+        "teaser": null
       }]
