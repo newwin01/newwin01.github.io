@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-26T00:58:23+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 10. Classification</title><link href="http://localhost:4000/recent/Classification/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 10. Classification" /><published>2024-03-26T00:00:00+09:00</published><updated>2024-03-26T00:00:00+09:00</updated><id>http://localhost:4000/recent/Classification</id><content type="html" xml:base="http://localhost:4000/recent/Classification/"><![CDATA[<ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-03-26T09:55:09+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 10. Classification</title><link href="http://localhost:4000/recent/Classification/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 10. Classification" /><published>2024-03-25T00:00:00+09:00</published><updated>2024-03-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/Classification</id><content type="html" xml:base="http://localhost:4000/recent/Classification/"><![CDATA[<ul>
   <li>classification and regression
     <ul>
       <li>both supervised learning</li>
@@ -1367,7 +1367,193 @@
 
     <p><img src="../../../assets/ML/InfoTheo/Untitled 3.png" /></p>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
+
+<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
+
+<ul>
+  <li>Introduction to AI
+    <ul>
+      <li>Weak and Strong AI
+        <ul>
+          <li>strong AI: understanding Chinese</li>
+          <li>weak AI: simulating the ability to understand Chinese</li>
+        </ul>
+      </li>
+      <li>Applied AI and General AI</li>
+      <li>Computationalism and Connectionism
+        <ul>
+          <li>Computationalism
+            <ul>
+              <li>thoughts are computation on symbols
+                <ul>
+                  <li>Symbolic, interpretable</li>
+                  <li>e.g) Turing Machine</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Connectionism
+            <ul>
+              <li>Information is represented in neurons and networks
+                <ul>
+                  <li>Low-level, black-box</li>
+                  <li>Neural Networks</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Turing Test</li>
+      <li>Implementation level and algorithmic level
+        <ul>
+          <li>Implmentation level: how the system is physically realized
+            <ul>
+              <li>AI and Human Intelligence are different</li>
+            </ul>
+          </li>
+          <li>Algorithmic level: how the system does, what representation or process it uses
+            <ul>
+              <li>3 level for intelligent system
+                <ul>
+                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
+                </ul>
+              </li>
+              <li>Can achieve some intelligence on approximation</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Superintelligence
+        <ul>
+          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
+        </ul>
+      </li>
+      <li>Deep Neural Networks
+        <ul>
+          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
+        </ul>
+      </li>
+      <li>Practical AI risks
+        <ul>
+          <li>affected by viruses</li>
+          <li>misused by people with bad intentions</li>
+          <li>biased AI</li>
+          <li>taking over roles</li>
+          <li>unable to reject AI’s decision</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Introduction to ML
+    <ul>
+      <li>What is learning
+        <ul>
+          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
+          <li>simple model (e.g., linear regression)</li>
+          <li>for supervised learning
+            <ul>
+              <li>Learning</li>
+              <li>Recognition</li>
+            </ul>
+          </li>
+          <li>Complex models</li>
+        </ul>
+      </li>
+      <li>Machine learning
+        <ul>
+          <li>Takes data and output  → Makes program</li>
+          <li>source of knowledge is data</li>
+        </ul>
+      </li>
+      <li>Workflow of machine learning
+        <ul>
+          <li>acquisition - data is gathered/collected from various sources</li>
+          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
+          <li>analysis - data is evaluated to run and customize reports</li>
+          <li>modeling - data is patternized and generalized as models</li>
+          <li>visualization</li>
+          <li>deployment and maintenance</li>
+        </ul>
+      </li>
+      <li>Components of ML
+        <ul>
+          <li>data: features, label, format</li>
+          <li>models: SVM, NN, K-means</li>
+          <li>objectives: cross-entropy, RMSE, likelihood</li>
+          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
+        </ul>
+      </li>
+      <li>Data
+        <ul>
+          <li>structured/unstructured</li>
+        </ul>
+      </li>
+      <li>Categories
+        <ul>
+          <li>unsupervised learning
+            <ul>
+              <li>e.g., clustering, dimension reduction</li>
+            </ul>
+          </li>
+          <li>supervised learning
+            <ul>
+              <li>e.g., speech/face recognition</li>
+            </ul>
+          </li>
+          <li>semi-supervised learning
+            <ul>
+              <li>e.g., cancer detection</li>
+            </ul>
+          </li>
+          <li>reinforcement learning
+            <ul>
+              <li>e.g., AlphaGo, self-driving car</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Discriminative model and Generative model
+        <ul>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Discriminative models: p(t</td>
+                  <td>x)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>only for supervising</li>
+            </ul>
+          </li>
+          <li>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Generative model: p(t, x) or p(x</td>
+                  <td>t)</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul>
+              <li>applicable to unlabeled data</li>
+              <li>focusing on modeling each class’ distribution</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Pattern Recognition
+        <ul>
+          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
+  -</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
 
 <ul>
   <li>Probability
@@ -1569,190 +1755,4 @@
       <li>basic distributions: categorical and multinomial</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
-
-<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
-
-<ul>
-  <li>Introduction to AI
-    <ul>
-      <li>Weak and Strong AI
-        <ul>
-          <li>strong AI: understanding Chinese</li>
-          <li>weak AI: simulating the ability to understand Chinese</li>
-        </ul>
-      </li>
-      <li>Applied AI and General AI</li>
-      <li>Computationalism and Connectionism
-        <ul>
-          <li>Computationalism
-            <ul>
-              <li>thoughts are computation on symbols
-                <ul>
-                  <li>Symbolic, interpretable</li>
-                  <li>e.g) Turing Machine</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Connectionism
-            <ul>
-              <li>Information is represented in neurons and networks
-                <ul>
-                  <li>Low-level, black-box</li>
-                  <li>Neural Networks</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Turing Test</li>
-      <li>Implementation level and algorithmic level
-        <ul>
-          <li>Implmentation level: how the system is physically realized
-            <ul>
-              <li>AI and Human Intelligence are different</li>
-            </ul>
-          </li>
-          <li>Algorithmic level: how the system does, what representation or process it uses
-            <ul>
-              <li>3 level for intelligent system
-                <ul>
-                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
-                </ul>
-              </li>
-              <li>Can achieve some intelligence on approximation</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Superintelligence
-        <ul>
-          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
-        </ul>
-      </li>
-      <li>Deep Neural Networks
-        <ul>
-          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
-        </ul>
-      </li>
-      <li>Practical AI risks
-        <ul>
-          <li>affected by viruses</li>
-          <li>misused by people with bad intentions</li>
-          <li>biased AI</li>
-          <li>taking over roles</li>
-          <li>unable to reject AI’s decision</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Introduction to ML
-    <ul>
-      <li>What is learning
-        <ul>
-          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
-          <li>simple model (e.g., linear regression)</li>
-          <li>for supervised learning
-            <ul>
-              <li>Learning</li>
-              <li>Recognition</li>
-            </ul>
-          </li>
-          <li>Complex models</li>
-        </ul>
-      </li>
-      <li>Machine learning
-        <ul>
-          <li>Takes data and output  → Makes program</li>
-          <li>source of knowledge is data</li>
-        </ul>
-      </li>
-      <li>Workflow of machine learning
-        <ul>
-          <li>acquisition - data is gathered/collected from various sources</li>
-          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
-          <li>analysis - data is evaluated to run and customize reports</li>
-          <li>modeling - data is patternized and generalized as models</li>
-          <li>visualization</li>
-          <li>deployment and maintenance</li>
-        </ul>
-      </li>
-      <li>Components of ML
-        <ul>
-          <li>data: features, label, format</li>
-          <li>models: SVM, NN, K-means</li>
-          <li>objectives: cross-entropy, RMSE, likelihood</li>
-          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
-        </ul>
-      </li>
-      <li>Data
-        <ul>
-          <li>structured/unstructured</li>
-        </ul>
-      </li>
-      <li>Categories
-        <ul>
-          <li>unsupervised learning
-            <ul>
-              <li>e.g., clustering, dimension reduction</li>
-            </ul>
-          </li>
-          <li>supervised learning
-            <ul>
-              <li>e.g., speech/face recognition</li>
-            </ul>
-          </li>
-          <li>semi-supervised learning
-            <ul>
-              <li>e.g., cancer detection</li>
-            </ul>
-          </li>
-          <li>reinforcement learning
-            <ul>
-              <li>e.g., AlphaGo, self-driving car</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Discriminative model and Generative model
-        <ul>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Discriminative models: p(t</td>
-                  <td>x)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>only for supervising</li>
-            </ul>
-          </li>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Generative model: p(t, x) or p(x</td>
-                  <td>t)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>applicable to unlabeled data</li>
-              <li>focusing on modeling each class’ distribution</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Pattern Recognition
-        <ul>
-          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
-  -</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. by Prof. Henry Choi]]></summary></entry></feed>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. by Prof. Henry Choi]]></summary></entry></feed>
