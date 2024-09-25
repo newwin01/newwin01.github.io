@@ -38,7 +38,7 @@ Joyful coding! <br><br>
 
 <ul>
   <li>2024.09 ~ 2024.12 - Programming Language Theory Teaching Assistants (English Section)</li>
-  <li> <strong> 2024.06            - Presented <a href="../../../assets/KCC_2024_SPI.pdf"> SPI: Similar Patch Identifier for Automated Program Repair </a> in <a href="https://kcc2024.kiise.or.kr/Proceedings/Home.asp">KCC 2024</a>, Jeju </strong> </li>
+  <li> <strong> 2024.06            - Presented <a href="../../../assets/KCC_2024_SPI_Presentation.pdf"> SPI: Similar Patch Identifier for Automated Program Repair </a> in <a href="https://kcc2024.kiise.or.kr/Proceedings/Home.asp">KCC 2024</a>, Jeju </strong> </li>
   <li>2024.03 ~ 2024.06 - Data Structure Teaching Assistants (Korean Section): Block plan</li>
   <li>2024.03 ~ 2024.06 - Java Programming Teaching Assistants (Korean Section): Block plan </li>
   <li>2024.02           - Attended <a href="http://sigsoft.or.kr/kcse2024/">KCSE 2024</a> </li>

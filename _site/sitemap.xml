@@ -234,10 +234,14 @@
 </url>
 <url>
 <loc>http://localhost:4000/assets/CV_JSC.pdf</loc>
-<lastmod>2024-09-21T23:22:51+09:00</lastmod>
+<lastmod>2024-09-21T23:27:11+09:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/assets/KCC_2024_SPI.pdf</loc>
-<lastmod>2024-07-05T15:28:59+09:00</lastmod>
+<lastmod>2024-09-21T23:27:11+09:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/assets/KCC_2024_SPI_Presentation.pdf</loc>
+<lastmod>2024-09-25T22:32:23+09:00</lastmod>
 </url>
 </urlset>
