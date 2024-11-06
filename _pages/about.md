@@ -12,7 +12,7 @@ title: "About"
 Hello! I am a student of Handong Global University.
 
 I am studying at the Department of Computer Science and Electrical Engineering. <br>
-My main interest is Software Engineering, especially on Automatic Program Repair field.
+My main interest is Software Engineering.
 <br> 
 <br> 
 Joyful coding! <br><br>
