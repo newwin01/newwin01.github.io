@@ -82,4 +82,10 @@ var store = [{
         "tags": ["Blog"],
         "url": "/recent/6th_Semester_Recap/",
         "teaser": null
+      },{
+        "title": "한동에서의 마지막 2학기를 돌아보며 Part 1",
+        "excerpt":"마지막 블로그 글을 쓴지 1년이 지나버렸다… 계속 써야지, 써야지 했지만 이제야 와서 쓰다니. 이렇게 늦어질지 몰랐다. ㅎㅎ 1년만에 글을 쓰는 만큼 많은 일이 있었고, 많은 변화가 있었다. 나만 그렇게 느낀 것이 아니였는지, 지금까지 살면서 달라졌다 라는 말을 가장 많이 들은 1년이 아닌가 싶다. 지난 1년간 있었던 가장 큰 일들을 꼽자면...","categories": ["Blog"],
+        "tags": ["Blog"],
+        "url": "/recent/7,8th_Semester_Recap_Part1/",
+        "teaser": null
       }]
