@@ -76,4 +76,10 @@ var store = [{
         "tags": ["Blog"],
         "url": "/recent/6th-Semester/",
         "teaser": null
+      },{
+        "title": "6학기를 돌아보며",
+        "excerpt":"6학기가 마친지 벌써 4주 정도가 지났다. 시간이 참 빠르다… 6학기를 앞두고 5학기를 돌아보며!라는 글을 쓴지 얼마 되지 않은 것 같은데, 6학기가 벌써 끝나다니… 6학기는 저번 학기에 비해 수월했다. TA 업무는 적응이 되어 속도가 붙었고, 수강생들을 대하는 것도 편해졌다. 저번 학기에 OS, DB, 알고 3과목이 있었다면 이번학기는 ML, PLT, 컴퓨터 네트워크...","categories": ["Blog"],
+        "tags": ["Blog"],
+        "url": "/recent/6th_Semester_Recap/",
+        "teaser": null
       }]
