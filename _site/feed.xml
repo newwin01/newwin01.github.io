@@ -1,1758 +1,1056 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-25T22:39:13+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">2023-HGU-ML Lecture 10. Classification</title><link href="http://localhost:4000/recent/Classification/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 10. Classification" /><published>2024-03-25T00:00:00+09:00</published><updated>2024-03-25T00:00:00+09:00</updated><id>http://localhost:4000/recent/Classification</id><content type="html" xml:base="http://localhost:4000/recent/Classification/"><![CDATA[<ul>
-  <li>classification and regression
-    <ul>
-      <li>both supervised learning</li>
-      <li>classification
-        <ul>
-          <li>predicting a discrete label of the input</li>
-          <li>interested in the boundary</li>
-        </ul>
-      </li>
-      <li>regression
-        <ul>
-          <li>predicting the quantity of output</li>
-          <li>usually evaluated by root mean square error</li>
-          <li>interested in the relationship between input and output</li>
-        </ul>
-      </li>
-    </ul>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2025-01-03T22:40:31+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">JSC’s DevLog</title><subtitle>SE and AI version 1.0</subtitle><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><entry><title type="html">6학기를 앞두고 5학기를 돌아보며!</title><link href="http://localhost:4000/recent/6th-Semester/" rel="alternate" type="text/html" title="6학기를 앞두고 5학기를 돌아보며!" /><published>2023-08-26T00:00:00+09:00</published><updated>2023-08-26T00:00:00+09:00</updated><id>http://localhost:4000/recent/6th-Semester</id><content type="html" xml:base="http://localhost:4000/recent/6th-Semester/"><![CDATA[<p>정말로 바빴던 방학을 마무리하고 한동에서의 6학기를 앞두고 있다!<br /></p>
 
-    <p><img src="../../../assets/ML/Classification/Untitled.png" /></p>
-  </li>
-  <li>data for supervised learning
-    <ul>
-      <li>a row: instance</li>
-      <li>a column: one feature or attribute</li>
-      <li>Xn → n samples</li>
-      <li>Y: N outputs</li>
-    </ul>
-  </li>
-  <li>training, validation, and testing
-    <ul>
-      <li>training the model with training data (Xtr, Ytr)
-        <ul>
-          <li>learning the parameters by optimizing an objective function</li>
-        </ul>
-      </li>
-      <li>validation with validation data (X val, Y val)
-        <ul>
-          <li>to evaluate the model or to avoid overfitting</li>
-          <li>if no validation data is available, split the data into training and validation</li>
-        </ul>
-      </li>
-      <li>test
-        <ul>
-          <li>predicting the output of new data</li>
-          <li>test data and training data should be separated at all.</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>cross-validation
-    <ul>
-      <li>a resampling procedure to evaluate ML models on limited data</li>
-      <li>split the data into training (including validation) and testing</li>
-      <li>evaluate the model</li>
-      <li>repeat the above steps</li>
-    </ul>
-  </li>
-  <li>model complexity and overfitting
-    <ul>
-      <li>overfitting: a model is too closely fit to a limited set of training data</li>
-      <li>to avoid
-        <ul>
-          <li>spreading out the probability mass from the training samples</li>
-          <li>discovering underlying abstractions/explanatory factors</li>
-        </ul>
-      </li>
-      <li>approaches
-        <ul>
-          <li>more data</li>
-          <li>simpler model</li>
-          <li>regularization</li>
-          <li>early stopping</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>k nearest neighbors
-    <ul>
-      <li>a simple form of making predictions</li>
-      <li>instance-based approach
-        <ul>
-          <li>to make a decision, retrieve k closest training examples in the feature space</li>
-        </ul>
-      </li>
-      <li>lazy learning
-        <ul>
-          <li>all deferred until the prediction time</li>
-        </ul>
-      </li>
-    </ul>
+<p>저번 학기 Recap을 써야지 써야지 하면서 결국 마무리하지 못했다. 6학기 시작 글과 Recap을 잘 버무려서 써보면 좋겠다는 생각에 글을 쓰고 있다!<br />5학기는 정말 힘든 학기였다. 내가 한동에 다니면서 이렇게까지 힘들고 지친적이 있었나 라는 질문을 스스로 던졌던 학기였다. 다들 5학기가 힘들다 힘들다 하지만 이 정도로 힘들 줄은 ㅠㅠ… <br /></p>
 
-    <p><img src="../../../assets/ML/Classification/Untitled 1.png" /></p>
-
-    <ul>
-      <li>Algorithm
-        <ul>
-          <li>need to decide
-            <ul>
-              <li>distance metric</li>
-              <li>k</li>
-              <li>how to make a prediction</li>
-            </ul>
-          </li>
-          <li>compute the distances to the training data instances</li>
-          <li>identify k neighbors</li>
-          <li>determine the class label of the testing instance</li>
-        </ul>
-      </li>
-      <li>characteristics
-        <ul>
-          <li>simple to implement</li>
-          <li>leads to a very simple approximation of the optimal Bayes classifier</li>
-          <li>lazy</li>
-        </ul>
-
-        <p><img src="../../../assets/ML/Classification/Untitled 2.png" /></p>
-
-        <ul>
-          <li>The “curse of dimensionality” refers to various challenges and phenomena that arise when working with high-dimensional data. As the number of features or dimensions in a dataset increases, certain issues and complexities emerge that can affect the performance of algorithms and the interpretation of results</li>
-        </ul>
-      </li>
-      <li>To solve the issue
-        <ul>
-          <li>bucketing</li>
-          <li>k-d tree</li>
-          <li>metric learning</li>
-          <li>feature-weighting</li>
-          <li>distance-weighting</li>
-        </ul>
-      </li>
-      <li>Under or overfitting
-        <ul>
-          <li>K is too small
-            <ul>
-              <li>sensitive to noisy data</li>
-              <li>overfitting to training data</li>
-            </ul>
-          </li>
-          <li>K is too large
-            <ul>
-              <li>no-sensitive to data</li>
-              <li>underfitting</li>
-              <li>smoother decision regions, destroying the locality of the estimation</li>
-              <li>burden</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>naïve Bayes classifier
-    <ul>
-      <li>for classification, what we want is posterior</li>
-    </ul>
-
-    <p><img src="../../../assets/ML/Classification/Untitled 2.png" /></p>
-
-    <ul>
-      <li>assuming that the features are class conditionally independent</li>
-      <li>The Naïve Bayes classifier is a probabilistic machine learning algorithm based on Bayes’ theorem.
-        <ul>
-          <li>It assumes that features are conditionally independent given the class label, simplifying the computation of the posterior probability. Despite its simplistic assumption, Naïve Bayes is widely used for classification tasks and is particularly effective in text categorization, spam filtering, and other applications where independence assumptions hold reasonably well.</li>
-          <li><a href="https://en.wikipedia.org/wiki/Naive_Bayes_classifier">https://en.wikipedia.org/wiki/Naive_Bayes_classifier</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>decision tree (DT)
-    <ul>
-      <li>a tree-shaped prediction mode</li>
-      <li>decision-based on a tree</li>
-      <li>a non-metric method
-        <ul>
-          <li>without a measure of distance between features</li>
-          <li>can work with nominal data</li>
-        </ul>
-      </li>
-      <li>Prediction and Training
-        <ul>
-          <li>prediction: given a decision tree, how can we make predictions for new data?
-            <ul>
-              <li>when the instance arrives at a leaf node, take the node’s decision</li>
-            </ul>
-          </li>
-          <li>training: given a dataset, how can we select a feature and make a branch?
-            <ul>
-              <li>the most common training strategy for a given dataset
-                <ul>
-                  <li>start from an empty decision tree</li>
-                  <li>on each node, split the set in the node into subsets based on a metric
-                    <ul>
-                      <li>until the subset at a node has all the same value</li>
-                    </ul>
-                  </li>
-                  <li>top-down induction of decision trees (greedy algorithm)</li>
-                </ul>
-              </li>
-            </ul>
-
-            <p><img src="../../../assets/ML/Classification/Untitled 3.png" /></p>
-
-            <ul>
-              <li>Metrics
-                <ul>
-                  <li>classification
-                    <ul>
-                      <li>Minimize Gini Impurity
-                        <ul>
-                          <li>Gini impurity: measures how often a decision would be incorrect
-  if it was randomly labeled according to the distribution of labels
-  in the subset</li>
-                        </ul>
-                      </li>
-                      <li>maximize information gain
-                        <ul>
-                          <li>Information Gain: calculates the decrease in entropy after the dataset is split on a feature</li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>regression
-                    <ul>
-                      <li>minimize variance and std</li>
-                      <li>a weighted average of MSE from two nodes</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li>interpretability of decision tree
-                <ul>
-                  <li>in business, interpretability is also important as well as accuracy</li>
-                  <li>importance value in the decision tree
-                    <ul>
-                      <li>measures decrease in node impurity weighted by the probability of the node</li>
-                      <li>or measures decrease in MSE for regression</li>
-                    </ul>
-
-                    <p><img src="../../../assets/ML/Classification/Untitled 4.png" /></p>
-                  </li>
-                  <li>to overcome overfitting
-                    <ul>
-                      <li>early stopping</li>
-                      <li>readjusting</li>
-                      <li>random forest</li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Random Forest
-    <ul>
-      <li>ensemble learning method by constructing a set of decision trees</li>
-      <li>algorithm
-        <ul>
-          <li>applies the committee method to the decision tree</li>
-        </ul>
-
-        <p><img src="../../../assets/ML/Classification/Untitled 5.png" /></p>
-
-        <p><img src="../../../assets/ML/Classification/Untitled 6.png" /></p>
-      </li>
-    </ul>
-  </li>
-  <li>For feature importance
-    <ul>
-      <li>permutation
-        <ul>
-          <li>train the baseline model and record the score</li>
-          <li>for all, randomize the values
-            <ul>
-              <li>calculate new scores</li>
-              <li>difference of the score → feature importance</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>dropping a column
-        <ul>
-          <li>compare a score with all features and a score with one feature dropped
-            <ul>
-              <li>accurate, but expensive</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Classification by Prof. Henry Choi]]></summary></entry><entry><title type="html">6학기를 돌아보며</title><link href="http://localhost:4000/recent/6th_Semester_Recap/" rel="alternate" type="text/html" title="6학기를 돌아보며" /><published>2024-01-28T00:00:00+09:00</published><updated>2024-01-28T00:00:00+09:00</updated><id>http://localhost:4000/recent/6th_Semester_Recap</id><content type="html" xml:base="http://localhost:4000/recent/6th_Semester_Recap/"><![CDATA[<p>6학기가 마친지 벌써 4주 정도가 지났다. 시간이 참 빠르다…</p>
-
-<p><a href="../../../recent/6th-Semester">6학기를 앞두고 5학기를 돌아보며!</a>라는 글을 쓴지 얼마 되지 않은 것 같은데, 6학기가 벌써 끝나다니…</p>
-
-<p>6학기는 저번 학기에 비해 수월했다.</p>
-
-<p>TA 업무는 적응이 되어 속도가 붙었고, 수강생들을 대하는 것도 편해졌다. <br />
-저번 학기에 OS, DB, 알고 3과목이 있었다면 이번학기는 ML, PLT, 컴퓨터 네트워크 3과목이 있었다. 마음 가짐의 변화인지, 같이 듣는 교양 과목들이 편해서 그랬는지 모르겠지만 “편안하게” 수업을 들을 수 있었다.</p>
-
-<p>“편안함”에 Quotation이 붙었다. (<del>이번학기 최고의 수확은 <프렌즈>일지도)</프렌즈></del></p>
-
-<p><img src="../../../assets/Joey_Quotation.jpg" width="700" height="170" /></p>
-
-<p>이번 학기가 마냥 편안했다는 건 아니다. 당장 3과목을 놓고 비교한다면, 종합적인 과목의 난이도는 이번 학기가 높았다.</p>
-
-<p>특히 ML, Machine Learning은 수학 증명을 따라가느라 많은 시간을 보냈다. (아직도 공부하는 중이다.)
-이외에도 PLT, Programming Language Theory는 컴퓨터 공학과에서 열리는 수업들 중 손에 꼽을 난이도를 가진 수업이고, 컴퓨터 네트워크는 수업 담당 교수님의 특성상 외워야 하는 분량이 꽤 많았다.</p>
-
-<p><strong>이러한 차이가 나온 이유를 생각해보면, 이번 학기는 참 건강하게 보냈지 싶다.</strong></p>
-
-<p>앞선 학기, 5학기는 나에게 가장 힘들었던, 눈코 뜰 새도 없이 바쁜 학기였지만, 나는 많은 걸 깨달았다. 공부는 체력 싸움이라는 말을 처음으로 이해했고 쉼의 중요성을 알았다.</p>
-
-<p>체력을 위해 방학부터 꾸준히 운동을 했고, 학기 중에도 중간과 기말기간 외에는 주 5일 이상 운동했다. 방학 때도 꾸준히 하고 있다. 
-운동을 하며 취미가 자연스럽게 생겼다. 내가 봐도 참 건강하다. 좋다.</p>
-
-<p>학기 중 “멘탈” 강화에 대한 노력도 높이 사고 싶다.</p>
-
-<p>정확히 나는 멘탈이 약하다기 보다는 “나의 의지에 반하는 변화”에 대해 극도로 예민하다. 
-랩실에 공공연히 퍼진 이야기인데, 내 머리가 헝클어져 있다면 나에게 무슨 일이 생긴거라나…</p>
-
-<p>일이 술술 풀린다면 높은 성과를 내지만 조그마한 “변화” 때문에 미끄러지는 경우가 많다. 너무나도 작은 변화에 예민하다. 훌훌털면 좋을텐데. <br />
-상담도 받아보고 여러 책도 읽어봤는데, 나에게 엄격한 부분, 그리고 취미와 이야기를 나눌 친구가 없음을 지적받았다.</p>
-
-<p>운동은 훌륭한 취미가 되어주었고, 여자친구와 통화 횟수를 늘렸다.</p>
-
-<p>더 나아가 나에게 엄격한 부분에 대해, <strong>타인이 나를 바라보는 것에 너무 예민하다</strong> 는 점을 지적받았다.
-남에 대한 이해가 부족하다는 점도 지적받았다. 나를 찾기 위해, 또 사람들의 다양한 인생을 공부하기 위해 노력 중이다.</p>
-
-<p>물론 공부도 열심히 했다.</p>
-
-<p>부끄럽지만 이번 학기 수강한 모든 과목에서 A+을 성취해냈고 졸업 프로젝트도 실마리가 보이고 있다. <del>(교수님이 굉장히 즐거워하신다.)</del></p>
-
-<p>너무 감사한 학기다. <strong>그리고 T1이 롤드컵 우승했다. 너무 행복하다.</strong></p>
-
-<p>다음 학기도 계속 노력해보고자 한다. 이제 대학원 준비를 진지하게 시작해야 할 시기이다. 다음 학기도 좋은 성과를 이루어 냈으면 하고, 이번 학기처럼 후회없는 학기가 되었으면 좋겠다.</p>
-
-<hr />
-
-<p><em>내가 궁핍하므로 말하는 것이 아니니라 어떠한 형편에든지 나는 자족하기를 배웠노니, 나는 비천에 처할 줄도 알고 풍부에 처할 줄도 알아 모든 일 곧 배부름과 배고픔과 풍부와 궁핍에도 처할 줄 아는 일체의 비결을 배웠노라 내게 능력 주시는 자 안에서 내가 모든 것을 할 수 있느니라 (빌립보서 4장 11 ~ 13절)</em></p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[6th Semster Recap]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 9. Nonlinear Dimension Reduction</title><link href="http://localhost:4000/recent/Nonlinear_Dimension_Reduction/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 9. Nonlinear Dimension Reduction" /><published>2024-01-24T00:00:00+09:00</published><updated>2024-01-24T00:00:00+09:00</updated><id>http://localhost:4000/recent/Nonlinear_Dimension_Reduction</id><content type="html" xml:base="http://localhost:4000/recent/Nonlinear_Dimension_Reduction/"><![CDATA[<h1 id="nonlinear-dimension-reduction">Nonlinear Dimension Reduction</h1>
+<p>그래도 많이 배운 학기였다. 저번 학기에 이룬 점이라고 한다면…</p>
 
 <ul>
-  <li>Kernel machine and manifold learning</li>
-  <li>extension of linear models with the kernel trick
+  <li>학기 중에 토익을 봤고 나쁘지 않은 성적을 받았다! (공부 한 번도 안하고 900 넘겼으니 잘한 거 아닐까…? <del>우리학교 사람들 너무 영어 잘해 ㅠㅠ</del>)</li>
+  <li>국가이공계우수장학생에 선정되어서 남은 2년 동안 전액 장학금을 받는다!</li>
+  <li>TA로 섬기게 되었고 우수 TA 상도 받았다!</li>
+  <li>그 어렵다는 홍신 교수님 OS 좋은 성적 받았다! <del>(솔직히 말이 안되는 성적을 받았다)</del></li>
+</ul>
+
+<p>물론 가장 아쉬운 학기였다는 건 부정할 수 없을 것 같다. 학부에 들어온 후 가장 낮은 성적을 받았고 가장 멘탈적으로 힘든 학기였다. 처음으로 지친다는 것을 경험해보기도 했고, 무엇보다 팀플이 가장 힘들었다… 학부 내에서 좋은 인맥을 쌓기도 했지만 정말 힘든 사람도 만나기도 했고… <br /></p>
+
+<p><img src="../../../assets/mudo_desperation.jpg" width="700" height="170" /></p>
+
+<p>그래도 감사한 건 5학기, 정말 좋은 타이밍에 너무 귀중한 것들을 깨달았다는 것이다. 공부는 체력 싸움이라는 말을 처음으로 이해했고 방학 때 운동도 꾸준히 했다. 크고 어려운 과제를 어떻게 풀어가야 하는가에 대한 방법론을 고민해보게 되었다. 방학 때는 정말 많은 논문을 읽으면서 연구 주제에 대한 식견을 넓혔다. 쉼의 중요성도 느끼면서 중간 중간 쉬는 방법도 깨달았고 2년 만에 못 봤던 친구들도 많이 만났다. <br /></p>
+
+<p>무엇보다 멘탈의 중요성을 느낀 학기였다. 솔직히 그렇게 크게 무너진 것도 아니였고 갑자기 모든 걸 놓아버리는 일이 있었던 것도 아니었다. 그러나 내 자신이 너무 지쳤던 학기였다. 충분히 만족할 만한 퍼포먼스를 보였고 걱정한 것보다도 훨씬 잘했지만 멘탈을 조금만 챙겼더라면 더 잘할 수 있지 않았을까 라는 아쉬움이 너무나도 크게 다가왔다. 그렇기에 6학기가 너무 기대된다. 이러한 위기 아닌 위기를 겪으면서 멘탈이 강화된 것 같다는 가설(?)을 증명하고 싶다. 뿐만 아니라 새로운 과목들을 (특히 내가 너무 기대하고 있는 Programming Language Theory) 듣는다. 이제는 공식적으로 연구자로서의 미미한 발걸음을 내딛는다. 랩실 생활에 적응했고 수민이가 없는 학교에 적응했다. TA로서도 학생들을 더 잘 도와줄 수 있지 않을까 라는 생각이 든다. <br /></p>
+
+<p>6학기를 앞두며 이제는 내가 목표한 바를 이루기 위해서 최선을 다 할 일밖에 남지 않았다고 생각한다. 지금까지 잘 해왔고 계속해온 것처럼 노력한다면 목표한 바를 충분히 이룰 수 있다고 생각한다. 지금까지 잘해왔고 잘하고 있다! <br /></p>
+
+<p>무엇보다 바쁜 학기 가운데 신앙을 잃지 않았으면 한다.</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[6th Semster]]></summary></entry><entry><title type="html">And Then There Were None 그리고 아무도 없었다</title><link href="http://localhost:4000/recent/And_Then_There_Were_None/" rel="alternate" type="text/html" title="And Then There Were None 그리고 아무도 없었다" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/And_Then_There_Were_None</id><content type="html" xml:base="http://localhost:4000/recent/And_Then_There_Were_None/"><![CDATA[<p>추리 소설을 추천받았다. 아가사 크리스티의 <strong><em>그리고 아무도 없었다</em></strong> 였다. <br /> 
+소설을 그렇게 좋아하는 편은 아니라 이름만 들어본 작가였지만 오랜만에 소설을 읽어보자는 마음으로 책을 집어들었다.</p>
+
+<p>와우. 정말 재밌게 읽었다. 그 자리에 앉아서 내리 2시간을 읽었다. <del>물론 소설이 짧기도 하다</del> <br />
+알고 보니 내 주위는 다들 읽었더라… 이 재밌는 걸 자신들만 알고 있었다니…</p>
+
+<p>물론 선입견빼면 시체인 내가 추리 소설을 추천 받았더라도 내가 내키지 않았으면 안 읽었을 것 같긴 하다.
+뭐든지 한 번 정도 시도해보고 판단하는게 맞는 것 같다는 생각이 근래에 많이 든다.</p>
+
+<p>그 정도로 책이 재밌었다. 다음엔 <strong><em>오리엔트 특급 살인</em></strong> 읽어볼까 싶다!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[재밌다...]]></summary></entry><entry><title type="html">Clean Code Chapter 3</title><link href="http://localhost:4000/recent/Clean_Code_Ch3/" rel="alternate" type="text/html" title="Clean Code Chapter 3" /><published>2023-07-16T00:00:00+09:00</published><updated>2023-07-16T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch3</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch3/"><![CDATA[<p>How can we make a function communicate its intent?</p>
+
+<p>What attributes can we give that will allow a reader to intuit the kind of program they live inside?</p>
+
+<p><strong><em>The function should be very small</em></strong></p>
+
+<ul>
+  <li>In 1999, every function was just two, three, or four lines long
     <ul>
-      <li>kernel PCA</li>
-      <li>kernel Fisher discriminant (kernel FD)</li>
+      <li>Each was transparent and led to the next in a compelling order</li>
+    </ul>
+  </li>
+  <li>Block and Indenting
+    <ul>
+      <li>block within if, else, while and so on should be one line long
+        <ul>
+          <li>The line must be a function call</li>
+          <li>The function should not be large enough to hold the nested structure</li>
+          <li>The indent level of a function should not be greater than one or two</li>
+        </ul>
+      </li>
     </ul>
 
-    <p><img src="../../../assets/ML/NonLinDimRed/Untitled.png" /></p>
+    <p><strong><em>Function Should Do One Thing</em></strong></p>
   </li>
-  <li>Kernel trick
+  <li>What is one thing?
     <ul>
-      <li>many ML algorithms are based on relations between samples’ inner product</li>
-      <li>The kernel trick is a method in machine learning and support vector machines (SVMs) that allows the application of a linear algorithm in a high-dimensional feature space without explicitly calculating the transformed feature vectors. It is achieved by using a kernel function to compute the dot product between the transformed data points, which implicitly represents the higher-dimensional space. This technique is especially powerful when dealing with non-linearly separable data, enabling linear algorithms to effectively capture complex relationships by operating in a higher-dimensional space.</li>
+      <li>If a function does only that is on one level below the stated name of the function, then the function is doing one thing</li>
+      <li>Decomposing a larger concept</li>
+      <li>Simply restates the code without changing the level of abstraction</li>
+      <li>if you can extract another function from it with a name that is not merely a restatement of its implementation</li>
+      <li>A function that does one thing cannot be divided</li>
+    </ul>
+  </li>
+  <li>One level of abstraction per function
+    <ul>
+      <li>Statements within the function are all at the same level of abstraction</li>
+    </ul>
+  </li>
+  <li>Reading code from Top to Bottom: The Stepdown Rule
+    <ul>
+      <li>Top-down Narrative</li>
+      <li>Reading program, descending one level of abstraction at a time as we read down the list of function</li>
+      <li>Each function introduces the nest, and each function remains at a consistent level of abstraction</li>
+    </ul>
+  </li>
+  <li>Avoid using switch statements
+    <ul>
+      <li>Each statement is buried in a low-level class and is never repeated</li>
+      <li>Switch Statements can be tolerated if they appear only once</li>
+      <li>Used to create polymorphic objects; hidden behind an inheritance relationship</li>
+    </ul>
+  </li>
+  <li>Simple Responsibility Principle
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Single-responsibility_principle">https://en.wikipedia.org/wiki/Single-responsibility_principle</a></li>
+    </ul>
+  </li>
+  <li>Open Closed Principle
+    <ul>
+      <li><a href="https://en.wikipedia.org/wiki/Open%E2%80%93closed_principle">https://en.wikipedia.org/wiki/Open–closed_principle</a></li>
+    </ul>
+  </li>
+  <li>Use Descriptive Names
+    <ul>
+      <li>Choose descriptive names to clarify the design of the module in mind</li>
+      <li>Don’t be afraid to make a name long</li>
+      <li>Be consistent in names</li>
     </ul>
   </li>
 </ul>
 
-<p><img src="../../../assets/ML/NonLinDimRed/Untitled 1.png" /></p>
+<p><strong><em>The argument is at a different level of abstraction</em></strong></p>
 
 <ul>
-  <li>Mercer’s theorem
+  <li>Function Arguments
     <ul>
-      <li>any PSD kernel can be expressed as an inner product in some space</li>
-      <li>if a kernel function k(x, y) is positive semi definite(PSD), a PSD matrix can be eigen-decomposed</li>
-    </ul>
-
-    <p><img src="../../../assets/ML/NonLinDimRed/Untitled 2.png" /></p>
-  </li>
-  <li>
-    <p>kernel functions</p>
-
-    <p><img src="../../../assets/ML/NonLinDimRed/Untitled 3.png" /></p>
-  </li>
-  <li>kernel PCA
-    <ul>
-      <li>Kernel Principal Component Analysis (Kernel PCA) is an extension of Principal Component Analysis (PCA) that utilizes the kernel trick to implicitly map input data into a higher-dimensional feature space. In traditional PCA, linear transformations are applied to find the principal components, but in Kernel PCA, a kernel function is used to capture non-linear relationships in the data. This allows Kernel PCA to uncover complex patterns and structures in high-dimensional spaces, making it particularly useful for tasks such as dimensionality reduction and non-linear feature extraction in machine learning.</li>
+      <li>The ideal number argument for a function is zero(niladic)</li>
+      <li>An argument forces the user to know the details</li>
     </ul>
   </li>
-  <li>kernel FD
+  <li>Arguments are hard at the testing point of a view
     <ul>
-      <li>Kernel Fisher Discriminant (KFD) is an extension of Fisher’s Linear Discriminant Analysis (LDA) that incorporates the kernel trick to handle non-linearly separable data. Fisher’s LDA is a method used for finding linear combinations of features that best separate different classes in a dataset. KFD, through the use of a kernel function, allows this linear separation to be performed in a higher-dimensional space, enabling the discrimination of classes in a non-linear manner. Similar to Kernel PCA, Kernel Fisher Discriminant is particularly useful when dealing with complex, non-linear relationships in the data.</li>
+      <li>Need to test all combinations of arguments</li>
+      <li>Output arguments are harder to understand than input arguments</li>
+      <li>Don’t expect information to be going out through arguments</li>
     </ul>
-
-    <p><img src="../../../assets/ML/NonLinDimRed/Untitled 4.png" /></p>
   </li>
-  <li>manifold learning
+  <li>Common Monadic(one argument) function
     <ul>
-      <li>usually, nonlinear dimension reduction</li>
-      <li>find the invariant property of a data set</li>
-      <li>linear methods (PCA, LDA, ICA, NMF, etc)</li>
-      <li>nonlinear methods (kernel PCA, kernel FD, Isomap, LLE, etc)</li>
-    </ul>
-
-    <p><img src="../../../assets/ML/NonLinDimRed/Untitled 5.png" /></p>
-  </li>
-  <li>Isomap
-    <ul>
-      <li>manifold learning algorithms are to find the embedded manifold from data samples in a high dimensional space</li>
-      <li>Isomap algorithm
+      <li>Usage of arguments
         <ul>
-          <li>uses geodesic distances on a neighborhood graph in the framework of MDS</li>
-          <li><a href="https://en.wikipedia.org/wiki/Multidimensional_scaling">https://en.wikipedia.org/wiki/Multidimensional_scaling</a></li>
+          <li>Asking questions about arguments</li>
+          <li>Operating on arguments, transforming the arguments</li>
         </ul>
-
-        <p><img src="../../../assets/ML/NonLinDimRed/Untitled 6.png" /></p>
-
+      </li>
+      <li><em>Event: there are input arguments but no output arguments</em>
         <ul>
-          <li>Deciding neighbors
-            <ul>
-              <li>KNN</li>
-              <li>epsilon neighborhood</li>
-            </ul>
-          </li>
+          <li>The intention of calling the event is to use the argument the alter the state of the system</li>
+          <li>Usage should be very clear that reader must notice this function is the event</li>
         </ul>
       </li>
     </ul>
   </li>
-  <li>
-    <p>kernel Isomap</p>
-
-    <p><img src="../../../assets/ML/NonLinDimRed/Untitled 7.png" /></p>
-
+  <li>Flag Arguments
     <ul>
-      <li>positive semi-definiteness</li>
-    </ul>
-  </li>
-  <li>locally linear embedding
-    <ul>
-      <li>keep the neighbors</li>
-      <li>Locally Linear Embedding (LLE) is a nonlinear dimensionality reduction algorithm that seeks to preserve the local linear relationships within a dataset. The key idea behind LLE is to represent each data point as a weighted linear combination of its neighbors, thereby capturing the local geometry of the data. Here’s a brief explanation of the LLE algorithm:
-        <ol>
-          <li><strong>Local Reconstruction:</strong>
-            <ul>
-              <li>For each data point in the high-dimensional space, LLE identifies its k nearest neighbors. These neighbors are the points that are most similar to the given point based on pairwise distances.</li>
-            </ul>
-          </li>
-          <li><strong>Local Weight Optimization:</strong>
-            <ul>
-              <li>LLE then seeks to reconstruct the data point by finding the weights (coefficients) that best represent it as a linear combination of its neighbors. The reconstruction is performed in a way that minimizes the difference between the original point and its reconstruction.</li>
-            </ul>
-          </li>
-          <li><strong>Global Embedding:</strong>
-            <ul>
-              <li>After obtaining the local linear representations for all data points, LLE seeks a lower-dimensional representation (embedding) for the entire dataset while preserving these local relationships. This is achieved by minimizing a cost function that enforces consistency in the local linear relationships across the entire dataset.</li>
-            </ul>
-          </li>
-          <li><strong>Final Embedding:</strong>
-            <ul>
-              <li>The resulting lower-dimensional representation is obtained by stacking the embeddings of all data points. This representation captures the intrinsic geometry of the data, emphasizing the local linear relationships.</li>
-            </ul>
-          </li>
-        </ol>
-      </li>
-    </ul>
-  </li>
-  <li>Isomap and LLE
-    <ul>
-      <li>Isomap takes a global strategy, while LLE local</li>
-      <li>LLE analyzes local linear coefficients and reconstruction error
-        <ul>
-          <li>no need to solve large dynamic programming problems</li>
-          <li>related to spectral clustering</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>stochastic neighbor embedding
-    <ul>
-      <li>probabilistically decides if points are neighbors to a given point</li>
-      <li>convert similarity into the probability</li>
-      <li>neighbors are selected probabilistically</li>
-      <li>use distances in a low dimensional space which define probabilities</li>
-      <li>compute KL divergence between the two probabilities</li>
-      <li>minimize KL with respect to yi</li>
-      <li>Stochastic Neighbor Embedding (SNE) is a dimensionality reduction technique that aims to capture the local and global structures of high-dimensional data in a lower-dimensional space. SNE is particularly effective at preserving pairwise similarities between data points, making it well-suited for visualization and exploration of complex datasets.</li>
-    </ul>
-  </li>
-  <li>t-SNE
-    <ul>
-      <li>a symmetrized version of SNE with t-Student instead of Gaussian</li>
-      <li>t-SNE (t-Distributed Stochastic Neighbor Embedding) is an extension of the original SNE (Stochastic Neighbor Embedding) algorithm designed to address some of its limitations. Both SNE and t-SNE are nonlinear dimensionality reduction techniques that focus on preserving pairwise similarities between data points.</li>
-    </ul>
-  </li>
-  <li>
-    <p>t-SNE and SNE</p>
-
-    <p>Comparison:</p>
-
-    <ul>
-      <li><strong>Crowding Problem:</strong>
-        <ul>
-          <li>One of the main challenges with SNE is the crowding problem, where points in high-dimensional space are too close together and end up being crowded in the lower-dimensional space. t-SNE addresses this issue by using a heavy-tailed distribution, leading to better separation of clusters.</li>
-        </ul>
-      </li>
-      <li><strong>Preservation of Global Structure:</strong>
-        <ul>
-          <li>While SNE can struggle with preserving global structures, t-SNE is designed to perform better in this aspect. It is often more effective in revealing the overall structure of the data.</li>
-        </ul>
-      </li>
-      <li><strong>Computational Complexity:</strong>
-        <ul>
-          <li>t-SNE can be computationally more expensive than SNE, especially for large datasets, due to the need to compute and optimize the heavy-tailed distribution</li>
-        </ul>
-      </li>
-      <li><a href="https://woosikyang.github.io/first-post.html">https://woosikyang.github.io/first-post.html</a></li>
-    </ul>
-  </li>
-  <li>neural network approaches
-    <ul>
-      <li>weakness in manifold learning (kernel machine): it does not scale well with sample size. (scales quadratically with the size) the training data is referenced for test data</li>
-      <li>let’s get back to parametric models, especially neural networks</li>
-      <li>self organizing map</li>
-      <li>restricted Boltzmann machine</li>
-      <li>autoencoder (trained with backprop)</li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Nonlinear Dimension Reduction by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 8. Dimension Reduction</title><link href="http://localhost:4000/recent/Dimension_Reduction/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 8. Dimension Reduction" /><published>2024-01-21T00:00:00+09:00</published><updated>2024-01-21T00:00:00+09:00</updated><id>http://localhost:4000/recent/Dimension_Reduction</id><content type="html" xml:base="http://localhost:4000/recent/Dimension_Reduction/"><![CDATA[<h1 id="dimension-reduction">Dimension Reduction</h1>
-
-<ul>
-  <li>Many features
-    <ul>
-      <li>provide more information and potentially high accuracy</li>
-      <li>make it harder to train a classifier (the curse of dimensionality)</li>
-      <li>increase the possibility of overfitting</li>
-    </ul>
-  </li>
-  <li>principal component analysis (PCA)
-    <ul>
-      <li>is one of the most popular and simple DR methods.</li>
-      <li>is a linear projection</li>
-      <li>finds an orthogonal basis set that makes the largest possible variance on the linearly projected space</li>
-      <li>minimal reconstruction error``
-        <ul>
-          <li>maximizing preserved variance after projection</li>
-        </ul>
-      </li>
-      <li>eigendecomposition of covariance matrix</li>
-    </ul>
-  </li>
-  <li>Rayleigh Quotient
-    <ul>
-      <li><a href="https://en.wikipedia.org/wiki/Rayleigh_quotient">https://en.wikipedia.org/wiki/Rayleigh_quotient</a></li>
-      <li>
-        <p><a href="https://blog.naver.com/kj0602j/221622542090">https://blog.naver.com/kj0602j/221622542090</a></p>
-
-        <p><img src="../../../assets/ML/DimRed/Untitled.png" /></p>
-      </li>
-    </ul>
-  </li>
-  <li>eigenfaces</li>
-  <li>
-    <p>multidimensional scaling (MDS)</p>
-
-    <p>Multidimensional Scaling (MDS) is a technique used in statistics and data analysis to visualize the similarity or dissimilarity of data points in a high-dimensional space by projecting them into a lower-dimensional space. The goal of MDS is to represent the pairwise dissimilarities or distances between data points in a way that preserves the original relationships as much as possible.</p>
-
-    <p>Here are the key concepts and steps involved in multidimensional scaling:</p>
-
-    <ol>
-      <li><strong>Dissimilarity (or Distance) Matrix:</strong>
-        <ul>
-          <li>MDS begins with a dissimilarity matrix, which contains the pairwise distances or dissimilarities between each pair of data points. These dissimilarities could represent any measure of dissimilarity, such as Euclidean distance, correlation, or other distance metrics depending on the nature of the data.</li>
-        </ul>
-      </li>
-      <li><strong>Projection into Lower-Dimensional Space:</strong>
-        <ul>
-          <li>MDS aims to find a configuration of points in a lower-dimensional space (typically 2D or 3D) such that the pairwise distances in the lower-dimensional space approximate the original dissimilarity matrix as closely as possible.</li>
-        </ul>
-      </li>
-      <li><strong>Stress Optimization:</strong>
-        <ul>
-          <li>The quality of the representation is often assessed using a stress criterion, which measures how well the lower-dimensional distances approximate the original dissimilarities. The goal is to minimize stress, indicating a good fit between the original and the lower-dimensional representation.</li>
-        </ul>
-      </li>
-      <li><strong>Metric vs. Non-metric MDS:</strong>
-        <ul>
-          <li>MDS can be classified into metric and non-metric MDS. Metric MDS preserves the actual distances between points, while non-metric MDS only preserves the order of distances (i.e., the ranking of dissimilarities).</li>
-        </ul>
-      </li>
-      <li><strong>Applications:</strong>
-        <ul>
-          <li>MDS is widely used in various fields, including psychology, marketing, geography, and bioinformatics. It is often applied to explore and visualize relationships between objects, such as similarity between products based on consumer preferences, geographic relationships between cities, or genetic similarities between species.</li>
-        </ul>
-      </li>
-      <li><strong>Classical vs. Non-classical MDS:</strong>
-        <ul>
-          <li>Classical MDS is based on eigenvalue decomposition and is suitable for metric MDS. Non-classical MDS, including methods like Sammon mapping, is used for non-metric MDS and often employs optimization algorithms to find the lower-dimensional representation.</li>
-        </ul>
-      </li>
-    </ol>
-
-    <p>In summary, multidimensional scaling is a valuable technique for visualizing and interpreting the relationships between data points based on their dissimilarities. It is particularly useful when dealing with high-dimensional data, as it provides a lower-dimensional representation that retains important structural information about the original data.</p>
-
-    <p><img src="../../../assets/ML/DimRed/Untitled 1.png" /></p>
-
-    <p><img src="../../../assets/ML/DimRed/Untitled 2.png" /></p>
-  </li>
-  <li>non-metric pairwise data
-    <ul>
-      <li>in the real world, many relations are asymmetric</li>
-      <li>kernel matrix from asymmetric relations is not PSD</li>
-    </ul>
-  </li>
-  <li>PCA with inner products</li>
-  <li>principle components regression (PCR)
-    <ul>
-      <li>instead of regressing y (the dependent variable) on x directly, the principal components (PCs) of x are used as regressors.</li>
-      <li>PCR regularizes the model (by using a subset of components)</li>
-      <li>In <a href="https://en.wikipedia.org/wiki/Statistics">statistics</a>, <strong>principal component regression</strong> (<strong>PCR</strong>) is a <a href="https://en.wikipedia.org/wiki/Regression_analysis">regression analysis</a> technique that is based on <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">principal component analysis</a> (PCA). More specifically, PCR is used for <a href="https://en.wikipedia.org/wiki/Estimation">estimating</a> the unknown <a href="https://en.wikipedia.org/wiki/Linear_regression">regression coefficients</a> in a <a href="https://en.wikipedia.org/wiki/Linear_regression">standard linear regression model</a>.</li>
-      <li>In PCR, instead of regressing the dependent variable on the explanatory variables directly, the <a href="https://en.wikipedia.org/wiki/Principal_component_analysis">principal components</a> of the explanatory variables are used as <a href="https://en.wikipedia.org/wiki/Dependent_and_independent_variables">regressors</a>. One typically uses only a subset of all the principal components for regression, making PCR a kind of <a href="https://en.wikipedia.org/wiki/Regularization_(mathematics)">regularized</a> procedure and also a type of <a href="https://en.wikipedia.org/wiki/Shrinkage_estimator">shrinkage estimator</a>.</li>
-      <li><a href="https://deep-learning-study.tistory.com/668">https://deep-learning-study.tistory.com/668</a></li>
-      <li>통계에서 주성분 회귀(Principal Component Regression, PCR)는 주성분 분석(Principal Component Analysis, PCA)을 기반으로 한 회귀 분석 기법입니다. 보다 구체적으로, PCR은 표준 선형 회귀 모델에서 알려지지 않은 회귀 계수를 추정하는 데 사용됩니다. PCR은 설명 변수의 종속 변수를 직접 회귀하는 대신 회귀 변수로 설명 변수의 주성분을 사용합니다. PCR은 일종의 정규화 절차이자 일종의 수축 추정기이기도 합니다. 일반적으로 모든 주성분의 하위 집합만 회귀에 사용되기 때문입니다. 종종 분산이 더 높은 주성분(설명 변수의 샘플 분산-공분산 행렬의 더 높은 고유값에 해당하는 고유 벡터를 기반으로 함)이 회귀 변수로 선택됩니다. 그러나 분산이 낮은 주성분도 결과를 예측하는 데 중요할 수 있으며 때로는 훨씬 더 중요할 수도 있습니다. PCR의 주요 용도 중 하나는 하나 이상의 설명 변수가 있을 때 발생하는 다중 공선성 문제를 극복하는 것입니다. 거의 동일선상에 있습니다. PCR은 회귀 단계에서 분산이 적은 일부 주요 구성 요소를 제외하여 이러한 상황을 잘 처리할 수 있습니다. 또한 PCR은 일반적으로 모든 주성분의 하위 집합만 회귀하여 기본 모델을 특성화하는 매개 변수의 유효 수를 크게 줄임으로써 차원을 줄일 수 있습니다. 이는 고차원 공변량이 있는 설정에서 특히 유용합니다. 또한 회귀에 사용할 주성분을 적절하게 선택하면 PCR은 가정된 모델을 기반으로 결과를 효율적으로 예측할 수 있습니다.</li>
-    </ul>
-  </li>
-  <li>probabilistic PCA (PPCA)
-    <ul>
-      <li>PPCA: probabilistic model of PCA for the observed data
-        <ul>
-          <li>the principal axes: maximum likelihood parameter estimates</li>
-          <li>generative view: sampling x conditioned on the latent value z</li>
-        </ul>
-      </li>
-      <li>Advantages
-        <ul>
-          <li>EM is available</li>
-          <li>can deal with missing value</li>
-          <li>can be used in other probabilistic models</li>
-        </ul>
-      </li>
-      <li><a href="https://eehoeskrap.tistory.com/231">https://eehoeskrap.tistory.com/231</a></li>
-    </ul>
-  </li>
-  <li>Difference between PCA and PPCA
-    <ul>
-      <li>PCA (Principal Component Analysis) and PPCA (Probabilistic Principal Component Analysis) are both techniques used for dimensionality reduction, but they have some differences in their underlying assumptions and methodologies.
-        <ol>
-          <li><strong>Nature:</strong>
-            <ul>
-              <li><strong>PCA:</strong> PCA is a deterministic method that aims to find orthogonal linear transformations of the data such that the variance of the data is maximized along the transformed axes.</li>
-              <li><strong>PPCA:</strong> PPCA, on the other hand, is a probabilistic method that assumes a probabilistic generative model for the data. It introduces a probabilistic noise model and estimates the parameters of this model.</li>
-            </ul>
-          </li>
-          <li><strong>Probabilistic Model:</strong>
-            <ul>
-              <li><strong>PCA:</strong> PCA does not explicitly model the probability distribution of the data. It focuses on finding the principal components that capture the maximum variance in the data.</li>
-              <li><strong>PPCA:</strong> PPCA explicitly models the probability distribution of the data. It assumes that the observed data is generated from a lower-dimensional subspace with Gaussian noise.</li>
-            </ul>
-          </li>
-          <li><strong>Handling Missing Data:</strong>
-            <ul>
-              <li><strong>PCA:</strong> PCA does not handle missing data well. If data is missing for some observations, PCA might not provide accurate results.</li>
-              <li><strong>PPCA:</strong> PPCA is designed to handle missing data more gracefully. It can incorporate a probabilistic treatment of missing data, making it more robust in scenarios where not all data is available.</li>
-            </ul>
-          </li>
-          <li><strong>Optimization:</strong>
-            <ul>
-              <li><strong>PCA:</strong> PCA is typically solved through the eigenvalue decomposition of the covariance matrix or by using singular value decomposition (SVD).</li>
-              <li><strong>PPCA:</strong> PPCA is often solved using the expectation-maximization (EM) algorithm, which is an iterative optimization algorithm for finding maximum likelihood estimates of parameters in probabilistic models.</li>
-            </ul>
-          </li>
-          <li><strong>Noise Model:</strong>
-            <ul>
-              <li><strong>PCA:</strong> PCA assumes that the variability in the data is entirely due to the principal components, and any residual variability is treated as noise without a specific probabilistic model.</li>
-              <li><strong>PPCA:</strong> PPCA explicitly models the noise in the data as Gaussian, which allows for a probabilistic treatment of uncertainty in the estimated lower-dimensional representation.</li>
-            </ul>
-          </li>
-        </ol>
-
-        <p>In summary, while both PCA and PPCA are techniques for dimensionality reduction, PPCA extends PCA by introducing a probabilistic model and is more suitable for scenarios where a probabilistic treatment of the data and handling missing values are important considerations.</p>
-      </li>
-    </ul>
-  </li>
-  <li>FA (Factor Analysis)
-    <ul>
-      <li>FA describes observations in terms of latent variable, factors</li>
-    </ul>
-  </li>
-  <li>PCA extension
-    <ul>
-      <li>LDA: Linear discriminant analysis
-        <ul>
-          <li>to supervised learning</li>
-        </ul>
-      </li>
-      <li>ICA: Independent component analysis
-        <ul>
-          <li>to independent factors</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>LDA
-    <ul>
-      <li>the dimensions of largest variance are good, but not always the best</li>
-      <li>known Fisher discriminant analysis</li>
-      <li>maximize the ratio of the variance between classes to the one within the classes on the projected space</li>
-      <li>it is a generalized eigenvalue problem (Rayleigh quotient)
-        <ul>
-          <li>for 2 class cases, no need even to solve eigendecomposition</li>
-        </ul>
-      </li>
-    </ul>
-
-    <p><img src="../../../assets/ML/DimRed/Untitled 3.png" /></p>
-
-    <ul>
-      <li>
-        <p>Multi-class case</p>
-
-        <p><img src="../../../assets/ML/DimRed/Untitled 4.png" /></p>
-      </li>
-    </ul>
-  </li>
-  <li>PCA and LDA</li>
-  <li>Principal Component Analysis (PCA) and Linear Discriminant Analysis (LDA) are both dimensionality reduction techniques, but they have different objectives and are used in different contexts. Here are the key differences between PCA and LDA:
-    <ol>
-      <li><strong>Supervision:</strong>
-        <ol>
-          <li><strong>Objective:</strong>
-            <ul>
-              <li><strong>PCA:</strong> PCA aims to maximize the variance in the data. It identifies the directions (principal components) along which the data varies the most.</li>
-              <li><strong>LDA:</strong> LDA, on the other hand, aims to maximize the separation between classes. It identifies the directions that maximize the distance between the means of different classes while minimizing the spread (variance) within each class.
-      - <strong>PCA:</strong> PCA is an unsupervised technique, meaning it does not take into account any class labels or information about the classes.
-      - <strong>LDA:</strong> LDA is a supervised technique. It requires class labels for each data point to learn the linear combinations of features that best separate the classes.</li>
-            </ul>
-          </li>
-        </ol>
-      </li>
-      <li><strong>Application:</strong>
-        <ul>
-          <li><strong>PCA:</strong> PCA is often used for reducing the dimensionality of data when the goal is to capture the most important patterns or variability in the entire dataset, without specific regard to class labels.</li>
-          <li><strong>LDA:</strong> LDA is commonly employed in classification problems where the goal is to distinguish between different classes. It is used to find the linear combinations of features that are most informative for classification.</li>
-        </ul>
-      </li>
-      <li><strong>Number of Components:</strong>
-        <ul>
-          <li><strong>PCA:</strong> In PCA, the number of principal components is determined by the number of features in the original data. It doesn’t consider class information.</li>
-          <li><strong>LDA:</strong> In LDA, the number of discriminant components is at most (c-1), where (c) is the number of classes. The maximum number of discriminant components is limited by the number of classes.</li>
-        </ul>
-      </li>
-      <li><strong>Variance vs. Discrimination:</strong>
-        <ul>
-          <li><strong>PCA:</strong> PCA focuses on maximizing the total variance in the dataset. It is not concerned with class discrimination.</li>
-          <li><strong>LDA:</strong> LDA focuses on maximizing the ratio of between-class variance to within-class variance. It explicitly considers class information to find directions that maximize class separability.</li>
-        </ul>
-      </li>
-      <li><strong>Assumptions:</strong>
-        <ul>
-          <li><strong>PCA:</strong> PCA assumes that the directions of maximum variance are the most important and informative directions in the data.</li>
-          <li><strong>LDA:</strong> LDA assumes that the data can be well-separated into classes, and it seeks the linear combinations of features that best discriminate between these classes.</li>
-        </ul>
-      </li>
-    </ol>
-
-    <p>In summary, PCA is primarily a dimensionality reduction technique that captures overall variance, while LDA is a supervised dimensionality reduction technique specifically designed for improving class separability in classification problems. The choice between PCA and LDA depends on the specific goals and nature of the data at hand.</p>
-  </li>
-  <li>cocktail party problem</li>
-  <li>independent component analysis
-    <ul>
-      <li>Independent Component Analysis (ICA) is a computational technique used for separating a multivariate signal into additive, independent components. The goal of ICA is to find a linear transformation of the data such that the resulting components are statistically as independent as possible. It is commonly applied in signal processing, neuroscience, and image analysis to identify and extract hidden factors contributing to observed data.</li>
-      <li>a statistical problem</li>
-      <li>to decompose given multivariate data into a linear sum of statistically independent components</li>
-    </ul>
-
-    <p><img src="../../../assets/ML/DimRed/Untitle 5.png" /></p>
-
-    <ol>
-      <li><strong>Maximum Likelihood Estimation (MLE):</strong>
-        <ul>
-          <li>In the context of ICA, the observed data is assumed to be a linear combination of independent sources corrupted by noise. The demixing matrix is then estimated by maximizing the likelihood of the observed data given the model assumptions.</li>
-          <li>The likelihood function involves the joint probability density function of the independent components. The demixing matrix that maximizes this likelihood is the one that effectively separates the sources.</li>
-          <li>The optimization problem is often solved using algorithms like the FastICA algorithm, which seeks to find the demixing matrix that maximizes non-Gaussianity of the estimated sources.</li>
-        </ul>
-      </li>
-      <li><strong>Super/Sub-Gaussianity:</strong>
-        <ul>
-          <li>ICA relies on the assumption that the sources are statistically independent and have non-Gaussian distributions. Super-Gaussian sources have heavier tails than a Gaussian distribution, while sub-Gaussian sources have lighter tails.</li>
-          <li>The non-Gaussianity assumption is crucial because Gaussian sources are not unique in ICA; any rotation or scaling of Gaussian sources can be considered a solution. Non-Gaussianity provides a measure of the independence of the estimated sources.</li>
-          <li>The algorithms used in ICA often exploit measures of non-Gaussianity, such as kurtosis, to guide the separation process. Sources that are more non-Gaussian are considered more likely to be independent.</li>
-        </ul>
-      </li>
-    </ol>
-  </li>
-  <li>nonnegative matrix factorization (NMF)
-    <ul>
-      <li>constraint: W and H can not have negative value</li>
-      <li>all basis vectors in NMF have localized features
-        <ul>
-          <li>so both the basis and encodings are sparse</li>
-          <li>the variability of X is generated by combining these different parts
-            <ul>
-              <li>the basis vectors are like Lego blocks without subtraction</li>
-              <li>and define a convex cone</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Non-negative Matrix Factorization (NMF) is a linear algebraic technique used for decomposing a non-negative matrix into two lower-rank non-negative matrices. It is particularly useful for analyzing non-negative data, such as images, documents, or audio signals. NMF has applications in diverse fields, including image processing, topic modeling, and source separation, where it helps extract meaningful and interpretable patterns from the data.</li>
-    </ul>
-  </li>
-  <li>representation: local vs. distributed
-    <ul>
-      <li>support vector machines (SVMs) vs. artificial neural networks (ANNs)</li>
-    </ul>
-
-    <p><img src="../../../assets/ML/DimRed/Untitled 6.png" /></p>
-  </li>
-  <li>representation: compact vs. sparse
-    <ul>
-      <li>coding strategy</li>
-      <li>sparseness
-        <ul>
-          <li>equal response probability over the cells, low response probability for input</li>
-        </ul>
-      </li>
+      <li><em>It is Ugly</em></li>
+      <li>Split function instead of flag</li>
     </ul>
   </li>
 </ul>
 
-<p><img src="../../../assets/ML/DimRed/Untitled 7.png" /></p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Dimension Reduction by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 7. Clustering</title><link href="http://localhost:4000/recent/Clustering/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 7. Clustering" /><published>2024-01-03T00:00:00+09:00</published><updated>2024-01-03T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clustering</id><content type="html" xml:base="http://localhost:4000/recent/Clustering/"><![CDATA[<h1 id="clustering">Clustering</h1>
+<p>Dyadic Functions</p>
 
 <ul>
-  <li>unsupervised learning
-    <ul>
-      <li>density estimation</li>
-      <li>clustering</li>
-      <li>dimension reduction</li>
-      <li>factor analysis</li>
-      <li>representation learning</li>
-    </ul>
-  </li>
-  <li>Clustering helps us understand the data samples
-    <ul>
-      <li>clustering → grouping samples in a way that samples in the same group are more similar to each other than to those in another group</li>
-    </ul>
-  </li>
-  <li>Approaches for clustering
-    <ul>
-      <li>Connectivity based</li>
-      <li>Centroids based</li>
-      <li>distribution based</li>
-      <li>graph theoretic</li>
-    </ul>
-  </li>
-  <li>hierarchical clustering
-    <ul>
-      <li>dendrogram in hierarchical clustering</li>
-      <li>bottom-up/top-down manner
-        <ul>
-          <li>agglomerative (bottom-up)
-            <ul>
-              <li>at each step, compute distances between all pairs of clusters, then merge the ones with the smallest distance.
-                <ul>
-                  <li>distance between centroids</li>
-                  <li>distance between the two closest or furthest points</li>
-                  <li>define the number of clusters</li>
-                  <li>use cohesion</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>divisive (top-down)</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>K-means
-    <ul>
-      <li>an unsupervised clustering algorithm</li>
-      <li>K → number of clusters</li>
-      <li>global convergence</li>
-      <li>only a local minimum is obtained</li>
-      <li>sensitive to initialization</li>
-      <li>sensitive to outliers</li>
-      <li>Algorithm
-        <ul>
-          <li>each vector will be assigned to one cluster exclusively</li>
-          <li>define dissimilarity measures such as Euclidean distance</li>
-          <li>K-means minimizes within cluster point scatter</li>
-          <li>It is an optimization problem</li>
-        </ul>
+  <li>Should be avoided, but there is a situation in that dyadic function is necessary</li>
+  <li>Take advantage of what mechanisms may be available to convert them into single-argument functions</li>
+</ul>
 
-        <p><img src="../../../assets/ML/Clus/Untitled.png" /></p>
-      </li>
-      <li>Issues
-        <ul>
-          <li>initialization is important</li>
-          <li>distance function (or metric) should be carefully chosen</li>
-          <li>K-means is sensitive to outliers</li>
-          <li>kMedoids → using medoids (one of the actual points)</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>mixture of Gaussian
-    <ul>
-      <li>a distribution can be approximated by a weighted sum of component Gaussian densities with parameters</li>
-    </ul>
-
-    <p><img src="../../../assets/ML/Clus/Untitled 1.png" /></p>
-
-    <ul>
-      <li>latent variables</li>
-    </ul>
-
-    <p><img src="../../../assets/ML/Clus/Untitled 2.png" /></p>
-
-    <ul>
-      <li>Gaussian densities with MLE</li>
-    </ul>
-  </li>
-  <li>expectation maximization (EM)
-    <ol>
-      <li>The Expectation-Maximization algorithm is the algorithm to find the maximum likelihood or maximum a posteriori estimates of parameters in probabilistic models. It repeatedly applies the expectation step and the maximization steps.</li>
-      <li>In the expectation step, calculate the expected value of log-likelihood using the estimated value of a parameter. Particularly when dealing with incomplete or missing data, the expectation step involves calculating the posterior probability distribution of the missing data given the observed data and the current parameter estimates.</li>
-      <li>The maximization step is finding a variable value that maximizes this expected value. The variable value calculated in the maximization step is used as the estimated value of the next expectation step.</li>
-      <li>The process iterates between the E and M steps until convergence, where the parameter estimates stabilize. Using this algorithm, you can easily know one of the parameters or latent variables, when you know the other values.
-        <ul>
-          <li>an iterative optimization method to estimate parameters, given measurements X when there are hidden (nuisance) variables Z</li>
-          <li>it can maximize the posterior probability (or likelihood or joint probability)</li>
-          <li>a naive approach would be an alternate optimization between Z and estimate parameters</li>
-          <li>EM: lower bound</li>
-        </ul>
-        <ul>
-          <li><a href="http://norman3.github.io/prml/docs/chapter09/4.html">http://norman3.github.io/prml/docs/chapter09/4.html</a></li>
-          <li><a href="https://zzaebok.github.io/machine_learning/EM_algorithm/">https://zzaebok.github.io/machine_learning/EM_algorithm/</a></li>
-          <li>E steps
-            <ul>
-              <li>suppose that we try to maximize joint probability, lower bound B</li>
-              <li>should tight log P(X, theta) → B should be maximized with respect to ft(Z)</li>
-            </ul>
-          </li>
-          <li>
-            <p>M steps</p>
-
-            <p><img src="../../../assets/ML/Clus/Untitled 3.png" /></p>
-          </li>
-        </ul>
-      </li>
-    </ol>
-
-    <p><img src="../../../assets/ML/Clus/Untitled 4.png" /></p>
-  </li>
-  <li>
-    <p>MoG training with EM</p>
-
-    <p><img src="../../../assets/ML/Clus/Untitled 5.png" /></p>
-  </li>
-  <li>Difference between MoG and K-means
-    <ul>
-      <li>EM for mixtures of Gaussians is just like a soft version of K-means, with
-  fixed priors and covariance</li>
-      <li>Instead of hard assignments in the E-step, we do soft assignments based on
-  the softmax of the squared Mahalanobis distance from each point to each
-  cluster.</li>
-      <li>Each center is moved by weighted means of the data, with weights given by
-  soft assignments</li>
-      <li>In K-means, weights are 0 or 1</li>
-    </ul>
-  </li>
-  <li>Spectral clustering
-    <ul>
-      <li>graphs:
-        <ul>
-          <li>natural way to represent many types of data</li>
-          <li>nodes corresponding to data samples</li>
-          <li>edges connecting the nodes</li>
-        </ul>
-      </li>
-      <li>graph partitioning
-        <ul>
-          <li>graph cut
-            <ul>
-              <li>consider a partition of the graph into two parts A and B</li>
-            </ul>
-          </li>
-          <li>normalized cut
-            <ul>
-              <li>considers the connectivity with the volume of each group</li>
-            </ul>
-          </li>
-          <li>normalized cut derivation</li>
-        </ul>
-
-        <p><img src="../../../assets/ML/Clus/Untitled 6.png" /></p>
-      </li>
-      <li>competitive learning
-        <ul>
-          <li>a clustering algorithm related to humans based on neural network</li>
-        </ul>
-      </li>
-      <li>when the number of clusters is unknown
-        <ul>
-          <li>DBSCAN (Density-based spatial clustering of applications with noise)</li>
-        </ul>
-
-        <p><img src="../../../assets/ML/Clus/Untitled 7.png" /></p>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Clustering by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 6. Decision Theory</title><link href="http://localhost:4000/recent/Decision_Theory/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 6. Decision Theory" /><published>2023-12-28T00:00:00+09:00</published><updated>2023-12-28T00:00:00+09:00</updated><id>http://localhost:4000/recent/Decision_Theory</id><content type="html" xml:base="http://localhost:4000/recent/Decision_Theory/"><![CDATA[<h1 id="decision-theory">Decision Theory</h1>
+<p>Triads Functions</p>
 
 <ul>
-  <li>given an input vector, our goal is to predict a corresponding target value
-    <ul>
-      <li>The target value is described probabilistically</li>
-    </ul>
-  </li>
-  <li>DT provides optimal decisions in situations involving uncertainty, combined with probability theory</li>
-  <li>Three approaches to making a decision
-    <ul>
-      <li>generative model, \(p(t, x)\) or \(p(x \mid t)\)
-        <ul>
-          <li>can be used for the classification using \(p(t \mid x)\) =  \(\frac { p(x \mid t)p(t) }{p(x)}\)</li>
-          <li>generate new data or detect outliers</li>
-        </ul>
-      </li>
-      <li>Discriminative Model
-        <ul>
-          <li>\(p(t \mid x)\), just classficiation</li>
-        </ul>
-      </li>
-      <li>Discriminant function
-        <ul>
-          <li>f(x), model a map function from input x to a label t</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>probability models for decision
-    <ul>
-      <li>misclassification rate vs. loss function</li>
-    </ul>
+  <li>Very careful to use it</li>
+</ul>
 
-    <p><img src="../../../assets/ML/DecTheo/Untitled.png" /></p>
-  </li>
-  <li>
-    <p>Type 1 and 2 error</p>
+<p>Argument Objects</p>
 
-    <p><img src="../../../assets/ML/DecTheo/Untitled 1.png" /></p>
-  </li>
-  <li>
-    <p>receiver operating characteristics (ROC)</p>
-
-    <p><img src="../../../assets/ML/DecTheo/Untitled 2.png" /></p>
-  </li>
-  <li>loss function
+<ul>
+  <li>When a group of variables is passed together, it is likely part of a concept that deserves a name of its own</li>
+  <li>Augment list
     <ul>
-      <li>a function that maps an event onto a “cost” value</li>
-    </ul>
-  </li>
-  <li>minimum expected loss
-    <ul>
-      <li>our goal is to minimize an expected loss (or risk)</li>
-      <li>classify x into class which minimizes the conditional risk (or expected loss)</li>
-    </ul>
-  </li>
-  <li>
-    <p>loss functions in general</p>
-
-    <p><img src="../../../assets/ML/DecTheo/Untitled 3.png" /></p>
-  </li>
-  <li>The term “probability” refers to the possibility of something happening. The term Likelihood refers to the process of determining the best data distribution given a specific situation in the data. When calculating the probability of a given outcome, you assume the model’s parameters are reliable.</li>
-  <li>Three decision rules based on probability
-    <ul>
-      <li>Maximum Likelihood
-        <ul>
-          <li><a href="https://angeloyeo.github.io/2020/07/17/MLE.html">https://angeloyeo.github.io/2020/07/17/MLE.html</a></li>
-        </ul>
-      </li>
-      <li>Maximum a posterior
-        <ul>
-          <li><a href="https://process-mining.tistory.com/126">https://process-mining.tistory.com/126</a></li>
-          <li><a href="https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation">https://en.wikipedia.org/wiki/Maximum_a_posteriori_estimation</a></li>
-        </ul>
-      </li>
-      <li>Bayes Risk
-        <ul>
-          <li><a href="http://www.stat.yale.edu/~yw562/teaching/598/lec02.pdf">http://www.stat.yale.edu/~yw562/teaching/598/lec02.pdf</a></li>
-        </ul>
-      </li>
+      <li>Functions that take variable arguments can be monads, dyads, or even triads, but no more than that</li>
     </ul>
   </li>
 </ul>
 
-<p>Bayes Risk is a concept in decision theory that measures the expected loss associated with a decision, taking into account the uncertainty in the underlying parameters or states. It is derived from Bayesian decision theory, which combines prior knowledge with observed data to make optimal decisions.</p>
-
-<p>In the context of decision theory, the Bayes Risk \((R(\delta))\) associated with a decision rule \((\delta)\) is defined as the expected value of the loss function under the posterior distribution of the parameters, given the observed data. Mathematically, it can be expressed as:</p>
-
-\[R(\delta) = \int L(\theta, \delta(x)) \cdot f(\theta | x) \, d\theta\]
-
-<p>where:</p>
+<p>Verb and Keywords</p>
 
 <ul>
-  <li>\(L(\theta, \delta(x))\) is the loss function, representing the cost associated with making a decision \(\delta(x)\) when the true state is \(\theta\).</li>
-  <li>\(f(\theta \mid x)\) is the posterior distribution of the parameters given the observed data \((x)\) .</li>
+  <li>Monad case
+    <ul>
+      <li>the function and argument should form a very nice verb/noun pair</li>
+    </ul>
+  </li>
+  <li>Using keywords to form a function name</li>
+  <li>Function name and ordering of argument</li>
+  <li>No side Effect
+    <ul>
+      <li>No temporal coupling</li>
+      <li>State exactly what the function does and split the function if it is possible</li>
+    </ul>
+  </li>
+  <li>Output arguments
+    <ul>
+      <li>Anything that forces you to check the function signature is equivalent to a double-take</li>
+      <li><em>this</em> keyword is intended to act as an output argument</li>
+      <li>Output argument should be avoided</li>
+    </ul>
+  </li>
 </ul>
 
-<p>The Bayes Risk accounts for the uncertainty in parameter estimation by integrating the loss over the entire parameter space, weighted by the posterior distribution. This approach reflects the Bayesian philosophy of updating beliefs based on both prior knowledge and observed evidence.</p>
+<p><strong><em>Do something or answer something, but not both</em></strong></p>
 
-<p>In practice, the decision rule \((\delta)\) can be chosen to minimize the Bayes Risk, resulting in a decision that is optimal in terms of expected loss. The Bayes Risk provides a comprehensive measure of the cost associated with decisions, considering the uncertainty inherent in parameter estimation in a Bayesian framework.</p>
+<p>Command Query Separation</p>
 
-<p>Maximum Likelihood Estimation (MLE) and Maximum A Posteriori (MAP) estimation are both methods used to estimate the parameters of a statistical model, but they differ in their underlying principles and assumptions.</p>
+<ul>
+  <li>Separate the command from the query so that ambiguity cannot occur</li>
+</ul>
 
-<p><strong>Maximum Likelihood Estimation (MLE):</strong></p>
+<p>Prefer Exception to Return Error Codes</p>
+
+<ul>
+  <li>Processing code can be separated from the happy path code and can be simplified</li>
+  <li>Extract Try/Catch Block
+    <ul>
+      <li>Specific function for error handling</li>
+      <li>It makes help to clarify the function
+        <ul>
+          <li>Nice Separation</li>
+        </ul>
+      </li>
+      <li>Error Handling is one thing; function should only be one thing</li>
+    </ul>
+  </li>
+  <li>New exceptions are derivatives of the exception class</li>
+</ul>
+
+<p>Don’t Repeat Yourself</p>
+
+<ul>
+  <li>Duplication may be the root of all evil in software</li>
+  <li>Since the invention of the subroutine, innovations have been an ongoing attempt to eliminate duplication from our source code</li>
+</ul>
+
+<p>Structured Programming</p>
+
+<ul>
+  <li>Only be one <em>return</em> statement</li>
+  <li>No <em>break</em> or <em>continue</em> statement</li>
+  <li>Never <em>goto</em> statement</li>
+  <li>These rules are beneficial for large functions, not small functions</li>
+</ul>
+
+<p>How to write a function with these rules?</p>
+
+<ul>
+  <li>Write code</li>
+  <li>Message and refine the code, shrink and reorder, and keeping the test passing</li>
+</ul>
+
+<p>Conclusion</p>
+
+<ul>
+  <li>Functions are the verb</li>
+  <li>Classes are the nouns</li>
+  <li>The art of programming is the art of language design</li>
+  <li>A function will be short, well-named, nicely organized</li>
+  <li><strong><em>Tell the story of the system</em></strong>
+    <ul>
+      <li>need to fit cleanly together in precise language</li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[Using Function Properly]]></summary></entry><entry><title type="html">Can We Automatically Fix Bugs by Learning Edit Operations?</title><link href="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/" rel="alternate" type="text/html" title="Can We Automatically Fix Bugs by Learning Edit Operations?" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Can%20We%20Automatically%20Fix%20Bugs%20by%20Learning%20Edit%20Operations</id><content type="html" xml:base="http://localhost:4000/recent/Can-We-Automatically-Fix-Bugs-by-Learning-Edit-Operations/"><![CDATA[<h2 id="can-we-automatically-fix-bugs-by-learning-edit-operations">“Can We Automatically Fix Bugs by Learning Edit Operations?”</h2>
+
+<h2 id="paper"><a href="https://www.cs.wm.edu/~denys/pubs/SANER-RENE-BugFixing.pdf">Paper</a></h2>
+
+<h3 id="summary">Summary:</h3>
+
+<ul>
+  <li>
+    <p>Implementing Hephaestus, a novel method to improve the accuracy of APR through learning to apply edit operations. Leverages neural machine translation and attempts to produce the edit operations needed.</p>
+
+    <p>Learning edit operations does not offer an advantage over the standard approach of translating directly from buggy code to fixed code. However, interestingly, Hephaestus exhibited lower translation accuracy than the baseline, able to perform successful bug repair.</p>
+  </li>
+</ul>
+
+<h3 id="points">Points:</h3>
 
 <ol>
-  <li><strong>Objective:</strong> MLE aims to find the values of the model parameters that maximize the likelihood function, which measures how well the observed data is explained by the model.</li>
-  <li><strong>Assumption:</strong> MLE assumes a uniform or non-informative prior distribution, meaning that all parameter values are equally likely before observing the data.</li>
-  <li>
-    <p><strong>Formula:</strong> \(\hat{\theta}_{\text{MLE}} = \arg\max_{\theta} \mathcal{L}(\theta \mid \text{data}),\) where $\mathcal{L}(\theta \mid \text{data})$ is the likelihood function.</p>
-  </li>
-  <li><strong>Result:</strong> MLE provides a point estimate of the parameters that maximizes the likelihood of the observed data.</li>
-</ol>
-
-<p><strong>Maximum A Posteriori (MAP) Estimation:</strong></p>
-
-<ol>
-  <li><strong>Objective:</strong> MAP estimation combines the likelihood function with a prior distribution to find the values of the parameters that maximize the posterior distribution.</li>
-  <li><strong>Assumption:</strong> MAP incorporates prior knowledge or beliefs about the parameters by introducing a prior distribution. This prior reflects any information available before observing the data.</li>
-  <li><strong>Formula:</strong> \(\hat{\theta}_{\text{MAP}} = \arg\max_{\theta} P(\theta \mid \text{data}),\) where $P(\theta \mid \text{data})$ is the posterior distribution.</li>
-  <li><strong>Result:</strong> MAP provides a point estimate of the parameters that maximizes the posterior distribution, considering both the likelihood and the prior.</li>
-</ol>
-
-<p><strong>Key Differences:</strong></p>
-
-<ul>
-  <li><strong>Incorporating Prior Information:</strong> The major distinction lies in the incorporation of prior information. MLE assumes a non-informative prior (flat prior), while MAP explicitly considers a prior distribution that may encode prior beliefs or knowledge about the parameters.</li>
-  <li><strong>Formula:</strong> The formulas for MLE and MAP are similar, but MAP includes the prior term in the optimization process, affecting the final estimate.</li>
-  <li><strong>Robustness:</strong> MAP estimates may be more robust when dealing with limited data because the prior helps regularize the estimation. MLE can be sensitive to sparse or noisy data.</li>
-</ul>
-
-<p>In summary, MLE and MAP are both methods for estimating parameters, with MLE relying solely on the likelihood function and MAP incorporating prior information through a prior distribution. The choice between them depends on the available information and the desired balance between data-driven estimates and prior beliefs.</p>
-
-<ul>
-  <li>
-    <p>discriminant function g(x) using gi(x) (e.g., ML, MAP, Bayes risk)</p>
-
-    <p><img src="../../../assets/ML/DecTheo/Untitled 4.png" /></p>
-  </li>
-  <li>
-    <p>decision boundary</p>
-
-    <p><img src="../../../assets/ML/DecTheo/Untitled 5.png" /></p>
-
-    <ul>
-      <li>boundaries for Gaussian
-        <ul>
-          <li>case1: features are uncorrelated (i.e., independent) with the same variance</li>
-          <li>case2: the classes have identical covariance matrices</li>
-          <li>case3: each class has a different covariance matrix</li>
-        </ul>
-      </li>
-      <li><a href="https://www.cs.cmu.edu/~aarti/Class/10315_Fall19/lecs/Lecture3.pdf">https://www.cs.cmu.edu/~aarti/Class/10315_Fall19/lecs/Lecture3.pdf</a></li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Decision... by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 5. Density Estimation</title><link href="http://localhost:4000/recent/Density_Estimation/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 5. Density Estimation" /><published>2023-12-27T00:00:00+09:00</published><updated>2023-12-27T00:00:00+09:00</updated><id>http://localhost:4000/recent/Density_Estimation</id><content type="html" xml:base="http://localhost:4000/recent/Density_Estimation/"><![CDATA[<h1 id="density-estimation">Density Estimation</h1>
-
-<ul>
-  <li>for a data sample, we need a vector to represent</li>
-  <li>for a dataset with many samples, we need the distribution of the samples to understand the dataset</li>
-  <li>Density Estimation
-    <ul>
-      <li>estimation of an underlying probability density function p(x) based on observed data</li>
-      <li>we can understand the population (unsupervised)</li>
-      <li>the density can be used for classification</li>
-      <li>parametric methods
-        <ul>
-          <li>assuming a functional form about the distribution (e.g., Gaussian)</li>
-          <li>estimating the parameters (e.g., mean and variance)</li>
-        </ul>
-      </li>
-      <li>non-parametric methods
-        <ul>
-          <li>no assumption on the distribution</li>
-          <li>estimating the density directly from data</li>
-        </ul>
-      </li>
-      <li>semi-parametric methods
-        <ul>
-          <li>a very general class of functional forms</li>
-          <li>with more parameters than parametric methods</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>estimation theory
-    <ul>
-      <li>estimating the unknown parameters from data</li>
-      <li>bias
-        <ul>
-          <li>error from assumptions in the learning algorithm</li>
-          <li>underfitting</li>
-        </ul>
-      </li>
-      <li>variance
-        <ul>
-          <li>error from sensitivity to small fluctuations in the data</li>
-          <li>overfitting</li>
-        </ul>
-      </li>
-      <li>bias-variance trade-off</li>
-    </ul>
-  </li>
-  <li>maximum likelihood estimation (MLE)
-    <ul>
-      <li>a method of estimating the parameters of a distribution
-        <ul>
-          <li>by maximizing a likelihood function</li>
-          <li>the observed data will be most probable</li>
-        </ul>
-      </li>
-      <li>maximum likelihood estimate
-        <ul>
-          <li>estimated parameter maximizing the likelihood function</li>
-        </ul>
-      </li>
-      <li><a href="https://angeloyeo.github.io/2020/07/17/MLE.html">https://angeloyeo.github.io/2020/07/17/MLE.html</a></li>
-    </ul>
-  </li>
-  <li>likelihood of Gaussian distribution
-    <ul>
-      <li>how likely is the data to occur given the parameters</li>
-    </ul>
-  </li>
-  <li>log-likelihood
-    <ul>
-      <li>the log function is monotonic and makes the likelihood equation much simpler</li>
-    </ul>
-  </li>
-  <li>
-    <p>MLE for Gaussian</p>
-
-    <p><img src="../../../assets/ML/DensityEst/Untitled.png" /></p>
-
-    <p><img src="../../../assets/ML/DensityEst/Untitled 1.png" /></p>
-  </li>
-  <li>the mean estimator is unbiased, but the variance estimator is biased
-    <ul>
-      <li>maximum likelihood estimator is related to overfitting</li>
-    </ul>
-
-    <p><img src="../../../assets/ML/DensityEst/Untitled 2.png" /></p>
-  </li>
-  <li>histogram as a nonparametric method
-    <ul>
-      <li>probability of x in a bin</li>
-    </ul>
-
-    <p><img src="../../../assets/ML/DensityEst/Untitled 3.png" /></p>
-  </li>
-  <li>KDE and kNN
-    <ul>
-      <li>kernel density estimation (KDE)
-        <ul>
-          <li><a href="https://seongkyun.github.io/study/2019/02/03/KDE/">https://seongkyun.github.io/study/2019/02/03/KDE/</a></li>
-          <li><a href="https://darkpgmr.tistory.com/147">https://darkpgmr.tistory.com/147</a></li>
-          <li>Parzen window</li>
-        </ul>
-
-        <p><img src="../../../assets/ML/DensityEst/Untitled 4.png" /></p>
-      </li>
-      <li>k nearest neighbors (kNN)
-        <ul>
-          <li>fix k, and increase V to include k samples</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Semi-parametric method
-    <ul>
-      <li>Mixture of Gaussian</li>
-    </ul>
-
-    <p><img src="../../../assets/ML/DensityEst/Untitled 5.png" /></p>
-
-    <p><img src="../../../assets/ML/DensityEst/Untitled 6.png" /></p>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Density Estimation by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 4. Information Theory</title><link href="http://localhost:4000/recent/Information_Theory/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 4. Information Theory" /><published>2023-12-18T00:00:00+09:00</published><updated>2023-12-18T00:00:00+09:00</updated><id>http://localhost:4000/recent/Information_Theory</id><content type="html" xml:base="http://localhost:4000/recent/Information_Theory/"><![CDATA[<h1 id="information-theory">Information Theory</h1>
-
-<ul>
-  <li>entropy
-    <ul>
-      <li>unpredictability of information content
-        <ul>
-          <li>it captures the value of surprises</li>
-          <li>information from independent events is “additive”</li>
-          <li>information is non-negative</li>
-        </ul>
-      </li>
-    </ul>
-
-    <p><img src="../../../assets/ML/InfoTheo/Untitled.png" /></p>
-
-    <ul>
-      <li>as distributions become more uniform, entropy goes up.</li>
-      <li>Gaussian distribution has the maximum entropy among possible distributions on an infinite range with a finite mean and variance</li>
-    </ul>
-
-    <p><img src="../../../assets/ML/InfoTheo/Untitled 1.png" /></p>
-
-    <ul>
-      <li>Kullback Leibler (KL) divergence
-        <ul>
-          <li><a href="https://hyunw.kim/blog/2017/10/27/KL_divergence.html">https://hyunw.kim/blog/2017/10/27/KL_divergence.html</a></li>
-          <li><a href="https://hwiyong.tistory.com/408">https://hwiyong.tistory.com/408</a></li>
-          <li>divergence between two probability distributions</li>
-        </ul>
-      </li>
-    </ul>
-
-    <p><img src="../../../assets/ML/InfoTheo/Untitled 2.png" /></p>
-
-    <p>Entropy is a measure of uncertainty or disorder in a set of outcomes or information. In information theory, three related concepts are often used: marginal entropy, joint entropy, and conditional entropy.</p>
-
+  <li>Introduction
     <ol>
-      <li><strong>Marginal Entropy:</strong>
-        <ul>
-          <li><strong>Definition:</strong> Marginal entropy quantifies the uncertainty associated with a single random variable in isolation, without considering any other variables.</li>
-          <li><strong>Formula:</strong> For a discrete random variable \((X)\), the marginal entropy \((H(X))\) is calculated as \((H(X) = -\sum_{x} P(x) \log_2(P(x)))\), where \((P(x))\) is the probability of each possible outcome of \((X)\).</li>
-          <li><strong>Interpretation:</strong> A higher marginal entropy indicates greater uncertainty or randomness associated with the individual variable.</li>
-        </ul>
+      <li>The naive approach attempts some sort of comparison algorithm that identifies the type of bug and replaces it with a prescribed bugs
+        <ol>
+          <li>Time Consuming</li>
+        </ol>
       </li>
-      <li><strong>Joint Entropy:</strong>
-        <ul>
-          <li><strong>Definition:</strong> Joint entropy measures the uncertainty associated with a pair of random variables considered together.</li>
-          <li><strong>Formula:</strong> For two discrete random variables \((X)\) and \((Y)\), the joint entropy \((H(X, Y))\) is calculated as \((H(X, Y) = -\sum_{x, y} P(x, y) \log_2(P(x, y)))\), where \((P(x, y))\) is the joint probability of the outcomes \(((x, y))\).</li>
-          <li><strong>Interpretation:</strong> Joint entropy provides a measure of uncertainty when considering the combined outcomes of two variables.</li>
-        </ul>
+      <li>Learning approach using neural machine translation</li>
+      <li>Directly applying the NMT approach to source code is inefficient
+        <ol>
+          <li>Many bugs fixes involve changes to a few sentences
+            <ol>
+              <li>Results in suboptimal performances</li>
+            </ol>
+          </li>
+          <li>Attempt to mitigate the inefficiency by predicting the specific statement on AST</li>
+          <li>Attempting on individual tokens would be more optimal</li>
+        </ol>
       </li>
-      <li><strong>Conditional Entropy:</strong>
-        <ul>
-          <li><strong>Definition:</strong> Conditional entropy quantifies the remaining uncertainty in one random variable given the knowledge of another.</li>
-          <li><strong>Formula:</strong> For two discrete random variables \((X)\) and \((Y)\), the conditional entropy \((H(X \mid Y))\) is calculated as \((H(X \mid Y) = -\sum_{x, y} P(x, y) \log_2\left(\frac{P(x, y)}{P(y)}\right))\), where \((P(x, y))\) is the joint probability, (P(y)) is the marginal probability of (Y), and the sum is taken over all possible outcomes of \((X)\) and \((Y)\).</li>
-          <li><strong>Interpretation:</strong> Conditional entropy reflects the remaining uncertainty in \((X)\) when \((Y)\) is known. A lower conditional entropy indicates that knowledge of \((Y)\) reduces the uncertainty about \((X)\).</li>
-        </ul>
+      <li>Hephaestus leverages NMT to predict edit operation, derived from Levenshtein Distance Algorithm
+        <ol>
+          <li>Working at the token level of source code</li>
+          <li>Work on any language without language-specific parsers</li>
+        </ol>
       </li>
     </ol>
-
-    <p>In summary, marginal entropy captures the uncertainty of individual variables, joint entropy quantifies the uncertainty of multiple variables considered together, and conditional entropy measures the remaining uncertainty in one variable given the knowledge of another. These concepts are fundamental in understanding and analyzing the information content and relationships between random variables in various domains, including information theory, statistics, and machine learning.</p>
-
-    <ul>
-      <li>KL divergence is not symmetric</li>
-      <li><a href="https://math.stackexchange.com/questions/1972633/what-is-the-difference-between-moment-projection-and-information-projection">https://math.stackexchange.com/questions/1972633/what-is-the-difference-between-moment-projection-and-information-projection</a></li>
-    </ul>
   </li>
-  <li>mutual information
-    <ul>
-      <li>measures how much information is shared</li>
-      <li>the more independent they are, the smaller MI is</li>
-    </ul>
-  </li>
-  <li>Cross Entropy
-    <ul>
-      <li>it measures dissimilarity between and a target</li>
-      <li>identical to KL up to an additive constant</li>
-      <li>popular loss function</li>
-      <li><a href="https://velog.io/@rcchun/%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%ED%81%AC%EB%A1%9C%EC%8A%A4-%EC%97%94%ED%8A%B8%EB%A1%9C%ED%94%BCcross-entropy">https://velog.io/@rcchun/머신러닝-크로스-엔트로피cross-entropy</a></li>
-    </ul>
-  </li>
-  <li>causality - information flow</li>
-  <li>
-    <p>transfer entropy</p>
-
-    <p><img src="../../../assets/ML/InfoTheo/Untitled 3.png" /></p>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Information Theory by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 1. Introduction to AI and ML</title><link href="http://localhost:4000/recent/Introduction_to_AI_ML/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 1. Introduction to AI and ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Introduction_to_AI_ML</id><content type="html" xml:base="http://localhost:4000/recent/Introduction_to_AI_ML/"><![CDATA[<h1 id="introduction-to-ai--ml">Introduction to AI &amp; ML</h1>
-
-<p>Came from Henry Choi’s Lecture and ChatGPT’s explanation</p>
-
-<ul>
-  <li>Introduction to AI
-    <ul>
-      <li>Weak and Strong AI
-        <ul>
-          <li>strong AI: understanding Chinese</li>
-          <li>weak AI: simulating the ability to understand Chinese</li>
-        </ul>
-      </li>
-      <li>Applied AI and General AI</li>
-      <li>Computationalism and Connectionism
-        <ul>
-          <li>Computationalism
-            <ul>
-              <li>thoughts are computation on symbols
-                <ul>
-                  <li>Symbolic, interpretable</li>
-                  <li>e.g) Turing Machine</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-          <li>Connectionism
-            <ul>
-              <li>Information is represented in neurons and networks
-                <ul>
-                  <li>Low-level, black-box</li>
-                  <li>Neural Networks</li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Turing Test</li>
-      <li>Implementation level and algorithmic level
-        <ul>
-          <li>Implmentation level: how the system is physically realized
-            <ul>
-              <li>AI and Human Intelligence are different</li>
-            </ul>
-          </li>
-          <li>Algorithmic level: how the system does, what representation or process it uses
-            <ul>
-              <li>3 level for intelligent system
-                <ul>
-                  <li>Learning, Computational level(what the system does and why), Algorithmic level</li>
-                </ul>
-              </li>
-              <li>Can achieve some intelligence on approximation</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Superintelligence
-        <ul>
-          <li>bootstrapping from “child machine”, brain emulation, biological cognition, brain-computer interface, networks, and organizations</li>
-        </ul>
-      </li>
-      <li>Deep Neural Networks
-        <ul>
-          <li>Hebbian learning, perceptron, multilayer perceptron, deep neural networks</li>
-        </ul>
-      </li>
-      <li>Practical AI risks
-        <ul>
-          <li>affected by viruses</li>
-          <li>misused by people with bad intentions</li>
-          <li>biased AI</li>
-          <li>taking over roles</li>
-          <li>unable to reject AI’s decision</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-  <li>Introduction to ML
-    <ul>
-      <li>What is learning
-        <ul>
-          <li>a computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, <strong>if its performance at the tasks improves with the experiences</strong></li>
-          <li>simple model (e.g., linear regression)</li>
-          <li>for supervised learning
-            <ul>
-              <li>Learning</li>
-              <li>Recognition</li>
-            </ul>
-          </li>
-          <li>Complex models</li>
-        </ul>
-      </li>
-      <li>Machine learning
-        <ul>
-          <li>Takes data and output  → Makes program</li>
-          <li>source of knowledge is data</li>
-        </ul>
-      </li>
-      <li>Workflow of machine learning
-        <ul>
-          <li>acquisition - data is gathered/collected from various sources</li>
-          <li>preparation - data is cleaned, preprocessed, and eventually becomes a dataset</li>
-          <li>analysis - data is evaluated to run and customize reports</li>
-          <li>modeling - data is patternized and generalized as models</li>
-          <li>visualization</li>
-          <li>deployment and maintenance</li>
-        </ul>
-      </li>
-      <li>Components of ML
-        <ul>
-          <li>data: features, label, format</li>
-          <li>models: SVM, NN, K-means</li>
-          <li>objectives: cross-entropy, RMSE, likelihood</li>
-          <li>optimization - gradient descent, Newton, linear programming, convex optimization</li>
-        </ul>
-      </li>
-      <li>Data
-        <ul>
-          <li>structured/unstructured</li>
-        </ul>
-      </li>
-      <li>Categories
-        <ul>
-          <li>unsupervised learning
-            <ul>
-              <li>e.g., clustering, dimension reduction</li>
-            </ul>
-          </li>
-          <li>supervised learning
-            <ul>
-              <li>e.g., speech/face recognition</li>
-            </ul>
-          </li>
-          <li>semi-supervised learning
-            <ul>
-              <li>e.g., cancer detection</li>
-            </ul>
-          </li>
-          <li>reinforcement learning
-            <ul>
-              <li>e.g., AlphaGo, self-driving car</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Discriminative model and Generative model
-        <ul>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Discriminative models: p(t</td>
-                  <td>x)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>only for supervising</li>
-            </ul>
-          </li>
-          <li>
-            <table>
-              <tbody>
-                <tr>
-                  <td>Generative model: p(t, x) or p(x</td>
-                  <td>t)</td>
-                </tr>
-              </tbody>
-            </table>
-            <ul>
-              <li>applicable to unlabeled data</li>
-              <li>focusing on modeling each class’ distribution</li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-      <li>Pattern Recognition
-        <ul>
-          <li>measuring → preprocessing → dimensionality reduction → prediction → model selection
-  -</li>
-        </ul>
-      </li>
-    </ul>
-  </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[AI and ML Intro. by Prof. Henry Choi]]></summary></entry><entry><title type="html">2023-HGU-ML Lecture 3. Probability and Statistics for ML</title><link href="http://localhost:4000/recent/Probability_and_Statistics/" rel="alternate" type="text/html" title="2023-HGU-ML Lecture 3. Probability and Statistics for ML" /><published>2023-12-17T00:00:00+09:00</published><updated>2023-12-17T00:00:00+09:00</updated><id>http://localhost:4000/recent/Probability_and_Statistics</id><content type="html" xml:base="http://localhost:4000/recent/Probability_and_Statistics/"><![CDATA[<h1 id="probability-and-statistics-for-ml">Probability and Statistics for ML</h1>
-
-<ul>
-  <li>Probability
-    <ul>
-      <li>IID: independent identically distributed</li>
-      <li>Simpson’s Paradox</li>
-      <li>Probability is a number assigned to an event indicating “how likely” the event will occur when randomly selected</li>
-      <li>uncertainty can make the model simpler. A simple/uncertain model rather than a complex/certain one, even when modeling the true/deterministic rule is possible</li>
-      <li>mathematical probability measures the likelihood that events will occur</li>
-      <li>empirical statistics is science of collecting and analyzing numerical data in large quantities</li>
-      <li>Random Variable
-        <ul>
-          <li>a variable whose possible values are numerical outcomes of a random phenomenon</li>
-          <li>is a measurable function from a set of possible outcomes to a measurable space</li>
-        </ul>
-      </li>
-    </ul>
-
-    <p><img src="../../../assets/ML/ProbAndStats/Untitled.png" /></p>
-
-    <p><img src="../../../assets/ML/ProbAndStats/Untitled 1.png" /></p>
-
-    <ul>
-      <li>marginal, joint, and conditional probabilities</li>
-    </ul>
-
-    <p><img src="../../../assets/ML/ProbAndStats/Untitled 2.png" /></p>
-
-    <p><img src="../../../assets/ML/ProbAndStats/Untitled 3.png" /></p>
-
-    <p><img src="../../../assets/ML/ProbAndStats/Untitled 4.png" /></p>
-
-    <ul>
-      <li>Bayes rule presents the transformation process of our beliefs.
-        <ul>
-          <li>subjective belief on Y changes with X</li>
-        </ul>
-      </li>
-      <li>learning is
-        <ul>
-          <li>nothing but to update our confidence from prior to posterior.</li>
-          <li>the key factor is likelihood which is based on data.</li>
-        </ul>
-      </li>
-      <li>
-        <p>Bayesianism (Thomas Bayes) vs. frequentism (Ronald A. Fisher)</p>
-
-        <p>Bayesianism and frequentism are two distinct approaches to statistical inference, and they differ in their fundamental principles and interpretations of probability. Thomas Bayes and Ronald A. Fisher were prominent figures associated with these respective approaches.</p>
-
-        <p>Bayesianism (Thomas Bayes):</p>
-
+  <li>Related Works
+    <ol>
+      <li>Tufano et al.
         <ol>
-          <li><strong>Probability as Belief:</strong>
-            <ul>
-              <li>In Bayesian statistics, probability is interpreted as a measure of belief or confidence in a particular hypothesis. It reflects the degree of certainty or uncertainty given available information.</li>
-              <li>Bayesians start with a prior probability distribution, representing initial beliefs about a hypothesis before observing data.</li>
-            </ul>
-          </li>
-          <li><strong>Bayes’ Theorem:</strong>
-            <ul>
-              <li>The cornerstone of Bayesian statistics is Bayes’ theorem, which updates the prior belief based on observed data to obtain a posterior probability distribution.</li>
-              <li>Bayes’ theorem relates the posterior probability (probability of the hypothesis given the data) to the prior probability and the likelihood of the data given the hypothesis.</li>
-            </ul>
-
-\[P(H|D) = \frac{P(D|H) \cdot P(H)}{P(D)}\]
-
-            <ul>
-              <li>\(P(H|D)\) is the posterior probability, 
- \(( P(D|H) )\) is the likelihood, 
- \(( P(H) )\) is the prior probability, and 
- \(( P(D) )\) is the probability of the data.</li>
-            </ul>
-          </li>
-          <li><strong>Incorporation of Prior Knowledge:</strong>
-            <ul>
-              <li>Bayesian analysis allows the incorporation of prior knowledge into the analysis, enabling the adjustment of beliefs based on both prior information and new data.</li>
-            </ul>
+          <li>Repairing code through identification of bug-fix patterns in large software repositories</li>
+          <li>Usage of Deep Learning Approach regarding “meaningful” change</li>
+        </ol>
+      </li>
+      <li>Chen et al.
+        <ol>
+          <li>Focus on single-line bug</li>
+        </ol>
+      </li>
+      <li>Jiang et al.
+        <ol>
+          <li>The correct fix for a given bug does not exist within the model’s output space and the model’s lack of awareness of syntax</li>
+          <li>Pre-train model on the programming language in question</li>
+        </ol>
+      </li>
+      <li>Yuan and Banzhaf
+        <ol>
+          <li>grouping fine-granularity edits into larger statement-level edits</li>
+        </ol>
+      </li>
+      <li>Mousavi et al.
+        <ol>
+          <li>Overfitting and Disparity between predicted bug and fix operation and would mimic a human software developer</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Background
+    <ol>
+      <li>Fixing buggy code to fixed code using traditional language translation matter of the buggy to fix a variety of language</li>
+      <li>Traditional translation replaces the majority of the input sequence which is natural language.
+        <ol>
+          <li>Fix in code might be minimal</li>
+          <li>repair translation should not have the same meaning as the input</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Approach
+    <ol>
+      <li>Levenshtein Edit Operation
+        <ol>
+          <li>the bug is input sequence, the NMT model attempts to produce edit operations</li>
+          <li>Basic Operations
+            <ol>
+              <li>Insertion</li>
+              <li>Deletion</li>
+              <li>Replacement</li>
+            </ol>
           </li>
         </ol>
-
-        <p>Frequentism (Ronald A. Fisher):</p>
-
+      </li>
+      <li>Compound Edit Operations
         <ol>
-          <li><strong>Probability as Frequency:</strong>
-            <ul>
-              <li>Frequentist statistics, on the other hand, views probability as a long-run frequency or limit of relative frequencies. Probability is associated with the repeated occurrence of events in a hypothetical infinite sequence of trials.</li>
-            </ul>
-          </li>
-          <li><strong>No Prior Probability:</strong>
-            <ul>
-              <li>Unlike Bayesianism, frequentist statistics does not involve prior probabilities. It relies solely on observed data and the likelihood of obtaining that data under different hypotheses.</li>
-            </ul>
-          </li>
-          <li><strong>Hypothesis Testing and Confidence Intervals:</strong>
-            <ul>
-              <li>Frequentist methods often focus on hypothesis testing and confidence intervals. Hypothesis testing involves assessing the evidence against a null hypothesis, and confidence intervals provide a range of plausible values for an unknown parameter.</li>
-            </ul>
-          </li>
-          <li><strong>Objective and Reproducible:</strong>
-            <ul>
-              <li>Frequentist methods are considered more objective and reproducible, as they do not rely on subjective prior beliefs.</li>
-            </ul>
-          </li>
+          <li>Group of one or more edit operations; sequence of operations</li>
+          <li>Condensing: A grouping process to compound operations</li>
         </ol>
-
-        <p>Comparison:</p>
-
-        <ul>
-          <li><strong>Subjectivity:</strong>
-            <ul>
-              <li>Bayesianism is often criticized for being subjective due to the reliance on prior beliefs. Frequentism is considered more objective since it doesn’t involve prior probabilities.</li>
-            </ul>
-          </li>
-          <li><strong>Flexibility vs. Objectivity:</strong>
-            <ul>
-              <li>Bayesian methods provide a flexible framework for incorporating prior information, but this flexibility is seen by some as a weakness. Frequentism, being more rigid, is valued for its objectivity and reproducibility.</li>
-            </ul>
-          </li>
-          <li><strong>Interpretation of Probability:</strong>
-            <ul>
-              <li>Bayesianism interprets probability as a measure of belief, while frequentism interprets it as a long-term frequency.</li>
-            </ul>
-          </li>
-        </ul>
-
-        <p>Both Bayesian and frequentist approaches have their strengths and weaknesses, and the choice between them often depends on the nature of the problem, available data, and the philosophical stance of the statistician or researcher. In practice, researchers sometimes use a combination of both approaches, known as Bayesian-frequentist synthesis.</p>
-
-        <ul>
-          <li>parameters
-            <ul>
-              <li>updated (represented probabilistically) vs. fixed</li>
-              <li>with prior vs. no prior</li>
-            </ul>
-          </li>
-          <li>data
-            <ul>
-              <li>fixed vs. random samples</li>
-            </ul>
-          </li>
-          <li>example
-            <ul>
-              <li>diagnosis vs. dice</li>
-            </ul>
-          </li>
-          <li>focused on
-            <ul>
-              <li>posterior vs likelihood</li>
-            </ul>
-          </li>
-        </ul>
       </li>
-    </ul>
+      <li>Dataset Construction
+        <ol>
+          <li>Control Dataset: baseline, not involved with edit operations</li>
+          <li>Machine String: In order to include edit operations, transforming edit operations
+            <ol>
+              <li>Typed</li>
+              <li>General</li>
+            </ol>
+          </li>
+          <li>We make the distinction between typed and general form to determine if the form of machine string used during training affects the Hephaestus models’ abilities to learn edit operations.</li>
+        </ol>
+      </li>
+      <li>Experimental Dataset
+        <ol>
+          <li>translate the bug into its corresponding fix, showing Levenshetein edit distance between the bug and fix</li>
+          <li>all basic compound operation sequences which transform the bug into the fix, strict is the minimal sequence of the strict compound operation sequences, and loose is the minimal sequence of the loose compound operation sequences</li>
+        </ol>
+      </li>
+      <li>Model Construction
+        <ol>
+          <li>LSTM+General</li>
+          <li>GRU+General</li>
+          <li>LSTM+Typed</li>
+        </ol>
+      </li>
+      <li>The CEC ensures that error signals fed forward into the LSTM layers and backpropagated to the LSTM layers are resistant to the effects of the vanishing gradient problem.</li>
+    </ol>
+  </li>
+  <li>Experimental Design
+    <ol>
+      <li>Perfect Prediction Accuracy</li>
+      <li>Failed Prediction Rate</li>
+      <li>Edit Distance Decrease</li>
+      <li>Training Accuracy</li>
+    </ol>
+  </li>
+  <li>Result
+    <ol>
+      <li>PPA: The control model (baseline model) outperformed the rest, with no much difference</li>
+      <li>FPR: The control model maintained 100% capability, the string can always be interpreted as a sequence of Java method tokens</li>
+      <li>EDD: every model generates “bug fixes” that were further away from the fixed code than the original buggy code</li>
+      <li>Training Accuracy: Every model exceeded 90%</li>
+    </ol>
+  </li>
+  <li>RQ
+    <ol>
+      <li>RQ1: Is learning edit operations an effective approach to automatic bug repair?
+        <ol>
+          <li>learning edit operations does not offer advantages over the baseline approach. The experimental Hephaestus models must determine a sequence of edit operations, decode them, and apply them to the inputted buggy method in order to predict fixed source code</li>
+        </ol>
+      </li>
+      <li>RQ2: What effect does each condensing strategy and machine string form have on the accuracy of bug repair?
+        <ol>
+          <li>The differences in PPA between the basic, strict, and loose models are negligible, but there are differences according to the training accuracy and average EDD values. Despite having significantly lower final training accuracy, the strict and loose models had slightly more positive EDD values than the basic models (a difference of about 0.96). Thus, it is evidenced that condensing edit operations into strict and loose forms are beneficial over not condensing them at all</li>
+        </ol>
+      </li>
+      <li>RQ3: What is the effect of using an LSTM-based architecture versus a GRU-based architecture on the accuracy of bug repair?
+        <ol>
+          <li>the variation is not meaningful enough to consider as a key difference between the models.</li>
+        </ol>
+      </li>
+      <li>Future Work
+        <ol>
+          <li>It was determined that most failed predictions were caused by generated indices outside the valid range for a given string. What changes can be made to this model to restrict the prediction range?</li>
+          <li>does changing the abstraction method of the training dataset affect this metric?</li>
+          <li>Other NLP Tools</li>
+          <li>Extra software layers in addition to the methods presented in our study.</li>
+        </ol>
+      </li>
+      <li>Conclusion
+        <ol>
+          <li>The introduction of these specific methods for training NMTbased systems to learn bug fixes did not provide a benefit to the task</li>
+          <li>Edit operations are capable of performing automated bug repair to some degree</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+</ol>
 
-    <p><img src="../../../assets/ML/ProbAndStats/Untitled 5.png" /></p>
+<h3 id="knowledge">Knowledge:</h3>
 
+<ul>
+  <li>NMT (Neural Machine Translation): <a href="https://en.wikipedia.org/wiki/Neural_machine_translation">Neural machine translation - Wikipedia</a>uses an artificial neural work to predict the likelihood of a sequence of words</li>
+  <li>Levenshtein Distance Algorithm: A string metric for measuring the difference between two sequences. This is likely due to the experimental models experiencing higher entropy than the control when making predictions.</li>
+</ul>
+
+<h3 id="terminology">Terminology:</h3>
+
+<ul>
+  <li>Condensing Strategies:
     <ul>
-      <li>conjugate distributions
+      <li>Basic Condensing: basic compound operation corresponds with exactly one change</li>
+      <li>Loose Condensing: iff the application of its constituent operation is equivalent to the application of some singular op
         <ul>
-          <li><a href="https://en.wikipedia.org/wiki/Conjugate_prior">https://en.wikipedia.org/wiki/Conjugate_prior</a></li>
-          <li>Prior and posterior distribution is in the same family</li>
+          <li>Modify a contiguous section of tokens</li>
         </ul>
       </li>
-      <li>Central Limit Theorem</li>
-      <li>Cramer’s theorem
-        <ul>
-          <li><a href="https://carstart.tistory.com/160">https://carstart.tistory.com/160</a></li>
-        </ul>
-      </li>
-      <li>multivariate Gaussian
-        <ul>
-          <li><a href="https://dhpark1212.tistory.com/entry/%EB%8B%A4%EB%B3%80%EB%9F%89-%EA%B0%80%EC%9A%B0%EC%8B%9C%EC%95%88-%EB%B6%84%ED%8F%ACMultivariate-Gaussian-Distribution">https://dhpark1212.tistory.com/entry/다변량-가우시안-분포Multivariate-Gaussian-Distribution</a></li>
-        </ul>
-      </li>
-      <li>transformed Gaussian</li>
-      <li>whitening transformation
-        <ul>
-          <li>it transforms a random variable vector with covariance into a new variable vector whose covariance is the identity matrix</li>
-        </ul>
-      </li>
-      <li>transformed densities</li>
-      <li>limitations of Gaussian distribution
-        <ul>
-          <li>there are too many parameters in general</li>
-          <li>it is intrinsically unimodal</li>
-        </ul>
-      </li>
-      <li>stationary process</li>
-      <li>basic distributions: uniform</li>
-      <li>basic distributions: Bernoulli
-        <ul>
-          <li>Discrete probability distribution</li>
-        </ul>
-      </li>
-      <li>basic distributions: binomial
-        <ul>
-          <li>the probability of observing occurrences of in a set of samples from a Bernoulli distribution</li>
-        </ul>
-      </li>
-      <li>basic distributions: categorical and multinomial</li>
+      <li>Strict Condensing: iff it is loosely compatible and every operation is of the same flavor</li>
     </ul>
   </li>
-</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="ML" /><category term="ML" /><summary type="html"><![CDATA[Prob and Stats are the fundamentals. by Prof. Henry Choi]]></summary></entry></feed>
+  <li>Machine Strings:
+    <ul>
+      <li>Typed: f is one of ins, del, or rep, depending on if the flavor of the represented edit operation is insertion, deletion, or replacement, respectively</li>
+      <li>General: general form machine strings do not explicitly store the flavor of their represented edit operations</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="tool">Tool:</h3>
+
+<p><a href="https://github.com/WM-SEMERU/hephaestus">GitHub - WM-SEMERU/hephaestus</a></p>
+
+<h3 id="questions">Questions:</h3>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[Generalizing the change is helpful...?]]></summary></entry><entry><title type="html">Clean Code Chapter 1</title><link href="http://localhost:4000/recent/Clean_Code_Ch1/" rel="alternate" type="text/html" title="Clean Code Chapter 1" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch1</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch1/"><![CDATA[<ul>
+  <li>What is Clean Code?
+    <ul>
+      <li>Bjarne Stroustrup, Inventor of C++
+        <ul>
+          <li>Wasted Cycle are inelegant, not pleasing</li>
+          <li>Error handling should be complete</li>
+          <li>Focused; Each function, class, and module expose a single-minded attitude that remains entirely undistracted, and unpolluted, by the surrounding details</li>
+        </ul>
+      </li>
+      <li>Grady Booch, author of Object Oriented Analysis and Design with Application
+        <ul>
+          <li>He took a readability perspective</li>
+          <li>Well-written purpose</li>
+          <li>clean code should clearly expose the tensions in the problem to be solved</li>
+          <li>Should be matter-of-fact as opposed to speculative</li>
+        </ul>
+      </li>
+      <li>Dave Thomas, founder of OTI
+        <ul>
+          <li>Make it easy for other people to enhance it</li>
+          <li>Code without test is not clean at all</li>
+          <li>values code that is small, code should be literate</li>
+        </ul>
+      </li>
+      <li>Michael Feathers, author of Working Effectively with Legacy Code
+        <ul>
+          <li>Looks like it was written by someone who cares</li>
+          <li>Someone has taken the time to keep it simple and orderly</li>
+        </ul>
+      </li>
+      <li>Ron Jeffries, author of Extreme Programming Installed and Extreme Programming Adventures in C#
+        <ul>
+          <li>No duplications</li>
+          <li>Express all the design ideas
+            <ul>
+              <li>High expressiveness</li>
+            </ul>
+          </li>
+          <li>Minimize the number of entities
+            <ul>
+              <li>Find things in a collection</li>
+              <li>Wrap particular implementation in a more abstract method</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+      <li>Ward Cunningham, inventor of Wiki, inventor of Fit …
+        <ul>
+          <li>read turns out what you expected</li>
+          <li>make it look like the language was made for the problem</li>
+          <li>It is the programmer that makes the language appear simple</li>
+        </ul>
+      </li>
+      <li>Author: <a href="https://www.google.com/search?q=Robert+C.+Martin&amp;stick=H4sIAAAAAAAAAONgVuLWz9U3MDSqMspOT3rEaMYt8PLHPWEp3UlrTl5jVOfiCs7IL3fNK8ksqRSS5GKDsvileLmQ9fEsYhUIyk9KLSpRcNZT8E0sKsnMAwD4hk_pWwAAAA&amp;sa=X&amp;ved=2ahUKEwjDuvb5qYSAAxWJAt4KHYeWALQQzIcDKAB6BAgiEAE">Robert Cecil Martin</a>
+        <ul>
+          <li>Discovering new techniques and founding their own schools</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>Many Recommendations in this book are controversial.</p>
+
+<p>And we are <strong>AUTHORS</strong>.</p>
+
+<ul>
+  <li>Making it Easy to read makes it easier to write</li>
+  <li>The code has to be kept clean over time</li>
+</ul>
+
+<p>This book cannot promise to make you a good programmer.</p>
+
+<p><strong>“Practice, son. Practice!”</strong></p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[What is Clean Code?]]></summary></entry><entry><title type="html">Clean Code Chapter 2</title><link href="http://localhost:4000/recent/Clean_Code_Ch2/" rel="alternate" type="text/html" title="Clean Code Chapter 2" /><published>2023-07-13T00:00:00+09:00</published><updated>2023-07-13T00:00:00+09:00</updated><id>http://localhost:4000/recent/Clean_Code_Ch2</id><content type="html" xml:base="http://localhost:4000/recent/Clean_Code_Ch2/"><![CDATA[<p><strong>Using the appropriate Name will pay off in the short term and continue to pay in the long run</strong></p>
+
+<ul>
+  <li>Using Intention-Revealing Names
+    <ul>
+      <li>Choosing good names takes time but saves more than it takes</li>
+      <li>Choosing a name that specifies what is being measured and the unit of that measurement</li>
+      <li>Things need to think
+        <ul>
+          <li>What kind are in</li>
+          <li>What is returned</li>
+          <li>zeroth subscript and value</li>
+        </ul>
+      </li>
+      <li>Do not use <strong>O <em>and l</em></strong></li>
+    </ul>
+  </li>
+  <li>Avoid Disinformation
+    <ul>
+      <li>Avoiding words whose entrenched meanings vary from intention</li>
+      <li>Spelling similar concepts similarly
+        <ul>
+          <li>No inconsistent spelling</li>
+        </ul>
+      </li>
+      <li><del>Using different font??</del></li>
+    </ul>
+  </li>
+  <li>Meaningful Distinction
+    <ul>
+      <li><strong>a</strong> for a local variable, <strong>the</strong> for all function arguments</li>
+      <li>Less redundant words</li>
+      <li>Distinguishing names in a way that readers know what the difference offer</li>
+    </ul>
+  </li>
+  <li>Using Pronounceable Names
+    <ul>
+      <li>Essential for communication</li>
+    </ul>
+  </li>
+  <li>Using Searchable Names
+    <ul>
+      <li>Single-letter names can ONLY be used as local variables inside short methods</li>
+      <li>The length of a name should correspond to the size of its scope</li>
+    </ul>
+  </li>
+  <li>Avoiding Encoding</li>
+  <li>Hungarian Notation
+    <ul>
+      <li>The compiler knows the type nowadays</li>
+    </ul>
+  </li>
+  <li>Member Prefixes
+    <ul>
+      <li>unseen clutter and a marker of older code…</li>
+    </ul>
+  </li>
+  <li>Interface and Implementation
+    <ul>
+      <li>Why would I let user knows I’m handling them with an interface?</li>
+      <li>Marking at the implementation</li>
+    </ul>
+  </li>
+  <li>Avoid Mental Mapping
+    <ul>
+      <li>In most contexts, a single letter for a loop is a poor choice (such as i, j, k)</li>
+      <li><em>Clarity is king</em></li>
+    </ul>
+  </li>
+  <li>Class Names
+    <ul>
+      <li>should have noun or noun phrase names</li>
+    </ul>
+  </li>
+  <li>Method Names
+    <ul>
+      <li>should have verb or verb phase names</li>
+      <li>When constructors are overloaded, use the static method with names that describe the argument
+        <ul>
+          <li>Make corresponding constructors private</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Don’t be cute
+    <ul>
+      <li>No too “user-specific name”</li>
+    </ul>
+  </li>
+  <li>Pick One Word per Concept
+    <ul>
+      <li>Pick one word for one abstract concept</li>
+      <li>The name will express two different types of object</li>
+    </ul>
+  </li>
+  <li>Don’t Pun
+    <ul>
+      <li>Avoiding using the same word for two purposes</li>
+      <li>Even if it has a similar concept, it must have a different name if it is semantically different</li>
+      <li><strong><em>It is the author’s responsibility</em></strong></li>
+    </ul>
+  </li>
+  <li>Use Solution Domain Names
+    <ul>
+      <li>People who read your code will be programmers
+        <ul>
+          <li>CS terms, algorithm names, pattern names, math terms, etc.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>Use Problem Domain Names
+    <ul>
+      <li>Separating solution and problem domain concept</li>
+    </ul>
+  </li>
+  <li>Add Meaningful Context
+    <ul>
+      <li>Place the name in context for the reader
+        <ul>
+          <li>enclosing classes, functions, or namespaces</li>
+        </ul>
+      </li>
+      <li>break it into smaller functions if it is necessary</li>
+    </ul>
+  </li>
+  <li>But Don’t Add Gratuitous Context
+    <ul>
+      <li>Shorter names are generally better
+        <ul>
+          <li>As long as they are clear</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Books" /><category term="Blog" /><summary type="html"><![CDATA[How to name clearly]]></summary></entry><entry><title type="html">Automatic Patch Generation with Context-based Change Application</title><link href="http://localhost:4000/recent/ConFix/" rel="alternate" type="text/html" title="Automatic Patch Generation with Context-based Change Application" /><published>2023-07-10T00:00:00+09:00</published><updated>2023-07-10T00:00:00+09:00</updated><id>http://localhost:4000/recent/ConFix</id><content type="html" xml:base="http://localhost:4000/recent/ConFix/"><![CDATA[<h3 id="automatic-patch-generation-with-context-based-change-application">Automatic Patch Generation with Context-based Change Application</h3>
+
+<h2 id="paper"><a href="https://raw.githubusercontent.com/wiki/thwak/ConFix/pre-print.pdf">Paper</a></h2>
+
+<p>Jindae Kim, Sunghun Kim</p>
+
+<h3 id="goal">Goal:</h3>
+
+<ol>
+  <li>I am collecting changes from human-written patches for new patch candidate generation.</li>
+  <li>Automatic patch generation technique leveraging human-written patches with our context-based change application technique used by ConFix.</li>
+</ol>
+
+<h3 id="summary">Summary:</h3>
+
+<ul>
+  <li>An effective patch generation technique should have a large search space with a high probability that patches for bugs are included, and it also needs to locate such patches effectively. Confix collects abstract AST changes from human-written patches, providing resources for patch generation. Then, using only matching context only, Confix selects a necessary change for a possible fixed location. Also, Confix filters out undesirable locations to fix using the info that the location has not been changed in human-written patches.</li>
+</ul>
+
+<h3 id="points">Points:</h3>
+
+<ol>
+  <li>The problem with APR is search space size and navigation.
+    <ol>
+      <li>To solve the problem, mining changes from human-written patches has been trying, but it makes navigation for the patch more difficult since the changes are very sparse.</li>
+      <li>Confix, use context-based change application technique to generate patch candidates.
+        <ol>
+          <li>AST context applies collected change to a possible fixed location only if their AST contents are matched</li>
+          <li>ConFix compares AST contexts defined by parent, left, and right nodes of a change and a location and applies the change to a target location only if their contexts are matched.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Change Collection
+    <ol>
+      <li>Collecting changes generally applicable to other location</li>
+      <li>We extract AST form since source code can be easily affected by specific user styles.</li>
+      <li>Following some steps, dependent on how changes are collected</li>
+    </ol>
+  </li>
+  <li>Change Extraction
+    <ol>
+      <li>Each hunk is extracted and converted to an individual AST subtree change.</li>
+      <li>Collect separate individual changes rather than the whole patch to use repetitiveness of changes.</li>
+      <li>To extract changes, use the differencing tool, generates AST subtree edit operation, combine node edit operation into trees
+        <ol>
+          <li>AST node type and node value indicate a specific identifier, literals, or operators; the edit operation preserves the AST structure of the inserted code fragment</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Change conversion
+    <ol>
+      <li>Extracted edit operations need to be independent and applicable form.
+        <ol>
+          <li>The type needs to be changed as a single change
+            <ol>
+              <li>divide operation more</li>
+              <li>extends operation</li>
+              <li>remove any operation if a changed AST is a subtree of another operation’s changed AST</li>
+              <li>Find all inserted-delete pairs applied to the same location and combine them.</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>Need to normalize the user-defined identifiers.
+        <ol>
+          <li>By normalizing user-defined names, we can increase the reusability of collected changes since we can apply a change regardless of the availability of user-defined names.</li>
+          <li>The technique normalizes user-defined names with two principles: consistency and order-preserving</li>
+          <li>By normalizing user-defined names, we can increase the reusability of collected changes since we can apply a change regardless of the availability of user-defined names.</li>
+          <li>At the time of change concretization, the collected information works as requirements for each abstract name which ConFix should consider when it assigns a concrete name for the abstract name.</li>
+        </ol>
+      </li>
+      <li>Change Context Identification
+        <ol>
+          <li>After individual changes are obtained from source code patches, the next step is identifying the AST contexts of the changes.</li>
+          <li>By identifying the context of the target location, we can avoid meaningless modifications and more frequent changes.</li>
+          <li>To define AST context, use nearby nodes of a changed AST subtree
+            <ol>
+              <li>The parent node represents the location where a changed code fragment belongs.</li>
+              <li>The left and Right nodes indicate code fragments before and after the changed code fragment.</li>
+              <li>Using fingerprinting technique</li>
+              <li>Dyck Word Hash
+                <ol>
+                  <li>represents the parent-child relationship of nodes</li>
+                  <li>Compare two nodes’ hash values to check whether they are the roots of two type-isomorphic AST subtrees.</li>
+                  <li>For fast comparison</li>
+                </ol>
+              </li>
+            </ol>
+          </li>
+          <li>PLRTH and PLRT
+            <ol>
+              <li>left node indicates code before the changed code frame; the right node indicates code after the changed code fragment</li>
+              <li>PTLRH context, we also examine whether the change and the location have the same code fragment before and after them, while PLRT context only checks which kind of code fragments exist before and after the change and the location.</li>
+              <li>PTLRH context constrains the search area too much; we can expand the search area with PLRT context.</li>
+              <li>Exception</li>
+              <li>Block node does not mean too much; use its parent node as a type.</li>
+              <li>Move operations primarily consider the old location’s context, but store the new location’s context to use it as an additional constraint of move changes.</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Change Application
+    <ol>
+      <li>Target Location Context Identification
+        <ol>
+          <li>The target location is also an AST node to which a change will be applied</li>
+          <li>To identify the location context is compatible with change contexts, using PLR nodes we can identify location contexts for changes
+            <ol>
+              <li>Except for insert, another operation has an old AST subtree so it is applicable</li>
+              <li>The inserted context is identified from New AST which is inserted. We need a different type, based on the assumption that a subtree is inserted near a location. Insert Before and Insert After contexts are the contexts for cases in which a new AST subtree is inserted before and after node N. Node C indicates the actual location where a subtree will be inserted</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Change Selection
+    <ol>
+      <li>retrieve changes with the same context from a changing pool</li>
+      <li>Categorized by their context, only store unique changes with their frequency</li>
+      <li>choose one of the selections and mimic human-written changes by selecting any of the changes on the list
+        <ol>
+          <li>The random selection, strategy is not decided specifically</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Change Concretiziation
+    <ol>
+      <li>Replacing all normalized identifiers with concrete name
+        <ol>
+          <li>Do not fully specify the strategy yet how ConFix concretizes a change since various strategies can be used</li>
+          <li>Since the type of normalized variables and signature of normalized methods are also stored during change collection, we can consider a strategy that assigns an existing variable name to a normalized variable (if the type is compatible)</li>
+          <li>Since change is concretized, apply it to the target location</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Patch generation
+    <ol>
+      <li>Generate-and-validate process</li>
+      <li>Starts with the PTLRH pool to narrow down the search area for patch generation, switch to PLRT if the patch generation failed at the above level</li>
+      <li>Identify target location, retrieves changes having the same context as the selected location, apply it to the target location</li>
+      <li>Lastly, tries different name assignments by predefined max trials
+        <ol>
+          <li>To prevent spoiled validation due to wrong name assignment</li>
+        </ol>
+      </li>
+      <li>Pass -&gt; termination; Fail -&gt; continues with another change</li>
+      <li>When it reaches the max candidate, moves to the next change pool</li>
+    </ol>
+  </li>
+  <li>Target Location Identification
+    <ol>
+      <li>Confix leverages both fault localization and change context to identify target locations from given buggy code
+        <ol>
+          <li>Identifies all AST nodes which belong to the statement as potential target locations</li>
+          <li>filters out all target locations having context not included in the current change pool</li>
+          <li>Identify fail and pass a group
+            <ol>
+              <li>The first pick from the fail-only group, if there is no location, starts from the pass-fail group</li>
+              <li>Failing test cases have a much higher priority</li>
+            </ol>
+          </li>
+          <li>Prior target location has if, method invocation, infix expression, or return statement since it influences the whole execution</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Change Selection
+    <ol>
+      <li>ConFix selects one of the retrieved changes for the current target location and chooses the most frequent change</li>
+      <li>Even if it is in the same context, change might not be applicable
+        <ol>
+          <li>In case of replacement operation, one more location should be selected</li>
+          <li>Therefore, ConFix randomly selects one of the target locations with a matching context
+            <ol>
+              <li>If there is not, discard the change</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+      <li>Code might not be compilable, so ConFix goes through the verification steps
+        <ol>
+          <li>Examine all change-location pairs since a change that was applicable in another location might not be applicable in other locations</li>
+          <li>Considering all pairs and compiling is beneficial rather than since it is not expensive to recompile source code with a small modification</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Change Concretization
+    <ol>
+      <li>Concretizing selected change for the target location</li>
+      <li>ConFix collects concrete names of variables, types, and methods from the given buggy code and decides which names are within the scope</li>
+      <li>To find a concrete method for a normalized method, ConFix identifies compatible methods from collected methods available at a target location</li>
+      <li>Abstract signature
+        <ol>
+          <li>method signature with normalized types</li>
+          <li>The purpose of this is to find a concrete method with the same abstract signature, then it will not cause a compile error</li>
+        </ol>
+      </li>
+      <li>Assignable type
+        <ol>
+          <li>Consider both type compatibility and the number of variables of the types
+            <ol>
+              <li>Normalized types are considered wildcard characters, which means that they can be assignable to either normalized types or JSL types.</li>
+              <li>ConFix only considers a type as assignable to another type if there exist enough variables for assignment.</li>
+            </ol>
+          </li>
+          <li>the compatibility of a normalized and a concrete method is defined by their abstract signatures and assignable types
+            <ol>
+              <li>The concrete method first considers local methods, then global methods with the assumption that local methods are more closely related to buggy code</li>
+              <li>Once a concrete method for a normalized method is selected and assigned, ConFix update types are matched due to method assignment</li>
+              <li>Randomly assigns one of the assignable concrete types for each normalized type</li>
+              <li>Assigns concrete variables to normalized variables</li>
+            </ol>
+          </li>
+          <li>There is one additional treatment for update type changes which updates an identifier with another identifier
+            <ol>
+              <li>Assume the update change is meaningful when the new name is similar to the old one, so calculate the Levenshtein distance between the identifier and concrete name</li>
+            </ol>
+          </li>
+          <li>In case of no type-compatible assignment
+            <ol>
+              <li>Change concretization is considered failed and no patch candidate is generated</li>
+            </ol>
+          </li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Evaluation
+    <ol>
+      <li>Collected changes with PTLRH and PTLR contexts from Apache Commons Collections (collections), Derby (derby), Hadoop (hadoop), Ivy (ivy) and Lucene (lucene) projects.
+        <ol>
+          <li>we selected a completely different set of projects for change resources from the projects in Defects4j dataset.</li>
+          <li>For each context, there are averages 1.91 and 16.25 changes in PTLRH and PLRT change pools respectively</li>
+        </ol>
+      </li>
+      <li>We built change pools and obtained coverage information of all buggy codes before we applied ConFix to each bug.
+        <ol>
+          <li>Change pool and coverage information is given to ConFix</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Results
+    <ol>
+      <li>Compilation of one Java file is much cheaper than test execution even if only a few failing test is executed. Therefore ConFix can find a patch within a reasonable time.</li>
+      <li>Acceptable and Plausible</li>
+      <li>We did not set a time budget, however, ConFix generated all the patches within two hours</li>
+      <li>ConFix generated 71 patches
+        <ol>
+          <li>which are greater than other techniques - ssFix(60), Nopol(33), jGenProg(19), jKali(18), HDRepair(16) and ACS(7)</li>
+          <li>generated 13 acceptable patches, which is significantly higher than valid patches generated by HDRepair(5), ACS(3), jGenProg(3), jKali(1), and Nopol(0). One exception is ssFix, which generated 20 valid patches, higher than ConFix.</li>
+        </ol>
+      </li>
+      <li>ssFix
+        <ol>
+          <li>We verified ssFix-generated patches again and found that two valid patches (C1, M79) are not acceptable patches.</li>
+        </ol>
+      </li>
+      <li>ConFix was able to find necessary changes and the right fix locations with its patch generation strategy</li>
+      <li>Informative Patches
+        <ol>
+          <li>Although plausible patches are not acceptable when it is compared to human-written patches, they might be given as debugging hints for developers.</li>
+          <li>we manually analyzed 58 plausible patches and checked whether these patches are informative.</li>
+        </ol>
+      </li>
+    </ol>
+  </li>
+  <li>Are PLRTH and PLRT really helpful?
+    <ol>
+      <li>With PTLRH contexts, ConFix explores a much narrower area in its candidate space
+        <ol>
+          <li>Consequently, it might also lose the chance that actual patches are included in the area</li>
+        </ol>
+      </li>
+      <li>Among 71 generated patches, 81% of the patches (58/71) are generated by changes from PTLRH change pools. In terms of acceptable patches, using PLRT context only gives two more acceptable patches, and PTLRH change pool still works for 85% of the acceptable patches (11/13).</li>
+      <li>ConFix generated two acceptable patches which take 15% of all acceptable patches under both types of context. These PLRT acceptable patches are all semantically equivalent to human-written patches, which means that they addressed issues in the same way as humans did. Therefore PLRT context can also provide practical constraints to mimic the developer’s changes and produce acceptable patches.</li>
+    </ol>
+  </li>
+  <li>Threats to validity
+    <ol>
+      <li>Our evaluation results might be different if we used other collected changes from different human-written patches.</li>
+      <li>There exists another issue that bugs from five projects might not be representative</li>
+      <li>Manual assessment of patches could be another issue, since we do not have domain knowledge and the judgment about patches might be subjective and biased.</li>
+    </ol>
+  </li>
+  <li>Related Works
+    <ol>
+      <li>The difference is that ConFix uses AST contexts to select one of the changes, while ssFix considers the syntactic relation of code fragments to given buggy code.</li>
+      <li>Identifying AST contexts is less costly than deriving SMT constraints, but these contexts still provide syntactic information which also implies some of the program semantics, although it does not fully represent the program’s semantics like SMT constraints.</li>
+      <li>ConFix differs from these previous techniques due to the point that it can automatically collect abstract individual changes on a large scale and it uses them to generate patch candidates, instead of generating patch candidates with several pre-defined modifications or mutation operations with limited resources of code fragments</li>
+    </ol>
+  </li>
+  <li>Studies on Human-written patches
+    <ol>
+      <li>changes in bug fixes are repetitive, and smaller changes are even more repetitive</li>
+      <li>There exist other studies on changes and source code’s uniqueness which imply the potential of techniques leveraging 17 existing code fragments or changes</li>
+      <li>Empirical evaluation of ConFix and fixability analysis results imply that we can obtain necessary changes for new bug fixes from existing patches.</li>
+    </ol>
+  </li>
+  <li>Change Collection and Application
+    <ol>
+      <li>we may consider using these code transfer techniques to develop new methods for patch candidate generation in ConFix</li>
+      <li>it is possible to apply high-level ideas such as collecting abstract changes with their AST contexts regardless of adjustment</li>
+    </ol>
+  </li>
+  <li>Conclusion
+    <ol>
+      <li>We may try to generate patches with multiple changes to improve partial patches up to acceptable patches or use more sophisticated concretization methods to effectively generate high-quality patches.</li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="knowledge">Knowledge:</h3>
+
+<ul>
+  <li>Context-based Change Application Technique: a technique to generate candidate patches</li>
+  <li>ConFix can expand its search space by collecting more changes, while it can navigate through them effectively with the guidance of context</li>
+</ul>
+
+<h3 id="terminology">Terminology:</h3>
+
+<ul>
+  <li>Hunk: Single changes including deletion and addition, may have multiple in a single commit</li>
+</ul>
+
+<h3 id="questions">Questions:</h3>
+
+<ul>
+  <li>Why PLRTH and PLRT: The paper mentioned it is for reducing the search space. Is it the most efficient way to do it?</li>
+  <li>I don’t understand the part about fault localization. Is it possible to localize the fault using AST context? Does it just localize fault according to the collected change?</li>
+  <li>What if AST differencing tools work maliciously?</li>
+</ul>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="APR" /><category term="APR" /><summary type="html"><![CDATA[ConFix]]></summary></entry><entry><title type="html">알고리즘 분석과 벚꽃</title><link href="http://localhost:4000/recent/Prof.Yong-Algorithm-Analysis/" rel="alternate" type="text/html" title="알고리즘 분석과 벚꽃" /><published>2023-06-09T00:00:00+09:00</published><updated>2023-06-09T00:00:00+09:00</updated><id>http://localhost:4000/recent/Prof.Yong-Algorithm-Analysis</id><content type="html" xml:base="http://localhost:4000/recent/Prof.Yong-Algorithm-Analysis/"><![CDATA[<p>거의 처음으로 한글로 블로그 포스팅을 써보는 것 같다! 
+아무래도 한국어가 제일 편하긴하다 ㅎ <br /></p>
+
+<p>블로그 포스팅을 학기 중에 하고자 헀지만 도저히 안되더라… 그래서 학기 중에 블로그 포스팅 할 것들 메모해놓고 방학 중에 일일히 쓰는 중이다! 날짜도 그 때 썼다고 생각하고 업로드 하는 중이기도 하고… ㅋㅋㅋ<br /></p>
+
+<p>한동에서의 3학년이 사망년이 되지 않기를 바라는 포스트 이후 논문 리뷰나 책 리뷰 외의 글을 쓰는 것은 몇달 만인 것 같다. 원래 쓸 생각이 없었는데 포스팅 할 내용이 나에게 큰 위로가 되었기도 하고… <del>랩실에 블로그 괴물이 있다… 진짜 너무 잘씀 꼭 <a href="https://0neand0nly.github.io/">여기</a>가 보세요</del></p>
+
+<p>이번 블로그 글의 제목은 알고리즘 분석과 벚꽃이다! 무슨 관계가 있을까 싶겠지만 꽤나 깊은 관계(?)가 있다.</p>
+
+<p>한동에는 중간고사 기간을 주위로 하여 벚꽃이 핀다! 벚꽃이 정말 아름답게 핀다. 내가 사진을 잘 안찍어서 벚꽃 사진이 없어서 첨부를 못하는게 아쉽다 ㅠㅠ 뭐 찾으면 있겠지만 귀찮기도 하고 사진을 왜 찍지 이해를 못하기도 하고… 뭐 암튼 그렇다. 거두절미하고 이 글은 알고리즘 분석 6월 9일 수업 때 일어난 일의 이야기를 담고 있다. 기억을 더듬어보자면 기말 고사를 앞둔 기간이었고, 과제는 미칠 듯이 쏟아져 나오고 있었다. 다들 너무 지쳐서 수업 분위기는 말이 아니었고 나도 굉장히 지쳐있었다.</p>
+
+<p>수업분위기에 화를 몇 번 내시던 교수님께서 갑자기 벚꽃 이야기를 꺼내셨다. 학교 벚꽃이 이쁘다면서 벚꽃이랑 사진찍는 학생들을 매년 보고 있다는 이야기를 하셨다. 뒤이어 학생들이 벚꽃과 사진을 찍는 것을 이해하지 못한다고 하셨다. 내심 나랑 공감하는 사람이 있다는 생각이 드는 찰나 교수님은 갑자기 닭살돋는 이야기를 하셨다. <em>“이 아이들은 자신이 벚꽃보다 아름답다는 걸 모르나? 왜 사진을 찍지?”</em> 많이 놀랬다. 솔직히 알고리즘 분석 담당 교수님께서 화를 안 내시는 분은 아니라…</p>
+
+<p>그렇게 말씀하시면서 여러 말을 덧붙이셨다. 사람이 가장 아름다운 나이는 20대 초중반이라고. 우리가 지금 20대 초중반을 지나고 있기에 우리가 하는 일들은 모두 아름답고 가치 있는 일이라고. 반대로 이렇게 꽃다운 나이기에 치열하게 살아가고, 후회없이 모든 것을 쏟아낼 수 있는 나이라고.</p>
+
+<p>솔직히 많은 위로가 됐다. 내가 글을 쓰는 재주도 없고 한 달 정도가 지난 후에 글을 쓰는 만큼 글에 감동이 하나도 묻어있지 않는게 너무 아쉽다…</p>
+
+<p>이제는 젊다고 할 수 없는 나이에 접어들었지만 치열하게 살아가야 한다는 사실은 오히려 나이가 들수록 깨닫고 있는 것 같다. 나이가 들고 후회하기 보다는 노력해보고 후회하는게 나쁘지 않은 것 같다 ㅎㅎ 교수님 감사합니다!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[젊음!]]></summary></entry><entry><title type="html">Vs code server error</title><link href="http://localhost:4000/recent/Vs_code_error/" rel="alternate" type="text/html" title="Vs code server error" /><published>2023-03-19T00:00:00+09:00</published><updated>2023-03-19T00:00:00+09:00</updated><id>http://localhost:4000/recent/Vs_code_error</id><content type="html" xml:base="http://localhost:4000/recent/Vs_code_error/"><![CDATA[<h2 id="vs-code로만-서버-접속이-안되는-경우">Vs code로만 서버 접속이 안되는 경우</h2>
+
+<p>VS code 서버 접속이 다른 경로로는 가능하지만 vs code로 안되는 경우가 존재한다. <br />
+서버 내에 vs code server파일의 문제일 가능성이 높다. 해결하는 방법은 어렵지 않다. <br /></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm -rf .vscode-server/
+</code></pre></div></div>
+
+<p>Good!</p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[왜 안들어가지지?]]></summary></entry><entry><title type="html">3rd week in handong</title><link href="http://localhost:4000/recent/3rd_week/" rel="alternate" type="text/html" title="3rd week in handong" /><published>2023-03-18T00:00:00+09:00</published><updated>2023-03-18T00:00:00+09:00</updated><id>http://localhost:4000/recent/3rd_week</id><content type="html" xml:base="http://localhost:4000/recent/3rd_week/"><![CDATA[<h2 id="i-am-at-the-end-of-3rd-week-in-handong">I am at the end of 3rd week in Handong.</h2>
+<p><br /></p>
+
+<p>The 3rd and 1st semesters at Handong are called “사망년” because it is busy as “hell”. <br />
+And I am passing the 3rd week. This semester, there were lots of changes. <br />
+I joined ISEL and met co-workers who share informations and visions. <br />
+I am getting familiar with the Linux system, starting to use notion and slack, and starting to learn query statements.</p>
+
+<p><br /> I am really happy to learn and I hope this happiness last at least until the end of this semester.</p>
+
+<p><img src="../../../assets/sudo_boo.png" width="700" height="270" /></p>]]></content><author><name>JSC</name><email>newwin0198@handong.ac.kr</email></author><category term="Blog" /><category term="Blog" /><summary type="html"><![CDATA[한동에서의 3주차]]></summary></entry></feed>
