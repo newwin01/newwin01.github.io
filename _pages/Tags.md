@@ -10,7 +10,5 @@ title: "Tags"
 
 #### 죄인 중의 괴수
 
-### [OS](/categories/os) 
 ### [blog](/categories/blog)
 ### [APR](/categories/APR)
-### [ML](/categories/ML)
