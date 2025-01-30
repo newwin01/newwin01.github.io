@@ -1,6 +1,6 @@
 ---
-title:  "한동에서의 마지막 2학기를 돌아보며 Part 2"
-excerpt: "7 and 8th Semster Recap Part 2"
+title:  "한동에서의 마지막 2학기를 돌아보며 Part 3"
+excerpt: "7 and 8th Semster Recap Part 3"
 
 categories:
   - Blog
