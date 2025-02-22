@@ -9,69 +9,85 @@ title: "About"
 ## Hello! My name is Jang Sechang!
 [[cv]](../../../assets/CV_JSC.pdf)
 
-Hello! I am a student of Handong Global University.
+I am a Master's student at the Korea Advanced Institute of Science and Technology (KAIST).  
+I am currently studying at the School of Computing.  
 
-I am studying at the Department of Computer Science and Electrical Engineering. <br>
-My main interest is Software Engineering.
-<br> 
-<br> 
-Joyful coding! <br><br>
+My main research interest is **Software Engineering**.  
 
-<h3 id="education">Education</h3>
-<ul>
-  <li>2019 ~ Present <a href="https://www.handong.edu/">Handong Global University</a>, Korea - Bachelor of <a href="https://csee.handong.edu/">Engineering in Computer Science</a></li>
-</ul>
+Joyful coding! 🚀  
 
-<h3 id="publications">Publications</h3>
-<ul>
-  <li> 
-    <strong>SPI: Similar Patch Identifier for Automated Program Repair</strong>, Korea Computer Congress 2024 
-    <a href="../../../assets/KCC_2024_SPI.pdf">[paper]</a>
-  </li>
-  <li> 
-    <strong>SPI: Similar Patch Identifier for Automated Program Repair</strong>, Journal of KIISE: Software and Application – <em>Extension of KCC paper</em> [Under review]
-  </li>
-</ul>
+---
+
+### 📚 Education  
+- **2025 ~ Present** – Master’s Student at the [School of Computing](https://cs.kaist.ac.kr/), [Korea Advanced Institute of Science and Technology (KAIST)](https://www.kaist.ac.kr/)  
+- **2019 ~ 2025** – Bachelor’s Degree in [Artificial Intelligence・Computer Science and Engineering](https://csee.handong.edu/), Summa Cum Laude, [Handong Global University](https://www.handong.edu/)  
+
+---
+
+### 📄 Publications  
+- Seongbin Kim, **<u>Sechang Jang</u>** , Jindae Kim, and Jaechang Nam, **"EnCus: Customizing Search Space for Automated Program Repair"**, *the 18th IEEE International Conference on Software Testing, Verification and Validation (ICST 2025, Short Papers, Vision and Emerging Results)*  
+  [Preprint](../../../assets/ICST_2025_EnCus.pdf)  
+
+- **<u>Sechang Jang</u>**, Seongbin Kim, Junhyeok Choi, Jindae Kim, and Jaechang Nam, **"SPI: Similar Patch Identifier for Automated Program Repair"**, 
+  *Journal of KIISE: Software and Application* – *Extended version of the KCC 2024 paper*  
+  [Paper](https://jok.kiise.or.kr/digital-library/102063)  
+
+- **<u>Sechang Jang</u>**, Junhyeok Choi, Seongbin Kim, Jindae Kim, and Jaechang Nam, **"SPI: Similar Patch Identifier for Automated Program Repair"**, *Korea Computer Congress (KCC) 2024*  
+  [Paper](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11861843)  
+
+---
+
+### ⏳ Timeline  
+
+- **2024.06** – Presented *[SPI: Similar Patch Identifier for Automated Program Repair](assets/KCC_2024_SPI_Presentation.pdf)* at [KCC 2024](https://kcc2024.kiise.or.kr/Proceedings/Home.asp), Jeju  
+- **2022.12 ~ 2024.12** – Undergraduate Research Intern at [ISEL](https://isel.handong.edu/)  
+- **2020.03 ~ 2021.09** – Human Resource Specialist, 142nd Military Policy Company (KATUSA)
+
+---
+
+### 👩🏻‍🏫 Teaching Experiences
+
+- Fall 2024 – Teaching Assistant for *Programming Language Theory* (English Section) in HGU
+- Spring 2024 – Teaching Assistant for *Data Structures* (Korean Section, Block Plan) in HGU
+- Spring 2024 – Teaching Assistant for *Java Programming* (Korean Section, Block Plan) in HGU
+- Fall 2023 – Teaching Assistant for *Java Programming* (Korean Section) in HGU
+- Spring 2023 – Teaching Assistant for *Java Programming* (English Section) in HGU
 
 
-<h3 id="timeline">Timeline</h3>
+---
 
-<ul>
-  <li>2024.09 ~ 2024.12 - Programming Language Theory Teaching Assistants (English Section)</li>
-  <li> <strong> 2024.06            - Presented <a href="../../../assets/KCC_2024_SPI_Presentation.pdf"> SPI: Similar Patch Identifier for Automated Program Repair </a> in <a href="https://kcc2024.kiise.or.kr/Proceedings/Home.asp">KCC 2024</a>, Jeju </strong> </li>
-  <li>2024.03 ~ 2024.06 - Data Structure Teaching Assistants (Korean Section): Block plan</li>
-  <li>2024.03 ~ 2024.06 - Java Programming Teaching Assistants (Korean Section): Block plan </li>
-  <li>2024.02           - Attended <a href="http://sigsoft.or.kr/kcse2024/">KCSE 2024</a> </li>
-  <li>2023.09 ~ 2023.12 - Java Programming Teaching Assistants (Korean Section)</li>
-  <li>2023.03 ~ 2023.06 - Java Programming Teaching Assistants (English Section)</li>
-  <li>2023.02           - Attended <a href="http://sigsoft.or.kr/kcse2023/">KCSE 2023</a> </li>
-  <li> <strong> 2022.12 ~ Present - <a href="https://isel.handong.edu/">ISEL</a> Undergraduate Research Intern </strong> </li>
-  <li> <strong> 2020.03 ~ 2021.09 - Human Resource Specialist, 142nd Military Policy Company </strong> </li>
-</ul>
+### 🏆 Awards 
 
-<h3 id="Awards">Awards</h3>
+- **2024.06** – Best Paper Award, *Korea Computer Congress (KCC) 2024*  
+- **2024.06** – Top Prize, *TOPCIT Regular Evaluation*  
+- **Spring 2023, Fall 2023** – *Excellent TA Award*  
+- **2021.09** – Army Achievement Medal, *19th Expeditionary Sustainment Command*  
 
-<ul>
-  <li> <strong> 2024.06 ~ 
-    Best Paper Award, Korea Computer Congress 2024 </strong> </li>
-  <li>2024.06 - Top Prize, TOPCIT Regular Evaluation</li>
-  <li>2023.09 - 2023.12 – Excellent TA Award</li>
-  <li><strong>2023.03 ~ 2024.12 – National Science & Technology Scholarship </strong> </li>
-  <li>2023.03 ~ 2023.06 – Excellent TA Award</li>
-  <li>Spring 2022, Fall 2022, Spring 2023, Spring 2024, Fall 2024 – Academic Excellence Scholarship</li>
-  <li><strong>2021.09 -  Army Achievement Medal, 19th Expeditionary Sustainment Command </strong> </li>
-</ul>
+---
 
-<h3 id="Projects">Projects</h3>
+### 🎓 Scholarships
 
-<ul>
-  <li>2022.12 ~ 2024.06 - <a herf="https://github.com/ISEL-HGU/SPI_3.0"> Similar Patch Identifier for Automated Program Repair </a> <br> </li>
-  <li>2024.06 - <a href="https://github.com/newwin01/Micro_Team"> Wireless Gamepad using LED Matrix and nRF52840 Development Kit </a> <br> </li>
-  <li>2024.03 ~ 2024.06 <a href="https://github.com/2024-SE-Project"> Handong Team Meeting Archiving and Exchange Web Platform </a> <br></li>
-  <li>2024.01 - <a href="https://github.com/newwin01/FAT32_Analysis"> Advanced programming practice with low-level file system structural analysis (with GMD Soft) </a> <br> </li>
-  <li> 2023.07 - <a href="https://github.com/newwin01/OS_30days"> Making Operating Systems in 30 Days </a> <br></li>
-</ul>
+- **2023.03 - 2024.12** – National Science & Technology Scholarship  
+- **Spring 2022, Fall 2022, Spring 2023, Spring 2024, Fall 2024** – *Academic Excellence Scholarship* 
 
-<hr>
+---
 
-<p><strong>Whoever can be trusted with very little can also be trusted with much, and whoever is dishonest with very little will also be dishonest with much</strong> – <em>Luke 16:10</em></p>
+### 🔬 Projects  
+- **2024.06** – [Wireless Gamepad using LED Matrix and nRF52840 Development Kit](https://github.com/newwin01/Micro_Team)  
+- **2024.03 ~ 2024.06** – [Handong Team Meeting Archiving and Exchange Web Platform](https://github.com/2024-SE-Project)  
+- **2024.01** – [Advanced programming practice with low-level file system structural analysis (with GMD Soft)](https://github.com/newwin01/FAT32_Analysis)  
+- **2023.07** – [Making an Operating System in 30 Days](https://github.com/newwin01/OS_30days)  
+
+---
+
+### ✨ Inspirational Quotes  
+> **"Whoever can be trusted with very little can also be trusted with much, and whoever is dishonest with very little will also be dishonest with much."** – *Luke 16:10*  
+
+> **"So whether you eat or drink or whatever you do, do it all for the glory of God."** – *1 Corinthians 10:31*  
+
+---
+
+### 📫 Contact  
+If you have any questions or want to collaborate, feel free to reach out! 🚀  
+
+---
