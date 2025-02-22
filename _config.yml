@@ -20,7 +20,7 @@ title                    : "JSC's DevLog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "JSC"
-description              : "SE and AI version 1.0"
+description              : "SE version 2.0"
 url                      : "https://newwin01.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : "newwin01/newwin01.github.io" # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -107,12 +107,12 @@ author:
   name             : "JSC"
   avatar           : "/assets/avatar.jpg"
   bio              : " **Sleepy...** "
-  location         : "Republic of Korea, Pohang"
-  email            : newwin0198@handong.ac.kr
+  location         : "Republic of Korea, Daejeon"
+  email            : newwin0198@gmail.com
   links:
-    - label: "Handong Global University"
+    - label: "KAIST"
       icon: "fas fa-fw fa-university"
-      url: "https://www.handong.edu"
+      url: "https://www.kaist.ac.kr/"
     # - label: "Email"
     #   icon: "fas fa-fw fa-envelope-square"
     #   url:  "newwin0198@handong.ac.kr"
