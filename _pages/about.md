@@ -61,7 +61,7 @@ Joyful coding! 🚀
 - **2024.06** – Best Paper Award, *Korea Computer Congress (KCC) 2024*  
 - **2024.06** – Top Prize, *TOPCIT Regular Evaluation*  
 - **Spring 2023, Fall 2023** – *Excellent TA Award*  
-- **2021.09** – Army Achievement Medal, *19th Expeditionary Sustainment Command*  
+- **2021.09** – Army Achievement Medal, *19th Expeditionary Sustainment Command* in HGU 
 
 ---
 
