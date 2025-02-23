@@ -12,6 +12,8 @@ tags:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/9SrIiVrSLR4?si=93eH6FPQ_CQVUYG8&amp;start=75" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+<br>
+
 벌써 대학교에 입학한지 6년이 되었다. 19년도에 학교에 입학해, 2년간의 군복무를 마치고 22년도에 학교에 복학했던 것이 얼마 되지 않았던 것 같은데, 어느새 4년 간의 학부 생활을 마무리하게 되었다. 
 
 대학교 입학식때의 싱숭생숭한 마음이 6년이 지난 지금도 생각이 난다. 나는 해외 대학을 준비하다, 개인적인 사정으로 인해 국내 대학에 진학해야 하는 상황에 놓여있었다. 국내 대학 입시 준비를 해놓은 것도 없었고, 그렇기에 수능을 준비하기에는 너무 늦은 상황이었다. 
