@@ -20,7 +20,7 @@ Joyful coding! 🚀
 
 ### 📚 Education  
 - **2025 ~ Present** – Master’s Student at the [School of Computing](https://cs.kaist.ac.kr/), [Korea Advanced Institute of Science and Technology (KAIST)](https://www.kaist.ac.kr/)  
-- **2019 ~ 2025** – Bachelor’s Degree in [Artificial Intelligence・Computer Science and Engineering](https://csee.handong.edu/), Summa Cum Laude, [Handong Global University](https://www.handong.edu/)  
+- **2019 ~ 2025** – Bachelor’s Degree in [Artificial Intelligence・Computer Science and Engineering](https://csee.handong.edu/) (Summa Cum Laude), [Handong Global University (HGU)](https://www.handong.edu/)
 
 ---
 
@@ -29,19 +29,11 @@ Joyful coding! 🚀
   [Preprint](../../../assets/ICST_2025_EnCus.pdf)  
 
 - **<u>Sechang Jang</u>**, Seongbin Kim, Junhyeok Choi, Jindae Kim, and Jaechang Nam, **"SPI: Similar Patch Identifier for Automated Program Repair"**, 
-  *Journal of KIISE: Software and Application* – *Extended version of the KCC 2024 paper*  
-  [Paper](https://jok.kiise.or.kr/digital-library/102063)  
+  *Journal of KIISE: Software and Application* – *The extension of the KCC 2024 paper*  
+  [Paper](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE12086914)
 
 - **<u>Sechang Jang</u>**, Junhyeok Choi, Seongbin Kim, Jindae Kim, and Jaechang Nam, **"SPI: Similar Patch Identifier for Automated Program Repair"**, *Korea Computer Congress (KCC) 2024*  
   [Paper](https://www.dbpia.co.kr/journal/articleDetail?nodeId=NODE11861843)  
-
----
-
-### ⏳ Timeline  
-
-- **2024.06** – Presented *[SPI: Similar Patch Identifier for Automated Program Repair](assets/KCC_2024_SPI_Presentation.pdf)* at [KCC 2024](https://kcc2024.kiise.or.kr/Proceedings/Home.asp), Jeju  
-- **2022.12 ~ 2024.12** – Undergraduate Research Intern at [ISEL](https://isel.handong.edu/)  
-- **2020.03 ~ 2021.09** – Human Resource Specialist, 142nd Military Policy Company (KATUSA)
 
 ---
 
@@ -53,14 +45,12 @@ Joyful coding! 🚀
 - Fall 2023 – Teaching Assistant for *Java Programming* (Korean Section) in HGU
 - Spring 2023 – Teaching Assistant for *Java Programming* (English Section) in HGU
 
-
 ---
 
 ### 🏆 Awards 
-
 - **2024.06** – Best Paper Award, *Korea Computer Congress (KCC) 2024*  
 - **2024.06** – Top Prize, *TOPCIT Regular Evaluation*  
-- **Spring 2023, Fall 2023** – *Excellent TA Award*  
+- **Spring 2023, Fall 2023** – *Excellent TA Award* in HGU
 - **2021.09** – Army Achievement Medal, *19th Expeditionary Sustainment Command*  
 
 ---
@@ -68,15 +58,14 @@ Joyful coding! 🚀
 ### 🎓 Scholarships
 
 - **2023.03 - 2024.12** – National Science & Technology Scholarship  
-- **Spring 2022, Fall 2022, Spring 2023, Spring 2024, Fall 2024** – *Academic Excellence Scholarship* 
+- **Spring 2022, Fall 2022, Spring 2023, Spring 2024, Fall 2024** – *Academic Excellence Scholarship* in HGU
 
 ---
 
 ### 🔬 Projects  
-- **2024.06** – [Wireless Gamepad using LED Matrix and nRF52840 Development Kit](https://github.com/newwin01/Micro_Team)  
-- **2024.03 ~ 2024.06** – [Handong Team Meeting Archiving and Exchange Web Platform](https://github.com/2024-SE-Project)  
+- **2024.03 ~ 2024.06** – [Handong Team Meeting Archiving and Exchange Web Platform](https://github.com/2024-SE-Project)
 - **2024.01** – [Advanced programming practice with low-level file system structural analysis (with GMD Soft)](https://github.com/newwin01/FAT32_Analysis)  
-- **2023.07** – [Making an Operating System in 30 Days](https://github.com/newwin01/OS_30days)  
+- **2023.07** – [Making an Operating System in 30 Days](https://github.com/newwin01/OS_30days)
 
 ---
 
