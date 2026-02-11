@@ -9,9 +9,9 @@ tags:
 ---
 
 
-"p align="center""
-"img src = "../../../assets/Joro_many_thing.png""
-"/p"
+<p align="center">
+<img src = "../../../assets/Joro_many_thing.png">
+</p>
 
 정말 많은 일이 있었다. 석사 1년차를 회고하는 상황에서 지금의 그림을 사용하는 것이 조금 우수울지도 모르겠지만, 지금 내가 느끼는 감정을 표현하기에는 더할나위 없이 좋다고 생각한다. 
 
