@@ -51,7 +51,7 @@ tags:
 
 지금까지의 표현으로 보면, 엄청 힘들어하고 괴로워했던 것처럼 그려지는데 정확히는 꽤나 멍한 상태였다. 지금까지 내가 원동력으로 삼았던 것들이 부정되는 순간이 오자, 그냥 전원이 꺼진 느낌이었다. 그렇다고 아무것도 안했느냐? 무언가를 계속 했다. 공부를 하던, 논문을 읽던, 연구를 하던. 그러나 보상도, 뚜렷한 목표도 없는 노력이 계속 지속되자 무기력함이 느껴졌다. 
 
-" "So whether you eat or drink or whatever you do, do it all for the glory of God." – 1 Corinthians 10:31
+> "So whether you eat or drink or whatever you do, do it all for the glory of God." – 1 Corinthians 10:31
 
 1년전에 이렇게 살아가겠다고 선포한 나는, 아직은 잘못된 습관들을 버리지 못했고, 말씀을 삶으로 실천하는 방법을 배우지 못했다. 체화되지 않은 말씀들은 내가 어려움을 겪을 때마다 자연스럽게 잊혀져 갔다.
 
