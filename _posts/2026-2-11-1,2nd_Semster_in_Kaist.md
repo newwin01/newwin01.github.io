@@ -10,12 +10,12 @@ tags:
 
 
 <p align="center">
-<img src = "../../../assets/Joro_many_thing.jpg">
+<img src = "../../../assets/Joro_many_thing.png">
 </p>
 
 정말 많은 일이 있었다. 석사 1년차를 회고하는 상황에서 지금의 그림을 사용하는 것이 조금 우수울지도 모르겠지만, 지금 내가 느끼는 감정을 표현하기에는 더할나위 없이 좋다고 생각한다. 
 
-[저번](../../../_posts/2025-2-23-Graduation.md)에 이야기 했던 것처럼, 나는 KAIST 전산학부 그리고 SWTV Group에서 석사 생활을 시작했다. 
+[저번](../../../recent/Graduation)에 이야기 했던 것처럼, 나는 KAIST 전산학부 그리고 SWTV Group에서 석사 생활을 시작했다. 
 
 첫 학기에는 연구보다는 수업에 집중하도록 배려 받았다. 매주 미팅에 들어가지 않았고, 지도 교수님 수업을 포함하여 3과목을 수강했다. 
 
