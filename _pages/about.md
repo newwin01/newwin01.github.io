@@ -39,6 +39,7 @@ Joyful coding! 🚀
 
 ### 👩🏻‍🏫 Teaching Experiences
 
+- Fall 2025 – Teaching Assistant for *Introduction to Software Engineering* (English Section) in KAIST [link](https://github.com/swtv-kaist/cs350-fall25)
 - Fall 2024 – Teaching Assistant for *Programming Language Theory* (English Section) in HGU
 - Spring 2024 – Teaching Assistant for *Data Structures* (Korean Section, Block Plan) in HGU
 - Spring 2024 – Teaching Assistant for *Java Programming* (Korean Section, Block Plan) in HGU
