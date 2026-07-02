@@ -25,7 +25,9 @@ Joyful coding! 🚀
 ---
 
 ### 📄 Publications  
-- Seongbin Kim, **<u>Sechang Jang</u>** , Jindae Kim, and Jaechang Nam, **"EnCus: Customizing Search Space for Automated Program Repair"**, *the 18th IEEE International Conference on Software Testing, Verification and Validation (ICST 2025, Short Papers, Vision and Emerging Results)*  
+- Ahcheong Lee, Yeongbin Kang, **<u>Sechang Jang</u>**, Heechan Yang, Moonzoo Kim, Top-down Multi-agent LLM System with Runtime Data for MISRA C Violation Detection, *the 41st IEEE/ACM International Conference on Automated Software Engineering* (ASE) - Industry showcase, October 12-16, 2026
+
+- Seongbin Kim, **<u>Sechang Jang</u>** , Jindae Kim, and Jaechang Nam, **"EnCus: Customizing Search Space for Automated Program Repair"**, *the 18th IEEE International Conference on Software Testing, Verification and Validation* (ICST 2025) - Short Papers, Vision and Emerging Results  
   [Preprint](../../../assets/ICST_2025_EnCus.pdf)  
 
 - **<u>Sechang Jang</u>**, Seongbin Kim, Junhyeok Choi, Jindae Kim, and Jaechang Nam, **"SPI: Similar Patch Identifier for Automated Program Repair"**, 
@@ -42,9 +44,7 @@ Joyful coding! 🚀
 - Fall 2025 – Teaching Assistant for *Introduction to Software Engineering* (English Section) in KAIST [link](https://github.com/swtv-kaist/cs350-fall25)
 - Fall 2024 – Teaching Assistant for *Programming Language Theory* (English Section) in HGU
 - Spring 2024 – Teaching Assistant for *Data Structures* (Korean Section, Block Plan) in HGU
-- Spring 2024 – Teaching Assistant for *Java Programming* (Korean Section, Block Plan) in HGU
-- Fall 2023 – Teaching Assistant for *Java Programming* (Korean Section) in HGU
-- Spring 2023 – Teaching Assistant for *Java Programming* (English Section) in HGU
+- Spring 2023, Fall 2023, Spring 2024 – Teaching Assistant for *Java Programming* (Korean Section) in HGU
 
 ---
 
