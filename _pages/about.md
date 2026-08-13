@@ -26,9 +26,10 @@ Joyful coding! 🚀
 
 ### 📄 Publications  
 - Ahcheong Lee, Yeongbin Kang, **<u>Sechang Jang</u>**, Heechan Yang, Moonzoo Kim, Top-down Multi-agent LLM System with Runtime Data for MISRA C Violation Detection, *the 41st IEEE/ACM International Conference on Automated Software Engineering* (ASE) - Industry showcase, October 12-16, 2026
+  [Paper](https://swtv.kaist.ac.kr/files/publications/international_conference/LASIK_ASE_2026.pdf)
 
 - Seongbin Kim, **<u>Sechang Jang</u>** , Jindae Kim, and Jaechang Nam, **"EnCus: Customizing Search Space for Automated Program Repair"**, *the 18th IEEE International Conference on Software Testing, Verification and Validation* (ICST 2025) - Short Papers, Vision and Emerging Results  
-  [Preprint](../../../assets/ICST_2025_EnCus.pdf)  
+  [Paper](../../../assets/ICST_2025_EnCus.pdf)  
 
 - **<u>Sechang Jang</u>**, Seongbin Kim, Junhyeok Choi, Jindae Kim, and Jaechang Nam, **"SPI: Similar Patch Identifier for Automated Program Repair"**, 
   *Journal of KIISE: Software and Application* – *The extension of the KCC 2024 paper*  
