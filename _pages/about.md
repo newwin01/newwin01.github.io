@@ -18,14 +18,17 @@ Joyful coding! 🚀
 
 ---
 
-### 📚 Education  
-- **2025 ~ Present** – Master’s Student at the [School of Computing](https://cs.kaist.ac.kr/), [Korea Advanced Institute of Science and Technology (KAIST)](https://www.kaist.ac.kr/)  
-- **2019 ~ 2025** – Bachelor’s Degree in [Artificial Intelligence・Computer Science and Engineering](https://csee.handong.edu/) (Summa Cum Laude), [Handong Global University (HGU)](https://www.handong.edu/)
+### 📚 Education
+
+* **Feb. 2025 – Present** – M.S. Student at the [School of Computing](https://cs.kaist.ac.kr/), [Korea Advanced Institute of Science and Technology (KAIST)](https://www.kaist.ac.kr/)  
+  Advisor: Moonzoo Kim
+* **Feb. 2019 – Feb. 2025** – B.S. in [Artificial Intelligence · Computer Science and Engineering](https://csee.handong.edu/), *Summa Cum Laude*, [Handong Global University (HGU)](https://www.handong.edu/)  
+  **GPA:** 4.30/4.50 (Major: 4.34/4.50) · **Rank:** 2nd in CS & EE, 1st in Computer Science
 
 ---
 
 ### 📄 Publications  
-- Ahcheong Lee, Yeongbin Kang, **<u>Sechang Jang</u>**, Heechan Yang, Moonzoo Kim, Top-down Multi-agent LLM System with Runtime Data for MISRA C Violation Detection, *the 41st IEEE/ACM International Conference on Automated Software Engineering* (ASE) - Industry showcase, October 12-16, 2026
+- Ahcheong Lee, Yeongbin Kang, **<u>Sechang Jang</u>**, Heechan Yang, Moonzoo Kim, Top-down Multi-agent LLM System with Runtime Data for MISRA C Violation Detection, *the 41st IEEE/ACM International Conference on Automated Software Engineering* (ASE) - Industry showcase, October 12-16, 2026  
   [Paper](https://swtv.kaist.ac.kr/files/publications/international_conference/LASIK_ASE_2026.pdf)
 
 - Seongbin Kim, **<u>Sechang Jang</u>** , Jindae Kim, and Jaechang Nam, **"EnCus: Customizing Search Space for Automated Program Repair"**, *the 18th IEEE International Conference on Software Testing, Verification and Validation* (ICST 2025) - Short Papers, Vision and Emerging Results  
